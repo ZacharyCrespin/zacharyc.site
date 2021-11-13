@@ -1,0 +1,7 @@
+# why are you here
+# this is for robots not humans
+
+Sitemap: https://zacharyc.site/sitemap.xml
+User-agent: *
+Disallow: /404.html
+Disallow: /offline.html

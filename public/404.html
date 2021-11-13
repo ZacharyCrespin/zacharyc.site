@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- meta -->
+    <title>404 | Zachary C</title>
+    <meta property="og:title" content="404">
+    <meta name="description" content="404 | Zachary C">
+    <meta property="og:site_name" content="Zachary C">
+    <link rel="shortcut icon" type="image/jpg" href="https://zacharyc.site/imgs/fav.png"/>
+    <link rel="apple-touch-icon" href="https://zacharyc.site/imgs/icon.png">
+    <!-- link -->
+    <link rel="stylesheet" href="https://zacharyc.site/main.css">
+    <script src="https://zacharyc.site/main.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- other -->
+    <meta name="theme-color" content="#2e2e2e">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
+      import { getPerformance } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-performance.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyAusVefSFH7pEqWLclTEDyEYFSlpMrzubk",
+        authDomain: "zacharyc.site",
+        projectId: "zacharycsite",
+        storageBucket: "zacharycsite.appspot.com",
+        messagingSenderId: "18418783539",
+        appId: "1:18418783539:web:904df4549700d037dc9a46",
+        measurementId: "G-7TQEN9M9FK"
+      };
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const perf = getPerformance(app);
+    </script>
+    <style>
+      body{
+        background-color: black;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      h1 {
+      font-size: 15rem;
+      padding: 0px;
+      margin: 2rem;
+      transition: all 0.5s;
+      -webkit-text-stroke: 3px darkred;
+      font-variation-settings: "wght" 900, "ital" 1;
+      text-align: center;
+      color: transparent;
+      font-family: sans-serif;
+      text-shadow: 5px 5px 0px #2e2e2e,
+        10px 10px 0px #2E2E2E,
+        15px 15px 0px #3D3D3D,
+        20px 20px 0px #4C4C4C,
+        25px 25px 0px #5B5B5B,
+        30px 30px 0px #6A6A6A;
+      cursor: default;
+    }
+    h1:hover {
+      font-variation-settings: "wght" 100, "ital" 0;
+      text-shadow: none;
+    }
+    @media screen and (max-width: 1000px) {
+      h1 {
+        text-shadow: none;
+      }
+    }
+    h2{
+      color: #950000;
+      font-size: xx-large;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- Menu -->
+    <div class="se-pre-con"></div>
+    <script>
+      $(window).load(function() {
+        $(".se-pre-con").fadeOut("slow");;
+      });
+    </script>
+    <menu class="topnav" id="myTopnav">
+      <a href="https://zacharyc.site/">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Photography&#x25BC
+        </button>
+        <div class="dropdown-content">
+          <a href="https://zacharyc.site/photography/favorites">My Favorites</a>
+          <a href="https://zacharyc.site/photography/collections">Collections</a>
+        </div>
+      </div>
+      <a href="https://zacharyc.site/wallpapers">Wallpapers</a>
+      <a href="https://zacharyc.site/shortcuts">Apple Shortcuts</a>
+      <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+      <script>function menu() {var x = document.getElementById("myTopnav");if (x.className === "topnav") {x.className += " responsive";} else {x.className = "topnav";}}</script>
+    </menu>
+    <!-- Menu end -->
+      <h1>404</h1>
+      <h2>This page does not exist</h2>
+      <a href="https://zacharyc.site"><button>Back Home</button></a>
+  </body>
+</html>

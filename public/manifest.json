@@ -1,0 +1,23 @@
+{
+    "short_name": "Zachary C",
+    "name": "Zachary C",
+    "description": "Photography and more",
+    "icons": [
+      {
+        "src": "imgs/icon-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "imgs/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "lang": "en-US",
+    "start_url": "/?source=pwa",
+    "background_color": "#000000",
+    "theme_color": "#2e2e2e",
+    "display": "standalone",
+    "scope": "/"
+  }

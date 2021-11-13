@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- meta -->
+    <title>offline | Zachary C</title>
+    <meta property="og:title" content="offline">
+    <meta name="description" content="offline | Zachary C">
+    <meta property="og:site_name" content="Zachary C">
+    <!-- <meta property="og:url" content=""> -->
+    <link rel="shortcut icon" type="image/jpg" href="imgs/fav.png"/>
+    <link rel="apple-touch-icon" href="imgs/icon.png">
+    <!-- link -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- other -->
+    <meta name="theme-color" content="#2e2e2e">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
+      import { getPerformance } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-performance.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyAusVefSFH7pEqWLclTEDyEYFSlpMrzubk",
+        authDomain: "zacharyc.site",
+        projectId: "zacharycsite",
+        storageBucket: "zacharycsite.appspot.com",
+        messagingSenderId: "18418783539",
+        appId: "1:18418783539:web:904df4549700d037dc9a46",
+        measurementId: "G-7TQEN9M9FK"
+      };
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const perf = getPerformance(app);
+    </script>
+
+    <style>
+      body{
+        background-color: black;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      h1 {
+      font-size: 10rem;
+      padding: 0px;
+      margin: 2rem;
+      transition: all 0.5s;
+      -webkit-text-stroke: 3px darkred;
+      font-variation-settings: "wght" 900, "ital" 1;
+      text-align: center;
+      color: transparent;
+      font-family: sans-serif;
+      text-shadow: 5px 5px 0px #2e2e2e,
+        10px 10px 0px #2E2E2E,
+        15px 15px 0px #3D3D3D,
+        20px 20px 0px #4C4C4C,
+        25px 25px 0px #5B5B5B,
+        30px 30px 0px #6A6A6A;
+      cursor: default;
+    }
+    h1:hover {
+      font-variation-settings: "wght" 100, "ital" 0;
+      text-shadow: none;
+    }
+    @media screen and (max-width: 1000px) {
+      h1 {
+        text-shadow: none;
+      }
+    }
+    h2{
+      color: #950000;
+      font-size: xx-large;
+    }
+    button{
+      font-family: 'Roboto', sans-serif;
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    button:hover{
+      cursor: pointer;
+      background-color: white;
+      border: 1px solid black;
+      color: black;
+    }
+    button:active{
+      background-color: transparent;
+      border: 1px solid #950000;
+      color: #950000;
+    }
+    </style>
+  </head>
+  <body>
+    <body>
+        <h1>Offline</h1>
+        <h2>You are offline</h2>
+        <button type="button">Reload</button>
+        <script>
+          // Manual reload feature.
+          document.querySelector("button").addEventListener("click", () => {
+            window.location.reload();
+          });
+        </script>
+      </body>
+  </body>
+</html>

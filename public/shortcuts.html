@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- meta -->
+    <title>Apple Shortcuts | Zachary C</title>
+    <meta property="og:title" content="Apple Shortcuts">
+    <meta name="description" content="Apple Shortcuts | Zachary C">
+    <meta property="og:site_name" content="Zachary C">
+    <meta property="og:url" content="https://zacharyc.site/shortcuts">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/fav.png">
+    <link rel="icon" type="image/jpg" href="imgs/fav.png">
+    <link rel="apple-touch-icon" href="imgs/icon.png">
+    <!-- link -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- other -->
+    <meta name="theme-color" content="#2e2e2e">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
+      import { getPerformance } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-performance.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyAusVefSFH7pEqWLclTEDyEYFSlpMrzubk",
+        authDomain: "zacharyc.site",
+        projectId: "zacharycsite",
+        storageBucket: "zacharycsite.appspot.com",
+        messagingSenderId: "18418783539",
+        appId: "1:18418783539:web:904df4549700d037dc9a46",
+        measurementId: "G-7TQEN9M9FK"
+      };
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const perf = getPerformance(app);
+    </script>
+
+  </head>
+  <body>
+    <!-- Menu -->
+    <div class="se-pre-con"></div>
+    <script>
+      $(window).load(function() {
+        $(".se-pre-con").fadeOut("slow");;
+      });
+    </script>
+    <menu class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Photography&#x25BC
+        </button>
+        <div class="dropdown-content">
+          <a href="photography/favorites.html">My Favorites</a>
+          <a href="photography/collections.html">Collections</a>
+        </div>
+      </div>
+      <a href="wallpapers.html">Wallpapers</a>
+      <a href="shortcuts.html" class="active">Apple Shortcuts</a>
+      <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+      <script>function menu() {var x = document.getElementById("myTopnav");if (x.className === "topnav") {x.className += " responsive";} else {x.className = "topnav";}}</script>
+    </menu>
+    <!-- Menu end -->
+    <h1>Apple Shortcuts</h1>
+    <div class="collections">
+      <div class="card">
+        <h3>Rotate Image</h3>
+        <img src="imgs/SCicons/rotate-image.png" alt="Rotate Image - Shortcut Icon" width="40px" height="40px"><br><br>
+        <a href="https://www.icloud.com/shortcuts/861aaca0ee994633aa4e0bd2fa78677f"><button>Get Shortcut</button></a>
+      </div>
+      <div class="card">
+        <h3>Clipboard Pro</h3>
+        <img src="imgs/SCicons/clipboard-pro.png" alt="Clipboard Pro - Shortcut Icon" width="40px" height="40px"><br><br>
+        <a href="https://www.icloud.com/shortcuts/6db62a0f11d34ef6a9a733a2e5c207c3"><button>Get Shortcut</button></a>
+      </div>
+      <div class="card">
+        <h3>Christmas Countdown</h3>
+        <img src="imgs/SCicons/christmas-countdown.png" alt="Christmas Countdown - Shortcut Icon" width="40px" height="40px"><br><br>
+        <a href="https://www.icloud.com/shortcuts/4f976a66113c49928d0b679b1b3031ae"><button>Get Shortcut</button></a>
+      </div>
+      <div class="card">
+        <h3>Random From List</h3>
+        <img src="imgs/SCicons/random-from-list.png" alt="Random From List - Shortcut Icon" width="40px" height="40px"><br><br>
+        <a href="https://www.icloud.com/shortcuts/fc31996663084cebac5e3837cd730535"><button>Get Shortcut</button></a>
+      </div>
+      <div class="card">
+        <h3>Find Emoji Name</h3>
+        <img src="imgs/SCicons/find-emoji-name.png" alt="Find Emoji Name - Shortcut Icon" width="40px" height="40px"><br><br>
+        <a href="https://www.icloud.com/shortcuts/683cf2ffb8fb4ada8a4f283e89961d23"><button>Get Shortcut</button></a>
+      </div>
+      <div class="card">
+        <h3>Show Network Details</h3>
+        <img src="imgs/SCicons/show-network-details.png" alt="Show Network Details - Shortcut Icon" width="40px" height="40px"><br><br>
+        <a href="https://www.icloud.com/shortcuts/9a68e6dd014c421cb280168d222c0d9d"><button>Get Shortcut</button></a>
+      </div>
+      <div class="card">
+        <h3>Generate Hash</h3>
+        <img src="imgs/SCicons/generate-hash.png" alt="Generate Hash - Shortcut Icon" width="40px" height="40px"><br><br>
+        <a href="https://www.icloud.com/shortcuts/5f4a43c3b05b49d0b3a0288a80fec860"><button>Get Shortcut</button></a>
+      </div>
+      <div class="card">
+        <h3>Video Frames</h3>
+        <img src="imgs/SCicons/video-frames.png" alt="Video Frames - Shortcut Icon" width="40px" height="40px"><br><br>
+        <a href="https://www.icloud.com/shortcuts/42f7fea6d2c840a9b38308e1da7ded69"><button>Get Shortcut</button></a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- meta -->
+    <title>Wallpapers | Zachary C</title>
+    <meta property="og:title" content="Wallpapers">
+    <meta name="description" content="Wallpapers | Zachary C">
+    <meta property="og:site_name" content="Zachary C">
+    <meta property="og:url" content="https://zacharyc.site/wallpapers">
+    <link rel="shortcut icon" type="image/jpg" href="imgs/fav.png">
+    <link rel="icon" type="image/jpg" href="imgs/fav.png">
+    <link rel="apple-touch-icon" href="imgs/icon.png">
+    <!-- link -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- other -->
+    <meta name="theme-color" content="#2e2e2e">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
+      import { getPerformance } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-performance.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyAusVefSFH7pEqWLclTEDyEYFSlpMrzubk",
+        authDomain: "zacharyc.site",
+        projectId: "zacharycsite",
+        storageBucket: "zacharycsite.appspot.com",
+        messagingSenderId: "18418783539",
+        appId: "1:18418783539:web:904df4549700d037dc9a46",
+        measurementId: "G-7TQEN9M9FK"
+      };
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const perf = getPerformance(app);
+    </script>
+
+<style>
+  img {
+    padding: 15px;
+  }
+  @media screen and (max-width: 800px) {
+    img{
+      padding-top: 0px;
+      padding-bottom: 15px;
+      padding-left: 0px;
+      padding-right: 0px;
+      width: 45%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    img{
+      width: 100%;
+    }
+  }
+  .new{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 25px;
+    border: 1px solid white;
+  }
+  @media screen and (max-width: 1000px) {
+    .new{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  }
+  .pic{
+    width: 100%;
+    height: 100%;
+  }
+  button{
+    margin-top: 15px;
+  }
+</style>
+  </head>
+  <body>
+    <!-- Menu -->
+    <div class="se-pre-con"></div>
+    <script>
+      $(window).load(function() {
+        $(".se-pre-con").fadeOut("slow");;
+      });
+    </script>
+    <menu class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Photography&#x25BC
+        </button>
+        <div class="dropdown-content">
+          <a href="photography/favorites.html">My Favorites</a>
+          <a href="photography/collections.html">Collections</a>
+        </div>
+      </div>
+      <a href="wallpapers.html" class="active">Wallpapers</a>
+      <a href="shortcuts.html">Apple Shortcuts</a>
+      <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+      <script>function menu() {var x = document.getElementById("myTopnav");if (x.className === "topnav") {x.className += " responsive";} else {x.className = "topnav";}}</script>
+    </menu>
+    <!-- Menu end -->
+      <h1>Wallpapers</h1>
+        <div class="new">
+          <div class="pic">
+          <img src="imgs/dark wisp.png" alt="dark wisp" width="20%">
+          <img src="imgs/light wisp.png" alt="light wisp" width="20%">
+          </div>
+          <div class="text"><h3>Wisps</h3><p>Mobile Wallpapers</p><a href="files/Wisp.zip"><button>Download</button></a></div>
+        </div>
+        <div class="new">
+          <div class="pic">
+            <img src="imgs/waves red.jpg" alt="digital waves red" width="25%">
+            <img src="imgs/waves blue.jpg" alt="digital waves blue" width="25%">
+            <img src="imgs/waves purple.jpg" alt="digital waves purple" width="25%"></div>
+          <div class="text"><h3>Digital Waves</h3><p>Mobile Wallpapers</p><a href="files/Digital Waves.zip"><button>Download</button></a></div>
+        </div>
+        <div class="new">
+          <div class="pic">
+            <img src="imgs/loops black.jpg" alt="endless loops black" width="28%">
+            <img src="imgs/loops blue.jpg" alt="endless loops blue" width="28%">
+            <img src="imgs/loops purple.jpg" alt="endless loops purple" width="28%"></div>
+          <div class="text"><h3>Endless Loops</h3><p>Mobile Wallpapers</p><a href="files/Endless Loops.zip"><button>Download</button></a></div>
+        </div>
+  </body>
+</html>
