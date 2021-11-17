@@ -36,13 +36,12 @@
     </script>
 
     <!-- gallery link -->
-    <link rel="stylesheet" href="../lightbox.css">
-    <script src="../lightbox.min.js"></script>
-    <script src="../lightbox-options.js"></script>
+    <link rel="stylesheet" href="../gallery.css">
+    <script src="../lightbox.min.js" async></script>
     <script>
-      lightbox.option({
-        'albumLabel': "Air Show - %1 of %2"
-      })
+      window.addEventListener('load', function() {
+        baguetteBox.run('.gallery');
+      });
     </script>
   </head>
   <body>
