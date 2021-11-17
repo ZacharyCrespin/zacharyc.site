@@ -62,11 +62,7 @@ img {
       -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
          -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
               box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
-<<<<<<< HEAD
     #baguetteBox-overlay .full-image figcaption {
-=======
-    /* #baguetteBox-overlay .full-image figcaption {
->>>>>>> b698887269ca432ecebf824ea53445ce1a5405b7
       display: block;
       position: absolute;
       bottom: 0;
@@ -77,11 +73,7 @@ img {
       color: #ccc;
       background-color: #000;
       background-color: rgba(0, 0, 0, 0.6);
-<<<<<<< HEAD
       font-family: sans-serif; }
-=======
-      font-family: sans-serif; } */
->>>>>>> b698887269ca432ecebf824ea53445ce1a5405b7
     #baguetteBox-overlay .full-image:before {
       content: "";
       display: inline-block;
