@@ -37,7 +37,7 @@
     var options = {},
         defaults = {
             captions: false,
-            buttons: 'auto',
+            buttons: true,
             fullScreen: false,
             noScrollbars: true,
             bodyClass: 'baguetteBox-open',
