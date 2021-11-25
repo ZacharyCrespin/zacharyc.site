@@ -3,21 +3,24 @@
   <head>
     <!-- meta -->
     <title>My Favorites | Photography | Zachary C</title>
-    <meta property="og:title" content="My Favorites">
-    <meta name="description" content="My favorite photos | Zachary C">
+    <meta property="og:title" content="My Favorites | Photography | Zachary C">
+    <meta name="description" content="My favorite photos">
+    <meta property="og:description" content="My favorite photos">
     <meta property="og:site_name" content="Zachary C">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://zacharyc.site/photography/favorites">
     <link rel="shortcut icon" type="image/jpg" href="../imgs/fav.png">
     <link rel="icon" type="image/jpg" href="../imgs/fav.png">
     <link rel="apple-touch-icon" href="../imgs/icon.png">
     <!-- link -->
     <link rel="stylesheet" href="../main.css">
+    <script src="../main.js"></script>
     <link rel="manifest" href="../manifest.json">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- other -->
     <meta name="theme-color" content="#2e2e2e">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="module">
+    <!-- <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
       import { getPerformance } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-performance.js";
@@ -33,7 +36,7 @@
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
       const perf = getPerformance(app);
-    </script>
+    </script> -->
 
     <!-- gallery link -->
     <link rel="stylesheet" href="gallery.css">
@@ -55,32 +58,36 @@
     <menu class="topnav" id="myTopnav">
       <a href="../index.html">Home</a>
       <div class="dropdown">
-        <button class="dropbtn">Photography&#x25BC
-        </button>
+        <button class="dropbtn">Photography<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7 10l5 5 5-5H7z"/></svg></button>
         <div class="dropdown-content">
           <a href="../photography/favorites.html" class="active">My Favorites</a>
           <a href="../photography/collections.html">Collections</a>
+          <a href="../photography/subscribe.html">Subscribe</a>
         </div>
       </div>
       <a href="../wallpapers.html">Wallpapers</a>
       <a href="../shortcuts.html">Apple Shortcuts</a>
-      <!-- <a href="../search.html">&#x1F50E;&#xFE0E;</a> -->
-      <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
-      <script>function menu() {var x = document.getElementById("myTopnav");if (x.className === "topnav") {x.className += " responsive";} else {x.className = "topnav";}}</script>
+      <!-- <a href="javascript:void(0);" id="SearchIcon" onclick="showsearch()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></a>
+      <a href="javascript:void(0);" id="CloseIcon" onclick="hidesearch()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg></a>
+      <div class="search" id="search">
+        <script async src="https://cse.google.com/cse.js?cx=e0d24c80e46b04dda"></script>
+        <div class="gcse-search"></div>
+      </div> -->
+      <a href="javascript:void(0);" class="icon" onclick="menu()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></a>
     </menu>
     <!-- Menu end -->
     <h1>My Favorites</h1>
         <div class="gallery">
-          <div class="mItem"><a href="https://i.ibb.co/K67MfKw/fav-1.jpg" data-lightbox="fav"><img src="https://i.ibb.co/CBvkYP2/fav-1.jpg" alt="fav-1"></a></div>
-          <div class="mItem"><a href="https://i.ibb.co/VB2wGBR/fav-2.jpg" data-lightbox="fav"><img src="https://i.ibb.co/0JhsLJT/fav-2.jpg" alt="fav-2"></a></div>
-          <div class="mItem"><a href="https://i.ibb.co/8m1WjKP/fav-3.jpg" data-lightbox="fav"><img src="https://i.ibb.co/3TgD0rS/fav-3.jpg" alt="fav-3"></a></div>
-          <div class="mItem"><a href="https://i.ibb.co/VN4bv8Z/fav-4.jpg" data-lightbox="fav"><img src="https://i.ibb.co/4frCjxG/fav-4.jpg" alt="fav-4"></a></div>
-          <div class="mItem"><a href="https://i.ibb.co/yVC8fjR/fav-5.jpg" data-lightbox="fav"><img src="https://i.ibb.co/4JLjmrf/fav-5.jpg" alt="fav-5"></a></div>
-          <div class="mItem"><a href="https://i.ibb.co/TKWvqNj/fav-6.jpg" data-lightbox="fav"><img src="https://i.ibb.co/28ZnYpV/fav-6.jpg" alt="fav-6"></a></div>
-          <div class="mItem"><a href="https://i.ibb.co/JpNwyQW/fav-7.jpg" data-lightbox="fav"><img src="https://i.ibb.co/R61kByG/fav-7.jpg" alt="fav-7"></a></div>
-          <div class="mItem"><a href="https://i.ibb.co/59X7GYj/fav-8.jpg" data-lightbox="fav"><img src="https://i.ibb.co/kyVd53D/fav-8.jpg" alt="fav-8"></a></div>
-          <div class="mItem"><a href="https://i.ibb.co/806rNyy/fav-9.jpg" data-lightbox="fav"><img src="https://i.ibb.co/Czhbmjj/fav-9.jpg" alt="fav-9"></a></div>
-          <div class="mItem"><a href="https://i.ibb.co/YQ18M0s/fav-11.jpg" data-lightbox="fav"><img src="https://i.ibb.co/JtG243J/fav-11.jpg" alt="fav-11"></a></div>
+          <div class="mItem"><a href="https://i.ibb.co/K67MfKw/fav-1.jpg" data-caption="Favorites 1 of 10"><img src="https://i.ibb.co/CBvkYP2/fav-1.jpg" alt="fav-1"></a></div>
+          <div class="mItem"><a href="https://i.ibb.co/VB2wGBR/fav-2.jpg" data-caption="Favorites 2 of 10"><img src="https://i.ibb.co/0JhsLJT/fav-2.jpg" alt="fav-2"></a></div>
+          <div class="mItem"><a href="https://i.ibb.co/8m1WjKP/fav-3.jpg" data-caption="Favorites 3 of 10"><img src="https://i.ibb.co/3TgD0rS/fav-3.jpg" alt="fav-3"></a></div>
+          <div class="mItem"><a href="https://i.ibb.co/VN4bv8Z/fav-4.jpg" data-caption="Favorites 4 of 10"><img src="https://i.ibb.co/4frCjxG/fav-4.jpg" alt="fav-4"></a></div>
+          <div class="mItem"><a href="https://i.ibb.co/yVC8fjR/fav-5.jpg" data-caption="Favorites 5 of 10"><img src="https://i.ibb.co/4JLjmrf/fav-5.jpg" alt="fav-5"></a></div>
+          <div class="mItem"><a href="https://i.ibb.co/TKWvqNj/fav-6.jpg" data-caption="Favorites 6 of 10"><img src="https://i.ibb.co/28ZnYpV/fav-6.jpg" alt="fav-6"></a></div>
+          <div class="mItem"><a href="https://i.ibb.co/JpNwyQW/fav-7.jpg" data-caption="Favorites 7 of 10"><img src="https://i.ibb.co/R61kByG/fav-7.jpg" alt="fav-7"></a></div>
+          <div class="mItem"><a href="https://i.ibb.co/59X7GYj/fav-8.jpg" data-caption="Favorites 8 of 10"><img src="https://i.ibb.co/kyVd53D/fav-8.jpg" alt="fav-8"></a></div>
+          <div class="mItem"><a href="https://i.ibb.co/806rNyy/fav-9.jpg" data-caption="Favorites 9 of 10"><img src="https://i.ibb.co/Czhbmjj/fav-9.jpg" alt="fav-9"></a></div>
+          <div class="mItem"><a href="https://i.ibb.co/YQ18M0s/fav-11.jpg" data-caption="Favorites 10 of 10"><img src="https://i.ibb.co/JtG243J/fav-11.jpg" alt="fav-11"></a></div>
         </div>
   </body>
 </html>

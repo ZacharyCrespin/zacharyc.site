@@ -197,6 +197,21 @@ if it's not present, don't show loader */
     text-align: left;
   }
 }
+/* search */
+.search{
+  display: none;
+  width: 50%;
+  margin-left: 50%;
+}
+@media screen and (max-width: 600px) {
+.search{
+  width: 100%;
+  margin-left: 0%;
+}
+}
+#CloseIcon{
+  display: none;
+}
 
 /* cards */
 .collections{
@@ -232,4 +247,13 @@ p.card-text{
 }
 a button{
   margin-bottom: 2rem;
+}
+footer{
+  background-color: #2e2e2e;
+  margin-top: 4rem;
+  padding: 2rem;
+  bottom: 0px;
+}
+footer p a{
+  padding: 1rem;
 }

@@ -36,7 +36,7 @@
     // Global options and their defaults
     var options = {},
         defaults = {
-            captions: false,
+            captions: true,
             buttons: true,
             fullScreen: false,
             noScrollbars: true,
