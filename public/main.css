@@ -49,7 +49,7 @@ a {
   color: white;
 }
 a:hover{
-  color: #555;
+  color: rgb(138, 138, 138);
 }
 a:active{
   color: #950000;
