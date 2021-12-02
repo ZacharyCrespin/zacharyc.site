@@ -3,5 +3,5 @@
 
 Sitemap: https://zacharyc.site/sitemap.xml
 User-agent: *
-Disallow: /404.html
-Disallow: /offline.html
+Disallow: /404
+Disallow: /photography/subscribe

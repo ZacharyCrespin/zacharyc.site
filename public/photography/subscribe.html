@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="../main.css">
     <script src="../main.js"></script>
     <link rel="manifest" href="../manifest.json">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- other -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#2e2e2e">
@@ -41,12 +40,7 @@
   </head>
   <body>
     <!-- Menu -->
-    <div class="se-pre-con"></div>
-    <script>
-      $(window).load(function() {
-        $(".se-pre-con").fadeOut("slow");;
-      });
-    </script>
+    <div id="loader"></div>
     <menu class="topnav" id="myTopnav">
       <a href="../index.html">Home</a>
       <div class="dropdown">
@@ -89,7 +83,7 @@
           <div class="mc-field-group input-group">
               <label>Receive emails about </label>
               <ul><li><input type="checkbox" value="1" name="group[83265][1]" id="mce-group[83265]-83265-0"><label for="mce-group[83265]-83265-0">New Photos</label></li>
-          <li><input type="checkbox" value="2" name="group[83265][2]" id="mce-group[83265]-83265-1"><label for="mce-group[83265]-83265-1">Website Updates</label></li>
+                  <li><input type="checkbox" value="2" name="group[83265][2]" id="mce-group[83265]-83265-1"><label for="mce-group[83265]-83265-1">Website Updates</label></li>
           </ul>
           </div>
             <div id="mce-responses" class="clear foot">
@@ -100,7 +94,7 @@
                   <div class="optionalParent">
                       <div class="clear foot">
                           <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                          <p class="brandingLogo"><a href="https://eepurl.com/hOg3JP" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+                          <p class="brandingLogo"><a href="https://eepurl.com/hOg3JP" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" alt="Mailchimp - email marketing made easy and fun"></a></p>
                       </div>
                   </div>
               </div>
