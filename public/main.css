@@ -10,12 +10,15 @@
 } 
 
 :root{
-  --darkgrey: #2e2e2e;
+  --white: #FFFFFF;
+  --grey: #4A4A4A;
+  --darkgrey: #2E2E2E;
+  --black: #000000;
   --red: #950000;
 }
 ::selection {
   background: var(--red);
-  color: white;
+  color: var(--white);
 }
 ::-webkit-scrollbar {
   width: .5em;
@@ -27,7 +30,7 @@
   margin-block: 0.2em;
 }
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: var(--white);
   border-radius: 100vw;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -37,32 +40,32 @@
 body {
   font-family: Roboto, sans-serif;
   text-align: center;
-  background-color: black;
+  background-color: var(--black);
 }
 
 h1 {
   font-family: Oswald, sans-serif;
-  color: white;
+  color: var(--white);
   letter-spacing: 1.5px;
   margin: 1rem;
   margin-top: 3rem;
 }
 
 h2, h3, h4, h5, h6 {
-  color: white;
+  color: var(--white);
   font-weight: normal;
 }
 h3{
   font-size: 1.5em;
 }
 p {
-  color: white;
+  color: var(--white);
 }
 a {
-  color: white;
+  color: var(--white);
 }
 a:hover{
-  color: rgb(138, 138, 138);
+  color: var(--grey);
 }
 a:active{
   color: #950000;
@@ -71,8 +74,8 @@ a:active{
 button{
   font-family: Roboto, sans-serif;
   background-color: transparent;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid var(--white);
+  color: var(--white);
   padding-top: .5rem;
   padding-bottom: .5rem;
   padding-left: 1rem;
@@ -80,9 +83,9 @@ button{
 }
 button:hover{
   cursor: pointer;
-  background-color: white;
-  border: 1px solid black;
-  color: black;
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  color: var(--black);
 }
 button:active{
   background-color: transparent;
@@ -112,7 +115,7 @@ button:active{
 .topnav a {
   float: left;
   display: block;
-  color: white;
+  color: var(--white);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -120,8 +123,8 @@ button:active{
 }
 
 .active {
-  background-color: #555;
-  color: white;
+  background-color: var(--grey);
+  color: var(--white);
 }
 
 .topnav .icon {
@@ -137,7 +140,7 @@ button:active{
   font-size: 17px;
   border: none;
   outline: none;
-  color: white;
+  color: var(--white);
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -154,7 +157,7 @@ button:active{
 
 .dropdown-content a {
   float: none;
-  color: white;
+  color: var(--white);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -162,13 +165,13 @@ button:active{
 }
 
 .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
+  background-color: var(--grey);
+  color: var(--white);
 }
 
 .dropdown-content a:hover {
-  background-color: #555;
-  color: white;
+  background-color: var(--grey);
+  color: var(--white);
 }
 
 .dropdown:hover .dropdown-content {
@@ -203,6 +206,24 @@ button:active{
     display: block;
     width: 100%;
     text-align: left;
+  }
+}
+
+/* search */
+.searchBox{
+  display: none;
+  position: absolute;
+  z-index: 2;
+  padding-top: 40vh;
+  padding-bottom: 40vh;
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: rgba(0, 0, 0, .85);
+}
+@media screen and (max-width: 800px) {
+  .searchBox{
+    padding-left: 0%;
+    padding-right: 0%;
   }
 }
 
