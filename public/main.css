@@ -186,9 +186,6 @@ button:active{
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
@@ -218,10 +215,12 @@ button:active{
   padding-bottom: 40vh;
   padding-left: 20%;
   padding-right: 20%;
+  height: 100%;
   background-color: rgba(0, 0, 0, .85);
 }
 @media screen and (max-width: 800px) {
   .searchBox{
+    padding-top: 30vh;
     padding-left: 0%;
     padding-right: 0%;
   }
