@@ -2,13 +2,13 @@
 <html lang="en-US">
   <head>
     <!-- meta -->
-    <title>Home | Zachary C</title>
-    <meta property="og:title" content="Home | Zachary C">
-    <meta name="description" content="Photography and more | Zachary C">
-    <meta property="og:description" content="Photography and more">
+    <title>Code Projects | Zachary C</title>
+    <meta property="og:title" content="Code Projects | Zachary C">
+    <meta name="description" content="Code Projects | Zachary C">
+    <meta property="og:description" content="Code Projects">
     <meta property="og:site_name" content="Zachary C">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://zacharyc.site">
+    <meta property="og:url" content="https://zacharyc.site/code">
     <!-- link -->
     <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
@@ -38,12 +38,34 @@
       const perf = getPerformance(app);
     </script>
     <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/70d3ac2e9e896b78f766b6778/caf471e7bf54cc055168bea92.js");</script>
+    <style>
+      .new{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 25px;
+        border: 1px solid white;
+      }
+      .text{
+        padding-top: 2rem;
+      }
+      img {
+        padding: 2rem;
+        width: 70%;
+      }
+      button{
+        margin-top: 15px;
+      }
+      </style>
   </head>
   <body>
     <!-- Menu -->
     <div id="loader"></div>
     <menu class="menu" id="menu">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <div class="dropdown">
         <button class="dropbtn">Photography<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 6L15 14L23 6" stroke="white" stroke-width="2"/></svg></button>
         <div class="dropdown-content">
@@ -57,30 +79,34 @@
       <a href="javascript:void(0);" class="icon" onclick="menu()"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 14H21V12H3V14ZM3 9H21V7H3V9ZM3 2V4H21V2H3Z" fill="white"/></svg></a>
     </menu>
     <!-- Menu end -->
-    <h1>Latest Collections</h1>
-    <div class="collections">
-      <div class="card">
-        <!-- <img class="card-image" src="imgs/collection.png" alt="collection image placeholder"> -->
-        <h2 class="card-text">Air Show</h2>
-        <p class="card-text">12 Photos</p>
-        <a href="photography/collections/air-show.html"><button>View Collection</button></a>
+    <h1>Code Projects</h1>
+    <div class="new">
+      <div>
+        <img src="imgs/code/Frame 1.jpg" alt="The Maze">
       </div>
-      <div class="card">
-        <!-- <img class="card-image" src="imgs/collection.png" alt="collection image placeholder"> -->
-        <h2 class="card-text">Lake Tahoe</h2>
-        <p class="card-text">7 Photos</p>
-        <a href="photography/collections/lake-tahoe.html"><button>View Collection</button></a>
-      </div>
-      <div class="card">
-        <!-- <img class="card-image" src="imgs/collection.png" alt="collection image placeholder"> -->
-        <h2 class="card-text">Irvine Park</h2>
-        <p class="card-text">6 Photos</p>
-        <a href="photography/collections/irvine-park.html"><button>View Collection</button></a>
+      <div class="text">
+        <h2>The Maze</h2>
+        <p>Roblox Game</p>
+        <a href="https://www.roblox.com/games/7253626757/The-Maze" target="_blank"><button>Play on Roblox</button></a>
       </div>
     </div>
-    <a href="photography/collections.html"><button>View More Collections</button></a>
-    
-    <h1>Featured Creations</h1>
-    <p>More creations coming soon</p>
+    <div class="new">
+      <div>
+        <img src="imgs/code/guess-the-number.png" alt="Guess The Number">
+      </div>
+      <div class="text">
+        <h2>Guess The Number</h2>
+        <a href="code/guess-the-number" target="blank"><button>Play</button></a>
+      </div>
+    </div>
+    <div class="new">
+      <div>
+        <img src="imgs/code/see-your-mouse.png" alt="See Your Mouse">
+      </div>
+      <div class="text"> 
+        <h2>See Your Mouse</h2>
+        <a href="code/see-your-mouse" target="blank"><button>See</button></a>
+      </div>
+    </div>
   </body>
 </html>

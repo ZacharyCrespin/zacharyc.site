@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+body {
+  background: linear-gradient(-90deg, white, black);
+}
+.cursor__collection {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border-radius: 20px;
+}
+
+span.cursor-type {
+  font-family: 'Fredericka the Great', sans-serif;
+  margin: 10px;
+  padding-top: 25px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, white, black);
+  text-align: center;
+  font-size: 30px;
+}
+
+.cursor-type:nth-of-type(1) {
+  cursor: default;
+}
+.cursor-type:nth-of-type(2) {
+  cursor: crosshair;
+}
+.cursor-type:nth-of-type(3) {
+  cursor: help;
+}
+.cursor-type:nth-of-type(4) {
+  cursor: move;
+}
+.cursor-type:nth-of-type(5) {
+  cursor: pointer;
+}
+.cursor-type:nth-of-type(6) {
+  cursor: progress;
+}
+.cursor-type:nth-of-type(7) {
+  cursor: text;
+}
+.cursor-type:nth-of-type(8) {
+  cursor: wait;
+}     
+.cursor-type:nth-of-type(9) {
+  cursor: none;
+}
+.cursor-type:nth-of-type(10) {
+  cursor: not-allowed;
+}
+.cursor-type:nth-of-type(11) {
+  cursor: grab;
+}
+.cursor-type:nth-of-type(12) {
+  cursor: grabbing;
+}
