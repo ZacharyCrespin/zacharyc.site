@@ -1,4 +1,7 @@
-function menu() {var x = document.getElementById("myTopnav");if (x.className === "topnav") {x.className += " responsive";} else {x.className = "topnav";}}
+function menu() {
+    var x = document.getElementById("menu");
+    if (x.className === "menu") {x.className += " open";} else {x.className = "menu";}
+}
 window.onload = function() {
     document.getElementById("loader").style.display = "none";
 };

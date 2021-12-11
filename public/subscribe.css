@@ -4,20 +4,10 @@
      text-align:left;
      padding:10px 0 10px 3%
 }
- #mc_embed_signup input {
-    border: 1px solid white;
-    background-color: #2e2e2e;
-    border-radius: 0px;
-}
- #mc_embed_signup input[type=checkbox]{
-    -webkit-appearance:checkbox;
-}
- #mc_embed_signup input[type=radio]{
-    -webkit-appearance:radio;
-}
- #mc_embed_signup input:focus {
-    border-color:#2e2e2e;
-}
+#mc_embed_signup input {border: 1px solid white; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+#mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}
+#mc_embed_signup input[type=radio]{-webkit-appearance:radio;}
+#mc_embed_signup input:focus {border-color:#2e2e2e;}
  #mc_embed_signup .button {
     clear:both;
      display: inline-block;
