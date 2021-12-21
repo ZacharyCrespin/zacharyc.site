@@ -9,7 +9,7 @@
 }
 
 .gallery .mItem {
-  display: inline-block;
+  display: flex;
   margin-bottom: 16px;
   width: 100%;
 }
