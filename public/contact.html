@@ -2,24 +2,24 @@
 <html lang="en-US">
   <head>
     <!-- meta -->
-    <title>Tech | Zachary C</title>
-    <meta property="og:title" content="Tech | Zachary C">
-    <meta name="description" content="Tech | Zachary C">
-    <meta property="og:description" content="Tech">
+    <title>Contact | Zachary C</title>
+    <meta property="og:title" content="Contact | Zachary C">
+    <meta name="description" content="Contact Me | Zachary C">
+    <meta property="og:description" content="Contact Me">
     <meta property="og:site_name" content="Zachary C">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://zacharyc.site/code">
+    <meta property="og:url" content="https://zacharyc.site/contact">
     <!-- link -->
     <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
     <link rel="manifest" href="manifest.json">
     <!-- other -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" contewidth=devwidth, initial-scale=1">
+    <meta name="theme-color" content="#2e2e2e">
     <link rel="shortcut icon" type="image/jpg" href="imgs/fav.png">
     <link rel="icon" type="image/jpg" href="imgs/fav.png">
     <link rel="apple-touch-icon" href="imgs/icon.png">
-    <meta name="theme-color" content="#2e2e2e">
-    
+
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
@@ -41,6 +41,31 @@
     <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/70d3ac2e9e896b78f766b6778/caf471e7bf54cc055168bea92.js");</script>
     <!-- End Mailchimp -->
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e7cc4275-d759-41fb-9055-6a80ed9a13c7" data-blockingmode="auto" type="text/javascript"></script>
+
+    <style>
+      label{
+        color: white;
+      }
+      input {
+        border: 1px solid white;
+        background-color: black;
+        color: white;
+        padding: 5px 10px 5px 10px;
+        margin: 5px;
+        width: 400px;
+        font-family: inherit;
+      }
+      textarea{
+        border: 1px solid white;
+        background-color: black;
+        color: white;
+        padding: 5px 10px 5px 10px;
+        margin: 5px;
+        width: 400px;
+        resize: vertical;
+        font-family: inherit;
+      }
+    </style>
   </head>
   <body>
     <!-- Menu -->
@@ -49,7 +74,7 @@
     <nav class="menu" id="menu">
       <a href="index.html">Home</a>
       <div class="dropdown">
-        <button class="dropbtn">Photography<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 6L15 14L23 6" stroke="white" stroke-width="2"/></svg></button>
+        <button class="dropbtn">Photography<width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 6L15 14L23 6" stroke="white" strwidth="2"/></svg></button>
         <div class="dropdown-content">
           <a href="photography/favorites.html">My Favorites</a>
           <a href="photography/collections.html">Collections</a>
@@ -58,33 +83,21 @@
       <a href="wallpapers.html">Wallpapers</a>
       <a href="shortcuts.html">Apple Shortcuts</a>
       <a href="code.html">Code</a>
-      <a href="javascript:void(0);" class="icon" onclick="menu()"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 14H21V12H3V14ZM3 9H21V7H3V9ZM3 2V4H21V2H3Z" fill="white"/></svg></a>
+      <a href="subscribe.html">Subscribe</a>
+      <a href="javascript:void(0);" class="icon" onclick="menu()"><width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 14H21V12H3V14ZM3 9H21V7H3V9ZM3 2V4H21V2H3Z" fill="white"/></svg></a>
     </nav>
     <!-- Menu end -->
-    <style>
-      ul{
-        color: white;
-        list-style-type: none;
-      }
-    </style>
-    <h1>Tech</h1>
-    <p>Technology used in this site</p>
-    <ul>
-      <li>Html</li>
-      <li>Css</li>
-      <li>javascript</li>
-      <li><a href="https://firebase.google.com/">Firebase</a></li>
-      <li><a href="https://analytics.google.com/">Google Analytics</a></li>
-      <li><a href="https://github.com/feimosi/baguetteBox.js">baguetteBox.js</a></li>
-      <li><a href="https://fonts.google.com/">Google Fonts</a></li>
-      <li><a href="https://fonts.google.com/icons">Google Fonts - Icons</a></li>
-    </ul>
-    <p>Other programs / services</p>
-    <ul>
-      <li><a href="https://code.visualstudio.com/">VS Code</a></li>
-      <li><a href="https://eepurl.com/hOg3JP">Mailchimp</a></li>
-      <li><a href="https://github.com/">Github</a></li>
-      <li><a href="https://imgbb.com/">imgBB</a></li>
-    </ul>
+        <h1>Contact Me</h1>
+        <p>Fill out the form or send an email to <a href="mailto:contact@zacharyc.site">contact@zacharyc.site</a></p>
+        <form target="_blank" action="https://formsubmit.co/e4fa38fa95003fc4550c688cde3ae85f" method="POST">
+            <input type="hidden" name="_next" value="https://zacharyc.site/contact/thanks">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+
+            <input type="text" name="name" placeholder="Full Name" required><br>
+            <input type="email" name="email" placeholder="Email Address" required><br>
+            <textarea placeholder="Your Message" name="message" rows="10" required></textarea><br>
+            <button type="submit">Send</button>
+        </form>
   </body>
 </html>

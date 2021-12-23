@@ -46,7 +46,7 @@
   #baguetteBox-overlay .full-image {
     display: inline-block;
     position: relative;
-    width: 99%;
+    width: 100%;
     height: 99%;
     text-align: center; }
     #baguetteBox-overlay .full-image figure {
@@ -73,13 +73,6 @@
       white-space: normal;
       color: white;
       text-shadow: 0 0 3px black, 0 0 3px black;}
-
-    #baguetteBox-overlay .full-image:before {
-      content: "";
-      display: inline-block;
-      height: 50%;
-      width: 1px;
-      margin-right: -1px; }
 
 #baguetteBox-slider {
   position: absolute;
