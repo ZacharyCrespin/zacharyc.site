@@ -210,6 +210,28 @@ button:active{
     text-align: left;
   }
 }
+/* search */
+.search{
+  display: none;
+  width: max-content;
+  float: right;
+  padding: 5px;
+}
+.searchBox{
+  border: 1px solid white;
+  background-color: var(--darkgrey);
+  color: white;
+  padding: 5px 0px 5px 10px;
+  margin: 5px;
+  margin-right: 0px;
+  width: 400px;
+  font-family: inherit;
+}
+.searchIcon{
+  padding: 5px 10px 5px 10px;
+  margin: 5px;
+  margin-left: 0px;
+}
 
 /* cards */
 .collections{

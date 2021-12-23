@@ -4,3 +4,4 @@ User-agent: *
 Disallow: /404
 Disallow: /code/*
 Disallow: /tech
+Disallow: /search
