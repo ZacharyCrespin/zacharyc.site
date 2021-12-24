@@ -50,13 +50,14 @@
   <body>
     <!-- Menu -->
     <div id="loader"></div>
+    <a href="#main-content" class="skip-nav">Skip Nav</a>
     <nav class="menu" id="menu">
       <a href="../index.html">Home</a>
-      <div class="dropdown">
-        <button class="dropbtn">Photography<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 6L15 14L23 6" stroke="white" stroke-width="2"/></svg></button>
-        <div class="dropdown-content">
+      <div class="drop-div">
+        <a href="javascript:void(0);" onclick="drop()">Photography<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 6L15 14L23 6" stroke="white" stroke-width="2"/></svg></a>
+        <div id="drop" class="dropdown">
           <a href="../photography/favorites.html">My Favorites</a>
-          <a href="../photography/collections.html" class="active">Collections</a>
+          <a href="../photography/collections.html">Collections</a>
         </div>
       </div>
       <a href="../wallpapers.html">Wallpapers</a>
@@ -72,6 +73,7 @@
       </div>
       <a href="javascript:void(0);" class="icon" onclick="menu()"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 14H21V12H3V14ZM3 9H21V7H3V9ZM3 2V4H21V2H3Z" fill="white"/></svg></a>
     </nav>
+    <div id="main-content"></div>
     <!-- Menu end -->
         <h1>Photo Collections</h1>
         <div class="collections">
