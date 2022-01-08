@@ -253,6 +253,7 @@ a button{
 
 /* footer */
 footer{
+  margin-top: 3rem;
   background-color: var(--darkgrey);
   padding: .5rem;
 }
