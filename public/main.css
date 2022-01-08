@@ -250,3 +250,9 @@ p.card-text{
 a button{
   margin-bottom: 2rem;
 }
+
+/* footer */
+footer{
+  background-color: var(--darkgrey);
+  padding: .5rem;
+}
