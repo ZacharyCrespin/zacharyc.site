@@ -14,10 +14,9 @@
   --grey: #4A4A4A;
   --darkgrey: #2E2E2E;
   --black: #000000;
-  --red: #950000;
 }
 ::selection {
-  background: var(--red);
+  background: var(--grey);
   color: var(--white);
 }
 ::-webkit-scrollbar {
@@ -25,16 +24,14 @@
   height: 1em;
 }
 ::-webkit-scrollbar-track {
-  background: var(--darkgrey);
-  border-radius: 100vw;
-  margin-block: 0.2em;
+  background: var(--black);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--white);
+  background: var(--grey);
   border-radius: 100vw;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #950000;
+  background: var(--white);
 }
 html{
   scroll-behavior: smooth;
@@ -84,63 +81,58 @@ a {
   color: var(--white);
 }
 a:hover{
-  color: gray;
-}
-a:active{
-  color: #950000;
+  color: var(--grey);
 }
 button{
   font-family: Roboto, sans-serif;
   background-color: transparent;
-  border: 1px solid var(--white);
+  border: thin solid var(--white);
   color: var(--white);
   padding: .5rem 1rem;
 }
 button:hover{
   cursor: pointer;
   background-color: var(--white);
-  border: 1px solid var(--black);
+  border: thin solid var(--black);
   color: var(--black);
-}
-button:active{
-  background-color: transparent;
-  border: 1px solid #950000;
-  color: #950000;
 }
 
 /* Menu */
 .menu {
-  background-color: var(--darkgrey);
   overflow: hidden;
+  margin: 0px 1rem 0px 1rem;
 }
 .menu a {
   float: left;
   display: block;
-  padding: 14px 16px;
+  padding: 1ch;
+  margin: 1rem 1ch;
   text-decoration: none;
-  font-size: 17px;
 }
 .menu a:hover {
   color: var(--white);
-  background-color: var(--grey);
-}
-.menu a:active {
-  color: var(--white);
+  border-bottom: thin solid var(--white);
 }
 .active {
-  background-color: var(--grey);
+  border-bottom: thin solid var(--white);
 }
 .menu .icon {
   display: none;
 }
-.dropdown {
+.menu .icon:hover {
+  border: none;
+}
+.dropdown{
   display: none;
-  position: absolute;
-  min-width: 160px;
-  z-index: 1;
+}
+.dropdown-open{
+  display: block;
 }
 
 @media screen and (max-width: 600px) {
+  .menu {
+    border-bottom: none;
+  }
   .menu a:not(:first-child) {
     display: none;
   }
@@ -148,7 +140,10 @@ button:active{
     float: right;
     display: block;
   }
-  .menu.open {position: relative;}
+  .menu.open {
+    position: relative;
+    border-bottom: thin solid var(--white);
+  }
   .menu.open a.icon {
     position: absolute;
     right: 0;
@@ -159,46 +154,29 @@ button:active{
     display: block;
     text-align: left;
   }
-  .menu .drop-div {
-    display: none;
-    float: none;
+  .menu a:hover {
+    color: var(--white);
+    border: thin solid var(--white);
   }
-  .menu.open .drop-div {
-    display: block;
-    float: none;
-  }
-  .menu.open .dropdown {
-    position: relative;
+  .active {
+    border: thin solid var(--white);
   }
 }
 /* search */
 .search{
   display: none;
+}
+.search-open{
+  display: block;
   width: max-content;
   float: right;
-  padding: 5px;
+  padding: 7px;
 }
 .searchBox{
   border: 1px solid white;
   background-color: transparent;
   color: white;
-  padding: 5px 0px 5px 10px;
-  margin: 5px;
-  margin-right: 0px;
-  max-width: 400px;
-}
-.searchIcon{
-  padding: 5px 10px 5px 10px;
-  margin: 5px;
-  margin-left: 0px;
-}
-@media screen and (max-width: 600px) {
-.search{
-  width: 100vw;
-}
-.searchBox{
-  width: 70vw;
-}
+  padding: .53rem;
 }
 .skip-nav{
   background: white;
@@ -208,7 +186,7 @@ button:active{
   float: left;
   left: 0px;
   margin: .5rem;
-  transform: translateY(-130%);
+  transform: translateY(-150%);
   transition: transform 200ms ease-in;
 }
 .skip-nav:focus{
@@ -218,21 +196,26 @@ button:active{
 /* cards */
 .collections{
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 @media screen and (max-width: 1200px) {
   .collections{
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
+  .collections{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
   .collections{
     grid-template-columns: 100%;
   }
 }
 .card{
   margin: 1rem;
-  background-color: var(--darkgrey);
+  border: thin solid var(--white);
 }
 .card-image{
   width: 100%;
@@ -253,7 +236,7 @@ a button{
 
 /* footer */
 footer{
-  margin-top: 3rem;
-  background-color: var(--darkgrey);
+  margin: 3rem 1rem 0px 1rem;
   padding: .5rem;
+  border-top: thin solid var(--white);
 }
