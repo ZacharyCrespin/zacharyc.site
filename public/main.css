@@ -20,18 +20,13 @@
   color: var(--white);
 }
 ::-webkit-scrollbar {
-  width: .5em;
-  height: 1em;
+  width: 2px
 }
 ::-webkit-scrollbar-track {
   background: var(--black);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--grey);
-  border-radius: 100vw;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--white);
+  background-color: var(--white);
 }
 html{
   scroll-behavior: smooth;
