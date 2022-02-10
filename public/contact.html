@@ -8,16 +8,13 @@
     <meta property="og:description" content="Contact Me">
     <meta property="og:site_name" content="Zachary C">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://zacharyc.site/contact">
-    <!-- link -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
     <link rel="manifest" href="manifest.json">
-    <!-- other -->
-    <meta name="viewport" contewidth=devwidth, initial-scale=1">
     <meta name="theme-color" content="#2e2e2e">
-    <link rel="shortcut icon" type="image/png" href="imgs/favicon.png">
-    <link rel="icon" type="image/png" href="imgs/favicon.png">
+    <link rel="icon" href="imgs/favicon-black.png" id="light-icon">
+    <link rel="icon" href="imgs/favicon-white.png" id="dark-icon">
     <link rel="apple-touch-icon" href="imgs/apple-touch-icon.png">
 
     <script type="module">
@@ -71,19 +68,20 @@
     <div id="loader"></div>
     <a href="#main-content" class="skip-nav">Skip Nav</a>
     <nav class="menu" id="menu">
-      <a href="index.html">Home</a>
-        <a href="javascript:void(0);" onclick="drop()">Photography<svg id="drop-icon" width="24" height="15" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 6L15 14L23 6" stroke="white" stroke-width="2"/></svg></a>
-        <div id="dropdown" class="dropdown">
+      <a href="index.html" class="active">Home</a>
+        <button onclick="drop1()">Photography<svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 7L15.5 14L23 7" stroke="var(--white)"/></svg></button>
+        <div id="dropdown1" class="dropdown">
           <a href="photography/favorites.html">My Favorites</a>
           <a href="photography/collections.html">Collections</a>
         </div>
       <a href="wallpapers.html">Wallpapers</a>
       <a href="shortcuts.html">Apple Shortcuts</a>
       <a href="code.html">Code</a>
-      <a href="javascript:void(0);" class="icon" onclick="menu()"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 14H21V12H3V14ZM3 9H21V7H3V9ZM3 2V4H21V2H3Z" fill="white"/></svg></a>
+      <a href="subscribe.html">Subscribe</a>
+      <button class="icon" onclick="menu()"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 14H21V12H3V14ZM3 9H21V7H3V9ZM3 2V4H21V2H3Z" fill="var(--white)"/></svg></button>
     </nav>
     <div id="main-content"></div>
-    <!-- Menu end -->
+    <!-- Menu End -->
         <h1>Contact Me</h1>
         <p>Fill out the form or send an email to <a href="mailto:contact@zacharyc.site">contact@zacharyc.site</a></p>
         <form target="_blank" action="https://formsubmit.co/e4fa38fa95003fc4550c688cde3ae85f" method="POST">
@@ -97,7 +95,7 @@
             <button type="submit">Send</button>
         </form>
     <!-- <footer>
-      <p>Version 3.2.2 | <a href="https://zacharyc.site/tech">Learn about the technology used</a></p>
+      <p>Version 3.3 | <a href="https://zacharyc.site/tech">Learn about the technology used</a></p>
     </footer> -->
   </body>
 </html>

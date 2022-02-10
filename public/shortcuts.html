@@ -8,24 +8,14 @@
     <meta property="og:description" content="Apple Shortcuts">
     <meta property="og:site_name" content="Zachary C">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://zacharyc.site/shortcuts">
-    <!-- link -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
     <link rel="manifest" href="manifest.json">
-    <script>
-      window.addEventListener("load", () => {
-        if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.register("service-worker.js");
-        }
-      });
-    </script>
-    <!-- other -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="imgs/favicon.png">
-    <link rel="icon" type="image/png" href="imgs/favicon.png">
-    <link rel="apple-touch-icon" href="imgs/apple-touch-icon.png">
     <meta name="theme-color" content="#2e2e2e">
+    <link rel="icon" href="imgs/favicon-black.png" id="light-icon">
+    <link rel="icon" href="imgs/favicon-white.png" id="dark-icon">
+    <link rel="apple-touch-icon" href="imgs/apple-touch-icon.png">
     
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
@@ -53,19 +43,20 @@
     <div id="loader"></div>
     <a href="#main-content" class="skip-nav">Skip Nav</a>
     <nav class="menu" id="menu">
-      <a href="index.html">Home</a>
-        <a href="javascript:void(0);" onclick="drop()">Photography<svg id="drop-icon" width="24" height="15" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 6L15 14L23 6" stroke="white" stroke-width="2"/></svg></a>
-        <div id="dropdown" class="dropdown">
+      <a href="index.html" class="active">Home</a>
+        <button onclick="drop1()">Photography<svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 7L15.5 14L23 7" stroke="var(--white)"/></svg></button>
+        <div id="dropdown1" class="dropdown">
           <a href="photography/favorites.html">My Favorites</a>
           <a href="photography/collections.html">Collections</a>
         </div>
       <a href="wallpapers.html">Wallpapers</a>
-      <a href="shortcuts.html" class="active">Apple Shortcuts</a>
+      <a href="shortcuts.html">Apple Shortcuts</a>
       <a href="code.html">Code</a>
-      <a href="javascript:void(0);" class="icon" onclick="menu()"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 14H21V12H3V14ZM3 9H21V7H3V9ZM3 2V4H21V2H3Z" fill="white"/></svg></a>
+      <a href="subscribe.html">Subscribe</a>
+      <button class="icon" onclick="menu()"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 14H21V12H3V14ZM3 9H21V7H3V9ZM3 2V4H21V2H3Z" fill="var(--white)"/></svg></button>
     </nav>
     <div id="main-content"></div>
-    <!-- Menu end -->
+    <!-- Menu End -->
     <h1>Apple Shortcuts</h1>
     <div class="collections">
       <div class="card">
@@ -77,11 +68,6 @@
         <h2>Clipboard Pro</h2>
         <img src="imgs/SCicons/clipboard-pro.png" alt="Clipboard Pro Shortcut Icon" width="40px" height="40px"><br><br>
         <a class="button" href="https://www.icloud.com/shortcuts/6db62a0f11d34ef6a9a733a2e5c207c3">Add Shortcut</a>
-      </div>
-      <div class="card">
-        <h2>Christmas Countdown</h2>
-        <img src="imgs/SCicons/christmas-countdown.png" alt="Christmas Countdown Shortcut Icon" width="40px" height="40px"><br><br>
-        <a class="button" href="https://www.icloud.com/shortcuts/4f976a66113c49928d0b679b1b3031ae">Add Shortcut</a>
       </div>
       <div class="card">
         <h2>Random From List</h2>
@@ -99,18 +85,13 @@
         <a class="button" href="https://www.icloud.com/shortcuts/9a68e6dd014c421cb280168d222c0d9d">Add Shortcut</a>
       </div>
       <div class="card">
-        <h2>Generate Hash</h2>
-        <img src="imgs/SCicons/generate-hash.png" alt="Generate Hash Shortcut Icon" width="40px" height="40px"><br><br>
-        <a class="button" href="https://www.icloud.com/shortcuts/5f4a43c3b05b49d0b3a0288a80fec860">Add Shortcut</a>
-      </div>
-      <div class="card">
         <h2>Video Frames</h2>
         <img src="imgs/SCicons/video-frames.png" alt="Video Frames Shortcut Icon" width="40px" height="40px"><br><br>
         <a class="button" href="https://www.icloud.com/shortcuts/42f7fea6d2c840a9b38308e1da7ded69">Add Shortcut</a>
       </div>
     </div>
     <!-- <footer>
-      <p>Version 3.2.2 | <a href="https://zacharyc.site/tech">Learn about the technology used</a></p>
+      <p>Version 3.3 | <a href="https://zacharyc.site/tech">Learn about the technology used</a></p>
     </footer> -->
   </body>
 </html>
