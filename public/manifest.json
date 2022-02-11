@@ -17,7 +17,7 @@
       }
     ],
     "lang": "en-US",
-    "start_url": "./?utm_source=web_app&utm_medium=web_app",
+    "start_url": "./?utm_source=PWA&utm_medium=PWA",
     "background_color": "#000000",
     "theme_color": "#4A4A4A",
     "display": "minimal-ui",

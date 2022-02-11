@@ -1,0 +1,20 @@
+{
+  "name": "zacharyc.site",
+  "version": "3.3.1",
+  "description": "My Personal Website",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Z-C-Code/zacharyc.site"
+  },
+  "keywords": [
+    "website",
+    "photography"
+  ],
+  "author": "Zachary C",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Z-C-Code/zacharyc.site/issues"
+  },
+  "homepage": "https://zacharyc.site"
+}
