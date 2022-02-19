@@ -4,7 +4,7 @@
     "description": "Zachary C | Photography and more",
     "icons": [
       {
-        "src": "imgs/Icons/manifest-icon-192.maskable.png",
+        "src": "imgs/Icons/manifest-icon-192.png",
         "sizes": "192x192",
         "type": "image/png",
         "purpose": "any"
@@ -16,7 +16,7 @@
         "purpose": "maskable"
       },
       {
-        "src": "imgs/Icons/manifest-icon-512.maskable.png",
+        "src": "imgs/Icons/manifest-icon-512.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "any"
@@ -32,6 +32,6 @@
     "start_url": "./?utm_source=PWA&utm_medium=PWA",
     "background_color": "#000000",
     "theme_color": "#4A4A4A",
-    "display": "minimal-ui",
+    "display": "standalone",
     "scope": "/"
   }
