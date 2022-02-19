@@ -1,0 +1,5 @@
+pwa-asset-generator public/imgs/logo-white.png public/imgs/Icons -b "linear-gradient(180deg, #4A4A4A 0%, #000000 100%)"
+
+
+pwa-asset-generator public/imgs/logo-white.png public/imgs/Icons --dark-mode --background "linear-gradient(180deg, #4A4A4A 0%, #000000 100%)" --splash-only --type jpeg --quality 80 --index ./public/index.html
+pwa-asset-generator public/imgs/logo-grey.png public/imgs/Icons --background "linear-gradient(180deg, #4A4A4A 0%, #FFFFFF 100%)" --splash-only --type jpeg --quality 80 --index ./public/index.html
