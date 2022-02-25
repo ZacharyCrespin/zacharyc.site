@@ -2,6 +2,4 @@ Sitemap: https://zacharyc.site/sitemap.xml
 
 User-agent: *
 Disallow: /404
-Disallow: /code/*
-Disallow: /search
 Disallow: /offline

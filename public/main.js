@@ -15,10 +15,25 @@ window.onload = function() {
     } else {
         document.getElementById('favicon').setAttribute("href","https://zacharyc.site/imgs/favicon-black.png");
     }
-
+    // if (localStorage.getItem('Theme') == 'Dark') {
+    //     dark()
+    // }
+    // if (localStorage.getItem('Theme') == 'Light') {
+    //     light()
+    // }
     if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("service-worker.js");
     }
+}
+function light() {
+    localStorage.setItem('Theme',  'Light');
+    document.documentElement.style.setProperty('--white', '#000000');
+    document.documentElement.style.setProperty('--black', '#FFFFFF');
+}
+function dark() {
+    localStorage.setItem('Theme',  'Dark');
+    document.documentElement.style.setProperty('--white', '#FFFFFF');
+    document.documentElement.style.setProperty('--black', '#000000');
 }
 function menu() {
     var x = document.getElementById("menu");

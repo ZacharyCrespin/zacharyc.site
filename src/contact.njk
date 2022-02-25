@@ -1,0 +1,42 @@
+---
+title: Contact
+description: Contact Me
+layout: 'basic.njk'
+permalink: contact.html
+---
+    <style>
+      label{
+        color: white;
+      }
+      input {
+        border: 1px solid white;
+        background-color: black;
+        color: white;
+        padding: 5px 10px 5px 10px;
+        margin: 5px;
+        width: 400px;
+        font-family: inherit;
+      }
+      textarea{
+        border: 1px solid white;
+        background-color: black;
+        color: white;
+        padding: 5px 10px 5px 10px;
+        margin: 5px;
+        width: 400px;
+        resize: vertical;
+        font-family: inherit;
+      }
+    </style>
+    <h1>Contact Me</h1>
+    <p>Fill out the form or send an email to <a href="mailto:contact@zacharyc.site">contact@zacharyc.site</a></p>
+    <form target="_blank" action="https://formsubmit.co/e4fa38fa95003fc4550c688cde3ae85f" method="POST">
+        <input type="hidden" name="_next" value="https://zacharyc.site/contact/thanks">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
+
+        <input type="text" name="name" placeholder="Name" required><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <textarea placeholder="Message" name="message" rows="10" required></textarea><br>
+        <button type="submit">Send</button>
+    </form>
