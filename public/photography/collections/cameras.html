@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html dir="ltr" lang="en-US">
   <head>
     <title>Cameras | Collections | Zachary C</title>
     <meta property="og:title" content="Cameras | Collections | Zachary C">
@@ -13,14 +13,16 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4A4A4A">
     <link rel="icon" href="/imgs/favicon-white.png" id="favicon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js";
       import { getPerformance } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-performance.js";
       const firebaseConfig = {
         apiKey: "AIzaSyAusVefSFH7pEqWLclTEDyEYFSlpMrzubk",
         authDomain: "zacharyc.site",
+        databaseURL: "https://zacharycsite-default-rtdb.firebaseio.com",
         projectId: "zacharycsite",
         storageBucket: "zacharycsite.appspot.com",
         messagingSenderId: "18418783539",
@@ -35,7 +37,7 @@
     <!-- Pinterest -->
     <script type="text/javascript">(function (d) {  var f = d.getElementsByTagName('SCRIPT')[0],    p = d.createElement('SCRIPT');  p.type = 'text/javascript';  p.async = true;  p.src = '//assets.pinterest.com/js/pinit.js';  f.parentNode.insertBefore(p, f);})(document);</script>
     <!-- End Pinterest -->
-
+    
     <!-- gallery link -->
     <link rel="stylesheet" href="/photography/gallery.css">
     <script src="/photography/lightbox.min.js" async></script>
@@ -90,19 +92,20 @@
       <a href="/wallpapers.html">Wallpapers</a>
       <a href="/shortcuts.html">Apple Shortcuts</a>
       <a href="/subscribe.html">Subscribe</a>
-      <button class="icon" onclick="menu()" aria-label="Menu Icon"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 14H21V12H3V14ZM3 9H21V7H3V9ZM3 2V4H21V2H3Z" fill="var(--white)"/></svg></button>
+      <button onclick="theam()" class="theam-toggle"><span id="theam-icon" class="material-icons">light_mode</span></button>
+      <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>
     </nav>
     <div id="main-content"></div>
     <!-- Menu End -->
     <h1>Cameras</h1>
     <div class="gallery">
-      <div class="mItem"><a href="https://i.ibb.co/m8Z81HS/Camera-1.jpg" data-caption="Cameras 1 of 4"><img src="https://i.ibb.co/74M48Gb/Camera-1.jpg" data-pin-description="Cameras 1 | Zachary C" alt="Cameras 1"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/WcY0d3K/Camera-2.jpg" data-caption="Cameras 2 of 4"><img src="https://i.ibb.co/nD5BV0k/Camera-2.jpg" data-pin-description="Cameras 2 | Zachary C" alt="Cameras 2"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/r2dt0YB/Camera-3.jpg" data-caption="Cameras 3 of 4"><img src="https://i.ibb.co/chYv30W/Camera-3.jpg" data-pin-description="Cameras 3 | Zachary C" alt="Cameras 3"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/NmNSqjy/Camera-4.jpg" data-caption="Cameras 4 of 4"><img src="https://i.ibb.co/wwQsqWz/Camera-4.jpg" data-pin-description="Cameras 4 | Zachary C" alt="Cameras 4"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/m8Z81HS/Camera-1.jpg" data-caption="Cameras 1 of 4"><img src="https://i.ibb.co/74M48Gb/Camera-1.jpg" data-pin-description="Cameras 1 | Zachary C" alt="Cameras 1"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/WcY0d3K/Camera-2.jpg" data-caption="Cameras 2 of 4"><img src="https://i.ibb.co/nD5BV0k/Camera-2.jpg" data-pin-description="Cameras 2 | Zachary C" alt="Cameras 2"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/r2dt0YB/Camera-3.jpg" data-caption="Cameras 3 of 4"><img src="https://i.ibb.co/chYv30W/Camera-3.jpg" data-pin-description="Cameras 3 | Zachary C" alt="Cameras 3"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/NmNSqjy/Camera-4.jpg" data-caption="Cameras 4 of 4"><img src="https://i.ibb.co/wwQsqWz/Camera-4.jpg" data-pin-description="Cameras 4 | Zachary C" alt="Cameras 4"></a></div>
     </div>
     <!-- <footer>
-        <p>Version 4.0.2 | <a href="/tech.html">Learn about the technology used</a></p>
+      <p>Version 4.0.3 | <a href="/tech.html">Learn about the technology used</a></p>
     </footer> -->
 </body>
 </html>

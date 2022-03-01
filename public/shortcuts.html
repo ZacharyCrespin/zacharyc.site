@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html dir="ltr" lang="en-US">
   <head>
     <title>Apple Shortcuts | Zachary C</title>
     <meta property="og:title" content="Apple Shortcuts  | Zachary C">
@@ -13,14 +13,16 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4A4A4A">
     <link rel="icon" href="/imgs/favicon-white.png" id="favicon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js";
       import { getPerformance } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-performance.js";
       const firebaseConfig = {
         apiKey: "AIzaSyAusVefSFH7pEqWLclTEDyEYFSlpMrzubk",
         authDomain: "zacharyc.site",
+        databaseURL: "https://zacharycsite-default-rtdb.firebaseio.com",
         projectId: "zacharycsite",
         storageBucket: "zacharycsite.appspot.com",
         messagingSenderId: "18418783539",
@@ -35,7 +37,7 @@
     <!-- Pinterest -->
     <script type="text/javascript">(function (d) {  var f = d.getElementsByTagName('SCRIPT')[0],    p = d.createElement('SCRIPT');  p.type = 'text/javascript';  p.async = true;  p.src = '//assets.pinterest.com/js/pinit.js';  f.parentNode.insertBefore(p, f);})(document);</script>
     <!-- End Pinterest -->
-    
+
     <!-- Apple -->
     <link rel="apple-touch-icon" href="/imgs/Icons/apple-touch-icon.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -81,11 +83,12 @@
       <a href="/wallpapers.html">Wallpapers</a>
       <a href="/shortcuts.html">Apple Shortcuts</a>
       <a href="/subscribe.html">Subscribe</a>
-      <button class="icon" onclick="menu()" aria-label="Menu Icon"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 14H21V12H3V14ZM3 9H21V7H3V9ZM3 2V4H21V2H3Z" fill="var(--white)"/></svg></button>
+      <button onclick="theam()" class="theam-toggle"><span id="theam-icon" class="material-icons">light_mode</span></button>
+      <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>
     </nav>
     <div id="main-content"></div>
     <!-- Menu End -->
-        
+    
     <h1>Apple Shortcuts</h1>
     <div class="collections">
       <div class="card">
@@ -120,7 +123,7 @@
       </div>
     </div>
     <!-- <footer>
-        <p>Version 4.0.2 | <a href="/tech.html">Learn about the technology used</a></p>
+      <p>Version 4.0.3 | <a href="/tech.html">Learn about the technology used</a></p>
     </footer> -->
 </body>
 </html>

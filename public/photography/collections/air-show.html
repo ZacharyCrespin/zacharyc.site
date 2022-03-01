@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html dir="ltr" lang="en-US">
   <head>
     <title>Air Show | Collections | Zachary C</title>
     <meta property="og:title" content="Air Show | Collections | Zachary C">
@@ -13,14 +13,16 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4A4A4A">
     <link rel="icon" href="/imgs/favicon-white.png" id="favicon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js";
       import { getPerformance } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-performance.js";
       const firebaseConfig = {
         apiKey: "AIzaSyAusVefSFH7pEqWLclTEDyEYFSlpMrzubk",
         authDomain: "zacharyc.site",
+        databaseURL: "https://zacharycsite-default-rtdb.firebaseio.com",
         projectId: "zacharycsite",
         storageBucket: "zacharycsite.appspot.com",
         messagingSenderId: "18418783539",
@@ -35,7 +37,7 @@
     <!-- Pinterest -->
     <script type="text/javascript">(function (d) {  var f = d.getElementsByTagName('SCRIPT')[0],    p = d.createElement('SCRIPT');  p.type = 'text/javascript';  p.async = true;  p.src = '//assets.pinterest.com/js/pinit.js';  f.parentNode.insertBefore(p, f);})(document);</script>
     <!-- End Pinterest -->
-
+    
     <!-- gallery link -->
     <link rel="stylesheet" href="/photography/gallery.css">
     <script src="/photography/lightbox.min.js" async></script>
@@ -90,27 +92,28 @@
       <a href="/wallpapers.html">Wallpapers</a>
       <a href="/shortcuts.html">Apple Shortcuts</a>
       <a href="/subscribe.html">Subscribe</a>
-      <button class="icon" onclick="menu()" aria-label="Menu Icon"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 14H21V12H3V14ZM3 9H21V7H3V9ZM3 2V4H21V2H3Z" fill="var(--white)"/></svg></button>
+      <button onclick="theam()" class="theam-toggle"><span id="theam-icon" class="material-icons">light_mode</span></button>
+      <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>
     </nav>
     <div id="main-content"></div>
     <!-- Menu End -->
     <h1>Air Show</h1>
     <div class="gallery">
-      <div class="mItem"><a href="https://i.ibb.co/LP0wx9d/P1140794.jpg" data-caption="Air Show 1 of 12"><img src="https://i.ibb.co/qnDGNmY/P1140794.jpg" data-pin-description="Air Show 1 | Zachary C" alt="Air Show 12"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/nRyLH87/P1140799.jpg" data-caption="Air Show 2 of 12"><img src="https://i.ibb.co/R7KDx43/P1140799.jpg" data-pin-description="Air Show 2 | Zachary C" alt="Air Show 11"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/gTgMPk4/P1150068.jpg" data-caption="Air Show 3 of 12"><img src="https://i.ibb.co/C705MRP/P1150068.jpg" data-pin-description="Air Show 3 | Zachary C" alt="Air Show 10"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/2NbGr5W/P1150279.jpg" data-caption="Air Show 4 of 12"><img src="https://i.ibb.co/NS4cq7t/P1150279.jpg" data-pin-description="Air Show 4 | Zachary C" alt="Air Show 9"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/WBMtZmC/P1150335.jpg" data-caption="Air Show 5 of 12"><img src="https://i.ibb.co/CVY2gRL/P1150335.jpg" data-pin-description="Air Show 5 | Zachary C" alt="Air Show 8"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/BfHW3yv/P1150388.jpg" data-caption="Air Show 6 of 12"><img src="https://i.ibb.co/kGVbB4z/P1150388.jpg" data-pin-description="Air Show 6 | Zachary C" alt="Air Show 7"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/cb4sc0S/P1150414.jpg" data-caption="Air Show 7 of 12"><img src="https://i.ibb.co/KNT8jdp/P1150414.jpg" data-pin-description="Air Show 7 | Zachary C" alt="Air Show 6"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/nM1cdtj/P1150417.jpg" data-caption="Air Show 8 of 12"><img src="https://i.ibb.co/gZWTqhJ/P1150417.jpg" data-pin-description="Air Show 8 | Zachary C" alt="Air Show 5"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/C76FjFH/P1150556.jpg" data-caption="Air Show 9 of 12"><img src="https://i.ibb.co/G29jZj5/P1150556.jpg" data-pin-description="Air Show 9 | Zachary C" alt="Air Show 4"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/3k1WtcM/P1150557.jpg" data-caption="Air Show 10 of 12"><img src="https://i.ibb.co/Km67CWL/P1150557.jpg" data-pin-description="Air Show 10 | Zachary C" alt="Air Show 3"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/qBWgYd6/P1150559.jpg" data-caption="Air Show 11 of 12"><img src="https://i.ibb.co/gyPWZ3Y/P1150559.jpg" data-pin-description="Air Show 11 | Zachary C" alt="Air Show 2"></a></div>
-<div class="mItem"><a href="https://i.ibb.co/frJNRPV/P1150560.jpg" data-caption="Air Show 12 of 12"><img src="https://i.ibb.co/dkZp9zs/P1150560.jpg" data-pin-description="Air Show 12 | Zachary C" alt="Air Show 1"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/LP0wx9d/P1140794.jpg" data-caption="Air Show 1 of 12"><img src="https://i.ibb.co/qnDGNmY/P1140794.jpg" data-pin-description="Air Show 1 | Zachary C" alt="Air Show 12"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/nRyLH87/P1140799.jpg" data-caption="Air Show 2 of 12"><img src="https://i.ibb.co/R7KDx43/P1140799.jpg" data-pin-description="Air Show 2 | Zachary C" alt="Air Show 11"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/gTgMPk4/P1150068.jpg" data-caption="Air Show 3 of 12"><img src="https://i.ibb.co/C705MRP/P1150068.jpg" data-pin-description="Air Show 3 | Zachary C" alt="Air Show 10"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/2NbGr5W/P1150279.jpg" data-caption="Air Show 4 of 12"><img src="https://i.ibb.co/NS4cq7t/P1150279.jpg" data-pin-description="Air Show 4 | Zachary C" alt="Air Show 9"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/WBMtZmC/P1150335.jpg" data-caption="Air Show 5 of 12"><img src="https://i.ibb.co/CVY2gRL/P1150335.jpg" data-pin-description="Air Show 5 | Zachary C" alt="Air Show 8"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/BfHW3yv/P1150388.jpg" data-caption="Air Show 6 of 12"><img src="https://i.ibb.co/kGVbB4z/P1150388.jpg" data-pin-description="Air Show 6 | Zachary C" alt="Air Show 7"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/cb4sc0S/P1150414.jpg" data-caption="Air Show 7 of 12"><img src="https://i.ibb.co/KNT8jdp/P1150414.jpg" data-pin-description="Air Show 7 | Zachary C" alt="Air Show 6"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/nM1cdtj/P1150417.jpg" data-caption="Air Show 8 of 12"><img src="https://i.ibb.co/gZWTqhJ/P1150417.jpg" data-pin-description="Air Show 8 | Zachary C" alt="Air Show 5"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/C76FjFH/P1150556.jpg" data-caption="Air Show 9 of 12"><img src="https://i.ibb.co/G29jZj5/P1150556.jpg" data-pin-description="Air Show 9 | Zachary C" alt="Air Show 4"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/3k1WtcM/P1150557.jpg" data-caption="Air Show 10 of 12"><img src="https://i.ibb.co/Km67CWL/P1150557.jpg" data-pin-description="Air Show 10 | Zachary C" alt="Air Show 3"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/qBWgYd6/P1150559.jpg" data-caption="Air Show 11 of 12"><img src="https://i.ibb.co/gyPWZ3Y/P1150559.jpg" data-pin-description="Air Show 11 | Zachary C" alt="Air Show 2"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/frJNRPV/P1150560.jpg" data-caption="Air Show 12 of 12"><img src="https://i.ibb.co/dkZp9zs/P1150560.jpg" data-pin-description="Air Show 12 | Zachary C" alt="Air Show 1"></a></div>
     </div>
     <!-- <footer>
-        <p>Version 4.0.2 | <a href="/tech.html">Learn about the technology used</a></p>
+      <p>Version 4.0.3 | <a href="/tech.html">Learn about the technology used</a></p>
     </footer> -->
 </body>
 </html>
