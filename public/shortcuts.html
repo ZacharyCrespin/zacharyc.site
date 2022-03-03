@@ -13,7 +13,6 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4A4A4A">
     <link rel="icon" href="/imgs/favicon-white.png" id="favicon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
@@ -83,7 +82,6 @@
       <a href="/wallpapers.html">Wallpapers</a>
       <a href="/shortcuts.html">Apple Shortcuts</a>
       <a href="/subscribe.html">Subscribe</a>
-      <button onclick="theam()" class="theam-toggle"><span id="theam-icon" class="material-icons">light_mode</span></button>
       <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>
     </nav>
     <div id="main-content"></div>
@@ -122,8 +120,20 @@
         <a class="button" href="https://www.icloud.com/shortcuts/42f7fea6d2c840a9b38308e1da7ded69">Add Shortcut</a>
       </div>
     </div>
+    <button onclick="settings()" class="SettingsIcon"><span class="material-icons">settings</span></button>
+    <div class="settings" id="settings">
+      <span onclick="settings()">X</span>
+      <button onclick="light()">Light</button>
+      <button onclick="dark()">Dark</button><br>
+      <button onclick="customTheme()">Custom</button>
+      <div id="customThemePicker" class="customThemePicker">
+        <input type="color" name="Custom-Black" id="Custom-Black">
+        <input type="color" name="Custom-White" id="Custom-White">
+        <br><button onclick="custom()">Save</button>
+      </div>
+    </div>
     <!-- <footer>
-      <p>Version 4.0.3 | <a href="/tech.html">Learn about the technology used</a></p>
+      <p>Version 4.1 | <a href="/tech.html">Learn about the technology used</a></p>
     </footer> -->
 </body>
 </html>

@@ -13,7 +13,6 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4A4A4A">
     <link rel="icon" href="/imgs/favicon-white.png" id="favicon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
@@ -92,27 +91,38 @@
       <a href="/wallpapers.html">Wallpapers</a>
       <a href="/shortcuts.html">Apple Shortcuts</a>
       <a href="/subscribe.html">Subscribe</a>
-      <button onclick="theam()" class="theam-toggle"><span id="theam-icon" class="material-icons">light_mode</span></button>
       <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>
     </nav>
     <div id="main-content"></div>
     <!-- Menu End -->
     <h1>Favorites</h1>
     <div class="gallery">
-            <div class="mItem"><a href="https://i.ibb.co/K67MfKw/fav-1.jpg" data-caption="Favorites 1 of 11"><img src="https://i.ibb.co/CBvkYP2/fav-1.jpg" data-pin-description="Favorites 1 | Zachary C" alt="fav-1"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/VB2wGBR/fav-2.jpg" data-caption="Favorites 2 of 11"><img src="https://i.ibb.co/0JhsLJT/fav-2.jpg" data-pin-description="Favorites 2 | Zachary C" alt="fav-2"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/8m1WjKP/fav-3.jpg" data-caption="Favorites 3 of 11"><img src="https://i.ibb.co/3TgD0rS/fav-3.jpg" data-pin-description="Favorites 3 | Zachary C" alt="fav-3"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/VN4bv8Z/fav-4.jpg" data-caption="Favorites 4 of 11"><img src="https://i.ibb.co/4frCjxG/fav-4.jpg" data-pin-description="Favorites 4 | Zachary C" alt="fav-4"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/yVC8fjR/fav-5.jpg" data-caption="Favorites 5 of 11"><img src="https://i.ibb.co/4JLjmrf/fav-5.jpg" data-pin-description="Favorites 5 | Zachary C" alt="fav-5"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/TKWvqNj/fav-6.jpg" data-caption="Favorites 6 of 11"><img src="https://i.ibb.co/28ZnYpV/fav-6.jpg" data-pin-description="Favorites 6 | Zachary C" alt="fav-6"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/JpNwyQW/fav-7.jpg" data-caption="Favorites 7 of 11"><img src="https://i.ibb.co/R61kByG/fav-7.jpg" data-pin-description="Favorites 7 | Zachary C" alt="fav-7"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/59X7GYj/fav-8.jpg" data-caption="Favorites 8 of 11"><img src="https://i.ibb.co/kyVd53D/fav-8.jpg" data-pin-description="Favorites 8 | Zachary C" alt="fav-8"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/806rNyy/fav-9.jpg" data-caption="Favorites 9 of 11"><img src="https://i.ibb.co/Czhbmjj/fav-9.jpg" data-pin-description="Favorites 9 | Zachary C" alt="fav-9"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/6FqZZJH/fav-10.jpg" data-caption="Favorites 10 of 11"><img src="https://i.ibb.co/VTkNNpg/fav-10.jpg" data-pin-description="Favorites 10 | Zachary C" alt="fav-10"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/YQ18M0s/fav-11.jpg" data-caption="Favorites 11 of 11"><img src="https://i.ibb.co/JtG243J/fav-11.jpg" data-pin-description="Favorites 11 | Zachary C" alt="fav-11"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/K67MfKw/fav-1.jpg"><img src="https://i.ibb.co/CBvkYP2/fav-1.jpg" data-pin-description="Favorites 1 | Zachary C" alt="fav-1"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/VB2wGBR/fav-2.jpg"><img src="https://i.ibb.co/0JhsLJT/fav-2.jpg" data-pin-description="Favorites 2 | Zachary C" alt="fav-2"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/8m1WjKP/fav-3.jpg"><img src="https://i.ibb.co/3TgD0rS/fav-3.jpg" data-pin-description="Favorites 3 | Zachary C" alt="fav-3"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/VN4bv8Z/fav-4.jpg"><img src="https://i.ibb.co/4frCjxG/fav-4.jpg" data-pin-description="Favorites 4 | Zachary C" alt="fav-4"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/yVC8fjR/fav-5.jpg"><img src="https://i.ibb.co/4JLjmrf/fav-5.jpg" data-pin-description="Favorites 5 | Zachary C" alt="fav-5"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/TKWvqNj/fav-6.jpg"><img src="https://i.ibb.co/28ZnYpV/fav-6.jpg" data-pin-description="Favorites 6 | Zachary C" alt="fav-6"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/JpNwyQW/fav-7.jpg"><img src="https://i.ibb.co/R61kByG/fav-7.jpg" data-pin-description="Favorites 7 | Zachary C" alt="fav-7"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/59X7GYj/fav-8.jpg"><img src="https://i.ibb.co/kyVd53D/fav-8.jpg" data-pin-description="Favorites 8 | Zachary C" alt="fav-8"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/806rNyy/fav-9.jpg"><img src="https://i.ibb.co/Czhbmjj/fav-9.jpg" data-pin-description="Favorites 9 | Zachary C" alt="fav-9"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/6FqZZJH/fav-10.jpg"><img src="https://i.ibb.co/VTkNNpg/fav-10.jpg" data-pin-description="Favorites 10 | Zachary C" alt="fav-10"></a></div>
+            <div class="mItem"><a href="https://i.ibb.co/YQ18M0s/fav-11.jpg"><img src="https://i.ibb.co/JtG243J/fav-11.jpg" data-pin-description="Favorites 11 | Zachary C" alt="fav-11"></a></div>
+    </div>
+    <button onclick="settings()" class="SettingsIcon"><span class="material-icons">settings</span></button>
+    <div class="settings" id="settings">
+      <span onclick="settings()">X</span>
+      <button onclick="light()">Light</button>
+      <button onclick="dark()">Dark</button><br>
+      <button onclick="customTheme()">Custom</button>
+      <div id="customThemePicker" class="customThemePicker">
+        <input type="color" name="Custom-Black" id="Custom-Black">
+        <input type="color" name="Custom-White" id="Custom-White">
+        <br><button onclick="custom()">Save</button>
+      </div>
     </div>
     <!-- <footer>
-      <p>Version 4.0.3 | <a href="/tech.html">Learn about the technology used</a></p>
+      <p>Version 4.1 | <a href="/tech.html">Learn about the technology used</a></p>
     </footer> -->
 </body>
 </html>
