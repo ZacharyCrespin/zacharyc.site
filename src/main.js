@@ -36,16 +36,27 @@ window.onload = function() {
         navigator.serviceWorker.register("service-worker.js");
     }
 }
+
 function light() {
     localStorage.setItem('Theme',  'Light');
+
     document.documentElement.style.setProperty('--white', '#000000');
     document.documentElement.style.setProperty('--black', '#FFFFFF');
+
+    localStorage.removeItem('Custom-White');
+    localStorage.removeItem('Custom-Black');
 }
+
 function dark() {
     localStorage.setItem('Theme',  'Dark');
+
     document.documentElement.style.setProperty('--white', '#FFFFFF');
     document.documentElement.style.setProperty('--black', '#000000');
+
+    localStorage.removeItem('Custom-White');
+    localStorage.removeItem('Custom-Black');
 }
+
 function custom() {
     localStorage.setItem('Theme',  'Custom');
 
@@ -60,6 +71,7 @@ function menu() {
     var x = document.getElementById("menu");
     if (x.className === "menu") {x.className += " open";} else {x.className = "menu";}
 }
+
 function drop1() {
     var x = document.getElementById("dropdown1");
     if (x.className === "dropdown") {x.className += " open";} else {x.className = "dropdown";}
@@ -69,6 +81,7 @@ function settings() {
     var x = document.getElementById("settings");
     if (x.className === "settings") {x.className += " open";} else {x.className = "settings";}
 }
+
 function customTheme() {
     var x = document.getElementById("customThemePicker");
     if (x.className === "customThemePicker") {x.className += " open";} else {x.className = "customThemePicker";}

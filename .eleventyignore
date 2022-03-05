@@ -1,2 +1,2 @@
-contact.njk
-offline.html
+./src/contact.njk
+./src/offline.html
