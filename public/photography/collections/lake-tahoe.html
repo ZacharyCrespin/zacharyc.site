@@ -2,40 +2,22 @@
 <html dir="ltr" lang="en-US">
   <head>
     <title>Lake Tahoe | Collections | Zachary C</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Meta -->
     <meta property="og:title" content="Lake Tahoe | Collections | Zachary C">
     <meta name="description" content="Lake Tahoe Photo Collection | Zachary C">
     <meta property="og:description" content="Lake Tahoe Photo Collection">
     <meta property="og:site_name" content="Zachary C">
     <meta property="og:type" content="website">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/main.css">
-    <script src="/main.js"></script>
-    <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4A4A4A">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/main.css">
+    <!-- JS -->
+    <script src="/main.js"></script>
+    <script type="module" src="/firebase.js"></script>
+    <!-- Icons -->
     <link rel="icon" href="/imgs/favicon-white.png" id="favicon">
-    
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js";
-      import { getPerformance } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-performance.js";
-      const firebaseConfig = {
-        apiKey: "AIzaSyAusVefSFH7pEqWLclTEDyEYFSlpMrzubk",
-        authDomain: "zacharyc.site",
-        databaseURL: "https://zacharycsite-default-rtdb.firebaseio.com",
-        projectId: "zacharycsite",
-        storageBucket: "zacharycsite.appspot.com",
-        messagingSenderId: "18418783539",
-        appId: "1:18418783539:web:904df4549700d037dc9a46",
-        measurementId: "G-7TQEN9M9FK"
-      };
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-      const perf = getPerformance(app);
-    </script>
-
-    <!-- Pinterest -->
-    <script type="text/javascript">(function (d) {  var f = d.getElementsByTagName('SCRIPT')[0],    p = d.createElement('SCRIPT');  p.type = 'text/javascript';  p.async = true;  p.src = '//assets.pinterest.com/js/pinit.js';  f.parentNode.insertBefore(p, f);})(document);</script>
-    <!-- End Pinterest -->
+    <link rel="apple-touch-icon" href="/imgs/icons/apple-touch-icon.png">
     
     <!-- gallery link -->
     <link rel="stylesheet" href="/photography/gallery.css">
@@ -45,9 +27,6 @@
         baguetteBox.run('.gallery');
       });
     </script>
-
-    <!-- Apple -->
-    <link rel="apple-touch-icon" href="/imgs/icons/apple-touch-icon.png">
 </head>
 <body>
     <!-- Menu -->
@@ -65,18 +44,16 @@
       <a href="/subscribe.html">Subscribe</a>
       <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>
     </nav>
-    <div id="main-content"></div>
+    <div id="main-content">
     <!-- Menu End -->
     <h1>Lake Tahoe</h1>
     <div class="gallery">
-            <div class="mItem"><a href="https://i.ibb.co/PCpLDPY/LT7.jpg"><img src="https://i.ibb.co/883CYfB/LT7.jpg" data-pin-description="Lake Tahoe 1 | Zachary C" alt="Lake Tahoe7"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/0Q2d0Gc/LT5.jpg"><img src="https://i.ibb.co/d7MzN5r/LT5.jpg" data-pin-description="Lake Tahoe 2 | Zachary C" alt="Lake Tahoe5"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/7zySy5R/LT6.jpg"><img src="https://i.ibb.co/KGy5ykL/LT6.jpg" data-pin-description="Lake Tahoe 3 | Zachary C" alt="Lake Tahoe6"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/xM5XNtn/LT4.jpg"><img src="https://i.ibb.co/rZyFVRB/LT4.jpg" data-pin-description="Lake Tahoe 4 | Zachary C" alt="Lake Tahoe4"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/t8cVqwz/LT3.jpg"><img src="https://i.ibb.co/wMC5SZ7/LT3.jpg" data-pin-description="Lake Tahoe 5 | Zachary C" alt="Lake Tahoe3"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/LRh4SS1/LT2.jpg"><img src="https://i.ibb.co/YQTv22h/LT2.jpg" data-pin-description="Lake Tahoe 6 | Zachary C" alt="Lake Tahoe2"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/k1CpG3h/LT1.jpg"><img src="https://i.ibb.co/QdwZJ86/LT1.jpg" data-pin-description="Lake Tahoe 7 | Zachary C" alt="Lake Tahoe1"></a></div>
+
     </div>
+    </div>
+    <!-- Pinterest -->
+    <script type="text/javascript">(function (d) {  var f = d.getElementsByTagName('SCRIPT')[0],    p = d.createElement('SCRIPT');  p.type = 'text/javascript';  p.async = true;  p.src = '//assets.pinterest.com/js/pinit.js';  f.parentNode.insertBefore(p, f);})(document);</script>
+    <!-- End Pinterest -->
     <button onclick="settings()" class="SettingsIcon"><span class="material-icons">settings</span></button>
     <div class="settings" id="settings">
       <span onclick="settings()">X</span>
@@ -89,8 +66,8 @@
         <br><button onclick="custom()">Save</button>
       </div>
     </div>
-    <!-- <footer>
-      <p>Version 4.1.1 | <a href="/tech.html">Learn about the technology used</a></p>
-    </footer> -->
+    <footer>
+      <p>Version 4.1.3 | <a href="/tech.html">Learn about the technology used</a></p>
+    </footer>
 </body>
 </html>

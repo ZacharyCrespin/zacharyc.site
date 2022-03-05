@@ -2,40 +2,22 @@
 <html dir="ltr" lang="en-US">
   <head>
     <title>Favorites | Collections | Zachary C</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Meta -->
     <meta property="og:title" content="Favorites | Collections | Zachary C">
     <meta name="description" content="Favorites Photo Collection | Zachary C">
     <meta property="og:description" content="Favorites Photo Collection">
     <meta property="og:site_name" content="Zachary C">
     <meta property="og:type" content="website">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/main.css">
-    <script src="/main.js"></script>
-    <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4A4A4A">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/main.css">
+    <!-- JS -->
+    <script src="/main.js"></script>
+    <script type="module" src="/firebase.js"></script>
+    <!-- Icons -->
     <link rel="icon" href="/imgs/favicon-white.png" id="favicon">
-    
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js";
-      import { getPerformance } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-performance.js";
-      const firebaseConfig = {
-        apiKey: "AIzaSyAusVefSFH7pEqWLclTEDyEYFSlpMrzubk",
-        authDomain: "zacharyc.site",
-        databaseURL: "https://zacharycsite-default-rtdb.firebaseio.com",
-        projectId: "zacharycsite",
-        storageBucket: "zacharycsite.appspot.com",
-        messagingSenderId: "18418783539",
-        appId: "1:18418783539:web:904df4549700d037dc9a46",
-        measurementId: "G-7TQEN9M9FK"
-      };
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-      const perf = getPerformance(app);
-    </script>
-
-    <!-- Pinterest -->
-    <script type="text/javascript">(function (d) {  var f = d.getElementsByTagName('SCRIPT')[0],    p = d.createElement('SCRIPT');  p.type = 'text/javascript';  p.async = true;  p.src = '//assets.pinterest.com/js/pinit.js';  f.parentNode.insertBefore(p, f);})(document);</script>
-    <!-- End Pinterest -->
+    <link rel="apple-touch-icon" href="/imgs/icons/apple-touch-icon.png">
     
     <!-- gallery link -->
     <link rel="stylesheet" href="/photography/gallery.css">
@@ -45,9 +27,6 @@
         baguetteBox.run('.gallery');
       });
     </script>
-
-    <!-- Apple -->
-    <link rel="apple-touch-icon" href="/imgs/icons/apple-touch-icon.png">
 </head>
 <body>
     <!-- Menu -->
@@ -65,22 +44,16 @@
       <a href="/subscribe.html">Subscribe</a>
       <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>
     </nav>
-    <div id="main-content"></div>
+    <div id="main-content">
     <!-- Menu End -->
     <h1>Favorites</h1>
     <div class="gallery">
-            <div class="mItem"><a href="https://i.ibb.co/K67MfKw/fav-1.jpg"><img src="https://i.ibb.co/CBvkYP2/fav-1.jpg" data-pin-description="Favorites 1 | Zachary C" alt="fav-1"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/VB2wGBR/fav-2.jpg"><img src="https://i.ibb.co/0JhsLJT/fav-2.jpg" data-pin-description="Favorites 2 | Zachary C" alt="fav-2"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/8m1WjKP/fav-3.jpg"><img src="https://i.ibb.co/3TgD0rS/fav-3.jpg" data-pin-description="Favorites 3 | Zachary C" alt="fav-3"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/VN4bv8Z/fav-4.jpg"><img src="https://i.ibb.co/4frCjxG/fav-4.jpg" data-pin-description="Favorites 4 | Zachary C" alt="fav-4"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/yVC8fjR/fav-5.jpg"><img src="https://i.ibb.co/4JLjmrf/fav-5.jpg" data-pin-description="Favorites 5 | Zachary C" alt="fav-5"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/TKWvqNj/fav-6.jpg"><img src="https://i.ibb.co/28ZnYpV/fav-6.jpg" data-pin-description="Favorites 6 | Zachary C" alt="fav-6"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/JpNwyQW/fav-7.jpg"><img src="https://i.ibb.co/R61kByG/fav-7.jpg" data-pin-description="Favorites 7 | Zachary C" alt="fav-7"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/59X7GYj/fav-8.jpg"><img src="https://i.ibb.co/kyVd53D/fav-8.jpg" data-pin-description="Favorites 8 | Zachary C" alt="fav-8"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/806rNyy/fav-9.jpg"><img src="https://i.ibb.co/Czhbmjj/fav-9.jpg" data-pin-description="Favorites 9 | Zachary C" alt="fav-9"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/6FqZZJH/fav-10.jpg"><img src="https://i.ibb.co/VTkNNpg/fav-10.jpg" data-pin-description="Favorites 10 | Zachary C" alt="fav-10"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/YQ18M0s/fav-11.jpg"><img src="https://i.ibb.co/JtG243J/fav-11.jpg" data-pin-description="Favorites 11 | Zachary C" alt="fav-11"></a></div>
+
     </div>
+    </div>
+    <!-- Pinterest -->
+    <script type="text/javascript">(function (d) {  var f = d.getElementsByTagName('SCRIPT')[0],    p = d.createElement('SCRIPT');  p.type = 'text/javascript';  p.async = true;  p.src = '//assets.pinterest.com/js/pinit.js';  f.parentNode.insertBefore(p, f);})(document);</script>
+    <!-- End Pinterest -->
     <button onclick="settings()" class="SettingsIcon"><span class="material-icons">settings</span></button>
     <div class="settings" id="settings">
       <span onclick="settings()">X</span>
@@ -93,8 +66,8 @@
         <br><button onclick="custom()">Save</button>
       </div>
     </div>
-    <!-- <footer>
-      <p>Version 4.1.1 | <a href="/tech.html">Learn about the technology used</a></p>
-    </footer> -->
+    <footer>
+      <p>Version 4.1.3 | <a href="/tech.html">Learn about the technology used</a></p>
+    </footer>
 </body>
 </html>

@@ -2,40 +2,22 @@
 <html dir="ltr" lang="en-US">
   <head>
     <title>Air Show | Collections | Zachary C</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Meta -->
     <meta property="og:title" content="Air Show | Collections | Zachary C">
     <meta name="description" content="Air Show Photo Collection | Zachary C">
     <meta property="og:description" content="Air Show Photo Collection">
     <meta property="og:site_name" content="Zachary C">
     <meta property="og:type" content="website">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/main.css">
-    <script src="/main.js"></script>
-    <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4A4A4A">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/main.css">
+    <!-- JS -->
+    <script src="/main.js"></script>
+    <script type="module" src="/firebase.js"></script>
+    <!-- Icons -->
     <link rel="icon" href="/imgs/favicon-white.png" id="favicon">
-    
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js";
-      import { getPerformance } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-performance.js";
-      const firebaseConfig = {
-        apiKey: "AIzaSyAusVefSFH7pEqWLclTEDyEYFSlpMrzubk",
-        authDomain: "zacharyc.site",
-        databaseURL: "https://zacharycsite-default-rtdb.firebaseio.com",
-        projectId: "zacharycsite",
-        storageBucket: "zacharycsite.appspot.com",
-        messagingSenderId: "18418783539",
-        appId: "1:18418783539:web:904df4549700d037dc9a46",
-        measurementId: "G-7TQEN9M9FK"
-      };
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-      const perf = getPerformance(app);
-    </script>
-
-    <!-- Pinterest -->
-    <script type="text/javascript">(function (d) {  var f = d.getElementsByTagName('SCRIPT')[0],    p = d.createElement('SCRIPT');  p.type = 'text/javascript';  p.async = true;  p.src = '//assets.pinterest.com/js/pinit.js';  f.parentNode.insertBefore(p, f);})(document);</script>
-    <!-- End Pinterest -->
+    <link rel="apple-touch-icon" href="/imgs/icons/apple-touch-icon.png">
     
     <!-- gallery link -->
     <link rel="stylesheet" href="/photography/gallery.css">
@@ -45,9 +27,6 @@
         baguetteBox.run('.gallery');
       });
     </script>
-
-    <!-- Apple -->
-    <link rel="apple-touch-icon" href="/imgs/icons/apple-touch-icon.png">
 </head>
 <body>
     <!-- Menu -->
@@ -65,23 +44,16 @@
       <a href="/subscribe.html">Subscribe</a>
       <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>
     </nav>
-    <div id="main-content"></div>
+    <div id="main-content">
     <!-- Menu End -->
     <h1>Air Show</h1>
     <div class="gallery">
-            <div class="mItem"><a href="https://i.ibb.co/LP0wx9d/P1140794.jpg"><img src="https://i.ibb.co/qnDGNmY/P1140794.jpg" data-pin-description="Air Show 1 | Zachary C" alt="Air Show 12"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/nRyLH87/P1140799.jpg"><img src="https://i.ibb.co/R7KDx43/P1140799.jpg" data-pin-description="Air Show 2 | Zachary C" alt="Air Show 11"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/gTgMPk4/P1150068.jpg"><img src="https://i.ibb.co/C705MRP/P1150068.jpg" data-pin-description="Air Show 3 | Zachary C" alt="Air Show 10"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/2NbGr5W/P1150279.jpg"><img src="https://i.ibb.co/NS4cq7t/P1150279.jpg" data-pin-description="Air Show 4 | Zachary C" alt="Air Show 9"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/WBMtZmC/P1150335.jpg"><img src="https://i.ibb.co/CVY2gRL/P1150335.jpg" data-pin-description="Air Show 5 | Zachary C" alt="Air Show 8"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/BfHW3yv/P1150388.jpg"><img src="https://i.ibb.co/kGVbB4z/P1150388.jpg" data-pin-description="Air Show 6 | Zachary C" alt="Air Show 7"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/cb4sc0S/P1150414.jpg"><img src="https://i.ibb.co/KNT8jdp/P1150414.jpg" data-pin-description="Air Show 7 | Zachary C" alt="Air Show 6"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/nM1cdtj/P1150417.jpg"><img src="https://i.ibb.co/gZWTqhJ/P1150417.jpg" data-pin-description="Air Show 8 | Zachary C" alt="Air Show 5"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/C76FjFH/P1150556.jpg"><img src="https://i.ibb.co/G29jZj5/P1150556.jpg" data-pin-description="Air Show 9 | Zachary C" alt="Air Show 4"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/3k1WtcM/P1150557.jpg"><img src="https://i.ibb.co/Km67CWL/P1150557.jpg" data-pin-description="Air Show 10 | Zachary C" alt="Air Show 3"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/qBWgYd6/P1150559.jpg"><img src="https://i.ibb.co/gyPWZ3Y/P1150559.jpg" data-pin-description="Air Show 11 | Zachary C" alt="Air Show 2"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/frJNRPV/P1150560.jpg"><img src="https://i.ibb.co/dkZp9zs/P1150560.jpg" data-pin-description="Air Show 12 | Zachary C" alt="Air Show 1"></a></div>
+
     </div>
+    </div>
+    <!-- Pinterest -->
+    <script type="text/javascript">(function (d) {  var f = d.getElementsByTagName('SCRIPT')[0],    p = d.createElement('SCRIPT');  p.type = 'text/javascript';  p.async = true;  p.src = '//assets.pinterest.com/js/pinit.js';  f.parentNode.insertBefore(p, f);})(document);</script>
+    <!-- End Pinterest -->
     <button onclick="settings()" class="SettingsIcon"><span class="material-icons">settings</span></button>
     <div class="settings" id="settings">
       <span onclick="settings()">X</span>
@@ -94,8 +66,8 @@
         <br><button onclick="custom()">Save</button>
       </div>
     </div>
-    <!-- <footer>
-      <p>Version 4.1.1 | <a href="/tech.html">Learn about the technology used</a></p>
-    </footer> -->
+    <footer>
+      <p>Version 4.1.3 | <a href="/tech.html">Learn about the technology used</a></p>
+    </footer>
 </body>
 </html>
