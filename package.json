@@ -1,11 +1,11 @@
 {
   "name": "zacharyc",
-  "version": "4.1.5",
+  "version": "4.2.0",
   "description": "My Personal Website",
   "main": "index.html",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy && webpack"
+    "build": "webpack"
   },
   "author": "Zachary C <contact@zacharyc.site> (https://zacharyc.site)",
   "license": "ISC",

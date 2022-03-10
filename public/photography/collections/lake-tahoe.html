@@ -10,13 +10,11 @@
     <meta property="og:site_name" content="Zachary C">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#4A4A4A">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TQS564H');</script>
-    <!-- End Google Tag Manager -->
     <!-- CSS -->
     <link rel="stylesheet" href="/main.css">
     <!-- JS -->
     <script src="/main.js"></script>
+    <script type="module" src="/firebase.js"></script>
     <!-- Icons -->
     <link rel="icon" href="/imgs/favicon-white.png" id="favicon">
     <link rel="apple-touch-icon" href="/imgs/icons/apple-touch-icon.png">
@@ -26,7 +24,7 @@
     
     <!-- gallery link -->
     <link rel="stylesheet" href="/photography/gallery.css">
-    <script src="/photography/lightbox.min.js" async></script>
+    <script src="/photography/lightbox.js" async></script>
     <script>
       window.addEventListener('load', function() {
         baguetteBox.run('.gallery');
@@ -34,9 +32,6 @@
     </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQS564H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!-- Menu -->
     <div id="loader"></div>
     <a href="#main-content" class="skip-nav">Skip Nav</a>
@@ -56,32 +51,20 @@
     <!-- Menu End -->
     <h1>Lake Tahoe</h1>
     <div class="gallery">
-            <div class="mItem"><a href="https://i.ibb.co/PCpLDPY/LT7.jpg"><img src="https://i.ibb.co/883CYfB/LT7.jpg" data-pin-description="Lake Tahoe 1 | Zachary C" alt="Lake Tahoe7"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/0Q2d0Gc/LT5.jpg"><img src="https://i.ibb.co/d7MzN5r/LT5.jpg" data-pin-description="Lake Tahoe 2 | Zachary C" alt="Lake Tahoe5"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/7zySy5R/LT6.jpg"><img src="https://i.ibb.co/KGy5ykL/LT6.jpg" data-pin-description="Lake Tahoe 3 | Zachary C" alt="Lake Tahoe6"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/xM5XNtn/LT4.jpg"><img src="https://i.ibb.co/rZyFVRB/LT4.jpg" data-pin-description="Lake Tahoe 4 | Zachary C" alt="Lake Tahoe4"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/t8cVqwz/LT3.jpg"><img src="https://i.ibb.co/wMC5SZ7/LT3.jpg" data-pin-description="Lake Tahoe 5 | Zachary C" alt="Lake Tahoe3"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/LRh4SS1/LT2.jpg"><img src="https://i.ibb.co/YQTv22h/LT2.jpg" data-pin-description="Lake Tahoe 6 | Zachary C" alt="Lake Tahoe2"></a></div>
-            <div class="mItem"><a href="https://i.ibb.co/k1CpG3h/LT1.jpg"><img src="https://i.ibb.co/QdwZJ86/LT1.jpg" data-pin-description="Lake Tahoe 7 | Zachary C" alt="Lake Tahoe1"></a></div>
+            <div class="mItem"><a href="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120525.jpg"><img src="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120525-Small.jpg" data-pin-description="Lake Tahoe 1 | Zachary C" alt="Lake Tahoe7"></a></div>
+            <div class="mItem"><a href="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120533.jpg"><img src="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120533-Small.jpg" data-pin-description="Lake Tahoe 2 | Zachary C" alt="Lake Tahoe5"></a></div>
+            <div class="mItem"><a href="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120534.jpg"><img src="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120534-Small.jpg" data-pin-description="Lake Tahoe 3 | Zachary C" alt="Lake Tahoe6"></a></div>
+            <div class="mItem"><a href="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120535.jpg"><img src="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120535-Small.jpg" data-pin-description="Lake Tahoe 4 | Zachary C" alt="Lake Tahoe4"></a></div>
+            <div class="mItem"><a href="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120546.jpg"><img src="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120546-Small.jpg" data-pin-description="Lake Tahoe 5 | Zachary C" alt="Lake Tahoe3"></a></div>
+            <div class="mItem"><a href="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120558.jpg"><img src="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120558-Small.jpg" data-pin-description="Lake Tahoe 6 | Zachary C" alt="Lake Tahoe2"></a></div>
+            <div class="mItem"><a href="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120589.jpg"><img src="https://assets.zacharyc.site/images/collection-images/lake-tahoe/laketahoe-1120589-Small.jpg" data-pin-description="Lake Tahoe 7 | Zachary C" alt="Lake Tahoe1"></a></div>
     </div>
     </div>
     <!-- Pinterest -->
     <script type="text/javascript">(function (d) {  var f = d.getElementsByTagName('SCRIPT')[0],    p = d.createElement('SCRIPT');  p.type = 'text/javascript';  p.async = true;  p.src = '//assets.pinterest.com/js/pinit.js';  f.parentNode.insertBefore(p, f);})(document);</script>
     <!-- End Pinterest -->
-    <button onclick="settings()" class="SettingsIcon"><span class="material-icons">settings</span></button>
-    <div class="settings" id="settings">
-      <span onclick="settings()">X</span>
-      <button onclick="light()">Light</button>
-      <button onclick="dark()">Dark</button><br>
-      <button onclick="customTheme()">Custom</button>
-      <div id="customThemePicker" class="customThemePicker">
-        <input type="color" name="Custom-Black" id="Custom-Black">
-        <input type="color" name="Custom-White" id="Custom-White">
-        <br><button onclick="custom()">Save</button>
-      </div>
-    </div>
     <footer>
-      <p>Version 4.1.4 | <a href="/tech.html">Learn about the technology used</a></p>
+      <p>Version 4.2.0 | <a href="/tech.html">Learn about the technology used</a></p>
     </footer>
 </body>
 </html>

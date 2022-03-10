@@ -284,59 +284,6 @@ a button{
   margin-bottom: 2rem;
 }
 
-.SettingsIcon{
-  position: fixed;
-  bottom: .5rem;
-  left: .5rem;
-  padding: .0px;
-  margin: 0px;
-  border: none;
-  color: var(--white);
-}
-.SettingsIcon:hover{
-  background-color: transparent;
-  border: none;
-  color: var(--grey);
-}
-@media screen and (max-width: 600px) {
-  .SettingsIcon{
-    display: none;
-  }
-}
-@media all and (display-mode: standalone) {
-  .SettingsIcon{
-    display: block;
-  }
-}
-.settings {
-  display: none;
-  background-color: var(--black);
-  border: 1px solid var(--white);
-  position: fixed;
-  bottom: 2rem;
-  left: 2rem;
-  padding: 1.5rem 1rem .5rem 1rem;
-}
-.settings.open {
-  display: block;
-}
-.settings.open span {
-  position: absolute;
-  top: .5rem;
-  right: .5rem;
-  color: var(--white);
-}
-.settings.open span:hover {
-  cursor: pointer;
-  color: var(--grey);
-}
-.customThemePicker {
-  display: none;
-}
-.customThemePicker.open{
-  display: block;
-}
-
 /* footer */
 footer{
   margin: 3rem 1rem 0px 1rem;
