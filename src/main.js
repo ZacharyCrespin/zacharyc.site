@@ -14,6 +14,10 @@ window.onload = function() {
         document.getElementById('favicon').setAttribute("href","https://zacharyc.site/imgs/favicon-black.png");
     }
 
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("https://zacharyc.site/service-worker.js");
+    }
+
     document.getElementById("loader").style.display = "none";
 }
 
