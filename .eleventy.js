@@ -15,7 +15,7 @@ module.exports = function(eleventyConfig) {
 
 
     eleventyConfig.addPassthroughCopy('./src/photography/gallery.css');
-    eleventyConfig.addPassthroughCopy('./src/photography/lightbox.min.js');
+    eleventyConfig.addPassthroughCopy('./src/photography/lightbox.js');
 
     return {
         dir: {

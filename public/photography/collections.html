@@ -14,13 +14,17 @@
     <link rel="stylesheet" href="/main.css">
     <!-- JS -->
     <script src="/main.js"></script>
-    <script type="module" src="/firebase.js"></script>
     <!-- Icons -->
-    <link rel="icon" href="/imgs/favicon-white.png" id="favicon">
+    <link rel="icon" href="/imgs/favicon-black.png" id="favicon">
     <link rel="apple-touch-icon" href="/imgs/icons/apple-touch-icon.png">
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
     <script src="/service-worker.js"></script>
+    <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./service-worker.js");
+    }
+    </script>
 </head>
 <body>
     <!-- Menu -->
@@ -69,7 +73,7 @@
       </div></div>
     </div>
     <footer>
-      <p>Version 4.2.0 | <a href="/tech.html">Learn about the technology used</a></p>
+      <p>Version 4.2.2 | <a href="/tech.html">Learn about the technology used</a></p>
     </footer>
 </body>
 </html>

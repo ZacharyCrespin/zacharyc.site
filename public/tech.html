@@ -14,13 +14,17 @@
     <link rel="stylesheet" href="/main.css">
     <!-- JS -->
     <script src="/main.js"></script>
-    <script type="module" src="/firebase.js"></script>
     <!-- Icons -->
-    <link rel="icon" href="/imgs/favicon-white.png" id="favicon">
+    <link rel="icon" href="/imgs/favicon-black.png" id="favicon">
     <link rel="apple-touch-icon" href="/imgs/icons/apple-touch-icon.png">
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
     <script src="/service-worker.js"></script>
+    <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./service-worker.js");
+    }
+    </script>
 </head>
 <body>
     <!-- Menu -->
@@ -55,18 +59,16 @@
       <li>Css</li>
       <li>Javascript</li>
       <li><a href="https://fonts.google.com/">Google Fonts</a> - Fonts and Icons</li>
-      <li><a href="https://imgbb.com/">imgBB</a> - Image Hosting</li>
       <li><a href="https://github.com/feimosi/baguetteBox.js">baguetteBox.js</a> - Image Sliders</li>
       <li><a href="https://firebase.google.com/">Firebase</a> - Performance and Analytics</li>
       <li><a href="https://eepurl.com/hOg3JP">Mailchimp</a> - Mailing List</li>
-      <!-- <li><a href="https://formsubmit.co/">formsubmit</a> - Contact Form</li> -->
       <li><a href="https://www.11ty.dev/">11ty</a></li>
       <li><a href="https://github.com"></a>github</li>
       <li><a href="https://netlify.com">Netlify</a> - Hosting</li>
     </ul>
     </div>
     <footer>
-      <p>Version 4.2.0 | <a href="/tech.html">Learn about the technology used</a></p>
+      <p>Version 4.2.2 | <a href="/tech.html">Learn about the technology used</a></p>
     </footer>
 </body>
 </html>
