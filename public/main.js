@@ -15,10 +15,6 @@ window.onload = function() {
     }
 
     document.getElementById("loader").style.display = "none";
-
-    if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("service-worker.js");
-    }
 }
 
 function menu() {

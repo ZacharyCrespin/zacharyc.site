@@ -19,6 +19,13 @@
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4A4A4A">
+    <script>
+      window.onload = function() {
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("../service-worker.js");
+        }
+      }
+    </script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TQEN9M9FK"></script>
     <script>
@@ -59,7 +66,6 @@
         </div>
       <a href="/wallpapers.html">Wallpapers</a>
       <a href="/shortcuts.html">Apple Shortcuts</a>
-      <a href="/subscribe.html">Subscribe</a>
       <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>
     </nav>
     <div id="main-content">

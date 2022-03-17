@@ -19,6 +19,13 @@
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4A4A4A">
+    <script>
+      window.onload = function() {
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
+      }
+    </script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TQEN9M9FK"></script>
     <script>
@@ -83,7 +90,7 @@
       </div></div>
     </div>
     <footer>
-      <p>Version 4.2.1 | <a href="/tech.html">Learn about the technology used</a></p>
+      <p>Version 4.2.2 | <a href="/tech.html">Learn about the technology used</a></p>
     </footer>
 </body>
 </html>
