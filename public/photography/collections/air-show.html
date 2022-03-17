@@ -9,18 +9,33 @@
     <meta property="og:description" content="Air Show Photo Collection">
     <meta property="og:site_name" content="Zachary C">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#4A4A4A">
     <!-- CSS -->
     <link rel="stylesheet" href="/main.css">
     <!-- JS -->
     <script src="/main.js"></script>
-    <script type="module" src="/firebase.js"></script>
     <!-- Icons -->
-    <link rel="icon" href="/imgs/favicon-white.png" id="favicon">
+    <link rel="icon" href="/imgs/favicon-black.png" id="favicon">
     <link rel="apple-touch-icon" href="/imgs/icons/apple-touch-icon.png">
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
-    <script src="/service-worker.js"></script>
+    <meta name="theme-color" content="#4A4A4A">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TQEN9M9FK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7TQEN9M9FK');
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "az7sbiynxy");
+    </script>
     
     <!-- gallery link -->
     <link rel="stylesheet" href="/photography/gallery.css">
@@ -69,7 +84,7 @@
     <script type="text/javascript">(function (d) {  var f = d.getElementsByTagName('SCRIPT')[0],    p = d.createElement('SCRIPT');  p.type = 'text/javascript';  p.async = true;  p.src = '//assets.pinterest.com/js/pinit.js';  f.parentNode.insertBefore(p, f);})(document);</script>
     <!-- End Pinterest -->
     <footer>
-      <p>Version 4.2.0 | <a href="/tech.html">Learn about the technology used</a></p>
+      <p>Version 4.2.1 | <a href="/tech.html">Learn about the technology used</a></p>
     </footer>
 </body>
 </html>
