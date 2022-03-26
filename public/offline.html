@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html dir="ltr" lang="en-US">
   <head>
     <title>Offline | Zachary C</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="https://zacharyc.site/imgs/favicon-white.png" id="favicon">
     <meta name="theme-color" content="#4A4A4A">
     <style>
       body{
@@ -12,44 +11,56 @@
         font-family: Roboto, sans-serif;
       }
       h1 {
-      font-size: 12rem;
-      padding: 0px;
-      margin: 2rem;
-      transition: all 0.5s;
-      -webkit-text-stroke: 3px white;
-      text-align: center;
-      color: transparent;
-      font-family: sans-serif;
-      text-shadow: 5px 5px 0px #2e2e2e,
-        10px 10px 0px #2E2E2E,
-        15px 15px 0px #3D3D3D,
-        20px 20px 0px #4C4C4C,
-        25px 25px 0px #5B5B5B,
-        30px 30px 0px #6A6A6A;
-      cursor: default;
-    }
-    h1:hover {
-      text-shadow: none;
-    }
-    @media screen and (max-width: 1000px) {
-      h1 {
-        text-shadow: none;
-        font-size: 6rem;
-      }
-    }
-    button{
-        font-family: Roboto, sans-serif;
-        background-color: transparent;
-        border: 1px solid white;
+        font-size: calc(65vh/2);
+        letter-spacing: 4rem;
+        line-height: 115%;
+        padding: 0px;
+        margin: 2rem;
+        transition: all 0.5s;
+        text-align: center;
         color: white;
-        padding: .5rem 1rem;
-    }
-    button:hover{
-        cursor: pointer;
-        background-color: white;
-        border: 1px solid black;
-        color: black;
-    }
+        font-family: sans-serif;
+        text-shadow: 
+          5px 5px 0px hsl(0, 0%, 90%),
+          10px 10px 0px hsl(0, 0%, 80%),
+          15px 15px 0px hsl(0, 0%, 70%),
+          20px 20px 0px hsl(0, 0%, 60%),
+          25px 25px 0px hsl(0, 0%, 50%),
+          30px 30px 0px hsl(0, 0%, 40%),
+          35px 35px 0px hsl(0, 0%, 30%),
+          40px 40px 0px hsl(0, 0%, 20%),
+          45px 45px 0px hsl(0, 0%, 10%);
+        cursor: default;
+      }
+      h1:hover {
+        letter-spacing: 10px;
+        line-height: 100%;
+        -webkit-text-stroke: 3px white;
+        color: transparent;
+        text-shadow: none;
+      }
+      @media screen and (max-width: 1000px) {
+        h1 {
+          letter-spacing: 10px;
+          -webkit-text-stroke: 3px white;
+          color: transparent;
+          text-shadow: none;
+          font-size: 6rem;
+        }
+      }
+      button{
+          font-family: Roboto, sans-serif;
+          background-color: transparent;
+          border: 1px solid white;
+          color: white;
+          padding: .5rem 1rem;
+      }
+      button:hover{
+          cursor: pointer;
+          background-color: white;
+          border: 1px solid black;
+          color: black;
+      }
     </style>
   </head>
   <body>

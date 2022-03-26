@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
   <head>
-    <title>{{ title }} | Collections | Zachary C</title>
+    <title>Code Projects | Zachary C</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Meta -->
-    <meta property="og:title" content="{{ title }} | Collections | Zachary C">
-    <meta name="description" content="{{ title }} Photo Collection | Zachary C">
-    <meta property="og:description" content="{{ title }} Photo Collection">
+    <meta property="og:title" content="Code Projects  | Zachary C">
+    <meta name="description" content="Code Projects | Zachary C">
+    <meta property="og:description" content="Code Projects">
     <meta property="og:image" content="/imgs/share-text.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="400">
@@ -40,15 +40,6 @@
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "az7sbiynxy");
     </script>
-    
-    <!-- gallery link -->
-    <link rel="stylesheet" href="/photography/gallery.css">
-    <script src="/photography/gallery.min.js" async></script>
-    <script>
-      window.addEventListener('load', function() {
-        baguetteBox.run('.gallery');
-      });
-    </script>
 </head>
 <body>
     <!-- Menu -->
@@ -67,14 +58,37 @@
     </nav>
     <div id="main-content">
     <!-- Menu End -->
-    <h1>{{ title }}</h1>
-    <div class="gallery">
-{{ content | safe }}
+    <h1>Code Projects</h1>
+    <a href="https://github.com/Z-C-Code">more on Github</a>
+    <div class="split-card" id="wordle-hacker">
+        <div class="pics">
+            <img src="https://assets.zacharyc.site/images/code/wordle-hacker.png" alt="Wordle Hacker Image">
+        </div>
+        <div class="text">
+            <h2>Wordle Hacker</h2>
+            <p>Chrome Extention</p>
+            <a class="button" href="https://github.com/Z-C-Code/wordle-hacker-chrome-extension">Download</a>
+        </div>
+    </div>
+    <div class="split-card" id="see-your-mouse">
+        <div class="pics">
+            <img src="https://via.placeholder.com/1280x640" alt="See Your Mouse Image">
+        </div>
+        <div class="text">
+            <h2>See Your Mouse</h2>
+            <a class="button" href="code/see-your-mouse">See</a>
+        </div>
+    </div>
+    <div class="split-card" id="guess-the-number">
+        <div class="pics">
+            <img src="https://via.placeholder.com/1280x640" alt="Guess The Number Image">
+        </div>
+        <div class="text">
+            <h2>Guess The Number</h2>
+            <a class="button" href="code/guess-the-number">Play</a>
+        </div>
     </div>
     </div>
-    <!-- Pinterest -->
-    <script type="text/javascript">(function (d) {  var f = d.getElementsByTagName('SCRIPT')[0],    p = d.createElement('SCRIPT');  p.type = 'text/javascript';  p.async = true;  p.src = '//assets.pinterest.com/js/pinit.js';  f.parentNode.insertBefore(p, f);})(document);</script>
-    <!-- End Pinterest -->
     <footer>
       <p><a href="https://github.com/Z-C-Code/zacharyc.site">v4.3</a> | <a href="/tech.html">technology</a></p>
     </footer>

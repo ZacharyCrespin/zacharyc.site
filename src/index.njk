@@ -4,42 +4,24 @@ description: Photography and more
 layout: 'basic.njk'
 permalink: index.html
 ---
-    <h1>Latest Collections</h1>
+    <h1>Latest Work</h1>
+    <style>
+      /* i know this is a terable way to do it */
+      /* i will fix it at some point */
+      /* basicly if it is child 5 or higher it aplys display = none */
+      .collections .card:nth-child(+n+5) {
+        display: none;
+      }
+    </style>
+    <h2>Photos</h2>
     <div class="collections">
-      <!-- {%- for collection in collections.collection -%}
+      {%- for collection in collections.collection -%}
       <div class="card">
-        <img class="card-image" src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image">
+        <img class="card-image" src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
           <h2 class="card-text">{{ collection.data.title }}</h2>
           <p class="card-text">{{ collection.data.numberofphotos }} Photos</p>
-          <a class="button" href="{{ collection.url }}">View Collection</a>
+          <a class="button" href="/photography/collections/{{ collection.data.url }}.html">View Collection</a>
       </div>
-      {%- endfor -%} -->
-      <div class="card">
-        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/1.jpg" alt="Cameras Collection Image" width="100%">
-        <h2 class="card-text">Cameras</h2>
-        <p class="card-text">4 Photos</p>
-        <a class="button" href="/photography/collections/cameras.html">View Collection</a>
-      </div>
-      <div class="card">
-        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/2.jpg" alt="Air Show Collection Image" width="100%">
-        <h2 class="card-text">Air Show</h2>
-        <p class="card-text">12 Photos</p>
-        <a class="button" href="/photography/collections/air-show.html">View Collection</a>
-      </div>
-      <div class="card">
-        <img  class="card-image" src="https://assets.zacharyc.site/images/collection-banner/3.jpg" alt="Lake Tahoe Collection Image" width="100%">
-        <h2 class="card-text">Lake Tahoe</h2>
-        <p class="card-text">7 Photos</p>
-        <a class="button" href="/photography/collections/lake-tahoe.html">View Collection</a>
-      </div>
-      <div class="card">
-        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/4.jpg" alt="Irvine Park Collection Image" width="100%">
-          <h2 class="card-text">Irvine Park</h2>
-          <p class="card-text">6 Photos</p>
-          <a class="button" href="/photography/collections/irvine-park.html">View Collection</a>
-      </div>
-    </div><br>
+      {%- endfor -%}
+    </div>
     <a class="button" href="/photography/collections.html">View More Collections</a>
-
-    <h1>Featured Creations</h1>
-    <p>More creations coming soon</p>

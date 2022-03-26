@@ -7,6 +7,10 @@
     <meta property="og:title" content="Home  | Zachary C">
     <meta name="description" content="Photography and more | Zachary C">
     <meta property="og:description" content="Photography and more">
+    <meta property="og:image" content="/imgs/share-text.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="200">
     <meta property="og:site_name" content="Zachary C">
     <meta property="og:type" content="website">
     <!-- CSS -->
@@ -54,66 +58,46 @@
     </nav>
     <div id="main-content">
     <!-- Menu End -->
-    <h1>Latest Collections</h1>
-    <div class="collections">
-      <!--<div class="card">
-        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/1.jpg" alt="Cameras Collection Image">
+    <h1>Latest Work</h1>
+    <style>
+      /* i know this is a terable way to do it */
+      /* i will fix it at some point */
+      /* basicly if it is child 5 or higher it aplys display = none */
+      .collections .card:nth-child(+n+5) {
+        display: none;
+      }
+    </style>
+    <h2>Photos</h2>
+    <div class="collections"><div class="card">
+        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/1.jpg" alt="Cameras Collection Image" width="100%">
           <h2 class="card-text">Cameras</h2>
           <p class="card-text">4 Photos</p>
           <a class="button" href="/photography/collections/cameras.html">View Collection</a>
       </div><div class="card">
-        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/2.jpg" alt="Air Show Collection Image">
+        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/2.jpg" alt="Air Show Collection Image" width="100%">
           <h2 class="card-text">Air Show</h2>
           <p class="card-text">12 Photos</p>
           <a class="button" href="/photography/collections/air-show.html">View Collection</a>
       </div><div class="card">
-        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/4.jpg" alt="Irvine Park Collection Image">
-          <h2 class="card-text">Irvine Park</h2>
-          <p class="card-text">6 Photos</p>
-          <a class="button" href="/photography/collections/irvine-park.html">View Collection</a>
-      </div><div class="card">
-        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/3.jpg" alt="Lake Tahoe Collection Image">
-          <h2 class="card-text">Lake Tahoe</h2>
-          <p class="card-text">7 Photos</p>
-          <a class="button" href="/photography/collections/lake-tahoe.html">View Collection</a>
-      </div><div class="card">
-        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/5.jpg" alt="Newport Beach Collection Image">
-          <h2 class="card-text">Newport Beach</h2>
-          <p class="card-text">3 Photos</p>
-          <a class="button" href="/photography/collections/newport.html">View Collection</a>
-      </div>-->
-      <div class="card">
-        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/1.jpg" alt="Cameras Collection Image" width="100%">
-        <h2 class="card-text">Cameras</h2>
-        <p class="card-text">4 Photos</p>
-        <a class="button" href="/photography/collections/cameras.html">View Collection</a>
-      </div>
-      <div class="card">
-        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/2.jpg" alt="Air Show Collection Image" width="100%">
-        <h2 class="card-text">Air Show</h2>
-        <p class="card-text">12 Photos</p>
-        <a class="button" href="/photography/collections/air-show.html">View Collection</a>
-      </div>
-      <div class="card">
-        <img  class="card-image" src="https://assets.zacharyc.site/images/collection-banner/3.jpg" alt="Lake Tahoe Collection Image" width="100%">
-        <h2 class="card-text">Lake Tahoe</h2>
-        <p class="card-text">7 Photos</p>
-        <a class="button" href="/photography/collections/lake-tahoe.html">View Collection</a>
-      </div>
-      <div class="card">
         <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/4.jpg" alt="Irvine Park Collection Image" width="100%">
           <h2 class="card-text">Irvine Park</h2>
           <p class="card-text">6 Photos</p>
           <a class="button" href="/photography/collections/irvine-park.html">View Collection</a>
-      </div>
-    </div><br>
+      </div><div class="card">
+        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/3.jpg" alt="Lake Tahoe Collection Image" width="100%">
+          <h2 class="card-text">Lake Tahoe</h2>
+          <p class="card-text">7 Photos</p>
+          <a class="button" href="/photography/collections/lake-tahoe.html">View Collection</a>
+      </div><div class="card">
+        <img class="card-image" src="https://assets.zacharyc.site/images/collection-banner/5.jpg" alt="Newport Beach Collection Image" width="100%">
+          <h2 class="card-text">Newport Beach</h2>
+          <p class="card-text">3 Photos</p>
+          <a class="button" href="/photography/collections/newport.html">View Collection</a>
+      </div></div>
     <a class="button" href="/photography/collections.html">View More Collections</a>
-
-    <h1>Featured Creations</h1>
-    <p>More creations coming soon</p>
     </div>
     <footer>
-      <p>Version 4.2.3 | <a href="/tech.html">Learn about the technology used</a></p>
+      <p><a href="https://github.com/Z-C-Code/zacharyc.site">v4.3</a> | <a href="/tech.html">technology</a></p>
     </footer>
 </body>
 </html>
