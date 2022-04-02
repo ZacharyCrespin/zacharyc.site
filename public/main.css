@@ -100,24 +100,25 @@ a:hover{
   color: gray;
 }
 
-button,
-.button{
-  padding: .5rem 1.5rem;
+.button, 
+button {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
   margin: 1rem .5rem;
+  padding: .5rem 1.5rem;
+  border: 1px solid var(--white);
+  background-color: transparent;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  color: var(--white);
-  background-color: transparent;
-  border: 1px solid var(--white);
-  position: relative;
-  overflow: hidden;
-  transition: .4s;
+  transition: .2s;
   z-index: 1;
+  color: var(--white);
 }
-.button::before {
+.button::before, 
+button::before {
   content: '';
-  width: 0%;
+  width: 0;
   height: 500%;
   position: absolute;
   top: 50%;
@@ -125,16 +126,17 @@ button,
   transform: translate(-50%, -50%) rotate(45deg);
   background: var(--white);
   transition: .4s ease;
+  display: block;
   z-index: -1;
- }
-.button:hover::before {
-  width: 200%;
- }
-button:hover,
-.button:hover{
-  cursor: pointer;
-  color: var(--black);
 }
+.button:hover::before, 
+button:hover::before {
+  width: 200%;
+}
+.button:hover, 
+button:hover {
+  color: #111;
+} 
 
 input {
   background-color: var(--black);
@@ -187,6 +189,9 @@ input {
   background-color: transparent;
   border: none;
   font-size: 1rem;
+}
+.menu button::before {
+  content: normal;
 }
 .menu a:hover, .menu button:hover, .active{
   color: var(--white);

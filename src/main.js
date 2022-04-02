@@ -1,5 +1,5 @@
 window.onload = function() {
-    // Update favicon for dark mode
+    // Update Favicon for Dark Mode
     const darkModeListener = (event) => {
     if (event.matches) {
         document.getElementById('favicon').setAttribute("href","https://zacharyc.site/imgs/favicon-white.png");
@@ -14,10 +14,12 @@ window.onload = function() {
         document.getElementById('favicon').setAttribute("href","https://zacharyc.site/imgs/favicon-black.png");
     }
 
+    // Register Servic Worker
     if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("https://zacharyc.site/service-worker.js");
     }
 
+    // Hide Loader
     document.getElementById("loader").style.display = "none";
 }
 
