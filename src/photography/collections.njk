@@ -1,18 +1,18 @@
 ---
-title: Collections
-description: All Photo Collections
+title: Collections | Photography
+description: All Photo Collections | Photography
 layout: 'basic.njk'
-permalink: /photography/collections.html
+id: collections
 ---
     <h1>Photo Collections</h1>
     <div class="collections">
 
-      {%- for collection in collections.collection -%}
+      {%- for collection in collections.collection | reverse -%}
       <div class="card">
         <img class="card-image" src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
           <h2 class="card-text">{{ collection.data.title }}</h2>
           <p class="card-text">{{ collection.data.numberofphotos }} Photos</p>
-          <a class="button" href="/photography/collections/{{ collection.data.url }}.html">View Collection</a>
+          <a class="button" href="/photography/collections/{{ collection.data.url }}">View Collection</a>
       </div>
       {%- endfor -%}
     </div>

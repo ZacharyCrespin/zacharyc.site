@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="Zachary C">
     <meta property="og:type" content="website">
-    <link rel="icon" href="https://zacharyc.site/imgs/favicon-black.png" id="favicon">
+    <link rel="icon" href="https://zacharyc.site/images/favicon-black.png" id="favicon">
     <meta name="theme-color" content="#4A4A4A">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TQEN9M9FK"></script>
@@ -31,7 +31,7 @@
         font-family: Roboto, sans-serif;
       }
       h1 {
-        font-size: 50vh;
+        font-size: 65vh;
         letter-spacing: 4rem;
         padding: 0px;
         margin: 2rem 2rem 0px 2rem;
@@ -59,6 +59,7 @@
       }
       @media screen and (max-width: 1000px) {
         h1 {
+          font-size: 50vh;
           letter-spacing: 1.5px;
           -webkit-text-stroke: 3px white;
           color: transparent;
@@ -85,16 +86,16 @@
           // Update favicon for dark mode
           const darkModeListener = (event) => {
           if (event.matches) {
-              document.getElementById('favicon').setAttribute("href","https://zacharyc.site/imgs/favicon-white.png");
+              document.getElementById('favicon').setAttribute("href","https://zacharyc.site/images/favicon-white.png");
           } else {
-              document.getElementById('favicon').setAttribute("href","https://zacharyc.site/imgs/favicon-black.png");
+              document.getElementById('favicon').setAttribute("href","https://zacharyc.site/images/favicon-black.png");
           }
           };
           window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', darkModeListener);
           if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-              document.getElementById('favicon').setAttribute("href","https://zacharyc.site/imgs/favicon-white.png");
+              document.getElementById('favicon').setAttribute("href","https://zacharyc.site/images/favicon-white.png");
           } else {
-              document.getElementById('favicon').setAttribute("href","https://zacharyc.site/imgs/favicon-black.png");
+              document.getElementById('favicon').setAttribute("href","https://zacharyc.site/images/favicon-black.png");
           }
       }
     </script>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <title>Collections | Photography | Zachary C</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Meta -->
+    <meta property="og:title" content="Collections | Photography  | Zachary C">
+    <meta name="description" content="All Photo Collections | Photography | Zachary C">
+    <meta property="og:description" content="All Photo Collections | Photography">
+    <meta property="og:image" content="/images/share-images/collections.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="200">
+    <meta property="og:site_name" content="Zachary C">
+    <meta property="og:type" content="website">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- JS -->
+    <script src="/js/main.js"></script>
+    <!-- Icons -->
+    <link rel="icon" href="/images/favicon-black.png" id="favicon">
+    <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4A4A4A">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TQEN9M9FK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7TQEN9M9FK');
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "az7sbiynxy");
+    </script>
+</head>
+<body>
+    <!-- Menu -->
+    <div id="loader"></div>
+    <a href="#content" class="skip-nav">Skip Nav</a>
+    <header>
+    <nav class="menu" id="menu" role="navigation">
+      <a href="/">Home</a>
+        <button onclick="drop1()" aria-label="Photography Dropdown">Photography<svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 7L15.5 14L23 7" stroke="var(--white)"/></svg></button>
+        <div id="dropdown1" class="dropdown">
+          <a href="/photography/favorites">My Favorites</a>
+          <a href="/photography/collections">Collections</a>
+        </div>
+      <a href="/wallpapers">Wallpapers</a>
+      <a href="/shortcuts">Apple Shortcuts</a>
+      <a href="/code">Code</a>
+      <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>
+    </nav>
+    </header>
+    <main id="content">
+    <!-- Menu End -->
+    <h1>Photo Collections</h1>
+    <div class="collections"><div class="card">
+        <img class="card-image" src="/images/collection-banner/1.jpg" alt="Cameras Collection Image" width="100%">
+          <h2 class="card-text">Cameras</h2>
+          <p class="card-text">4 Photos</p>
+          <a class="button" href="/photography/collections/cameras">View Collection</a>
+      </div><div class="card">
+        <img class="card-image" src="/images/collection-banner/2.jpg" alt="Air Show Collection Image" width="100%">
+          <h2 class="card-text">Air Show</h2>
+          <p class="card-text">12 Photos</p>
+          <a class="button" href="/photography/collections/air-show">View Collection</a>
+      </div><div class="card">
+        <img class="card-image" src="/images/collection-banner/3.jpg" alt="Lake Tahoe Collection Image" width="100%">
+          <h2 class="card-text">Lake Tahoe</h2>
+          <p class="card-text">7 Photos</p>
+          <a class="button" href="/photography/collections/lake-tahoe">View Collection</a>
+      </div><div class="card">
+        <img class="card-image" src="/images/collection-banner/4.jpg" alt="Irvine Park Collection Image" width="100%">
+          <h2 class="card-text">Irvine Park</h2>
+          <p class="card-text">6 Photos</p>
+          <a class="button" href="/photography/collections/irvine-park">View Collection</a>
+      </div><div class="card">
+        <img class="card-image" src="/images/collection-banner/5.jpg" alt="Newport Beach Collection Image" width="100%">
+          <h2 class="card-text">Newport Beach</h2>
+          <p class="card-text">3 Photos</p>
+          <a class="button" href="/photography/collections/newport">View Collection</a>
+      </div></div>
+    </main>
+    <footer>
+      <p><a href="https://github.com/Z-C-Code/zacharyc.site">v4.4</a> | <a href="/tech">technology</a></p>
+    </footer>
+</body>
+</html>
