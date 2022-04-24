@@ -1,0 +1,19 @@
+{
+    "hosting": {
+      "public": "public",
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "ignore": [
+        ".unlighthouse",
+        "/node_modules",
+        "/src",
+        ".eleventy.js",
+        ".eleventyignore",
+        ".gitignore",
+        "firebase.json",
+        "package-lock.json",
+        "package.json",
+        "README.md"
+      ]
+    }
+  }
