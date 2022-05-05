@@ -1,0 +1,44 @@
+---
+title: Photography
+description: Photography
+layout: 'basic.njk'
+id: Photography
+---
+    <h1>Photography</h1>
+    <style>
+      /* i know this is a terable way to do it */
+      /* i will fix it at some point */
+      /* basicly if it is child 5 or higher it aplys display = none */
+      .collections .card:nth-child(+n+5) {
+        display: none;
+      }
+    </style>
+    <h2>Latest Collections</h2>
+    <div class="collections">
+    {%- for collection in collections.collection | reverse -%}
+    <div class="card">
+      <img class="card-image" src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
+        <h2 class="card-text">{{ collection.data.title }}</h2>
+        <p class="card-text">{{ collection.data.numberofphotos }} Photos</p>
+        <a class="button" href="/photography/collections/{{ collection.data.url }}">View Collection</a>
+    </div>
+    {%- endfor -%}
+    </div>
+    <!-- gallery link -->
+    <link rel="stylesheet" href="/css/gallery.min.css">
+    <script src="/js/gallery.min.js" async></script>
+    <script>
+      window.addEventListener('load', function() {
+        baguetteBox.run('.gallery');
+      });
+    </script>
+    <h2>Latest Photos</h2>
+    <div class="gallery">
+      <div class="photo"><a href="/images/collection-images/latest/lizard-1.jpg"><img src="/images/collection-images/latest/lizard-1-Small.jpg" data-pin-description="Latest 1 | Zachary C" alt="Latest 1"></a></div>
+      <div class="photo"><a href="/images/collection-images/latest/lizard-2.jpg"><img src="/images/collection-images/latest/lizard-2-Small.jpg" data-pin-description="Latest 2 | Zachary C" alt="Latest 2"></a></div>
+      <div class="photo"><a href="/images/collection-images/latest/lizard-3.jpg"><img src="/images/collection-images/latest/lizard-3-Small.jpg" data-pin-description="Latest 3 | Zachary C" alt="Latest 3"></a></div>
+      <div class="photo"><a href="/images/collection-images/latest/camera-1.jpg"><img src="/images/collection-images/latest/camera-1-Small.jpg" data-pin-description="Latest 4 | Zachary C" alt="Latest 4"></a></div>
+      <div class="photo"><a href="/images/collection-images/latest/camera-2.jpg"><img src="/images/collection-images/latest/camera-2-Small.jpg" data-pin-description="Latest 5 | Zachary C" alt="Latest 5"></a></div>
+      <div class="photo"><a href="/images/collection-images/latest/camera-3.jpg"><img src="/images/collection-images/latest/camera-3-Small.jpg" data-pin-description="Latest 6 | Zachary C" alt="Latest 6"></a></div>
+      <div class="photo"><a href="/images/collection-images/latest/camera-4.jpg"><img src="/images/collection-images/latest/camera-4-Small.jpg" data-pin-description="Latest 7 | Zachary C" alt="Latest 7"></a></div>  
+    </div>
