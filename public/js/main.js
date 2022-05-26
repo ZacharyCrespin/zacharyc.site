@@ -24,11 +24,9 @@ window.onload = function() {
 }
 
 function menu() {
-    var x = document.getElementById("menu");
-    if (x.className === "menu") {x.className += " open";} else {x.className = "menu";}
-}
-
-function drop1() {
-    var x = document.getElementById("dropdown1");
-    if (x.className === "dropdown") {x.className += " open";} else {x.className = "dropdown";}
-}
+    if (document.getElementById("menu").style.display !== "block") {
+      document.getElementById("menu").style.display = "block"
+    } else {
+      document.getElementById("menu").style.display = "none"
+    }
+  }

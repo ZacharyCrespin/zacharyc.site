@@ -46,18 +46,21 @@
     <div id="loader"></div>
     <a href="#content" class="skip-nav">Skip Nav</a>
     <header>
-    <nav class="menu" id="menu" role="navigation">
-      <a href="/">Home</a>
-        <button onclick="drop1()" aria-label="Photography Dropdown">Photography<svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 7L15.5 14L23 7" stroke="var(--white)"/></svg></button>
-        <div id="dropdown1" class="dropdown">
-          <a href="/photography/favorites">My Favorites</a>
-          <a href="/photography/collections">Collections</a>
-        </div>
-      <a href="/wallpapers">Wallpapers</a>
-      <a href="/shortcuts">Apple Shortcuts</a>
-      <a href="/code">Code</a>
-      <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>
-    </nav>
+      <nav class="menu" id="menu" role="navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/photography" aria-haspopup="true">Photography</a><svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 7L15.5 14L23 7" stroke="var(--white)"/></svg>
+            <ul class="dropdown" aria-label="submenu">
+              <li><a href="/photography/favorites">My Favorites</a></li>
+              <li><a href="/photography/collections">Collections</a></li>
+            </ul>
+          </li>
+          <li><a href="/wallpapers">Wallpapers</a></li>
+          <li><a href="/shortcuts">Apple Shortcuts</a></li>
+          <li><a href="/code">Code</a></li>
+        </ul>
+      </nav>
+      <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>    
     </header>
     <main id="content">
     <!-- Menu End -->
@@ -70,63 +73,66 @@
         display: none;
       }
     </style>
-    <h2>Photos</h2>
+    <h2>Latest Photos</h2>
     <div class="collections"><div class="card">
-        <img class="card-image" src="/images/collection-banner/6.jpg" alt="Lizard Collection Image" width="100%">
-          <h2>Lizard</h2>
-          <p>3 Photos</p>
-          <a class="button" href="/photography/collections/lizard">View Collection</a>
-      </div><div class="card">
-        <img class="card-image" src="/images/collection-banner/1.jpg" alt="Cameras Collection Image" width="100%">
-          <h2>Cameras</h2>
-          <p>4 Photos</p>
-          <a class="button" href="/photography/collections/cameras">View Collection</a>
-      </div><div class="card">
-        <img class="card-image" src="/images/collection-banner/2.jpg" alt="Air Show Collection Image" width="100%">
-          <h2>Air Show</h2>
-          <p>12 Photos</p>
-          <a class="button" href="/photography/collections/air-show">View Collection</a>
-      </div><div class="card">
-        <img class="card-image" src="/images/collection-banner/3.jpg" alt="Lake Tahoe Collection Image" width="100%">
-          <h2>Lake Tahoe</h2>
-          <p>7 Photos</p>
-          <a class="button" href="/photography/collections/lake-tahoe">View Collection</a>
-      </div><div class="card">
-        <img class="card-image" src="/images/collection-banner/4.jpg" alt="Irvine Park Collection Image" width="100%">
-          <h2>Irvine Park</h2>
-          <p>6 Photos</p>
-          <a class="button" href="/photography/collections/irvine-park">View Collection</a>
-      </div><div class="card">
-        <img class="card-image" src="/images/collection-banner/5.jpg" alt="Newport Beach Collection Image" width="100%">
-          <h2>Newport Beach</h2>
-          <p>3 Photos</p>
-          <a class="button" href="/photography/collections/newport">View Collection</a>
-      </div></div>
-    <a class="button" href="/photography">View More Photos</a>
+      <img class="card-image" src="/images/collection-banner/6.jpg" alt="Lizard Collection Image" width="100%">
+        <h2 class="card-text">Lizard</h2>
+        <p class="card-text">3 Photos</p>
+        <a class="button" href="/photography/collections/lizard">View Collection</a>
+    </div><div class="card">
+      <img class="card-image" src="/images/collection-banner/1.jpg" alt="Cameras Collection Image" width="100%">
+        <h2 class="card-text">Cameras</h2>
+        <p class="card-text">4 Photos</p>
+        <a class="button" href="/photography/collections/cameras">View Collection</a>
+    </div><div class="card">
+      <img class="card-image" src="/images/collection-banner/2.jpg" alt="Air Show Collection Image" width="100%">
+        <h2 class="card-text">Air Show</h2>
+        <p class="card-text">12 Photos</p>
+        <a class="button" href="/photography/collections/air-show">View Collection</a>
+    </div><div class="card">
+      <img class="card-image" src="/images/collection-banner/3.jpg" alt="Lake Tahoe Collection Image" width="100%">
+        <h2 class="card-text">Lake Tahoe</h2>
+        <p class="card-text">7 Photos</p>
+        <a class="button" href="/photography/collections/lake-tahoe">View Collection</a>
+    </div><div class="card">
+      <img class="card-image" src="/images/collection-banner/4.jpg" alt="Irvine Park Collection Image" width="100%">
+        <h2 class="card-text">Irvine Park</h2>
+        <p class="card-text">6 Photos</p>
+        <a class="button" href="/photography/collections/irvine-park">View Collection</a>
+    </div><div class="card">
+      <img class="card-image" src="/images/collection-banner/5.jpg" alt="Newport Beach Collection Image" width="100%">
+        <h2 class="card-text">Newport Beach</h2>
+        <p class="card-text">3 Photos</p>
+        <a class="button" href="/photography/collections/newport">View Collection</a>
+    </div></div>
+    <a class="button" href="/photography/collections">View More Collections</a>
 
     <h2>Coding Projects</h2>
-    <div class="collections">
-      <div class="card">
-        <h2>Free Periodic Tables</h2>
-        <p><a href="https://11ty.dev">11ty</a></p>
-        <a class="button" href="https://periodictables.zacharyc.site" target="_blank">Visit</a>
-      </div>
-      <div class="card">
+    <div class="collections"><div class="card">
+        <h2>Upcoming Launches</h2>
+        <p>API, JavaScript</p>
+        <a class="button" href="https://z-c-code.github.io/upcoming-launches/" target="_blank">View</a>
+      </div><div class="card">
         <h2>Weather</h2>
-        <p>API</p>
-        <a class="button" href="/code/weather" target="_blank">View</a>
-      </div>
-      <div class="card">
+        <p>API, JavaScript</p>
+        <a class="button" href="https://z-c-code.github.io/weather/" target="_blank">View</a>
+      </div><div class="card">
+        <h2>Free Periodic Tables</h2>
+        <p>11ty, Figma</p>
+        <a class="button" href="https://periodictables.zacharyc.site" target="_blank">Visit</a>
+      </div><div class="card">
         <h2>Wordle Hacker</h2>
         <p>Chrome Extention</p>
         <a class="button" href="https://github.com/Z-C-Code/wordle-hacker-chrome-extension" target="_blank">Download</a>
-      </div>
-      <div class="card">
+      </div><div class="card">
         <h2>See Your Mouse</h2>
         <p>CSS</p>
-        <a class="button" href="/code/see-your-mouse" target="_blank">See</a>
-      </div>
-    </div>
+        <a class="button" href="https://z-c-code.github.io/see-your-mouse/" target="_blank">See</a>
+      </div><div class="card">
+        <h2>Guess The Number</h2>
+        <p>JavaScript</p>
+        <a class="button" href="https://z-c-code.github.io/guess-the-number/" target="_blank">Play</a>
+      </div></div>
     <a class="button" href="/code">View More Projects</a>
     </main>
     <footer>

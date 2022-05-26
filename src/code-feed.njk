@@ -1,0 +1,19 @@
+---json
+{
+  "permalink": "/code/feed.xml",
+  "eleventyExcludeFromCollections": true
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Latest Codeing Projects</title>
+  <updated>{{ collections.code | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  {%- for post in collections.code %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ post.data.link }}"/>
+    <updated>{{ post.data.date | dateToRfc3339 }}</updated>
+    <id>{{ post.data.id }}</id>
+  </entry>
+  {%- endfor %}
+</feed>

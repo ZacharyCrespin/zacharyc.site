@@ -10,7 +10,8 @@
   "author": "Zachary C <contact@zacharyc.site> (https://zacharyc.site)",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1"
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.1.2"
   },
   "dependencies": {},
   "repository": {

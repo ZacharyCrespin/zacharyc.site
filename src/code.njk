@@ -27,19 +27,11 @@ id: code
       </div>
     </div>
     <div class="collections">
+      {%- for code in collections.code | reverse -%}
       <div class="card">
-        <h2>Weather</h2>
-        <p>API</p>
-        <a class="button" href="/code/weather" target="_blank">View</a>
+        <h2>{{ code.data.title }}</h2>
+        <p>{{ code.data.tech }}</p>
+        <a class="button" href="{{ code.data.link }}" target="_blank">{{ code.data.linktext }}</a>
       </div>
-      <div class="card">
-        <h2>See Your Mouse</h2>
-        <p>CSS</p>
-        <a class="button" href="/code/see-your-mouse" target="_blank">See</a>
-      </div>
-      <div class="card">
-        <h2>Guess The Number</h2>
-        <p>JavaScript</p>
-        <a class="button" href="/code/guess-the-number" target="_blank">Play</a>
-      </div>
+      {%- endfor -%}
     </div>

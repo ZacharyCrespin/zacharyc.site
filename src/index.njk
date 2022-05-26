@@ -13,40 +13,27 @@ id: home
         display: none;
       }
     </style>
-    <h2>Photos</h2>
+    <h2>Latest Photos</h2>
     <div class="collections">
-      {%- for collection in collections.collection | reverse -%}
-      <div class="card">
-        <img class="card-image" src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
-          <h2>{{ collection.data.title }}</h2>
-          <p>{{ collection.data.numberofphotos }} Photos</p>
-          <a class="button" href="/photography/collections/{{ collection.data.url }}">View Collection</a>
-      </div>
-      {%- endfor -%}
+    {%- for collection in collections.collection | reverse -%}
+    <div class="card">
+      <img class="card-image" src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
+        <h2 class="card-text">{{ collection.data.title }}</h2>
+        <p class="card-text">{{ collection.data.numberofphotos }} Photos</p>
+        <a class="button" href="/photography/collections/{{ collection.data.url }}">View Collection</a>
     </div>
-    <a class="button" href="/photography">View More Photos</a>
+    {%- endfor -%}
+    </div>
+    <a class="button" href="/photography/collections">View More Collections</a>
 
     <h2>Coding Projects</h2>
     <div class="collections">
+      {%- for code in collections.code | reverse -%}
       <div class="card">
-        <h2>Free Periodic Tables</h2>
-        <p><a href="https://11ty.dev">11ty</a></p>
-        <a class="button" href="https://periodictables.zacharyc.site" target="_blank">Visit</a>
+        <h2>{{ code.data.title }}</h2>
+        <p>{{ code.data.tech }}</p>
+        <a class="button" href="{{ code.data.link }}" target="_blank">{{ code.data.linktext }}</a>
       </div>
-      <div class="card">
-        <h2>Weather</h2>
-        <p>API</p>
-        <a class="button" href="/code/weather" target="_blank">View</a>
-      </div>
-      <div class="card">
-        <h2>Wordle Hacker</h2>
-        <p>Chrome Extention</p>
-        <a class="button" href="https://github.com/Z-C-Code/wordle-hacker-chrome-extension" target="_blank">Download</a>
-      </div>
-      <div class="card">
-        <h2>See Your Mouse</h2>
-        <p>CSS</p>
-        <a class="button" href="/code/see-your-mouse" target="_blank">See</a>
-      </div>
+      {%- endfor -%}
     </div>
     <a class="button" href="/code">View More Projects</a>

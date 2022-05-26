@@ -46,18 +46,21 @@
     <div id="loader"></div>
     <a href="#content" class="skip-nav">Skip Nav</a>
     <header>
-    <nav class="menu" id="menu" role="navigation">
-      <a href="/">Home</a>
-        <button onclick="drop1()" aria-label="Photography Dropdown">Photography<svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 7L15.5 14L23 7" stroke="var(--white)"/></svg></button>
-        <div id="dropdown1" class="dropdown">
-          <a href="/photography/favorites">My Favorites</a>
-          <a href="/photography/collections">Collections</a>
-        </div>
-      <a href="/wallpapers">Wallpapers</a>
-      <a href="/shortcuts">Apple Shortcuts</a>
-      <a href="/code">Code</a>
-      <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>
-    </nav>
+      <nav class="menu" id="menu" role="navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/photography" aria-haspopup="true">Photography</a><svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 7L15.5 14L23 7" stroke="var(--white)"/></svg>
+            <ul class="dropdown" aria-label="submenu">
+              <li><a href="/photography/favorites">My Favorites</a></li>
+              <li><a href="/photography/collections">Collections</a></li>
+            </ul>
+          </li>
+          <li><a href="/wallpapers">Wallpapers</a></li>
+          <li><a href="/shortcuts">Apple Shortcuts</a></li>
+          <li><a href="/code">Code</a></li>
+        </ul>
+      </nav>
+      <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>    
     </header>
     <main id="content">
     <!-- Menu End -->
@@ -112,13 +115,13 @@
     </script>
     <h2>Latest Photos</h2>
     <div class="gallery">
-      <div class="photo"><a href="/images/collection-images/latest/lizard-1.jpg"><img src="/images/collection-images/latest/lizard-1-Small.jpg" data-pin-description="Latest 1 | Zachary C" alt="Latest 1"></a></div>
-      <div class="photo"><a href="/images/collection-images/latest/lizard-2.jpg"><img src="/images/collection-images/latest/lizard-2-Small.jpg" data-pin-description="Latest 2 | Zachary C" alt="Latest 2"></a></div>
-      <div class="photo"><a href="/images/collection-images/latest/lizard-3.jpg"><img src="/images/collection-images/latest/lizard-3-Small.jpg" data-pin-description="Latest 3 | Zachary C" alt="Latest 3"></a></div>
-      <div class="photo"><a href="/images/collection-images/latest/camera-1.jpg"><img src="/images/collection-images/latest/camera-1-Small.jpg" data-pin-description="Latest 4 | Zachary C" alt="Latest 4"></a></div>
-      <div class="photo"><a href="/images/collection-images/latest/camera-2.jpg"><img src="/images/collection-images/latest/camera-2-Small.jpg" data-pin-description="Latest 5 | Zachary C" alt="Latest 5"></a></div>
-      <div class="photo"><a href="/images/collection-images/latest/camera-3.jpg"><img src="/images/collection-images/latest/camera-3-Small.jpg" data-pin-description="Latest 6 | Zachary C" alt="Latest 6"></a></div>
-      <div class="photo"><a href="/images/collection-images/latest/camera-4.jpg"><img src="/images/collection-images/latest/camera-4-Small.jpg" data-pin-description="Latest 7 | Zachary C" alt="Latest 7"></a></div>  
+      <div class="photo"><a href="/images/collection-images/lizard/lizard-1.jpg"><img src="/images/collection-images/lizard/lizard-1-Small.jpg" data-pin-description="Latest 1 | Zachary C" alt="Latest 1"></a></div>
+      <div class="photo"><a href="/images/collection-images/lizard/lizard-2.jpg"><img src="/images/collection-images/lizard/lizard-2-Small.jpg" data-pin-description="Latest 2 | Zachary C" alt="Latest 2"></a></div>
+      <div class="photo"><a href="/images/collection-images/lizard/lizard-3.jpg"><img src="/images/collection-images/lizard/lizard-3-Small.jpg" data-pin-description="Latest 3 | Zachary C" alt="Latest 3"></a></div>
+      <div class="photo"><a href="/images/collection-images/cameras/camera-1.jpg"><img src="/images/collection-images/cameras/camera-1-Small.jpg" data-pin-description="Latest 4 | Zachary C" alt="Latest 4"></a></div>
+      <div class="photo"><a href="/images/collection-images/cameras/camera-2.jpg"><img src="/images/collection-images/cameras/camera-2-Small.jpg" data-pin-description="Latest 5 | Zachary C" alt="Latest 5"></a></div>
+      <div class="photo"><a href="/images/collection-images/cameras/camera-3.jpg"><img src="/images/collection-images/cameras/camera-3-Small.jpg" data-pin-description="Latest 6 | Zachary C" alt="Latest 6"></a></div>
+      <div class="photo"><a href="/images/collection-images/cameras/camera-4.jpg"><img src="/images/collection-images/cameras/camera-4-Small.jpg" data-pin-description="Latest 7 | Zachary C" alt="Latest 7"></a></div>  
     </div>
     </main>
     <footer>

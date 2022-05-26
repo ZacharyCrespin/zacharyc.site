@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Latest Collections</title>
+  <updated>2022-05-04T00:00:00Z</updated>
+  <entry>
+    <title>Newport Beach</title>
+    <link href="https://zacharyc.site/photography/collections/newport"/>
+    <updated>2020-06-22T00:00:00Z</updated>
+    <id>newport</id>
+  </entry>
+  <entry>
+    <title>Irvine Park</title>
+    <link href="https://zacharyc.site/photography/collections/irvine-park"/>
+    <updated>2021-01-18T00:00:00Z</updated>
+    <id>irvine-park</id>
+  </entry>
+  <entry>
+    <title>Lake Tahoe</title>
+    <link href="https://zacharyc.site/photography/collections/lake-tahoe"/>
+    <updated>2021-06-25T00:00:00Z</updated>
+    <id>lake-tahoe</id>
+  </entry>
+  <entry>
+    <title>Air Show</title>
+    <link href="https://zacharyc.site/photography/collections/air-show"/>
+    <updated>2021-10-02T00:00:00Z</updated>
+    <id>air-show</id>
+  </entry>
+  <entry>
+    <title>Cameras</title>
+    <link href="https://zacharyc.site/photography/collections/cameras"/>
+    <updated>2021-10-31T00:00:00Z</updated>
+    <id>cameras</id>
+  </entry>
+  <entry>
+    <title>Lizard</title>
+    <link href="https://zacharyc.site/photography/collections/lizard"/>
+    <updated>2022-05-04T00:00:00Z</updated>
+    <id>lizard</id>
+  </entry>
+</feed>

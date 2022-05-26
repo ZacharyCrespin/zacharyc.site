@@ -1,0 +1,19 @@
+---json
+{
+  "permalink": "/photography/collections/feed.xml",
+  "eleventyExcludeFromCollections": true
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Latest Collections</title>
+  <updated>{{ collections.collection | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  {%- for post in collections.collection %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="https://zacharyc.site/photography/collections/{{ post.data.url }}"/>
+    <updated>{{ post.data.date | dateToRfc3339 }}</updated>
+    <id>{{ post.data.url }}</id>
+  </entry>
+  {%- endfor %}
+</feed>
