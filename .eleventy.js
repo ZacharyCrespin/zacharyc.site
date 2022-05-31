@@ -10,6 +10,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/js');
     eleventyConfig.addPassthroughCopy('./src/_redirects');
     eleventyConfig.addPassthroughCopy('./src/404.html');
+    eleventyConfig.addPassthroughCopy('./src/insert.js');
     eleventyConfig.addPassthroughCopy('./src/manifest.json');
     eleventyConfig.addPassthroughCopy('./src/offline.html');
     eleventyConfig.addPassthroughCopy('./src/robots.txt');
