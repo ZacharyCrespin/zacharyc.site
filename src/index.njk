@@ -1,6 +1,6 @@
 ---
 title: Home
-description: Photography and more
+description: Photography, Code and more
 layout: 'basic.njk'
 id: home
 ---
@@ -18,9 +18,9 @@ id: home
     {%- for collection in collections.collection | reverse -%}
     <div class="card">
       <img class="card-image" src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
-        <h2 class="card-text">{{ collection.data.title }}</h2>
-        <p class="card-text">{{ collection.data.numberofphotos }} Photos</p>
-        <a class="button" href="/photography/collections/{{ collection.data.url }}">View Collection</a>
+      <h2 class="card-text">{{ collection.data.title }}</h2>
+      <p class="card-text">{{ collection.data.numberofphotos }} Photos</p>
+      <a class="button" href="/photography/collections/{{ collection.data.url }}">View Collection</a>
     </div>
     {%- endfor -%}
     </div>
