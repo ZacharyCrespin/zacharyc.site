@@ -1,8 +1,8 @@
 {
   "name": "zacharyc",
-  "version": "4.6.1.1",
+  "version": "4.6.2",
   "description": "My Personal Website",
-  "main": "index.html",
+  "main": "public/index.html",
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy"
@@ -16,7 +16,7 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Z-C-Code/zacharyc.site.git"
+    "url": "git+https://github.com/ZacharyCrespin/zacharyc.site.git"
   },
   "keywords": [
     "photography",
@@ -24,7 +24,7 @@
     "website"
   ],
   "bugs": {
-    "url": "https://github.com/Z-C-Code/zacharyc.site/issues"
+    "url": "https://github.com/ZacharyCrespin/zacharyc.site/issues"
   },
   "homepage": "https://zacharyc.site"
 }
