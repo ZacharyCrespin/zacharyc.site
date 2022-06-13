@@ -8,7 +8,7 @@
     "build": "eleventy"
   },
   "author": "Zachary C <contact@zacharyc.site> (https://zacharyc.site)",
-  "license": "ISC",
+  "license": "MPL-2.0",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-plugin-rss": "^1.1.2"
