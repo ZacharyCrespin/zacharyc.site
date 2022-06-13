@@ -17,10 +17,11 @@ id: Photography
     <div class="collections">
     {%- for collection in collections.collection | reverse -%}
     <div class="card">
-      <img class="card-image" src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
-        <h2 class="card-text">{{ collection.data.title }}</h2>
-        <p class="card-text">{{ collection.data.numberofphotos }} Photos</p>
-        <a class="button" href="/photography/collections/{{ collection.data.url }}">View Collection</a>
+      <img src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
+      <h2>{{ collection.data.title }}</h2>
+      <p>{{ collection.data.numberofphotos }} Photos</p>
+      <p>Updated {{ collection.data.date | toLocaleString }}</p>
+      <a class="button" href="/photography/collections/{{ collection.data.url }}">View Collection</a>
     </div>
     {%- endfor -%}
     </div>

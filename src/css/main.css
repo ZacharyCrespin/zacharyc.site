@@ -145,14 +145,13 @@ button:hover::before {
 }
 .button:hover, 
 button:hover {
-  color: black;
+  color: var(--black);
 } 
 
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -170,11 +169,6 @@ button:hover {
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
-/* Rules for sizing the icon. */
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
 
 /* Menu */
 nav {
@@ -201,10 +195,11 @@ nav li {
 	padding: 1rem;
 	position: relative;
 	text-decoration: none;
+  background-color: var(--black);
 }
 
 nav ul li ul {
-	background-color: black;
+	background-color: var(--black);
 	position: absolute;
 	margin-top: 1rem;
 	left: 0;
@@ -254,9 +249,9 @@ nav ul li ul:focus {
 
 .skip-nav{
   z-index: 2;
-  background: white;
+  background: var(--white);
   border-radius: var(--corner);
-  color: black;
+  color: var(--black);
   padding: .5rem;
   position: absolute;
   float: left;
@@ -299,9 +294,15 @@ nav ul li ul:focus {
   margin: .5rem;
   border: 1px solid var(--white);
   border-radius: var(--corner);
+  transition: .2s ease;
+}
+.card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px var(--white);
 }
 
-.card-image {
+.card img {
+  width: 100%;
   border-radius: var(--corner) var(--corner) 0px 0px;
 }
 
@@ -331,6 +332,10 @@ nav ul li ul:focus {
 }
 .split-card img{
   width: 100%;
+}
+.split-card .text{
+  margin-left: 2rem;
+  text-align: left;
 }
 
 /* footer */

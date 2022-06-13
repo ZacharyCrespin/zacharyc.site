@@ -13,18 +13,19 @@ id: home
         display: none;
       }
     </style>
-    <h2>Latest Photos</h2>
+    <h2>Photos</h2>
     <div class="collections">
     {%- for collection in collections.collection | reverse -%}
     <div class="card">
-      <img class="card-image" src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
-      <h2 class="card-text">{{ collection.data.title }}</h2>
-      <p class="card-text">{{ collection.data.numberofphotos }} Photos</p>
+      <img src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
+      <h2>{{ collection.data.title }}</h2>
+      <p>{{ collection.data.numberofphotos }} Photos</p>
+      <p>Updated {{ collection.data.date | toLocaleString }}</p>
       <a class="button" href="/photography/collections/{{ collection.data.url }}">View Collection</a>
     </div>
     {%- endfor -%}
     </div>
-    <a class="button" href="/photography/collections">View More Collections</a>
+    <a class="button" href="/photography/collections">More Collections</a>
 
     <h2>Coding Projects</h2>
     <div class="collections">
@@ -36,4 +37,4 @@ id: home
       </div>
       {%- endfor -%}
     </div>
-    <a class="button" href="/code">View More Projects</a>
+    <a class="button" href="/code">More Projects</a>
