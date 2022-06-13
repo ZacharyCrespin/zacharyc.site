@@ -29,4 +29,4 @@ function menu() {
     } else {
       document.getElementById("menu").style.display = "none"
     }
-  }
+}

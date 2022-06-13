@@ -1,3 +1,5 @@
+const { DateTime } = require("luxon");
+
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
@@ -14,6 +16,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/manifest.json');
     eleventyConfig.addPassthroughCopy('./src/robots.txt');
     eleventyConfig.addPassthroughCopy('./src/sitemap.xml');
+
+    eleventyConfig.addFilter("toLocaleString", (dateObj) => {
+        return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+    });
 
     return {
         dir: {
