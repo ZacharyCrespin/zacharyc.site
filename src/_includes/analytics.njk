@@ -1,11 +1,31 @@
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TQEN9M9FK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-7TQEN9M9FK');
+    <!-- Firebase -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
+      import { getPerformance } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-performance.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAusVefSFH7pEqWLclTEDyEYFSlpMrzubk",
+        authDomain: "zacharycsite.firebaseapp.com",
+        databaseURL: "https://zacharycsite-default-rtdb.firebaseio.com",
+        projectId: "zacharycsite",
+        storageBucket: "zacharycsite.appspot.com",
+        messagingSenderId: "18418783539",
+        appId: "1:18418783539:web:904df4549700d037dc9a46",
+        measurementId: "G-7TQEN9M9FK"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      // Initialize Analytics and get a reference to the service
+      const analytics = getAnalytics(app);
+      // Initialize Performance Monitoring and get a reference to the service
+      const perf = getPerformance(app);
     </script>
     <!-- Microsoft Clarity -->
     <script type="text/javascript">

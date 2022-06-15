@@ -10,9 +10,6 @@
     <meta name="image" content="/images/share-images/{{ id }}.png">
     <meta property="og:image" content="/images/share-images/{{ id }}.png">
     <meta property="og:site_name" content="Zachary Crespin">
-    <!-- Twitter -->
-    <meta property="twitter:site" content="@ZacharyCrespin">
-    <meta property="twitter:creator" content="@ZacharyCrespin">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/main.css">
     <!-- JS -->
@@ -23,24 +20,10 @@
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4A4A4A">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TQEN9M9FK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-7TQEN9M9FK');
-    </script>
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "az7sbiynxy");
-    </script>
-    
+{% include 'analytics.njk' %}
+    <!-- Twitter -->
+    <meta property="twitter:site" content="@ZacharyCrespin">
+    <meta property="twitter:creator" content="@ZacharyCrespin">
     <!-- gallery link -->
     <link rel="stylesheet" href="/css/gallery.min.css">
     <script src="/js/gallery.min.js" async></script>
@@ -51,35 +34,13 @@
     </script>
 </head>
 <body>
-    <!-- Menu -->
-    <div id="loader"></div>
-    <a href="#content" class="skip-nav">Skip Nav</a>
-    <header>
-      <nav class="menu" id="menu" role="navigation">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/photography" aria-haspopup="true">Photography</a><svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 7L15.5 14L23 7" stroke="var(--white)"/></svg>
-            <ul class="dropdown" aria-label="submenu">
-              <li><a href="/photography/favorites">My Favorites</a></li>
-              <li><a href="/photography/collections">Collections</a></li>
-            </ul>
-          </li>
-          <li><a href="/wallpapers">Wallpapers</a></li>
-          <li><a href="/shortcuts">Apple Shortcuts</a></li>
-          <li><a href="/code">Code</a></li>
-        </ul>
-      </nav>
-      <button class="icon" onclick="menu()" aria-label="Menu Icon"><span class="material-icons">menu</span></button>    
-    </header>
+{% include 'header.njk'  %}
     <main id="content">
-    <!-- Menu End -->
     <h1>{{ title }}</h1>
     <div class="gallery">
 {{ content | safe }}
     </div>
     </main>
-    <footer>
-      <p><a href="https://github.com/ZacharyCrespin/zacharyc.site">code</a> | <a href="/tech">technology</a></p>
-    </footer>
+{% include 'footer.njk' %}
 </body>
 </html>

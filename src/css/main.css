@@ -324,14 +324,21 @@ nav ul li ul:focus {
   padding: 1rem;
   border: 1px solid var(--white);
   border-radius: var(--corner);
+  transition: .2s ease;
 }
+.split-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px var(--white);
+}
+
 @media screen and (max-width: 600px) {
   .split-card{
     grid-template-columns: 100%;
   }
 }
 .split-card img{
-  width: 100%;
+  max-width: 100%;
+  max-height: 80vh;
 }
 .split-card .text{
   margin-left: 2rem;
