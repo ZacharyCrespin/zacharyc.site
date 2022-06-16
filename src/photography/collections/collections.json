@@ -1,5 +1,5 @@
 {
     "layout": "collection.njk",
     "tags": "collection",
-    "permalink": "/photography/collections/{{ url }}/index.html"
+    "permalink": "/photography//{{ id }}/index.html"
 }

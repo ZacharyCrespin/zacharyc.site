@@ -13,7 +13,7 @@ id: collections
         <h2>{{ collection.data.title }}</h2>
         <p>{{ collection.data.numberofphotos }} Photos</p>
         <p>Updated {{ collection.data.date | toLocaleString }}</p>
-        <a class="button" href="/photography/collections/{{ collection.data.url }}">View Collection</a>
+        <a class="button" href="{{ collection.url }}">View Collection</a>
       </div>
       {%- endfor -%}
     </div>
