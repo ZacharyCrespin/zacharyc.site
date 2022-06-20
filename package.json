@@ -1,18 +1,17 @@
 {
   "name": "zacharyc",
-  "version": "4.7.2",
+  "version": "4.8.0",
   "description": "My Personal Website",
   "main": "public/index.html",
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy"
   },
-  "author": "Zachary C <contact@zacharyc.site> (https://zacharyc.site)",
+  "author": "Zachary Crespin <contact@zacharyc.site> (https://zacharyc.site)",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-plugin-rss": "^1.1.2"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ZacharyCrespin/zacharyc.site.git"

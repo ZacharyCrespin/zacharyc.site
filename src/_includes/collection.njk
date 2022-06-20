@@ -3,13 +3,22 @@
   <head>
     <title>{{ title }} | Collections | Photography | Zachary Crespin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Meta -->
-    <meta property="og:title" content="{{ title }} | Collections | Photography | Zachary Crespin">
-    <meta name="description" content="{{ title }} Photo Collection | Zachary Crespin">
-    <meta property="og:description" content="{{ title }} Photo Collection | Zachary Crespin">
+    <meta name="description" content="{{ title }} Photo Collection">
     <meta name="image" content="/images/share-images/{{ id }}.png">
-    <meta property="og:image" content="/images/share-images/{{ id }}.png">
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ title }} Photo Collection | Zachary Crespin" />
+    <meta property="og:description" content="{{ title }} Photo Collection">
+    <meta property="og:url" content="{{ url }}" />
+    <meta property="og:image" content="/images/share-images/{{ id }}.png" />
     <meta property="og:site_name" content="Zachary Crespin">
+    <!-- Twitter -->
+    <meta name="twitter:title" content="{{ title }} Photo Collection | Zachary Crespin" />
+    <meta name="twitter:description" content="{{ title }} Photo Collection" />
+    <meta name="twitter:image" content="https://zacharyc.site/images/share-images/{{ id }}.png" />
+    <meta name="twitter:image:alt" content="{{ title }} Photo Collection">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ZacharyCrespin" />
     <!-- CSS -->
     <link rel="stylesheet" href="/css/main.css">
     <!-- JS -->
@@ -21,9 +30,6 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4A4A4A">
 {% include 'analytics.njk' %}
-    <!-- Twitter -->
-    <meta property="twitter:site" content="@ZacharyCrespin">
-    <meta property="twitter:creator" content="@ZacharyCrespin">
     <!-- gallery link -->
     <link rel="stylesheet" href="/css/gallery.min.css">
     <script src="/js/gallery.min.js" async></script>
@@ -35,11 +41,11 @@
 </head>
 <body>
 {% include 'header.njk'  %}
-    <main id="content">
-    <h1>{{ title }}</h1>
-    <div class="gallery">
+    <main role="main" id="content">
+      <h1>{{ title }}</h1>
+      <div class="gallery">
 {{ content | safe }}
-    </div>
+      </div>
     </main>
 {% include 'footer.njk' %}
 </body>
