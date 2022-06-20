@@ -1,5 +1,5 @@
 {
     "layout": "code.njk",
     "tags": "code",
-    "permalink": "/code/{{ id }}/index.html"
+    "permalink": false
 }
