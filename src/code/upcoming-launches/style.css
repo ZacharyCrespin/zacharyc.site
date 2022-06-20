@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+}
+
+.launch {
+    margin: 1rem;
+}
+
+hr {
+    margin: 1rem;
+}
