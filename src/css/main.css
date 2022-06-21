@@ -172,17 +172,14 @@ button {
 nav {
   display: inline-block;
 }
-
 nav a {
 	text-decoration: none;
 }
-
 nav ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 }
-
 nav li {
 	display: block;
 	float: left;
@@ -191,7 +188,6 @@ nav li {
 	text-decoration: none;
   background-color: var(--black);
 }
-
 nav ul li ul {
 	background-color: var(--black);
 	position: absolute;
@@ -199,7 +195,6 @@ nav ul li ul {
 	left: 0;
 	display: none;
 }
-
 nav ul li:hover>ul,
 nav ul li:focus-within>ul,
 nav ul li ul:hover,
@@ -222,15 +217,12 @@ nav ul li ul:focus {
     padding: 0 0;
     text-align: left;
 	}
-
 	.icon {
 		display: block;
 	}
-
 	nav li {
 		width: calc(100% - 2rem);
 	}
-
 	nav ul li ul {
 		width: calc(100% - 3rem);
 		position: relative;
@@ -290,24 +282,21 @@ nav ul li ul:focus {
   transform: translate(-4px, -4px);
   box-shadow: 4px 4px var(--white);
 }
-
 .card img {
   width: 100%;
   border-radius: var(--corner) var(--corner) 0 0;
 }
-
 .card h2{
   margin-bottom: 0;
   padding-bottom: 0;
 }
-
 .card p{
   font-size: small;
   margin: 5px;
   padding: 0;
 }
 
-.split-card{
+.split-card {
   display: grid;
   grid-template-columns: 60% 40%;
   margin: 1rem .5rem;
@@ -320,19 +309,21 @@ nav ul li ul:focus {
   transform: translate(-4px, -4px);
   box-shadow: 4px 4px var(--white);
 }
-
-@media screen and (max-width: 600px) {
-  .split-card{
-    grid-template-columns: 100%;
-  }
-}
-.split-card img{
+.split-card img {
   max-width: 100%;
   max-height: 80vh;
 }
-.split-card .text{
+.split-card .text {
   margin-left: 2rem;
   text-align: left;
+}
+@media screen and (max-width: 600px) {
+  .split-card {
+    grid-template-columns: 100%;
+  }
+  .split-card .text {
+    text-align: center;
+  }
 }
 
 /* footer */
