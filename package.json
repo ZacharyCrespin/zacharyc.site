@@ -1,6 +1,6 @@
 {
   "name": "zacharyc",
-  "version": "4.8.1",
+  "version": "4.8.2",
   "description": "My Personal Website",
   "main": "public/index.html",
   "scripts": {
@@ -17,9 +17,10 @@
     "url": "git+https://github.com/ZacharyCrespin/zacharyc.site.git"
   },
   "keywords": [
-    "photography",
     "portfolio",
-    "website"
+    "personal-website",
+    "firebase",
+    "11ty"
   ],
   "bugs": {
     "url": "https://github.com/ZacharyCrespin/zacharyc.site/issues"

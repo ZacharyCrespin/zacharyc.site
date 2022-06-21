@@ -5,17 +5,9 @@ layout: 'basic.njk'
 id: home
 ---
     <h1>Latest Work</h1>
-    <style>
-      /* i know this is a terable way to do it */
-      /* i will fix it at some point */
-      /* basicly if it is child 5 or higher it aplys display = none */
-      .collections .card:nth-child(+n+5) {
-        display: none;
-      }
-    </style>
     <h2>Photos</h2>
     <div class="collections">
-    {%- for collection in collections.collection | reverse -%}
+    {%- for collection in collections.collection | reverse | limit(4) -%}
     <div class="card">
       <img src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
       <h2>{{ collection.data.title }}</h2>
@@ -29,7 +21,7 @@ id: home
 
     <h2>Coding Projects</h2>
     <div class="collections">
-      {%- for code in collections.code | reverse -%}
+      {%- for code in collections.code | reverse | limit(4) -%}
       <div class="card">
         <h2>{{ code.data.title }}</h2>
         <p>{{ code.data.tech }}</p>

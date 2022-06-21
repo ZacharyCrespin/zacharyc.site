@@ -89,24 +89,23 @@ h2, h3, h4, h5, h6 {
   color: var(--white);
   font-weight: normal;
 }
-h3{
+h3 {
   font-size: 1.5em;
 }
 p, label {
   color: var(--white);
 }
-.bold{
+.bold {
   font-weight: bold;
 }
 a {
   color: var(--white);
 }
-a:hover{
+a:hover {
   color: var(--lightgrey);
 }
 
-.button, 
-button {
+.button {
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -121,8 +120,7 @@ button {
   z-index: 1;
   color: var(--white);
 }
-.button::before, 
-button::before {
+.button::before {
   content: '';
   width: 0;
   height: 500%;
@@ -135,14 +133,18 @@ button::before {
   display: block;
   z-index: -1;
 }
-.button:hover::before, 
-button:hover::before {
+.button:hover::before {
   width: 200%;
 }
-.button:hover, 
-button:hover {
+.button:hover {
   color: var(--black);
 } 
+
+button {
+  background-color: var(--black);
+  border: none;
+  color: var(--white);
+}
 
 .material-icons {
   font-family: 'Material Icons';
@@ -212,11 +214,6 @@ nav ul li ul:focus {
 	right: 1rem;
 	margin: 0;
 	padding: .5rem;
-  color: var(--white) !important;
-  border: none;
-}
-.icon::before {
-  content: normal;
 }
 
 @media screen and (max-width: 600px) {

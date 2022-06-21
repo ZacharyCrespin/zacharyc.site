@@ -18,9 +18,12 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/robots.txt');
     eleventyConfig.addPassthroughCopy('./src/sitemap.xml');
 
+    // format dates
     eleventyConfig.addFilter("toLocaleString", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     });
+    // limit number of idems in a collection
+    eleventyConfig.addNunjucksFilter("limit", (arr, limit) => arr.slice(0, limit));
 
     return {
         dir: {
