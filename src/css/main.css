@@ -322,6 +322,7 @@ nav ul li ul:focus {
     grid-template-columns: 100%;
   }
   .split-card .text {
+    margin-left: 0;
     text-align: center;
   }
 }
