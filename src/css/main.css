@@ -92,7 +92,7 @@ h2, h3, h4, h5, h6 {
 h3 {
   font-size: 1.5em;
 }
-p, label {
+p, label, span {
   color: var(--white);
 }
 .bold {
