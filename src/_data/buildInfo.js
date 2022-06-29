@@ -7,7 +7,6 @@ const getBuildInfo = () => {
     timeZone,
   }).format(now);
   return {
-    // Can't use timeZoneName option together with dateStyle, so interpolate manually
     time: {
       raw: now.toISOString(),
       formatted: `${buildTime} ${timeZone}`,

@@ -10,7 +10,7 @@ id: code
           <img src="/images/code/freeperiodictables.png" alt="Free Periodic Tables">
       </div>
       <div class="text">
-          <h2>Free Periodic Tables</h2>
+          <h3>Free Periodic Tables</h3>
           <p><a href="https://11ty.dev">11ty</a></p>
           <a class="button" href="https://periodictables.zacharyc.site" target="_blank">Visit</a>
       </div>
@@ -20,7 +20,7 @@ id: code
           <img src="/images/code/wordle-hacker.png" alt="Wordle Hacker">
       </div>
       <div class="text">
-          <h2>Wordle Hacker</h2>
+          <h3>Wordle Hacker</h3>
           <p>Chrome Extention</p>
           <a class="button" href="https://github.com/ZacharyCrespin/wordle-hacker-chrome-extension" target="_blank">Download</a>
       </div>
@@ -28,7 +28,7 @@ id: code
     <div class="collections">
       {%- for code in collections.code | reverse -%}
       <div class="card">
-        <h2>{{ code.data.title }}</h2>
+        <h3>{{ code.data.title }}</h3>
         <p>{{ code.data.tech }}</p>
         <a class="button" href="{{ code.data.link }}" target="_blank">{{ code.data.linktext }}</a>
       </div>
