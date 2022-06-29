@@ -6,7 +6,6 @@ id: collections
 ---
     <h1>Photo Collections</h1>
     <div class="collections">
-
       {%- for collection in collections.collection | reverse -%}
       <div class="card">
         <img src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
