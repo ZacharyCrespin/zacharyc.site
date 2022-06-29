@@ -328,7 +328,7 @@ nav ul li ul:focus {
 
 /* footer */
 footer {
-  padding: 2rem;
+  padding: 2rem 0;
   margin-top: 2rem;
   border-top: 1px solid var(--white);
 }
