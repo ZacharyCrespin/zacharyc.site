@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/js/firebase.js',
   // The location of the build folder described above
   output: {
-    path: path.resolve(__dirname, 'public/js'),
+    path: path.resolve(__dirname, 'public/js/'),
     filename: 'firebase.js'
   }
 };
@@ -14,7 +14,7 @@ module.exports = {
   entry: './src/js/service-worker.js',
   // The location of the build folder described above
   output: {
-    path: path.resolve(__dirname, 'public/js'),
+    path: path.resolve(__dirname, 'public/js/'),
     filename: 'service-worker.js'
   }
 };
