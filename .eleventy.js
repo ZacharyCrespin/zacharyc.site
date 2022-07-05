@@ -10,7 +10,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/files');
     eleventyConfig.addPassthroughCopy('./src/fonts');
     eleventyConfig.addPassthroughCopy('./src/images');
-    eleventyConfig.addPassthroughCopy('./src/js');
+    eleventyConfig.addPassthroughCopy('./src/js/main.js');
+    eleventyConfig.addPassthroughCopy('./src/js/gallery.min.js');
     eleventyConfig.addPassthroughCopy('./src/favicon.ico');
     eleventyConfig.addPassthroughCopy('./src/insert.js');
     eleventyConfig.addPassthroughCopy('./src/manifest.json');
