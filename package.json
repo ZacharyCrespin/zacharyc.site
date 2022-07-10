@@ -17,16 +17,13 @@
     "11ty"
   ],
   "scripts": {
-    "start": "webpack --mode=none && eleventy --serve",
-    "build": "webpack --mode=production && eleventy"
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
   "dependencies": {
-    "firebase": "^9.8.4"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "webpack": "^5.73.0",
-    "webpack-cli": "^4.10.0"
+    "@11ty/eleventy-plugin-rss": "^1.2.0"
   }
 }

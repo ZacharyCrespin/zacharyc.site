@@ -1,5 +1,4 @@
-![version](https://img.shields.io/github/package-json/v/ZacharyCrespin/zacharyc.site "version
-")
+![version](https://img.shields.io/github/package-json/v/ZacharyCrespin/zacharyc.site "version")
 # [zacharyc.site](https://zacharyc.site)
 
 ### Built With
