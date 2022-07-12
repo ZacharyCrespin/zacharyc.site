@@ -4,18 +4,14 @@ permalink: "404.html"
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
   <head>
-    <title>404 | Zachary Crespin</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:site_name" content="Zachary Crespin">
-    <link rel="icon" href="https://zacharyc.site/images/favicon-black.png" id="favicon">
-    <meta name="theme-color" content="#4A4A4A">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TQS564H');</script>
-    <!-- End Google Tag Manager -->
+    <title>404 | Zachary Crespin</title>
+    <link rel="icon" href="https://zacharyc.site/favicon.ico" id="favicon">
+    <link rel="apple-touch-icon" href="https://zacharyc.site/images/icons/apple-touch-icon.png">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#2e2e2e">
+    <meta name="author" content="Zachary Crespin">
     <style>
       body{
         background-color: black;
@@ -78,24 +74,21 @@ permalink: "404.html"
           // Update favicon for dark mode
           const darkModeListener = (event) => {
           if (event.matches) {
-              document.getElementById('favicon').setAttribute("href","https://zacharyc.site/images/favicon-white.png");
+              document.getElementById('favicon').setAttribute("href","https://zacharyc.sitehttps://zacharyc.site/images/favicon-white.png");
           } else {
-              document.getElementById('favicon').setAttribute("href","https://zacharyc.site/images/favicon-black.png");
+              document.getElementById('favicon').setAttribute("href","https://zacharyc.sitehttps://zacharyc.site/images/favicon-black.png");
           }
           };
           window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', darkModeListener);
           if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-              document.getElementById('favicon').setAttribute("href","https://zacharyc.site/images/favicon-white.png");
+              document.getElementById('favicon').setAttribute("href","https://zacharyc.sitehttps://zacharyc.site/images/favicon-white.png");
           } else {
-              document.getElementById('favicon').setAttribute("href","https://zacharyc.site/images/favicon-black.png");
+              document.getElementById('favicon').setAttribute("href","https://zacharyc.sitehttps://zacharyc.site/images/favicon-black.png");
           }
       }
     </script>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQS564H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <h1>404</h1>
     <h2>This page does not exist</h2>
     <a href="https://zacharyc.site"><button>Back Home</button></a>

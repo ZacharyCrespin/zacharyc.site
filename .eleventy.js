@@ -25,6 +25,9 @@ module.exports = function(eleventyConfig) {
     // limit number of idems in a collection
     eleventyConfig.addNunjucksFilter("limit", (arr, limit) => arr.slice(0, limit));
 
+    // version
+    eleventyConfig.addShortcode("version", () => "4.11.1");
+
     return {
         dir: {
             input: "src",

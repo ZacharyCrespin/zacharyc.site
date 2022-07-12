@@ -5,23 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }} | Collections | Photography | Zachary Crespin</title>
     <meta name="description" content="{{ title }} Photo Collection">
-    <link rel="icon" href="/images/favicon-black.png" id="favicon">
+    <link rel="icon" href="/favicon.ico" id="favicon">
     <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
     <meta name="image" content="/images/share-images/{{ id }}.png">
-    <meta name="author" content="Zachary Crespin">
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/main.js"></script>
     <script src="/js/firebase.js"></script>
+    <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "az7sbiynxy");</script>
     <link rel="manifest" href="/manifest.json">
+    <meta name="color-scheme" content="dark light">
     <meta name="theme-color" content="#2e2e2e">
+    <meta name="author" content="Zachary Crespin">
     <meta name="generator" content="eleventy">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TQS564H');</script>
-    <!-- End Google Tag Manager -->
+    <meta name="version" content="{% version %}">
     <!-- Open Graph -->
     <meta property="og:url" content="https://zacharyc.site{ page.url }" />
     <meta property="og:type" content="article" />
@@ -46,9 +42,6 @@
     </script>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQS564H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 {% include 'header.njk'  %}
     <main role="main" id="content">
       <h1>{{ title }}</h1>
