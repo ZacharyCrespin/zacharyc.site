@@ -26,7 +26,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addNunjucksFilter("limit", (arr, limit) => arr.slice(0, limit));
 
     // version
-    eleventyConfig.addShortcode("version", () => "4.11.1");
+    eleventyConfig.addShortcode("version", () => "4.12.0");
 
     return {
         dir: {

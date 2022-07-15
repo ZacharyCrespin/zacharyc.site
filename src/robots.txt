@@ -4,3 +4,5 @@ User-agent: *
 Disallow: /404
 Disallow: /offline
 Disallow: /code/*
+Disallow: /tech
+Disallow: /tech/licenses
