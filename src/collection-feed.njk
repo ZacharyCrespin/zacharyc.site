@@ -11,9 +11,9 @@
   {%- for post in collections.collection %}
   <entry>
     <title>{{ post.data.title }}</title>
-    <link href="https://zacharyc.site/photography/collections/{{ post.data.url }}"/>
+    <link href="https://zacharyc.site/photography/collections/{{ post.data.id }}"/>
     <updated>{{ post.data.date | dateToRfc3339 }}</updated>
-    <id>{{ post.data.url }}</id>
+    <id>{{ post.data.id }}</id>
   </entry>
   {%- endfor %}
 </feed>
