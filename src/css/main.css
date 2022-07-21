@@ -88,6 +88,9 @@ h1 {
 h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
+h2 {
+  font-size: 200%;
+}
 h3 {
   font-size: 1.5em;
 }
@@ -317,6 +320,9 @@ nav ul li ul:focus {
 .split-card .text {
   margin-left: 2rem;
   text-align: left;
+}
+.split-card .button {
+  margin-left: 0;
 }
 @media screen and (max-width: 600px) {
   .split-card {

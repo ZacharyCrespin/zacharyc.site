@@ -69,24 +69,6 @@ permalink: "404.html"
           color: black;
       }
     </style>
-    <script>
-      window.onload = function() {
-          // Update favicon for dark mode
-          const darkModeListener = (event) => {
-          if (event.matches) {
-              document.getElementById('favicon').setAttribute("href","https://zacharyc.sitehttps://zacharyc.site/images/favicon-white.png");
-          } else {
-              document.getElementById('favicon').setAttribute("href","https://zacharyc.sitehttps://zacharyc.site/images/favicon-black.png");
-          }
-          };
-          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', darkModeListener);
-          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-              document.getElementById('favicon').setAttribute("href","https://zacharyc.sitehttps://zacharyc.site/images/favicon-white.png");
-          } else {
-              document.getElementById('favicon').setAttribute("href","https://zacharyc.sitehttps://zacharyc.site/images/favicon-black.png");
-          }
-      }
-    </script>
   </head>
   <body>
     <h1>404</h1>
