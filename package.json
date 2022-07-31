@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "start": "webpack --mode=development && eleventy --serve",
-    "build": "webpack --mode=production && eleventy"
+    "build": "webpack --mode=production && eleventy && npx stylelint ./src/**/*.css"
   },
   "dependencies": {
     "firebase": "^9.9.0",
