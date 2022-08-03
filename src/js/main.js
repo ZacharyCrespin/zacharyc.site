@@ -5,8 +5,6 @@ window.onload = function() {
     }
     // Hide Loader
     document.getElementById("loader").style.display = "none";
-    // Pinterest Page Visit Event
-    pintrk('track', 'pagevisit');
 }
 
 function menu() {
