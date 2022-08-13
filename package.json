@@ -1,7 +1,7 @@
 {
   "name": "zacharyc.site",
   "description": "My Personal Website",
-  "version": "4.13.1",
+  "version": "4.14.0",
   "license": "UNLICENSED",
   "author": "Zachary Crespin <contact@zacharyc.site> (https://zacharyc.site)",
   "homepage": "zacharyc.site",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
     "stylelint": "^14.9.1",
     "stylelint-config-standard": "^26.0.0"
   }

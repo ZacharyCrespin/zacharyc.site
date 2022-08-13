@@ -8,7 +8,7 @@ id: collections
     <div class="collections">
       {%- for collection in collections.collection | reverse -%}
       <div class="card">
-        <img src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
+        <img src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image">
         <h3>{{ collection.data.title }}</h3>
         <p>{{ collection.data.numberofphotos }} Photos</p>
         <p>Updated {{ collection.data.date | toLocaleString }}</p>

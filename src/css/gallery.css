@@ -21,10 +21,6 @@
   }
 }
 
-.baguetteBox-button::before{
-  content: normal;
-}
-
 /*!
  * baguetteBox.js
  * @author  feimosi

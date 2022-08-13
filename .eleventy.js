@@ -1,9 +1,11 @@
 const { DateTime } = require("luxon");
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const eleventyPluginFilesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
+    eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
 
     eleventyConfig.addPassthroughCopy('./src/code');
     eleventyConfig.addPassthroughCopy('./src/css');
@@ -26,7 +28,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addNunjucksFilter("limit", (arr, limit) => arr.slice(0, limit));
 
     // version
-    eleventyConfig.addShortcode("version", () => "4.13.1");
+    eleventyConfig.addShortcode("version", () => "4.14.0");
 
     return {
         dir: {

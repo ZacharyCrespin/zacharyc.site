@@ -1,5 +1,4 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getPerformance } from "firebase/performance";
 const firebaseConfig = {
     apiKey: "AIzaSyAusVefSFH7pEqWLclTEDyEYFSlpMrzubk",
@@ -12,5 +11,4 @@ const firebaseConfig = {
     measurementId: "G-7TQEN9M9FK"
 };
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const perf = getPerformance(app);

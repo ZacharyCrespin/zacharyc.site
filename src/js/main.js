@@ -1,10 +1,30 @@
+function consentGranted() {
+    gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted'
+    });
+    window.clarity('consent');
+}
+function acceptCookies() {
+    localStorage.setItem("cookies", true)
+    consentGranted()
+    document.getElementById("cookie-consent").style.display = "none";
+}
+function declineCookies() {
+    localStorage.setItem("cookies", false)
+    document.getElementById("cookie-consent").style.display = "none";
+}
 window.onload = function() {
     // Register Service Worker
     if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("https://zacharyc.site/js/service-worker.js");
+        navigator.serviceWorker.register("/js/sw.js");
     }
-    // Hide Loader
-    document.getElementById("loader").style.display = "none";
+    // 
+    if (localStorage.getItem("cookies") == "true") {
+        consentGranted()
+    } else {
+        document.getElementById("cookie-consent").style.display = "";
+    }
 }
 
 function menu() {
