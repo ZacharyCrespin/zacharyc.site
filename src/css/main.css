@@ -343,21 +343,21 @@ footer {
   padding: 2rem 0;
   border-top: 1px solid var(--white);
 }
-footer ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 footer a {
-  padding: 0.5rem;
   text-decoration: none;
 }
-.buildinfo {
-  margin: 0;
-  padding: 0;
-  padding-bottom: 1rem;
+.social-list {
+  margin-bottom: 0.5rem;
+}
+.social-list a {
+  padding: 0.5em;
+}
+.social-list a svg path {
+  fill: var(--white);
+}
+.social-list a:hover svg path {
+  fill: var(--lightgrey);
+}
+.build-info {
   font-size: small;
 }

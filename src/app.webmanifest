@@ -1,7 +1,7 @@
 {
   "short_name": "Zachary C",
   "name": "Zachary Crespin",
-  "description": "Zachary Crespin | Photography, Code and more",
+  "description": "Photography, Code and more",
   "icons": [
     {
       "src": "images/icons/manifest-icon-192.png",
@@ -29,9 +29,10 @@
     }
   ],
   "lang": "en-US",
-  "start_url": "./?utm_source=web_app&utm_medium=web_app",
+  "start_url": "/",
   "background_color": "#000000",
   "theme_color": "#2e2e2e",
   "display": "standalone",
+  "orientation": "portrait",
   "scope": "/"
 }

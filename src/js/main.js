@@ -17,7 +17,7 @@ function declineCookies() {
 window.onload = function() {
     // Register Service Worker
     if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/js/sw.js");
+        navigator.serviceWorker.register("https://zacharyc.site/js/sw.js");
     }
     // 
     if (localStorage.getItem("cookies") == "true") {
