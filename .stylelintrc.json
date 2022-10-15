@@ -6,8 +6,5 @@
         "rule-empty-line-before": null,
         "selector-list-comma-newline-after": "always-multi-line",
         "comment-empty-line-before": null
-    },
-    "ignoreFiles": [
-        "**/gallery**.css"
-    ]
+    }
 }

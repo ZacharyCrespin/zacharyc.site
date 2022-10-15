@@ -4,38 +4,102 @@ description: Photography
 layout: 'basic.njk'
 id: photography
 ---
-    <h1>Photography</h1>
-    <h2>Latest Collections</h2>
-    <div class="collections">
-    {%- for collection in collections.collection | reverse | limit(4) -%}
-    <div class="card">
-      <img src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image" width="100%">
-      <h3>{{ collection.data.title }}</h3>
-      <p>{{ collection.data.numberofphotos }} Photos</p>
-      <p>Updated {{ collection.data.date | toLocaleString }}</p>
-      <a class="button" href="{{ collection.url }}">View Collection</a>
-    </div>
-    {%- endfor -%}
-    </div>
-    <a class="button" href="/photography/collections">More Collections</a>
-    <!-- Gallery Setup -->
-    <link rel="stylesheet" href="/css/gallery.css">
-    <script defer src="/js/gallery.js"></script>
-    <script>
-      window.addEventListener('load', function() {
-        baguetteBox.run('.gallery');
-      });
-    </script>
-    <h2>Latest Photos</h2>
-    <div class="gallery">
-      <div class="photo"><a href="/images/collection-images/hummingbirds/hummingbirds-1.JPG"><img src="/images/collection-images/hummingbirds/hummingbirds-1-Small.JPG" data-pin-media="https://zacharyc.site/images/collection-images/hummingbirds/hummingbirds-1.JPG" data-pin-description="Hummingbird 1 | Zachary Crespin" alt="Hummingbird sitting on a branch."></a></div>
-      <div class="photo"><a href="/images/collection-images/hummingbirds/hummingbirds-2.JPG"><img src="/images/collection-images/hummingbirds/hummingbirds-2-Small.JPG" data-pin-media="https://zacharyc.site/images/collection-images/hummingbirds/hummingbirds-2.JPG" data-pin-description="Hummingbird 2 | Zachary Crespin" alt="Hummingbird sitting on a feeder."></a></div>
-      <div class="photo"><a href="/images/collection-images/hummingbirds/hummingbirds-3.JPG"><img src="/images/collection-images/hummingbirds/hummingbirds-3-Small.JPG" data-pin-media="https://zacharyc.site/images/collection-images/hummingbirds/hummingbirds-3.JPG" data-pin-description="Hummingbird 3 | Zachary Crespin" alt="A hummingbird sitting on a feeder with its wings still in motion."></a></div>
-      <div class="photo"><a href="/images/collection-images/lizard/lizard-1.JPG"><img src="/images/collection-images/lizard/lizard-1-Small.JPG" data-pin-description="Latest 1 | Zachary C" alt="Latest 1"></a></div>
-      <div class="photo"><a href="/images/collection-images/lizard/lizard-2.JPG"><img src="/images/collection-images/lizard/lizard-2-Small.JPG" data-pin-description="Latest 2 | Zachary C" alt="Latest 2"></a></div>
-      <div class="photo"><a href="/images/collection-images/lizard/lizard-3.JPG"><img src="/images/collection-images/lizard/lizard-3-Small.JPG" data-pin-description="Latest 3 | Zachary C" alt="Latest 3"></a></div>
-      <div class="photo"><a href="/images/collection-images/cameras/camera-1.jpg"><img src="/images/collection-images/cameras/camera-1-Small.jpg" data-pin-description="Latest 4 | Zachary C" alt="Latest 4"></a></div>
-      <div class="photo"><a href="/images/collection-images/cameras/camera-2.jpg"><img src="/images/collection-images/cameras/camera-2-Small.jpg" data-pin-description="Latest 5 | Zachary C" alt="Latest 5"></a></div>
-      <div class="photo"><a href="/images/collection-images/cameras/camera-3.jpg"><img src="/images/collection-images/cameras/camera-3-Small.jpg" data-pin-description="Latest 6 | Zachary C" alt="Latest 6"></a></div>
-      <div class="photo"><a href="/images/collection-images/cameras/camera-4.jpg"><img src="/images/collection-images/cameras/camera-4-Small.jpg" data-pin-description="Latest 7 | Zachary C" alt="Latest 7"></a></div>  
-    </div>
+<h1>Photography</h1>
+<h2>Latest Collections</h2>
+<div class="collections">
+  {%- for collection in collections.collection | reverse | limit(4) -%}
+  <div class="card">
+    <img src="/images/banners/{{ collection.data.id }}.jpg" alt="{{ collection.data.title }} Collection Image" width="100%">
+    <h3>{{ collection.data.title }}</h3>
+    <p>{{ collection.data.numberofphotos }} Photos</p>
+    <a class="button" href="{{ collection.url }}">View</a>
+  </div>
+  {%- endfor -%}
+</div>
+<a class="button" href="/photography/collections">All Collections</a>
+<h2>Latest Photos</h2>
+<div class="gallery">
+  <div class="photo">
+    <a href="/photography/i?i=/images/collections/hummingbirds/1.JPG&collection=Hummingbirds">
+      <img src="/images/collections/hummingbirds/1-Small.JPG"
+        data-pin-url="https://zacharyc.site/photography/hummingbirds"
+        data-pin-media="https://zacharyc.site/images/collections/hummingbirds/1.JPG"
+        data-pin-description="Hummingbird 1 | Zachary Crespin"
+        alt="Hummingbird sitting on a branch.">
+    </a>
+  </div>
+  <div class="photo">
+    <a href="/photography/i?i=/images/collections/hummingbirds/2.JPG&collection=Hummingbirds">
+      <img src="/images/collections/hummingbirds/2-Small.JPG"
+        data-pin-url="https://zacharyc.site/photography/hummingbirds"
+        data-pin-media="https://zacharyc.site/images/collections/hummingbirds/2.JPG"
+        data-pin-description="Hummingbird 2 | Zachary Crespin"
+        alt="Hummingbird sitting on a feeder.">
+    </a>
+  </div>
+  <div class="photo">
+    <a href="/photography/i?i=/images/collections/hummingbirds/3.JPG&collection=Hummingbirds">
+      <img src="/images/collections/hummingbirds/3-Small.JPG"
+        data-pin-url="https://zacharyc.site/photography/hummingbirds"
+        data-pin-media="https://zacharyc.site/images/collections/hummingbirds/3.JPG"
+        data-pin-description="Hummingbird 3 | Zachary Crespin"
+        alt="A hummingbird sitting on a feeder with its wings still in motion.">
+    </a>
+  </div>
+  <div class="photo">
+    <a href="/photography/i?i=/images/collections/lizard/1.JPG&collection=Lizards">
+      <img src="/images/collections/lizard/1-Small.JPG"
+        data-pin-url="https://zacharyc.site/photography/lizard"
+        data-pin-description="Lizards 1 | Zachary C"
+        alt="Lizards 1">
+    </a>
+  </div>
+  <div class="photo">
+    <a href="/photography/i?i=/images/collections/lizard/2.JPG&collection=Lizards">
+      <img src="/images/collections/lizard/2-Small.JPG"
+        data-pin-url="https://zacharyc.site/photography/lizard"
+        data-pin-description="Lizards 2 | Zachary C"
+        alt="Lizards 2">
+    </a>
+  </div>
+  <div class="photo">
+    <a href="/photography/i?i=/images/collections/lizard/3.JPG&collection=Lizards">
+      <img src="/images/collections/lizard/3-Small.JPG"
+        data-pin-url="https://zacharyc.site/photography/lizard"
+        data-pin-description="Lizards 3 | Zachary C"
+        alt="Lizards 3">
+    </a>
+  </div>
+  <div class="photo">
+    <a href="/photography/i?i=/images/collections/cameras/1.jpg&collection=Cameras">
+      <img src="/images/collections/cameras/1-Small.jpg"
+        data-pin-url="https://zacharyc.site/photography/cameras"
+        data-pin-description="Cameras 1 | Zachary C"
+        alt="Cameras 1">
+    </a>
+  </div>
+  <div class="photo">
+    <a href="/photography/i?i=/images/collections/cameras/2.jpg&collection=Cameras">
+      <img src="/images/collections/cameras/2-Small.jpg"
+        data-pin-url="https://zacharyc.site/photography/cameras"
+        data-pin-description="Cameras 2 | Zachary C"
+        alt="Cameras 2">
+    </a>
+  </div>
+  <div class="photo">
+    <a href="/photography/i?i=/images/collections/cameras/3.jpg&collection=Cameras">
+      <img src="/images/collections/cameras/3-Small.jpg"
+        data-pin-url="https://zacharyc.site/photography/cameras"
+        data-pin-description="Cameras 3 | Zachary C"
+        alt="Cameras 3">
+    </a>
+  </div>
+  <div class="photo">
+    <a href="/photography/i?i=/images/collections/cameras/4.jpg&collection=Cameras">
+      <img src="/images/collections/cameras/4-Small.jpg"
+        data-pin-url="https://zacharyc.site/photography/cameras"
+        data-pin-description="Cameras 4 | Zachary C"
+        alt="Cameras 4">
+    </a>
+  </div>
+</div>

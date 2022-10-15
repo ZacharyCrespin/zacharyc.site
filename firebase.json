@@ -1,8 +1,0 @@
-{
-    "hosting": {
-      "site": "zacharycsite",
-      "public": "public",
-      "cleanUrls": true,
-      "trailingSlash": false
-    }
-  }

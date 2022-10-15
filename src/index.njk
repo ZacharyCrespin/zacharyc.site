@@ -4,29 +4,28 @@ description: Photography, Code and more
 layout: 'basic.njk'
 id: home
 ---
-    <h1>Latest Work</h1>
-    <h2>Photos</h2>
-    <div class="collections">
-    {%- for collection in collections.collection | reverse | limit(4) -%}
-    <div class="card">
-      <img src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image">
-      <h3>{{ collection.data.title }}</h3>
-      <p>{{ collection.data.numberofphotos }} Photos</p>
-      <p>Updated {{ collection.data.date | toLocaleString }}</p>
-      <a class="button" href="{{ collection.url }}">View</a>
-    </div>
-    {%- endfor -%}
-    </div>
-    <a class="button" href="/photography/collections">More Collections</a>
+<h1>Latest Work</h1>
+<h2>Photos</h2>
+<div class="collections">
+{%- for collection in collections.collection | reverse | limit(4) -%}
+<div class="card">
+  <img src="/images/banners/{{ collection.data.id }}.jpg" alt="{{ collection.data.title }} Collection Image">
+  <h3>{{ collection.data.title }}</h3>
+  <p>{{ collection.data.numberofphotos }} Photos</p>
+  <a class="button" href="{{ collection.url }}">View</a>
+</div>
+{%- endfor -%}
+</div>
+<a class="button" href="/photography/collections">All Collections</a>
 
-    <h2>Coding Projects</h2>
-    <div class="collections">
-      {%- for code in collections.code | reverse | limit(4) -%}
-      <div class="card">
-        <h3>{{ code.data.title }}</h3>
-        <p>{{ code.data.tech }}</p>
-        <a class="button" href="{{ code.data.link }}" target="_blank">{{ code.data.linktext }}</a>
-      </div>
-      {%- endfor -%}
-    </div>
-    <a class="button" href="/code">More Projects</a>
+<h2>Code Projects</h2>
+<div class="collections">
+  {%- for code in collections.code | reverse | limit(4) -%}
+  <div class="card">
+    <h3>{{ code.data.title }}</h3>
+    <p>{{ code.data.tech }}</p>
+    <a class="button" href="{{ code.data.link }}" target="_blank">View</a>
+  </div>
+  {%- endfor -%}
+</div>
+<a class="button" href="/code">All Projects</a>

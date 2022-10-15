@@ -4,33 +4,33 @@ description: Code Projects
 layout: 'basic.njk'
 id: code
 ---
-    <h1>Code Projects</h1>
-    <div class="split-card" id="freeperiodictables">
-      <div class="pics">
-          <img src="/images/code/freeperiodictables.png" alt="Free Periodic Tables">
-      </div>
-      <div class="text">
-          <h3>Free Periodic Tables</h3>
-          <p><a href="https://11ty.dev">11ty</a>, Figma</p>
-          <a class="button" href="https://periodictables.zacharyc.site" target="_blank">Visit</a>
-      </div>
+<h1>Code</h1>
+<h2>Featured Projects</h2>
+<div class="stack-collections">
+  <div class="stack-card" id="freeperiodictables">
+    <img src="/images/code/freeperiodictables.png" alt="Free Periodic Tables">
+    <div class="text">
+        <h3>Free Periodic Tables</h3>
+        <p>11ty, Figma</p>
+        <a class="button" href="https://periodictables.zacharyc.site" target="_blank">View</a>
     </div>
-    <div class="split-card" id="wordle-hacker">
-      <div class="pics">
-          <img src="/images/code/wordle-hacker.png" alt="Wordle Hacker">
-      </div>
-      <div class="text">
-          <h3>Wordle Hacker</h3>
-          <p>Chrome Extention</p>
-          <a class="button" href="https://github.com/ZacharyCrespin/wordle-hacker-chrome-extension" target="_blank">Download</a>
-      </div>
+  </div>
+  <div class="stack-card" id="bellschedule">
+    <img src="/images/code/bellschedule.png" alt="FHS Bell Schedule">
+    <div class="text">
+        <h3>FHS Bell Schedule</h3>
+        <p>Python</p>
+        <a class="button" href="https://fhsbellschedule.web.app/" target="_blank">View</a>
     </div>
-    <div class="collections">
-      {%- for code in collections.code | reverse -%}
-      <div class="card">
-        <h3>{{ code.data.title }}</h3>
-        <p>{{ code.data.tech }}</p>
-        <a class="button" href="{{ code.data.link }}" target="_blank">{{ code.data.linktext }}</a>
-      </div>
-      {%- endfor -%}
-    </div>
+  </div>
+</div>
+<h2>All Projects</h2>
+<div class="collections">
+  {%- for code in collections.code | reverse -%}
+  <div class="card">
+    <h3>{{ code.data.title }}</h3>
+    <p>{{ code.data.tech }}</p>
+    <a class="button" href="{{ code.data.link }}" target="_blank">View</a>
+  </div>
+  {%- endfor -%}
+</div>

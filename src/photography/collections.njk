@@ -4,15 +4,15 @@ description: All Photo Collections | Photography
 layout: 'basic.njk'
 id: collections
 ---
-    <h1>Photo Collections</h1>
-    <div class="collections">
-      {%- for collection in collections.collection | reverse -%}
-      <div class="card">
-        <img src="{{ collection.data.img }}" alt="{{ collection.data.title }} Collection Image">
-        <h3>{{ collection.data.title }}</h3>
-        <p>{{ collection.data.numberofphotos }} Photos</p>
-        <p>Updated {{ collection.data.date | toLocaleString }}</p>
-        <a class="button" href="{{ collection.url }}">View Collection</a>
-      </div>
-      {%- endfor -%}
-    </div>
+<h1>Photo Collections</h1>
+<div class="collections">
+  {%- for collection in collections.collection | reverse -%}
+  <div class="card">
+    <img src="/images/banners/{{ collection.data.id }}.jpg" alt="{{ collection.data.title }} Collection Image">
+    <h3>{{ collection.data.title }}</h3>
+    <p>{{ collection.data.numberofphotos }} Photos</p>
+    <p>Updated {{ collection.data.date | shortString }}</p>
+    <a class="button" href="{{ collection.url }}">View Collection</a>
+  </div>
+  {%- endfor -%}
+</div>

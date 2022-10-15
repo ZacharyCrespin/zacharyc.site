@@ -1,16 +1,15 @@
-const { DateTime } = require("luxon");
-
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const eleventyPluginFilesMinifier = require("@sherby/eleventy-plugin-files-minifier");
+const rss = require("@11ty/eleventy-plugin-rss");
+const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPlugin(pluginRss);
-    eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
+    eleventyConfig.addPlugin(rss);
+    eleventyConfig.addPlugin(filesMinifier);
 
     eleventyConfig.addPassthroughCopy('./src/code');
     eleventyConfig.addPassthroughCopy('./src/css');
     eleventyConfig.addPassthroughCopy('./src/files');
     eleventyConfig.addPassthroughCopy('./src/fonts');
+    eleventyConfig.addPassthroughCopy('./src/film/scripts');
     eleventyConfig.addPassthroughCopy('./src/images');
     eleventyConfig.addPassthroughCopy('./src/js');
     eleventyConfig.addPassthroughCopy('./src/favicon.ico');
@@ -21,14 +20,26 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/sitemap.xml');
 
     // format dates
-    eleventyConfig.addFilter("toLocaleString", (dateObj) => {
-        return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+    eleventyConfig.addFilter("shortString", (dateObj) => {
+        let year = dateObj.getUTCFullYear();
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        let month = months[dateObj.getUTCMonth()];
+        let day = dateObj.getUTCDate();
+        return `${month} ${day}, ${year}`;
     });
+    eleventyConfig.addFilter("fullString", (dateObj) => {
+        let year = dateObj.getUTCFullYear();
+        const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        let month = months[dateObj.getUTCMonth()];
+        let day = dateObj.getUTCDate();
+        return `${month} ${day}, ${year}`;
+    });
+
     // limit number of idems in a collection
-    eleventyConfig.addNunjucksFilter("limit", (arr, limit) => arr.slice(0, limit));
+    eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
 
     // version
-    eleventyConfig.addShortcode("version", () => "4.14.0");
+    eleventyConfig.addShortcode("version", () => "5.0.0");
 
     return {
         dir: {
