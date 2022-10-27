@@ -25,83 +25,71 @@
     <meta name="twitter:creator" content="@ZacharyCrespin">
   </head>
   <body>
-    <main role="main" id="content">
-      <style>
-        body {
-          margin-top: 3rem;
-          min-height: 0;
-        }
-        main {
-          display: grid;
-          grid-template-columns: 75% 25%;
-        }
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+      #image {
+        max-width: 75vw;
+        max-width: calc(100vw - 2rem);
+        max-height: calc(100vh - 2rem);
+        padding: 1rem;
+      }
+      #close, #info {
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: transparent;
+      }
+      #close svg, #info svg {
+        width: 2rem;
+        height: 2rem;
+      }
+      #close:hover, #info:hover {
+        cursor: pointer;
+      }
+      #close:hover svg path, #info:hover svg path {
+        fill: var(--lightgrey);
+      }
+      #close {
+        top: 1rem;
+        right: 1rem;
+      }
+      #info {
+        bottom: 1rem;
+        right: 1rem;
+      }
+      /* TODO: center verticaly insted */
+      @media screen and (max-width: 600px) {
         #image {
-          max-width: calc(100% - 2rem);
-          max-height: calc(100vh - 5rem);
-          padding: 1rem;
+          margin-top: 3rem;
         }
-        .info {
-          text-align: left;
-        }
-        .icons {
-          position: fixed;
-          top: 1rem;
-          right: 1rem;
-        }
-        .icons button {
-          margin: 0;
-          padding: 0;
-          border: none;
-          background: transparent;
-        }
-        .icons button:hover {
-          cursor: pointer;
-        }
-        .icons button:hover svg path {
-          fill: var(--lightgrey);
-        }
-        @media screen and (max-width: 1000px) {
-          main {
-            grid-template-columns: 100%;
-          }
-        }
-      </style>
-      <script>
-        i = new URLSearchParams(location.search).get('i');
-        collection = new URLSearchParams(location.search).get('collection');
-        date = new URLSearchParams(location.search).get('date');
-      </script>
+      }
+    </style>
+    <script>
+      i = new URLSearchParams(location.search).get('i');
+    </script>
+    <main role="main" id="content">
       <img id="image" src="/images/1x1.png">
-      <div class="icons">
-        <button id="share">
-          <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24.0504 28.6499C23.1853 28.6499 22.4445 28.3416 21.8279 27.725C21.2113 27.1084 20.903 26.3675 20.903 25.5024C20.903 25.3736 20.9168 25.2217 20.9444 25.0469C20.972 24.872 21.0134 24.711 21.0686 24.5637L12.703 19.7045C12.4269 20.0174 12.0864 20.2705 11.6815 20.4637C11.2766 20.657 10.8624 20.7536 10.4391 20.7536C9.57399 20.7536 8.83314 20.4453 8.21654 19.8287C7.59993 19.2121 7.29163 18.4713 7.29163 17.6062C7.29163 16.7227 7.59993 15.9772 8.21654 15.3698C8.83314 14.7624 9.57399 14.4587 10.4391 14.4587C10.8624 14.4587 11.2674 14.5416 11.6539 14.7072C12.0404 14.8729 12.3901 15.1122 12.703 15.4251L21.0686 10.6211C21.0134 10.4922 20.972 10.345 20.9444 10.1793C20.9168 10.0137 20.903 9.8572 20.903 9.70995C20.903 8.82646 21.2113 8.08101 21.8279 7.4736C22.4445 6.8662 23.1853 6.5625 24.0504 6.5625C24.9339 6.5625 25.6794 6.8662 26.2868 7.4736C26.8942 8.08101 27.1979 8.82646 27.1979 9.70995C27.1979 10.575 26.8942 11.3159 26.2868 11.9325C25.6794 12.5491 24.9339 12.8574 24.0504 12.8574C23.6271 12.8574 23.2175 12.7884 22.8218 12.6503C22.4261 12.5123 22.0902 12.2868 21.8141 11.9739L13.4485 16.6123C13.4853 16.7595 13.5175 16.9298 13.5451 17.123C13.5727 17.3163 13.5865 17.4773 13.5865 17.6062C13.5865 17.735 13.5727 17.8731 13.5451 18.0203C13.5175 18.1676 13.4853 18.3148 13.4485 18.4621L21.8141 23.2109C22.0902 22.9532 22.4123 22.7461 22.7804 22.5897C23.1485 22.4332 23.5719 22.355 24.0504 22.355C24.9339 22.355 25.6794 22.6587 26.2868 23.2661C26.8942 23.8735 27.1979 24.6189 27.1979 25.5024C27.1979 26.3675 26.8942 27.1084 26.2868 27.725C25.6794 28.3416 24.9339 28.6499 24.0504 28.6499ZM24.0504 11.2008C24.4738 11.2008 24.8281 11.0582 25.1134 10.7729C25.3987 10.4876 25.5413 10.1333 25.5413 9.70995C25.5413 9.28661 25.3987 8.93229 25.1134 8.647C24.8281 8.3617 24.4738 8.21905 24.0504 8.21905C23.6271 8.21905 23.2728 8.3617 22.9875 8.647C22.7022 8.93229 22.5595 9.28661 22.5595 9.70995C22.5595 10.1333 22.7022 10.4876 22.9875 10.7729C23.2728 11.0582 23.6271 11.2008 24.0504 11.2008V11.2008ZM10.4391 19.0971C10.8624 19.0971 11.2167 18.9544 11.502 18.6691C11.7873 18.3838 11.93 18.0295 11.93 17.6062C11.93 17.1828 11.7873 16.8285 11.502 16.5432C11.2167 16.2579 10.8624 16.1153 10.4391 16.1153C10.0157 16.1153 9.66142 16.2579 9.37612 16.5432C9.09083 16.8285 8.94818 17.1828 8.94818 17.6062C8.94818 18.0295 9.09083 18.3838 9.37612 18.6691C9.66142 18.9544 10.0157 19.0971 10.4391 19.0971V19.0971ZM24.0504 26.9933C24.4738 26.9933 24.8281 26.8507 25.1134 26.5654C25.3987 26.2801 25.5413 25.9258 25.5413 25.5024C25.5413 25.0791 25.3987 24.7248 25.1134 24.4395C24.8281 24.1542 24.4738 24.0115 24.0504 24.0115C23.6271 24.0115 23.2728 24.1542 22.9875 24.4395C22.7022 24.7248 22.5595 25.0791 22.5595 25.5024C22.5595 25.9258 22.7022 26.2801 22.9875 26.5654C23.2728 26.8507 23.6271 26.9933 24.0504 26.9933Z" fill="white"/>
-          </svg>
-        </button>
-        <button id="close" onclick="history.back()">
-          <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.07812 27.4531L7.54688 25.9219L15.9687 17.5L7.54688 9.07812L9.07812 7.54688L17.5 15.9687L25.9219 7.54688L27.4531 9.07812L19.0313 17.5L27.4531 25.9219L25.9219 27.4531L17.5 19.0313L9.07812 27.4531Z" fill="white"/>
-          </svg>
-        </button>
-      </div>
-      <div class="info">
-        <h2 id="collection" style="display: none;"></h2>
-        <p id="date" style="display: none;"></p>
-      </div>
-      <script>
-        if (i !== null) {
-          document.getElementById("image").src = i;
-          document.getElementById("shareImage").content = i;
-        }
-        if (collection !== null) {
-          document.getElementById("collection").innerText = collection;
-          document.getElementById("collection").style.display = "";
-        }
-        if (date !== null) {
-          document.getElementById("date").innerText = date;
-          document.getElementById("date").style.display = "";
-        }
-      </script>      
+      <button id="close" onclick="history.back()">
+        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.07812 27.4531L7.54688 25.9219L15.9687 17.5L7.54688 9.07812L9.07812 7.54688L17.5 15.9687L25.9219 7.54688L27.4531 9.07812L19.0313 17.5L27.4531 25.9219L25.9219 27.4531L17.5 19.0313L9.07812 27.4531Z" fill="white"/>
+        </svg>
+      </button>
+      <button id="info" style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+          <path d="M22.65 34h3V22h-3ZM24 18.3q.7 0 1.175-.45.475-.45.475-1.15t-.475-1.2Q24.7 15 24 15q-.7 0-1.175.5-.475.5-.475 1.2t.475 1.15q.475.45 1.175.45ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 23.95q0-4.1 1.575-7.75 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24.05 4q4.1 0 7.75 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm.05-3q7.05 0 12-4.975T41 23.95q0-7.05-4.95-12T24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24.05 41ZM24 24Z" fill="white"/>
+        </svg>
+      </button>
     </main>
+    <script>
+      if (i !== null) {
+        document.getElementById("image").src = i;
+        document.getElementById("shareImage").content = i;
+      }
+    </script>
   </body>
 </html>
