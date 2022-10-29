@@ -1,9 +1,9 @@
 function consentGranted() {
-  gtag('consent', 'update', {
-    ad_storage: 'granted',
-    analytics_storage: 'granted',
-  });
-  window.clarity('consent');
+  var s = document.createElement('script');
+  s.setAttribute('src',"https://analytics.zacharyc.site/tracker.js");
+  s.setAttribute('data-ackee-server',"https://analytics.zacharyc.site");
+  s.setAttribute('data-ackee-domain-id',"133c9354-5976-48e5-803f-809c8aeeda11");
+  document.body.appendChild(s);
 }
 function acceptCookies() {
   localStorage.setItem('cookies', true);

@@ -1,10 +1,12 @@
 @font-face {
   font-family: Finlandica;
   src: url("/fonts/finlandica.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: Roboto;
   src: url("/fonts/roboto.ttf") format("truetype");
+  font-display: swap;
 }
 
 :root {
