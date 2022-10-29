@@ -14,7 +14,6 @@
     <meta name="author" content="Zachary Crespin">
     <meta name="generator" content="Eleventy">
     <link rel="stylesheet" href="/css/main.css">
-    <script defer src="/js/main.js"></script>
     <!-- Open Graph -->
     <meta property="og:url" content="https://zacharyc.site{{ page.url }}">
     <meta property="og:locale" content="en_US">
@@ -29,10 +28,13 @@
     <meta name="twitter:creator" content="@ZacharyCrespin">
   </head>
   <body>
-{% include 'header.njk'  %}
+{% include 'cookie-consent.njk' %}
+{% include 'header.njk' %}
     <main role="main" id="content">
   {{ content | safe }}
     </main>
 {% include 'footer.njk' %}
-  </body>
+  <script async src="https://analytics.zacharyc.site/tracker.js" id="ackee" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11"></script>
+  <script src="/js/main.js"></script>  
+</body>
 </html>

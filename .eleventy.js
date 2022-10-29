@@ -35,7 +35,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
 
   // version
-  eleventyConfig.addShortcode("version", () => "5.1.0");
+  eleventyConfig.addShortcode("version", () => "5.1.1");
 
   return {
     dir: {
