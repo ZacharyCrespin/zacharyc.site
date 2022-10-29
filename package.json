@@ -1,7 +1,7 @@
 {
   "name": "zacharyc.site",
   "description": "My Personal Website",
-  "version": "5.0.2",
+  "version": "5.1.0",
   "license": "UNLICENSED",
   "author": "Zachary Crespin <contact@zacharyc.site> (https://zacharyc.site)",
   "homepage": "zacharyc.site",
@@ -18,18 +18,13 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "lint": "stylelint src/**/*.css && eslint src/**/*.js"
+    "lint": "stylelint src/**/*.css"
   },
-  "dependencies": {
-    "exif": "^0.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
-    "eslint": "^8.23.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
     "stylelint": "^14.9.1",
     "stylelint-config-standard": "^29.0.0"
   }

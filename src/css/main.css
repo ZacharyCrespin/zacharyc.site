@@ -240,6 +240,7 @@ footer a {
 
 .card {
   margin: 0.5rem;
+  padding: 0.5rem;
   border: 1px solid var(--white);
   border-radius: var(--corner);
   transition: 0.2s ease;
@@ -291,6 +292,7 @@ footer a {
 
 .stack-card {
   margin: 0.5rem;
+  padding: 0.5rem;
   border: 1px solid var(--white);
   border-radius: var(--corner);
   transition: 0.2s ease;
@@ -322,13 +324,16 @@ footer a {
 }
 
 /* Gallery */
-.photo img {
-  max-width: 100%;
+.gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
 }
-.gallery .photo {
+.gallery img {
   margin: 0.5rem;
-  display: inline-block;
-  width: calc(33% - 2rem);
+  width: calc(100% - 1rem);
+  height: auto;
 }
 
 @media screen and (max-width: 1200px) {
@@ -337,9 +342,6 @@ footer a {
   }
 }
 @media (max-width: 1000px) {
-  .gallery .photo {
-    width: calc(50% - 2rem);
-  }
   .stack-collections {
     grid-template-columns: 100%;
   }
@@ -348,10 +350,8 @@ footer a {
   .collections {
     grid-template-columns: 1fr 1fr;
   }
-}
-@media (max-width: 700px) {
-  .gallery .photo {
-    width: calc(100% - 2rem);
+  .gallery {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (max-width: 600px) {
@@ -363,6 +363,15 @@ footer a {
   }
   .collections {
     grid-template-columns: 100%;
+  }
+  .gallery {
+    grid-template-columns: 100%;
+  }
+  .card:hover,
+  .split-card:hover,
+  .stack-card:hover {
+    transform: none;
+    box-shadow: none;
   }
   .split-card {
     grid-template-columns: 100%;

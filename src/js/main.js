@@ -22,11 +22,3 @@ window.onload = function onload() {
     document.getElementById('cookie-consent').style.display = '';
   }
 };
-
-function menu() {
-  if (document.getElementById('menu').style.display !== 'inline-block') {
-    document.getElementById('menu').style.display = 'inline-block';
-  } else {
-    document.getElementById('menu').style.display = 'none';
-  }
-}
