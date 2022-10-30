@@ -14,17 +14,19 @@
     <meta name="author" content="Zachary Crespin">
     <meta name="generator" content="Eleventy">
     <link rel="stylesheet" href="/css/main.css">
-    <script defer src="/js/main.js"></script>
     <!-- Open Graph -->
     <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Photography by Zachary Crespin">
+    <meta property="og:image" content="https://zacharyc.site/images/share/photography.png">
+    <meta property="og:image:alt" content="Photography by Zachary Crespin">
     <meta property="og:site_name" content="zacharyc.site">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photography by Zachary Crespin">
+    <meta name="twitter:image" content="https://zacharyc.site/images/share/photography.png">
+    <meta name="twitter:image:alt" content="Photography by Zachary Crespin">
     <meta name="twitter:site" content="@ZacharyCrespin">
     <meta name="twitter:creator" content="@ZacharyCrespin">
-  </head>
-  <body>
-{% include 'cookie-consent.njk' %}
     <style>
       body {
         margin: 0;
@@ -72,6 +74,9 @@
     <script>
       i = new URLSearchParams(location.search).get('i');
     </script>
+  </head>
+  <body>
+{% include 'cookie-consent.njk' %}
     <main role="main" id="content">
       <img id="image" src="/images/1x1.png">
       <button id="close" onclick="history.back()">
@@ -91,7 +96,7 @@
         document.getElementById("shareImage").content = i;
       }
     </script>
-    <script async src="https://analytics.zacharyc.site/tracker.js" id="ackee" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11"></script>
-    <script src="/js/main.js"></script>  
+    <script defer src="/js/main.js"></script>
+    <script defer src="https://analytics.zacharyc.site/tracker.js"></script>
   </body>
 </html>

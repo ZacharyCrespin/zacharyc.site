@@ -7,26 +7,33 @@ permalink: "404.html"
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>404 | Zachary Crespin</title>
-    <link rel="icon" href="https://zacharyc.site/favicon.ico" id="favicon">
-    <link rel="apple-touch-icon" href="https://zacharyc.site/images/icons/apple-touch-icon.png">
+    <meta name="description" content="page does not exist">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
     <meta name="color-scheme" content="dark">
     <meta name="theme-color" content="#2e2e2e">
+    <meta name="author" content="Zachary Crespin">
+    <meta name="generator" content="Eleventy">
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter -->
+    <meta name="twitter:site" content="@ZacharyCrespin">
+    <meta name="twitter:creator" content="@ZacharyCrespin">
+    <!-- capture the CSS content as a Nunjucks variable -->
+    {% set css %}
+    {% include "src/css/main.css" %}
+    {% endset %}
+    <!-- feed it through our cssmin filter to minify -->
     <style>
-      body{
-        background-color: black;
-        text-align: center;
-        font-family: Roboto, sans-serif;
-      }
+    {{ css | safe }}
+    </style>
+    <style>
       h1 {
-        font-size: 65vh;
-        letter-spacing: 2rem;
-        padding: 0;
         margin: 0;
+        padding: 0;
+        font-size: 50vh;
+        letter-spacing: 2rem;
         transition: all 0.5s;
-        text-align: center;
-        color: white;
-        font-family: Finlandica, "Segoe UI", sans-serif;
-        text-transform: uppercase;
         text-shadow: 
           5px 5px 0px hsl(0, 0%, 90%),
           10px 10px 0px hsl(0, 0%, 80%),
@@ -37,45 +44,30 @@ permalink: "404.html"
           35px 35px 0px hsl(0, 0%, 30%),
           40px 40px 0px hsl(0, 0%, 20%),
           45px 45px 0px hsl(0, 0%, 10%);
-        cursor: default;
       }
       h1:hover {
-        letter-spacing: 1.5px;
-        -webkit-text-stroke: 3px white;
+        letter-spacing: normal;
+        -webkit-text-stroke: 1px white;
         color: transparent;
         text-shadow: none;
       }
       @media screen and (max-width: 1000px) {
         h1 {
-          font-size: 50vh;
-          letter-spacing: 1.5px;
+          letter-spacing: normal;
           -webkit-text-stroke: 3px white;
           color: transparent;
           text-shadow: none;
-          font-size: 6rem;
         }
-      }
-      h2 {
-        font-family: Finlandica, "Segoe UI", sans-serif;
-      }
-      button{
-        font-family: Roboto, sans-serif;
-        background-color: transparent;
-        border: 1px solid white;
-        color: white;
-        padding: .5rem 1rem;
-      }
-      button:hover{
-        cursor: pointer;
-        background-color: white;
-        border: 1px solid black;
-        color: black;
       }
     </style>
   </head>
   <body>
+{% include 'header.njk' %}
+    <main role="main" id="content">
     <h1>404</h1>
     <h2>This page does not exist</h2>
-    <a href="https://zacharyc.site"><button>Back Home</button></a>
+    <a href="https://zacharyc.site" class="button">Back Home</a>
+    </main>
+{% include 'footer.njk' %}
   </body>
 </html>
