@@ -315,11 +315,11 @@ footer a {
 }
 
 /* Cookie Consent */
-#cookie-consent {
+#consent {
   position: fixed;
   bottom: 1rem;
   left: 1rem;
-  padding: 0 1rem;
+  padding: 0.5rem;
   background-color: var(--black);
   border: 1px solid var(--white);
   z-index: 1;
@@ -382,7 +382,7 @@ footer a {
     margin-left: 0;
     text-align: center;
   }
-  #cookie-consent {
+  #consent {
     width: calc(100% - 2rem - 2px);
     bottom: 0;
     left: 0;
