@@ -4,27 +4,12 @@ numberofphotos: 3
 date: 2022-05-04
 id: lizard
 ---
-<div class="photo">
-  <a href="/photography/i?i=/images/collections/lizard/1.JPG&collection=Lizards">
-    <img src="/images/collections/lizard/1-Small.JPG"
-      data-pin-url="https://zacharyc.site/photography/lizard"
-      data-pin-media="https://zacharyc.site/images/collections/lizard/1.JPG"
-      data-pin-description="Lizard 1 | Zachary Crespin" alt="Lizard 1">
-  </a>
-</div>
-<div class="photo">
-  <a href="/photography/i?i=/images/collections/lizard/2.JPG&collection=Lizards">
-    <img src="/images/collections/lizard/2-Small.JPG"
-      data-pin-url="https://zacharyc.site/photography/lizard"
-      data-pin-media="https://zacharyc.site/images/collections/lizard/2.JPG"
-      data-pin-description="Lizard 2 | Zachary Crespin" alt="Lizard 2">
-  </a>
-</div>
-<div class="photo">
-  <a href="/photography/i?i=/images/collections/lizard/3.JPG&collection=Lizards">
-    <img src="/images/collections/lizard/3-Small.JPG"
-      data-pin-url="https://zacharyc.site/photography/lizard"
-      data-pin-media="https://zacharyc.site/images/collections/lizard/3.JPG"
-      data-pin-description="Lizard 3 | Zachary Crespin" alt="Lizard 3">
-  </a>
-</div>
+<a class="photo" href="/photography/i?i=/images/collections/lizard/1.JPG&collection=Lizards">
+  {% image "./src/images/collections/lizard/1-Small.JPG", "Lizard 1" %}
+</a>
+<a class="photo" href="/photography/i?i=/images/collections/lizard/2.JPG&collection=Lizards">
+  {% image "./src/images/collections/lizard/2-Small.JPG", "Lizard 2" %}
+</a>
+<a class="photo" href="/photography/i?i=/images/collections/lizard/3.JPG&collection=Lizards">
+  {% image "./src/images/collections/lizard/3-Small.JPG", "Lizard 3" %}
+</a>

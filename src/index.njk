@@ -9,7 +9,7 @@ id: home
 <div class="collections">
 {%- for collection in collections.collection | reverse | limit(4) -%}
 <div class="card">
-  <img src="/images/banners/{{ collection.data.id }}.jpg" alt="{{ collection.data.title }} Collection Image">
+  {% image "./src/images/banners/" + collection.data.id + ".jpg", collection.data.title + " Collection Image" %}
   <h3>{{ collection.data.title }}</h3>
   <p>{{ collection.data.numberofphotos }} Photos</p>
   <a class="button" href="{{ collection.url }}">View</a>

@@ -4,27 +4,12 @@ numberofphotos: 3
 date: 2020-06-22
 id: newport
 ---
-<div class="photo">
-  <a href="/photography/i?i=/images/collections/newport-beach/1.jpg&collection=Newport Beach">
-    <img src="/images/collections/newport-beach/1-Small.jpg"
-      data-pin-url="https://zacharyc.site/photography/newport-beach"
-      data-pin-media="https://zacharyc.site/images/collections/newport-beach/1.jpg"
-      data-pin-description="Newport Beach 1 | Zachary Crespin" alt="Newport Beach 1">
-  </a>
-</div>
-<div class="photo">
-  <a href="/photography/i?i=/images/collections/newport-beach/2.jpg&collection=Newport Beach">
-    <img src="/images/collections/newport-beach/2-Small.jpg"
-      data-pin-url="https://zacharyc.site/photography/newport-beach"
-      data-pin-media="https://zacharyc.site/images/collections/newport-beach/2.jpg"
-      data-pin-description="Newport Beach 2 | Zachary Crespin" alt="Newport Beach 2">
-  </a>
-</div>
-<div class="photo">
-  <a href="/photography/i?i=/images/collections/newport-beach/3.jpg&collection=Newport Beach">
-    <img src="/images/collections/newport-beach/3-Small.jpg"
-      data-pin-url="https://zacharyc.site/photography/newport-beach"
-      data-pin-media="https://zacharyc.site/images/collections/newport-beach/3.jpg"
-      data-pin-description="Newport Beach 3 | Zachary Crespin" alt="Newport Beach 3">
-  </a>
-</div>
+<a class="photo" href="/photography/i?i=/images/collections/newport-beach/1.jpg&collection=Newport Beach">
+  {% image "./src/images/collections/newport-beach/1-Small.jpg", "Newport Beach 1" %}
+</a>
+<a class="photo" href="/photography/i?i=/images/collections/newport-beach/2.jpg&collection=Newport Beach">
+  {% image "./src/images/collections/newport-beach/2-Small.jpg", "Newport Beach 2" %}
+</a>
+<a class="photo" href="/photography/i?i=/images/collections/newport-beach/3.jpg&collection=Newport Beach">
+  {% image "./src/images/collections/newport-beach/3-Small.jpg", "Newport Beach 3" %}
+</a>

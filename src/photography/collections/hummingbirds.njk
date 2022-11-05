@@ -4,28 +4,12 @@ numberofphotos: 3
 date: 2022-07-20
 id: hummingbirds
 ---
-<div class="photo">
-  <a href="/photography/i?i=/images/collections/hummingbirds/1.JPG&collection=Hummingbirds">
-    <img src="/images/collections/hummingbirds/1-Small.JPG"
-      data-pin-url="https://zacharyc.site/photography/hummingbirds"
-      data-pin-media="https://zacharyc.site/images/collections/hummingbirds/1.JPG"
-      data-pin-description="Hummingbird 1 | Zachary Crespin" alt="Hummingbird sitting on a branch.">
-  </a>
-</div>
-<div class="photo">
-  <a href="/photography/i?i=/images/collections/hummingbirds/2.JPG&collection=Hummingbirds">
-    <img src="/images/collections/hummingbirds/2-Small.JPG"
-      data-pin-url="https://zacharyc.site/photography/hummingbirds"
-      data-pin-media="https://zacharyc.site/images/collections/hummingbirds/2.JPG"
-      data-pin-description="Hummingbird 2 | Zachary Crespin" alt="Hummingbird sitting on a feeder.">
-  </a>
-</div>
-<div class="photo">
-  <a href="/photography/i?i=/images/collections/hummingbirds/3.JPG&collection=Hummingbirds">
-    <img src="/images/collections/hummingbirds/3-Small.JPG"
-      data-pin-url="https://zacharyc.site/photography/hummingbirds"
-      data-pin-media="https://zacharyc.site/images/collections/hummingbirds/3.JPG"
-      data-pin-description="Hummingbird 3 | Zachary Crespin"
-      alt="A hummingbird sitting on a feeder with its wings still in motion.">
-  </a>
-</div>
+<a class="photo" href="/photography/i?i=/images/collections/hummingbirds/1.JPG&collection=Hummingbirds">
+  {% image "./src/images/collections/hummingbirds/1-Small.JPG", "Hummingbird sitting on a branch." %}
+</a>
+<a class="photo" href="/photography/i?i=/images/collections/hummingbirds/2.JPG&collection=Hummingbirds">
+  {% image "./src/images/collections/hummingbirds/2-Small.JPG", "Hummingbird sitting on a feeder." %}
+</a>
+<a class="photo" href="/photography/i?i=/images/collections/hummingbirds/3.JPG&collection=Hummingbirds">
+  {% image "./src/images/collections/hummingbirds/3-Small.JPG", "A hummingbird sitting on a feeder with its wings still in motion." %}
+</a>
