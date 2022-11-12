@@ -47,7 +47,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
 
   // version
-  eleventyConfig.addShortcode("version", () => "5.2.0");
+  eleventyConfig.addShortcode("version", () => "5.2.1");
 
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 

@@ -11,9 +11,9 @@
 
 :root {
   --white: #fff;
-  --lightgrey: #afafaf;
-  --grey: #4a4a4a;
-  --darkgrey: #2e2e2e;
+  --lightgrey: #bfbfbf;
+  --grey: #808080;
+  --darkgrey: #404040;
   --black: #000;
   --corner: 0;
 }
@@ -70,11 +70,6 @@ body {
   transform: translateY(0);
   color: var(--black);
   text-decoration: none;
-}
-
-*:focus-visible {
-  outline: 1px solid var(--white);
-  outline-offset: 2px;
 }
 
 h1 {
@@ -164,14 +159,6 @@ a:focus-visible {
 .button:focus-visible {
   background: var(--white);
   color: var(--black);
-}
-
-button {
-  background-color: var(--black);
-  color: var(--white);
-  border: 1px solid var(--white);
-  margin: 0.5rem;
-  padding: 0.5rem 1.5rem;
 }
 
 input, textarea {
