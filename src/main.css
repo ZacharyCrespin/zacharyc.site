@@ -124,7 +124,7 @@ a:focus-visible {
   color: var(--lightgrey);
 }
 
-.button {
+.button, button {
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -154,6 +154,10 @@ a:focus-visible {
   width: 200%;
 }
 .button:hover {
+  color: var(--black);
+}
+button:hover {
+  background-color: var(--white);
   color: var(--black);
 }
 .button:focus-visible {
