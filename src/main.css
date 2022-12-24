@@ -5,7 +5,7 @@
   --darkgrey: #404040;
   --black: #000;
   --stroke: 1px;
-  --corner: 0;
+  --corner: 6px;
 }
 
 * {
@@ -14,8 +14,8 @@
 }
 
 ::selection {
-  background: var(--white);
-  color: var(--black);
+  background: green;
+  color: red;
 }
 
 ::-webkit-scrollbar {
@@ -29,7 +29,7 @@
   background-color: var(--white);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--lightgrey);
+  background-color: green;
 }
 ::-webkit-scrollbar-corner {
   background-color: var(--black);
@@ -116,11 +116,11 @@ a, .a {
   color: var(--white);
 }
 a:hover, .a:hover {
-  color: var(--lightgrey);
+  color: red;
   cursor: pointer;
 }
 a:focus-visible, .a:focus-visible {
-  color: var(--lightgrey);
+  color: red;
 }
 
 .uppercase {
@@ -159,7 +159,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: var(--white);
+  background: red;
   transition: 0.4s ease;
   display: block;
   z-index: -1;
@@ -168,11 +168,13 @@ button {
   width: 200%;
 }
 .button:hover {
-  color: var(--black);
+  color: green;
+  font-weight: bold;
+  border: var(--stroke) solid green;
 }
 .button:focus-visible {
-  background: var(--white);
-  color: var(--black);
+  background: red;
+  color: green;
 }
 
 header, footer {
@@ -209,10 +211,10 @@ header nav a, footer nav a, footer p {
 }
 
 footer a:hover svg path {
-  fill: var(--lightgrey);
+  fill: red;
 }
 footer a:focus-visible svg path {
-  fill: var(--lightgrey);
+  fill: red;
 }
 
 /* Cards */
@@ -233,7 +235,7 @@ footer a:focus-visible svg path {
 }
 .card:hover {
   transform: translate(-4px, -4px);
-  box-shadow: 4px 4px var(--white);
+  box-shadow: 4px 4px green;
 }
 a.card {
   text-decoration: none;
