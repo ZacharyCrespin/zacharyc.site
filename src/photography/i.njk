@@ -1,14 +1,28 @@
+---
+pagination:
+  data: photos
+  size: 1
+  alias: image
+permalink: "/photography/{{ image.collection }}/{{ image.id }}/index.html"
+---
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Photography by Zachary Crespin</title>
-    <meta name="description" content="Photography by Zachary Crespin">
+    {% if image.title %}
+      <title>{{ image.title }} by Zachary Crespin</title>
+    {% else %}
+      <title>Photo by Zachary Crespin</title>
+    {% endif %}
+    {% if image.title %}
+      <meta name="description" content="{{ image.title }} by Zachary Crespin">
+    {% else %}
+      <meta name="description" content="Photo by Zachary Crespin">
+    {% endif %}
     <link rel="icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <meta name="image" content="/images/share/photography.png" id="shareImage">
-    <link rel="manifest" href="/app.webmanifest">
     <meta name="color-scheme" content="dark">
     <meta name="theme-color" content="#2e2e2e">
     <meta name="author" content="Zachary Crespin">
@@ -16,86 +30,59 @@
     <link rel="stylesheet" href="/main.css">
     <!-- Open Graph -->
     <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="Photography by Zachary Crespin">
-    <meta property="og:image" content="https://zacharyc.site/images/share/photography.png">
-    <meta property="og:image:alt" content="Photography by Zachary Crespin">
+    {% if image.title %}
+      <meta name="og:title" content="{{ image.title }} by Zachary Crespin">
+    {% else %}
+      <meta name="og:title" content="Photo by Zachary Crespin">
+    {% endif %}
+    <meta property="og:image" content="https://zacharyc.site/images/photography/{{ image.src }}">
+    <meta property="og:image:alt" content="{{ image.alt }}">
     <meta property="og:site_name" content="zacharyc.site">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Photography by Zachary Crespin">
-    <meta name="twitter:image" content="https://zacharyc.site/images/share/photography.png">
-    <meta name="twitter:image:alt" content="Photography by Zachary Crespin">
+    {% if image.title %}
+      <meta name="twitter:title" content="{{ image.title }} by Zachary Crespin">
+    {% else %}
+      <meta name="twitter:title" content="Photo by Zachary Crespin">
+    {% endif %}
+    <meta name="twitter:image" content="https://zacharyc.site/images/photography/{{ image.src }}">
+    <meta name="twitter:image:alt" content="{{ image.alt }}">
     <meta name="twitter:site" content="@ZacharyCrespin">
     <meta name="twitter:creator" content="@ZacharyCrespin">
     <style>
       body {
         margin: 0;
-        min-height: 100vh;
-        overflow: hidden;
       }
-      #image {
-        max-width: 75vw;
-        max-width: calc(100vw - 2rem);
-        max-height: calc(100vh - 2rem);
-        padding: 1rem;
-      }
-      #close, #info {
-        position: fixed;
-        margin: 0;
-        padding: 0;
-        border: none;
-        background: transparent;
-      }
-      #close svg, #info svg {
-        width: 2rem;
-        height: 2rem;
-      }
-      #close:hover, #info:hover {
-        cursor: pointer;
-      }
-      #close:hover svg path, #info:hover svg path {
-        fill: var(--lightgrey);
+      main {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       #close {
+        position: fixed;
         top: 1rem;
         right: 1rem;
       }
-      #info {
-        bottom: 1rem;
-        right: 1rem;
-      }
-      /* TODO: center verticaly insted */
-      @media screen and (max-width: 600px) {
-        #image {
-          margin-top: 3rem;
-        }
+      img {
+        width: auto;
+        height: auto;
+        max-width: calc(100vw - 1rem);
+        max-height: calc(100vh - 1rem);
       }
     </style>
-    <script>
-      i = new URLSearchParams(location.search).get('i');
-    </script>
   </head>
   <body>
 {% include 'consent.njk' %}
     <main role="main" id="content">
-      <img id="image" src="/images/1x1.png">
       <button id="close" onclick="history.back()">
         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9.07812 27.4531L7.54688 25.9219L15.9687 17.5L7.54688 9.07812L9.07812 7.54688L17.5 15.9687L25.9219 7.54688L27.4531 9.07812L19.0313 17.5L27.4531 25.9219L25.9219 27.4531L17.5 19.0313L9.07812 27.4531Z" fill="white"/>
         </svg>
       </button>
-      <button id="info" style="display: none;">
-        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
-          <path d="M22.65 34h3V22h-3ZM24 18.3q.7 0 1.175-.45.475-.45.475-1.15t-.475-1.2Q24.7 15 24 15q-.7 0-1.175.5-.475.5-.475 1.2t.475 1.15q.475.45 1.175.45ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 23.95q0-4.1 1.575-7.75 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24.05 4q4.1 0 7.75 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm.05-3q7.05 0 12-4.975T41 23.95q0-7.05-4.95-12T24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24.05 41ZM24 24Z" fill="white"/>
-        </svg>
-      </button>
+      {% image "./src/images/photography/" + image.src, image.alt %}
     </main>
-    <script>
-      if (i !== null) {
-        document.getElementById("image").src = i;
-        document.getElementById("shareImage").content = i;
-      }
-    </script>
     <script defer src="/main.js"></script>
     <script async src="https://analytics.zacharyc.site/tracker.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11"></script>
   </body>

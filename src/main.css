@@ -1,35 +1,16 @@
-@font-face {
-  font-family: Finlandica;
-  src: url("/fonts/finlandica.ttf") format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: Roboto;
-  src: url("/fonts/roboto.ttf") format("truetype");
-  font-display: swap;
-}
-
 :root {
   --white: #fff;
   --lightgrey: #bfbfbf;
   --grey: #808080;
   --darkgrey: #404040;
   --black: #000;
+  --stroke: 1px;
   --corner: 0;
 }
 
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: Roboto, sans-serif;
-  text-align: center;
-  background-color: var(--black);
-  color: var(--white);
-  margin: 0 3rem;
-  min-height: 100vh;
 }
 
 ::selection {
@@ -54,6 +35,14 @@ body {
   background-color: var(--black);
 }
 
+body {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  background-color: var(--black);
+  color: var(--white);
+  margin: 0 3rem;
+}
+
 .skip-nav {
   z-index: 2;
   background: var(--white);
@@ -72,65 +61,89 @@ body {
   text-decoration: none;
 }
 
-h1 {
-  font-family: Finlandica, "Segoe UI", sans-serif;
-  text-transform: uppercase;
+h1, .h1 {
+  font-family: Oswald, sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0.25em;
+}
+h2, .h2 {
+  font-family: Roboto, sans-serif;
   font-size: 2.6rem;
-  margin: 0.25em 0;
+  font-weight: 400;
+  margin: 0.25em;
 }
-h2 {
-  font-family: Finlandica, "Segoe UI", sans-serif;
-  text-transform: uppercase;
+h3, .h3 {
+  font-family: Roboto, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin: 0.25em;
+}
+h4, .h4 {
+  font-family: Roboto, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 200;
+  margin: 0.25em;
+}
+h5, .h5 {
+  font-family: Roboto, sans-serif;
   font-size: 2rem;
-  margin: 0.25em 0;
+  font-weight: 200;
+  margin: 0.25em;
 }
-h3 {
-  font-family: Finlandica, "Segoe UI", sans-serif;
+h6, .h6 {
+  font-family: Roboto, sans-serif;
   font-size: 1.8rem;
-  margin: 0.25em 0;
-}
-h4 {
-  font-family: Finlandica, "Segoe UI", sans-serif;
-  font-size: 1.6rem;
-  margin: 0.25em 0;
-}
-h5 {
-  font-family: Finlandica, "Segoe UI", sans-serif;
-  font-size: 1.4rem;
-  margin: 0.25em 0;
-}
-h6 {
-  font-family: Finlandica, "Segoe UI", sans-serif;
-  font-size: 1.2rem;
-  margin: 0.25em 0;
+  font-weight: 200;
+  margin: 0.25em;
 }
 
-p {
+p, .p {
   font-family: Roboto, sans-serif;
   font-size: 1rem;
-  margin: 0.25em 0;
+  font-weight: 200;
+  margin: 0.25em;
+}
+p a {
+  margin: 0;
 }
 
-a {
+a, .a {
   font-family: Roboto, sans-serif;
   font-size: 1rem;
-  margin: 0.25em 0;
+  font-weight: 200;
+  margin: 0.25em;
   color: var(--white);
 }
-a:hover {
+a:hover, .a:hover {
   color: var(--lightgrey);
+  cursor: pointer;
 }
-a:focus-visible {
+a:focus-visible, .a:focus-visible {
   color: var(--lightgrey);
 }
 
-.button, button {
+.uppercase {
+  text-transform: uppercase;
+}
+
+.black {
+  font-family: "Meshed Display Black", serif;
+  font-weight: 900;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.button {
   position: relative;
   display: inline-block;
   overflow: hidden;
   margin: 0.5rem;
   padding: 0.5rem 1.5rem;
-  border: 1px solid var(--white);
+  border: var(--stroke) solid var(--white);
   border-radius: var(--corner);
   color: var(--white);
   background-color: transparent;
@@ -157,85 +170,64 @@ a:focus-visible {
 .button:hover {
   color: var(--black);
 }
-button:hover {
-  background-color: var(--white);
-  color: var(--black);
-}
 .button:focus-visible {
   background: var(--white);
   color: var(--black);
 }
 
-input, textarea {
-  font-family: Roboto, sans-serif;
-  margin: 0.5rem;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid var(--white);
-  background-color: var(--black);
-  color: var(--white);
+header, footer {
+  display: grid;
+  margin: 1rem 0;
+  padding: 0 0.5rem;
 }
-
-/* Menu */
-nav {
-  border-bottom: 1px solid var(--white);
-  margin: 0 0.5rem 1rem;
-  padding: 1rem 0;
+header {
+  grid-template-columns: max-content auto;
 }
-nav a {
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-}
-
-/* Footer */
 footer {
-  position: relative;
-  bottom: 0;
-  width: calc(100% - 1rem);
-  border-top: 1px solid var(--white);
-  margin: 1rem 0.5rem 0;
-  padding: 1rem 0;
+  grid-template-columns: auto max-content;
 }
-footer .info {
-  padding: 0;
-  margin: 0;
+
+header a, footer a, header p, footer p {
+  font-size: 1.1rem;
 }
-footer a {
+header a, footer a {
   text-decoration: none;
 }
-.social-list {
-  margin: 0.5rem 0;
-  margin-top: 0;
+
+header nav, footer nav {
+  display: flex;
 }
-.social-list a {
-  padding: 0.5em;
+header nav {
+  justify-content: flex-end;
 }
-.social-list a svg path {
-  fill: var(--white);
+footer nav {
+  justify-content: flex-start;
 }
-.social-list a:hover svg path {
+
+header nav a, footer nav a, footer p {
+  padding: calc((2.2rem + 0.25em - 1.1rem)/2) 0.5rem;
+}
+
+footer a:hover svg path {
   fill: var(--lightgrey);
 }
-.social-list a:focus-visible {
-  outline: none;
-}
-.social-list a:focus-visible svg {
-  outline: 1px solid var(--white);
-  outline-offset: 2px;
-}
-.social-list a:focus-visible svg path {
+footer a:focus-visible svg path {
   fill: var(--lightgrey);
 }
 
 /* Cards */
-.collections {
+.cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.cards.wide {
+  grid-template-columns: 1fr 1fr;
 }
 
 .card {
   margin: 0.5rem;
   padding: 0.5rem;
-  border: 1px solid var(--white);
+  border: var(--stroke) solid var(--white);
   border-radius: var(--corner);
   transition: 0.2s ease;
 }
@@ -243,67 +235,44 @@ footer a {
   transform: translate(-4px, -4px);
   box-shadow: 4px 4px var(--white);
 }
+a.card {
+  text-decoration: none;
+}
+a.card:hover {
+  color: var(--white);
+}
+a.card:focus {
+  color: var(--white);
+}
 .card img {
-  width: 100%;
+  width: calc(100% + 1rem);
+  margin-top: -0.5rem;
+  margin-left: -0.5rem;
   height: auto;
   border-radius: var(--corner) var(--corner) 0 0;
 }
 
-/* Split Cards */
-.split-card {
+/* Full Width Cards */
+.card.full {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: max-content auto;
   margin: 1rem 0.5rem;
   padding: 1rem;
-  border: 1px solid var(--white);
-  border-radius: var(--corner);
-  transition: 0.2s ease;
 }
-.split-card:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 4px 4px var(--white);
-}
-.split-card h3 {
-  margin-left: 0;
-}
-.split-card img {
+.card.full img {
+  width: auto;
   max-width: 100%;
   max-height: 80vh;
 }
-.split-card .text {
+.card.full .text {
   margin-left: 2rem;
   text-align: left;
 }
-.split-card .button {
+.card.full h3 {
   margin-left: 0;
 }
-
-/* Stack Cards */
-.stack-collections {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.stack-card {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid var(--white);
-  border-radius: var(--corner);
-  transition: 0.2s ease;
-}
-.stack-card:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 4px 4px var(--white);
-}
-.stack-card img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--corner) var(--corner) 0 0;
-}
-
-/* Video Cards */
-.video-card {
-  grid-template-columns: max-content 1fr;
+.card.full .button {
+  margin-left: 0;
 }
 
 /* Cookie Consent */
@@ -313,7 +282,7 @@ footer a {
   left: 1rem;
   padding: 0.5rem;
   background-color: var(--black);
-  border: 1px solid var(--white);
+  border: var(--stroke) solid var(--white);
   z-index: 1;
 }
 
@@ -336,17 +305,17 @@ footer a {
 }
 
 @media screen and (max-width: 1200px) {
-  .collections {
+  .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media (max-width: 1000px) {
-  .stack-collections {
+  .cards.wide {
     grid-template-columns: 100%;
   }
 }
 @media screen and (max-width: 900px) {
-  .collections {
+  .cards {
     grid-template-columns: 1fr 1fr;
   }
   .gallery {
@@ -360,22 +329,22 @@ footer a {
   .skip-nav {
     display: none;
   }
-  .collections {
+  .cards {
     grid-template-columns: 100%;
   }
   .gallery {
     grid-template-columns: 100%;
   }
   .card:hover,
-  .split-card:hover,
+  .card.full:hover,
   .stack-card:hover {
     transform: none;
     box-shadow: none;
   }
-  .split-card {
+  .card.full {
     grid-template-columns: 100%;
   }
-  .split-card .text {
+  .card.full .text {
     margin-left: 0;
     text-align: center;
   }
@@ -383,5 +352,15 @@ footer a {
     width: calc(100% - 1rem - 2px);
     bottom: 0;
     left: 0;
+  }
+  header, footer {
+    grid-template-columns: 100%;
+    padding: 0;
+  }
+  header nav, footer nav {
+    justify-content: center;
+  }
+  header nav a, footer nav a, footer p {
+    padding: 0 0.5rem;
   }
 }

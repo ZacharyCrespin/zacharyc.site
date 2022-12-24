@@ -1,31 +1,30 @@
 ---
-title: Home
-description: Photography, Code and more
+title: Latest Work
+description: Photography, Code, More
 layout: 'basic.njk'
 id: home
 ---
-<h1>Latest Work</h1>
 <h2>Photos</h2>
-<div class="collections">
-{%- for collection in collections.collection | reverse | limit(4) -%}
-<div class="card">
-  {% image "./src/images/banners/" + collection.data.id + ".jpg", collection.data.title + " Collection Image" %}
-  <h3>{{ collection.data.title }}</h3>
-  <p>{{ collection.data.numberofphotos }} Photos</p>
-  <a class="button" href="{{ collection.url }}">View</a>
-</div>
-{%- endfor -%}
+<div class="cards" aria-label="Latest Photo Collections">
+  {%- for collection in collections.collection | reverse | limit(4) -%}
+  <a class="card" href="{{ collection.url }}" aria-label="{{ collection.data.title }}">
+    {% image "./src/images/banners/" + collection.data.id + ".jpg", collection.data.title + " Collection Image" %}
+    <h3 class="h4">{{ collection.data.title }}</h3>
+    <p>{{ collection.data.numberofphotos }} Photos</p>
+    <span class="button">View</span>
+  </a>
+  {%- endfor -%}
 </div>
 <a class="button" href="/photography/collections">All Collections</a>
 
 <h2>Code Projects</h2>
-<div class="collections">
+<div class="cards" aria-label="Latest Code Projects">
   {%- for code in collections.code | reverse | limit(4) -%}
-  <div class="card">
-    <h3>{{ code.data.title }}</h3>
+  <a class="card" href="{{ code.data.link }}" target="_blank" aria-label="{{ code.data.title }}">
+    <h3 class="h4">{{ code.data.title }}</h3>
     <p>{{ code.data.tech }}</p>
-    <a class="button" href="{{ code.data.link }}" target="_blank">View</a>
-  </div>
+    <span class="button">View</span>
+  </a>
   {%- endfor -%}
 </div>
 <a class="button" href="/code">All Projects</a>

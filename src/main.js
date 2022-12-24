@@ -14,6 +14,6 @@ window.onload = function onload() {
     const instance = ackeeTracker.create('https://analytics.zacharyc.site', {detailed: true});
     instance.record('133c9354-5976-48e5-803f-809c8aeeda11');
   } else {
-    document.getElementById('consent').style.display = ''
+    document.getElementById('consent').style.display = '';
   }
 };

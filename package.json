@@ -1,8 +1,7 @@
 {
   "name": "zacharyc.site",
   "description": "My Personal Website",
-  "version": "5.2.1",
-  "license": "UNLICENSED",
+  "version": "6.0.0",
   "author": "Zachary Crespin <contact@zacharyc.site> (https://zacharyc.site)",
   "homepage": "zacharyc.site",
   "repository": {
@@ -13,7 +12,9 @@
     "url": "https://github.com/ZacharyCrespin/zacharyc.site/issues"
   },
   "keywords": [
-    "11ty"
+    "11ty",
+    "photography",
+    "portfolio"
   ],
   "scripts": {
     "start": "eleventy --serve",

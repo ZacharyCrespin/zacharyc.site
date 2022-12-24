@@ -6,27 +6,13 @@ permalink: "404.html"
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
     <title>404 | Zachary Crespin</title>
     <meta name="description" content="page does not exist">
-    <link rel="icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
+    <link rel="icon" href="https://zacharyc.site/favicon.png">
+    <link rel="apple-touch-icon" href="https://zacharyc.site/images/icons/apple-touch-icon.png">
     <meta name="color-scheme" content="dark">
-    <meta name="theme-color" content="#2e2e2e">
-    <meta name="author" content="Zachary Crespin">
-    <meta name="generator" content="Eleventy">
-    <!-- Open Graph -->
-    <meta property="og:locale" content="en_US">
-    <!-- Twitter -->
-    <meta name="twitter:site" content="@ZacharyCrespin">
-    <meta name="twitter:creator" content="@ZacharyCrespin">
-    <!-- capture the CSS content as a Nunjucks variable -->
-    {% set css %}
-    {% include "src/main.css" %}
-    {% endset %}
-    <!-- feed it through our cssmin filter to minify -->
-    <style>
-    {{ css | safe }}
-    </style>
+    <link rel="stylesheet" href="https://zacharyc.site/main.css">
     <style>
       h1 {
         margin: 0;
@@ -62,12 +48,10 @@ permalink: "404.html"
     </style>
   </head>
   <body>
-{% include 'header.njk' %}
     <main role="main" id="content">
-    <h1>404</h1>
-    <h2>This page does not exist</h2>
-    <a href="https://zacharyc.site" class="button">Back Home</a>
+      <h1>404</h1>
+      <h2>This page does not exist</h2>
+      <a href="https://zacharyc.site" class="button">Back Home</a>
     </main>
-{% include 'footer.njk' %}
   </body>
 </html>

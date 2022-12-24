@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if SEOtitle %}
+      <title>{{ SEOtitle }} | Zachary Crespin</title>
+    {% else %}
+      <title>{{ title }} | Zachary Crespin</title>
+    {% endif %}
+    <meta name="description" content="{{ description }}">
+    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon-light.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <meta name="image" content="/images/share/{{ id }}.png">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#2e2e2e">
+    <meta name="author" content="Zachary Crespin">
+    <meta name="generator" content="Eleventy">
+    <link rel="stylesheet" href="/main.css">
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://zacharyc.site{{ page.url }}">
+    <meta property="og:locale" content="en_US">
+    {% if SEOtitle %}
+      <meta property="og:title" content="{{ SEOtitle }} | Zachary Crespin">
+    {% else %}
+      <meta property="og:title" content="{{ title }} | Zachary Crespin">
+    {% endif %}
+    <meta property="og:image" content="https://zacharyc.site/images/share/{{ id }}.png">
+		<meta property="og:image:alt" content="{{ title }}">
+    <meta property="og:site_name" content="zacharyc.site">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    {% if SEOtitle %}
+      <meta name="twitter:title" content="{{ SEOtitle }} | Zachary Crespin">
+    {% else %}
+      <meta name="twitter:title" content="{{ title }} | Zachary Crespin">
+    {% endif %}
+    <meta name="twitter:image" content="https://zacharyc.site/images/share/{{ id }}.png">
+    <meta name="twitter:image:alt" content="{{ title }}">
+    <meta name="twitter:site" content="@ZacharyCrespin">
+    <meta name="twitter:creator" content="@ZacharyCrespin">
+  </head>
+  <body>
+    {{ content | safe }}
+    <script async src="https://analytics.zacharyc.site/tracker.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11"></script>
+  </body>
+</html>
