@@ -1,5 +1,6 @@
 const rss = require("@11ty/eleventy-plugin-rss");
 const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
+const CleanCSS = require("clean-css");
 const Image = require("@11ty/eleventy-img");
 
 async function imageShortcode(src, alt) {
@@ -16,15 +17,19 @@ async function imageShortcode(src, alt) {
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(rss);
+  // minify HTML
   eleventyConfig.addPlugin(filesMinifier);
+  // minify CSS
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
 
   eleventyConfig.addPassthroughCopy('./src/fonts');
   eleventyConfig.addPassthroughCopy('./src/images');
   eleventyConfig.addPassthroughCopy('./src/favicon.png');
   eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
   eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');
-  eleventyConfig.addPassthroughCopy('./src/main.css');
-  eleventyConfig.addPassthroughCopy('./src/main.js');
+  eleventyConfig.addPassthroughCopy('./src/consent.js');
   eleventyConfig.addPassthroughCopy('./src/robots.txt');
   eleventyConfig.addPassthroughCopy('./src/sitemap.xml');
 
@@ -48,7 +53,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
 
   // version
-  eleventyConfig.addShortcode("version", () => "6.0.0");
+  eleventyConfig.addShortcode("version", () => "6.0.1");
 
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 

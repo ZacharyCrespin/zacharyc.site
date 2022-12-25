@@ -123,21 +123,12 @@ a:focus-visible, .a:focus-visible {
   color: var(--lightgrey);
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
-
 .black {
   font-family: "Meshed Display Black", serif;
   font-weight: 900;
 }
 
-button {
-  background-color: transparent;
-  border: none;
-}
-
-.button {
+.button, button {
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -151,7 +142,7 @@ button {
   text-decoration: none;
   transition: 0.2s;
 }
-.button::before {
+.button::before, button::before {
   content: "";
   width: 0;
   height: 500%;
@@ -164,13 +155,14 @@ button {
   display: block;
   z-index: -1;
 }
-.button:hover::before {
+.button:hover::before, button:hover::before {
   width: 200%;
 }
-.button:hover {
+.button:hover, button:hover {
   color: var(--black);
+  cursor: pointer;
 }
-.button:focus-visible {
+.button:focus-visible, button:focus-visible {
   background: var(--white);
   color: var(--black);
 }
