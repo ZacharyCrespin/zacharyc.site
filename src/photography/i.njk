@@ -67,6 +67,9 @@ permalink: "/photography/{{ image.collection }}/{{ image.id }}/index.html"
         top: 1rem;
         right: 1rem;
       }
+      #close:hover svg path {
+        fill: gold;
+      }
       img {
         width: auto;
         height: auto;
@@ -76,6 +79,15 @@ permalink: "/photography/{{ image.collection }}/{{ image.id }}/index.html"
     </style>
   </head>
   <body>
+    <div class="snow-contaner">
+      <div class="snow snow-near"></div>
+      <div class="snow snow-near snow-alt"></div>
+      <div class="snow snow-mid"></div>
+      <div class="snow snow-mid snow-alt"></div>
+      <div class="snow snow-far"></div>
+      <div class="snow snow-far snow-alt"></div>
+    </div>
+    <link rel="stylesheet" href="https://snow.zacharyc.site/snow.min.css">
 {% include 'consent.njk' %}
     <main role="main" id="content">
       <button id="close" onclick="history.back()">
