@@ -5,7 +5,7 @@
   --darkgrey: #404040;
   --black: #000;
   --stroke: 1px;
-  --corner: 6px;
+  --corner: 0;
 }
 
 * {
@@ -14,8 +14,8 @@
 }
 
 ::selection {
-  background: green;
-  color: red;
+  background: var(--white);
+  color: var(--black);
 }
 
 ::-webkit-scrollbar {
@@ -29,7 +29,7 @@
   background-color: var(--white);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: green;
+  background-color: var(--lightgrey);
 }
 ::-webkit-scrollbar-corner {
   background-color: var(--black);
@@ -116,11 +116,11 @@ a, .a {
   color: var(--white);
 }
 a:hover, .a:hover {
-  color: red;
+  color: var(--lightgrey);
   cursor: pointer;
 }
 a:focus-visible, .a:focus-visible {
-  color: red;
+  color: var(--lightgrey);
 }
 
 .black {
@@ -128,7 +128,7 @@ a:focus-visible, .a:focus-visible {
   font-weight: 900;
 }
 
-.button, button {
+.button {
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -142,7 +142,7 @@ a:focus-visible, .a:focus-visible {
   text-decoration: none;
   transition: 0.2s;
 }
-.button::before, button::before {
+.button::before {
   content: "";
   width: 0;
   height: 500%;
@@ -150,24 +150,27 @@ a:focus-visible, .a:focus-visible {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: red;
+  background: var(--white);
   transition: 0.4s ease;
   display: block;
   z-index: -1;
 }
-.button:hover::before, button:hover::before {
+.button:hover::before {
   width: 200%;
 }
 
-.button:hover, button:hover {
-  color: green;
+.button:hover {
+  color: var(--black);
   cursor: pointer;
-  font-weight: bold;
-  border: var(--stroke) solid green;
 }
-.button:focus-visible, button:focus-visible {
-  background: red;
-  color: green;
+.button:focus-visible {
+  background: var(--white);
+  color: var(--black);
+}
+
+button {
+  background-color: transparent;
+  border: none;
 }
 
 header, footer {
@@ -204,10 +207,10 @@ header nav a, footer nav a, footer p {
 }
 
 footer a:hover svg path {
-  fill: red;
+  fill: var(--lightgrey);
 }
 footer a:focus-visible svg path {
-  fill: red;
+  fill: var(--lightgrey);
 }
 
 /* Cards */
@@ -228,7 +231,7 @@ footer a:focus-visible svg path {
 }
 .card:hover {
   transform: translate(-4px, -4px);
-  box-shadow: 4px 4px green;
+  box-shadow: 4px 4px var(--white);
 }
 a.card {
   text-decoration: none;
