@@ -24,12 +24,12 @@ module.exports = function(eleventyConfig) {
     return new CleanCSS({}).minify(code).styles;
   });
 
-  eleventyConfig.addPassthroughCopy('./src/fonts');
-  eleventyConfig.addPassthroughCopy('./src/images');
+  eleventyConfig.addPassthroughCopy('./src/consent.js');
   eleventyConfig.addPassthroughCopy('./src/favicon.png');
   eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
   eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');
-  eleventyConfig.addPassthroughCopy('./src/consent.js');
+  eleventyConfig.addPassthroughCopy('./src/fonts');
+  eleventyConfig.addPassthroughCopy('./src/images');
   eleventyConfig.addPassthroughCopy('./src/robots.txt');
   eleventyConfig.addPassthroughCopy('./src/sitemap.xml');
 
@@ -53,7 +53,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
 
   // version
-  eleventyConfig.addShortcode("version", () => "6.0.3");
+  eleventyConfig.addShortcode("version", () => "6.0.4");
 
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 

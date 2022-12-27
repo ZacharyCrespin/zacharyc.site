@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Roboto;
+  src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Oswald;
+  src: url("/fonts/Oswald-Bold.ttf") format("truetype");
+}
+
 :root {
   --white: #fff;
   --lightgrey: #bfbfbf;
@@ -64,7 +73,7 @@ body {
 h1, .h1 {
   font-family: Oswald, sans-serif;
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 700;
   margin: 0.25em;
 }
 h2, .h2 {
@@ -82,26 +91,26 @@ h3, .h3 {
 h4, .h4 {
   font-family: Roboto, sans-serif;
   font-size: 2.2rem;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0.25em;
 }
 h5, .h5 {
   font-family: Roboto, sans-serif;
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0.25em;
 }
 h6, .h6 {
   font-family: Roboto, sans-serif;
   font-size: 1.8rem;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0.25em;
 }
 
 p, .p {
   font-family: Roboto, sans-serif;
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0.25em;
 }
 p a {
@@ -111,7 +120,7 @@ p a {
 a, .a {
   font-family: Roboto, sans-serif;
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0.25em;
   color: var(--white);
 }
