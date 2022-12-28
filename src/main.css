@@ -177,11 +177,6 @@ a:focus-visible, .a:focus-visible {
   color: var(--black);
 }
 
-button {
-  background-color: transparent;
-  border: none;
-}
-
 header, footer {
   display: grid;
   margin: 1rem 0;
