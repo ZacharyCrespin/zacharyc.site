@@ -3,12 +3,13 @@ pagination:
   data: photos
   size: 1
   alias: image
-permalink: "/photography/{{ image.collection }}/{{ image.id }}/index.html"
+permalink: "/photography/{{ image.collection.id }}/{{ image.id }}/index.html"
 ---
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
   <head>
     <meta charset="utf-8">
+    <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if image.title %}
       <title>{{ image.title }} by Zachary Crespin</title>
@@ -66,6 +67,14 @@ permalink: "/photography/{{ image.collection }}/{{ image.id }}/index.html"
         position: fixed;
         top: 1rem;
         right: 1rem;
+        border: none;
+        background-color: transparent;
+      }
+      #close svg path {
+        fill: var(--white);
+      }
+      #close:hover svg path {
+        fill: var(--lightgrey);
       }
       img {
         width: auto;
@@ -76,7 +85,6 @@ permalink: "/photography/{{ image.collection }}/{{ image.id }}/index.html"
     </style>
   </head>
   <body>
-{% include 'consent.njk' %}
     <main role="main" id="content">
       <button id="close" onclick="history.back()" aria-label="Close">
         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -132,11 +132,6 @@ a:focus-visible, .a:focus-visible {
   color: var(--lightgrey);
 }
 
-.black {
-  font-family: "Meshed Display Black", serif;
-  font-weight: 900;
-}
-
 .button {
   position: relative;
   display: inline-block;
@@ -177,15 +172,28 @@ a:focus-visible, .a:focus-visible {
   color: var(--black);
 }
 
+header .logo {
+  margin: 0;
+}
+header .logo svg {
+  height: 2.2rem;
+  width: max-content;
+}
+header .logo:hover svg path {
+  fill: var(--lightgrey);
+}
+
 header, footer {
-  display: grid;
   margin: 1rem 0;
   padding: 0 0.5rem;
 }
 header {
-  grid-template-columns: max-content auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 footer {
+  display: grid;
   grid-template-columns: auto max-content;
 }
 
@@ -364,5 +372,8 @@ a.card:focus {
   }
   header nav a, footer nav a, footer p {
     padding: 0 0.5rem;
+  }
+  footer a {
+    text-decoration: underline;
   }
 }
