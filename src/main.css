@@ -177,7 +177,7 @@ header .logo {
 }
 header .logo svg {
   height: 2.2rem;
-  width: max-content;
+  width: auto;
 }
 header .logo:hover svg path {
   fill: var(--lightgrey);
@@ -186,14 +186,12 @@ header .logo:hover svg path {
 header, footer {
   margin: 1rem 0;
   padding: 0 0.5rem;
+  display: grid;
 }
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  grid-template-columns: max-content auto;
 }
 footer {
-  display: grid;
   grid-template-columns: auto max-content;
 }
 

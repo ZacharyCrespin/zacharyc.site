@@ -91,7 +91,7 @@ permalink: "/photography/{{ image.collection.id }}/{{ image.id }}/index.html"
           <path d="M9.07812 27.4531L7.54688 25.9219L15.9687 17.5L7.54688 9.07812L9.07812 7.54688L17.5 15.9687L25.9219 7.54688L27.4531 9.07812L19.0313 17.5L27.4531 25.9219L25.9219 27.4531L17.5 19.0313L9.07812 27.4531Z" fill="white"/>
         </svg>
       </button>
-      {% image "./src/images/photography/" + image.src, image.alt %}
+      {% image "./src/images/photography/" + image.src, image.alt, "auto" %}
     </main>
     <script async src="https://analytics.zacharyc.site/tracker.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11"></script>
   </body>

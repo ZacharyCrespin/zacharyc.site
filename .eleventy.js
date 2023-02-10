@@ -1,22 +1,22 @@
-const rss = require("@11ty/eleventy-plugin-rss");
 const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const CleanCSS = require("clean-css");
 const Image = require("@11ty/eleventy-img");
 
-async function imageShortcode(src, alt) {
+async function imageShortcode(src, alt, sizes) {
   let metadata = await Image(src, {
     formats: ["webp", "jpeg"],
+    widths: [300, 600, "auto"],
     urlPath: "/images/",
     outputDir: "./public/images/"
   });
   let imageAttributes = {
-    alt
+    alt,
+    sizes
   };
   return Image.generateHTML(metadata, imageAttributes);
 }
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPlugin(rss);
   // minify HTML
   eleventyConfig.addPlugin(filesMinifier);
   // minify CSS
@@ -53,7 +53,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
 
   // version
-  eleventyConfig.addShortcode("version", () => "6.1.0");
+  eleventyConfig.addShortcode("version", () => require('./package.json').version);
 
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
 
