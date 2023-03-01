@@ -1,47 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-  <loc>https://zacharyc.site</loc>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://zacharyc.site/photography</loc>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://zacharyc.site/code</loc>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://zacharyc.site/photography/collections</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://zacharyc.site/photography/collections/lizard</loc>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://zacharyc.site/photography/collections/cameras</loc>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://zacharyc.site/photography/collections/air-show</loc>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://zacharyc.site/photography/collections/lake-tahoe</loc>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://zacharyc.site/photography/collections/irvine-park</loc>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://zacharyc.site/photography/collections/newport</loc>
-  <priority>0.70</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://zacharyc.site</loc>
+  </url>
+  <url>
+    <loc>https://zacharyc.site/photography</loc>
+  </url>
+  <url>
+    <loc>https://zacharyc.site/code</loc>
+  </url>
+  <url>
+    <loc>https://zacharyc.site/photography/collections</loc>
+  </url>
+  <url>
+    <loc>https://zacharyc.site/photography/collections/lizard</loc>
+  </url>
+  <url>
+    <loc>https://zacharyc.site/photography/collections/cameras</loc>
+  </url>
+  <url>
+    <loc>https://zacharyc.site/photography/collections/air-show</loc>
+  </url>
+  <url>
+    <loc>https://zacharyc.site/photography/collections/lake-tahoe</loc>
+  </url>
+  <url>
+    <loc>https://zacharyc.site/photography/collections/irvine-park</loc>
+  </url>
+  <url>
+    <loc>https://zacharyc.site/photography/collections/newport</loc>
+  </url>
 </urlset>

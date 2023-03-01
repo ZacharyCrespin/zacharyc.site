@@ -1,9 +1,9 @@
 {
   "name": "zacharyc.site",
   "description": "My Personal Website",
-  "version": "6.1.1",
+  "version": "6.2.0",
   "author": "Zachary Crespin <contact@zacharyc.site> (https://zacharyc.site)",
-  "homepage": "zacharyc.site",
+  "homepage": "https://zacharyc.site",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ZacharyCrespin/zacharyc.site.git"
@@ -11,13 +11,14 @@
   "bugs": {
     "url": "https://github.com/ZacharyCrespin/zacharyc.site/issues"
   },
+  "private": true,
   "keywords": [
     "11ty",
     "photography",
     "portfolio"
   ],
   "scripts": {
-    "start": "eleventy --serve",
+    "start": "eleventy --quiet --serve",
     "build": "eleventy",
     "lint": "stylelint src/**/*.css"
   },
@@ -25,10 +26,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-img": "^3.0.0",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
-    "clean-css": "^5.3.1",
-    "stylelint": "^15.1.0",
-    "stylelint-config-standard": "^29.0.0"
+    "stylelint": "^15.2.0",
+    "stylelint-config-standard": "^30.0.1"
   }
 }

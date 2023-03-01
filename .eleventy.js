@@ -1,5 +1,4 @@
 const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
-const CleanCSS = require("clean-css");
 const Image = require("@11ty/eleventy-img");
 
 async function imageShortcode(src, alt, sizes) {
@@ -17,12 +16,9 @@ async function imageShortcode(src, alt, sizes) {
 }
 
 module.exports = function(eleventyConfig) {
-  // minify HTML
   eleventyConfig.addPlugin(filesMinifier);
-  // minify CSS
-  eleventyConfig.addFilter("cssmin", function(code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
+
+  eleventyConfig.addWatchTarget("./src/main.css");
 
   eleventyConfig.addPassthroughCopy('./src/consent.js');
   eleventyConfig.addPassthroughCopy('./src/favicon.png');
