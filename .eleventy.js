@@ -1,5 +1,6 @@
-const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const Image = require("@11ty/eleventy-img");
+const pkg = require("./package.json");
+const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 
 async function imageShortcode(src, alt, sizes) {
   let metadata = await Image(src, {
@@ -29,6 +30,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/robots.txt');
   eleventyConfig.addPassthroughCopy('./src/sitemap.xml');
 
+  // Layouts
+  eleventyConfig.addLayoutAlias('default', 'layouts/default.njk');
+  eleventyConfig.addLayoutAlias('collection', 'layouts/collection.njk');
+
   // format dates
   eleventyConfig.addFilter("shortString", (dateObj) => {
     let year = dateObj.getUTCFullYear();
@@ -49,11 +54,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
 
   // version
-  eleventyConfig.addShortcode("version", () => require('./package.json').version);
+  eleventyConfig.addShortcode("version", () => pkg.version);
 
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
-
-  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   return {
     dir: {

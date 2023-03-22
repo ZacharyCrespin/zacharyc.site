@@ -1,0 +1,22 @@
+---
+title: Projects
+description: Projects
+layout: default
+id: projects
+---
+<div class="cards wide">
+  {%- for project in collections.project | reverse -%}
+  <a class="card" href="{{ project.data.link }}" target="_blank">
+    {% image "./src/images/code/"+project.data.img, project.data.title, 600 %}
+    <div class="text">
+      <h3 class="h4">{{ project.data.title }}</h3>
+      <div class="tags">
+        {%- for tag in project.data.tech -%}
+          <p class="tag">{{ tag }}</p>
+        {%- endfor -%}
+      </div>
+      <span class="button">View</span>
+    </div>
+  </a>
+  {%- endfor -%}
+</div>

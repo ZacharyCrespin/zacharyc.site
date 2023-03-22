@@ -1,10 +1,10 @@
 ---
 title: Latest Work
 description: Photography, Code, More
-layout: 'basic.njk'
+layout: default
 id: home
 ---
-<h2>Photos</h2>
+<h2 class="section-heading">Photos</h2>
 <div class="cards" aria-label="Latest Photo Collections">
   {%- for collection in collections.collection | reverse | limit(4) -%}
   <a class="card" href="{{ collection.url }}" aria-label="{{ collection.data.title }}">
@@ -17,14 +17,37 @@ id: home
 </div>
 <a class="button" href="/photography/collections">More Collections</a>
 
-<h2>Code Projects</h2>
-<div class="cards" aria-label="Latest Code Projects">
-  {%- for code in collections.code | reverse | limit(4) -%}
-  <a class="card" href="{{ code.data.link }}" target="_blank" aria-label="{{ code.data.title }}">
-    <h3 class="h4">{{ code.data.title }}</h3>
-    <p>{{ code.data.tech }}</p>
+<h2 class="section-heading">Projects</h2>
+<div class="cards wide">
+  {%- for project in collections.project | reverse | limit(2) -%}
+  <a class="card" href="{{ project.data.link }}" target="_blank">
+    {% image "./src/images/code/"+project.data.img, project.data.title, 600 %}
+    <div class="text">
+      <h3 class="h4">{{ project.data.title }}</h3>
+      <div class="tags">
+        {%- for tag in project.data.tech -%}
+          <p class="tag">{{ tag }}</p>
+        {%- endfor -%}
+      </div>
+      <span class="button">View</span>
+    </div>
+  </a>
+  {%- endfor -%}
+</div>
+<a class="button" href="/projects">More Projects</a>
+
+<h2 class="section-heading">Experiments</h2>
+<div class="cards">
+  {%- for experiment in collections.experiment | reverse | limit(4) -%}
+  <a class="card" href="{{ experiment.data.link }}" target="_blank">
+    <h3 class="h4">{{ experiment.data.title }}</h3>
+    <div class="tags">
+      {%- for tag in experiment.data.tech -%}
+        <p class="tag">{{ tag }}</p>
+      {%- endfor -%}
+    </div>
     <span class="button">View</span>
   </a>
   {%- endfor -%}
 </div>
-<a class="button" href="/code">More Projects</a>
+<a class="button" href="/experiments">More Experiments</a>
