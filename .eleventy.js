@@ -22,6 +22,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/main.css");
 
   eleventyConfig.addPassthroughCopy('./src/fonts');
+  eleventyConfig.addPassthroughCopy('./src/files');
   eleventyConfig.addPassthroughCopy('./src/images');
   eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');
   eleventyConfig.addPassthroughCopy('./src/favicon-light.png');

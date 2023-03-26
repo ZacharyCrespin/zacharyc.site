@@ -109,9 +109,6 @@ p, .p {
   font-weight: 300;
   margin: 0.25em 0.5rem;
 }
-p a {
-  margin: 0;
-}
 
 a, .a {
   font-family: var(--font);
@@ -126,6 +123,10 @@ a:hover, .a:hover {
 }
 a:focus-visible, .a:focus-visible {
   color: var(--lightgrey);
+}
+
+p a {
+  margin: 0;
 }
 
 i, .i {
@@ -222,10 +223,6 @@ footer {
   border-radius: var(--corner);
   transition: 0.2s ease;
 }
-.card:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 4px 4px var(--white);
-}
 a.card, .card * {
   text-decoration: none;
 }
@@ -259,7 +256,7 @@ a.card:focus {
   margin-left: 2rem;
   text-align: left;
 }
-.card.full h3 {
+.card.full h3, .card.full p {
   margin-left: 0;
 }
 .card.full .button {
@@ -302,11 +299,13 @@ a.card:focus {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 @media (max-width: 1000px) {
   .cards.wide {
     grid-template-columns: 100%;
   }
 }
+
 @media screen and (max-width: 900px) {
   .cards {
     grid-template-columns: 1fr 1fr;
@@ -315,6 +314,7 @@ a.card:focus {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media screen and (max-width: 600px) {
   body {
     margin: 0 1rem;
