@@ -20,7 +20,7 @@ id: home
 <h2 class="section-heading">Projects</h2>
 <div class="cards wide">
   {%- for project in collections.project | reverse | limit(2) -%}
-  <a class="card" href="{{ project.data.link }}" target="_blank">
+  <div class="card">
     {% image "./src/images/code/"+project.data.img, project.data.title, 600 %}
     <div class="text">
       <h3 class="h4">{{ project.data.title }}</h3>
@@ -29,9 +29,10 @@ id: home
           <p class="tag">{{ tag }}</p>
         {%- endfor -%}
       </div>
-      <span class="button">View</span>
+      {% if project.data.live %}<a class="button" href="{{ project.data.live }}" target="_blank">Live</a>{% endif %}
+      {% if project.data.source %}<a class="button" href="{{ project.data.source }}" target="_blank">Source</a>{% endif %}
     </div>
-  </a>
+  </div>
   {%- endfor -%}
 </div>
 <a class="button" href="/projects">More Projects</a>
@@ -39,15 +40,16 @@ id: home
 <h2 class="section-heading">Experiments</h2>
 <div class="cards">
   {%- for experiment in collections.experiment | reverse | limit(4) -%}
-  <a class="card" href="{{ experiment.data.link }}" target="_blank">
+  <div class="card">
     <h3 class="h4">{{ experiment.data.title }}</h3>
     <div class="tags">
       {%- for tag in experiment.data.tech -%}
         <p class="tag">{{ tag }}</p>
       {%- endfor -%}
     </div>
-    <span class="button">View</span>
-  </a>
+    {% if experiment.data.live %}<a class="button" href="{{ experiment.data.live }}" target="_blank">Live</a>{% endif %}
+    {% if experiment.data.source %}<a class="button" href="{{ experiment.data.source }}" target="_blank">Source</a>{% endif %}
+  </div>
   {%- endfor -%}
 </div>
 <a class="button" href="/experiments">More Experiments</a>
