@@ -22,9 +22,8 @@
     "build": "eleventy",
     "lint": "stylelint src/**/*.css"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.0.0",
     "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
     "stylelint": "^15.2.0",
