@@ -3,9 +3,15 @@ layout: 'layouts/base.njk'
 ---
 {% include 'components/header.njk'  %}
 <main role="main" id="content">
-  <h1>{{ title }}</h1>
+  <h1 class="title">{{ title }}</h1>
   <section class="gallery">
-    {{ content | safe }}
+    {% for photo in photos %}
+      {% if photo.collection.id == id %}
+      <a class="photo" href="/photography/{{ id }}/{{ photo.id }}">
+        {% image "./src/images/" + photo.src, photo.alt, 600 %}
+      </a>
+      {% endif %}
+    {% endfor %}
   </section>
 </main>
 {% include 'components/footer.njk' %}

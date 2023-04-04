@@ -1,23 +1,8 @@
 ---
-title: My Work
-description: Photography, Code, More
+title: Code
+description: Code Projects and Experiments
 layout: default
 ---
-<section>
-  <h2>Latest Photos</h2>
-  <div class="cards" aria-label="Latest Photo Collections">
-    {%- for collection in collections.collection | reverse | limit(4) -%}
-    <a class="card" href="{{ collection.url }}" aria-label="{{ collection.data.title }}">
-      {% image "./src/images/" + collection.data.img, collection.data.title + " Collection Image", 300 %}
-      <h3 class="h4">{{ collection.data.title }}</h3>
-      <p>{{ collection.data.numberofphotos }} Photos</p>
-      <span class="button">View</span>
-    </a>
-    {%- endfor -%}
-  </div>
-  <a class="button" href="/photography/collections">More Collections</a>
-</section>
-
 <section>
   <h2>Featured Projects</h2>
   <div class="cards wide">
@@ -39,5 +24,23 @@ layout: default
       {% endif %}
     {%- endfor -%}
   </div>
-  <a class="button" href="/code">More Projects</a>
+</section>
+
+<section>
+  <h2>More Projects and Experiments</h2>
+  <div class="cards">
+    {%- for project in collections.code | reverse -%}
+    <div class="card">
+      <h3 class="h4">{{ project.data.title }}</h3>
+      <p>{{ project.data.date | fullString }}</p>
+      <div class="tags">
+        {%- for tag in project.data.tech -%}
+          <p class="tag">{{ tag }}</p>
+        {%- endfor -%}
+      </div>
+      {% if project.data.live %}<a class="button" href="{{ project.data.live }}" target="_blank">Live</a>{% endif %}
+      {% if project.data.source %}<a class="button" href="{{ project.data.source }}" target="_blank">Source</a>{% endif %}
+    </div>
+    {%- endfor -%}
+  </div>
 </section>
