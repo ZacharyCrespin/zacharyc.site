@@ -4,7 +4,7 @@ description: Code Projects and Experiments
 layout: default
 ---
 <section>
-  <h2>Featured Projects</h2>
+  <h2>Featured</h2>
   <div class="cards wide">
     {%- for project in collections.code | reverse -%}
       {% if project.data.featured %}
@@ -27,7 +27,7 @@ layout: default
 </section>
 
 <section>
-  <h2>More Projects and Experiments</h2>
+  <h2>More</h2>
   <div class="cards">
     {%- for project in collections.code | reverse -%}
     <div class="card">

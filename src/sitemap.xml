@@ -4,10 +4,6 @@
   </url>
   <url>
     <loc>https://zacharyc.site/code</loc>
-  </url>
-    <url>
-    <loc>https://zacharyc.site/wallpapers</loc>
-  </url>
     <url>
     <loc>https://zacharyc.site/photography</loc>
   </url>
@@ -34,5 +30,9 @@
   </url>
   <url>
     <loc>https://zacharyc.site/photography/newport</loc>
+  </url>
+  </url>
+    <url>
+    <loc>https://zacharyc.site/wallpapers</loc>
   </url>
 </urlset>
