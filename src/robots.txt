@@ -2,3 +2,4 @@ Sitemap: https://zacharyc.site/sitemap.xml
 
 User-agent: *
 Disallow: /404
+Disallow: /admin/*
