@@ -1,0 +1,24 @@
+---
+title: Film
+description: Film
+layout: default
+---
+<div class="cards wide">
+  {%- for film in collections.film | reverse -%}
+  <div class="card" id="{{ film.slug }}">
+    {% image "./src/images/"+film.data.img, film.data.imgalt, 600 %}
+    <div class="text">
+      <h3>{{ film.data.title }}</h3>
+      {% if film.data.description %}
+      <p>{{ film.data.description }}</p>
+      {% endif %}
+      {% if film.data.infolink %}
+      <a href="{{ film.data.infolink }}" class="button">More Info</a>
+      {% endif %}
+      {% if film.data.watchlink %}
+      <a href="{{ film.data.watchlink }}" class="button">Watch</a>
+      {% endif %}
+    </div>
+  </div>
+  {%- endfor -%}
+</div>

@@ -1,30 +1,43 @@
 ---
-title: Latest Work
+title: My Work
 description: Photography, Code, More
-layout: 'basic.njk'
-id: home
+layout: default
 ---
-<h2>Photos</h2>
-<div class="cards" aria-label="Latest Photo Collections">
-  {%- for collection in collections.collection | reverse | limit(4) -%}
-  <a class="card" href="{{ collection.url }}" aria-label="{{ collection.data.title }}">
-    {% image "./src/images/banners/" + collection.data.id + ".jpg", collection.data.title + " Collection Image", 300 %}
-    <h3 class="h4">{{ collection.data.title }}</h3>
-    <p>{{ collection.data.numberofphotos }} Photos</p>
-    <span class="button">View</span>
-  </a>
-  {%- endfor -%}
-</div>
-<a class="button" href="/photography/collections">More Collections</a>
+<section>
+  <h2>Latest Photos</h2>
+  <div class="cards" aria-label="Latest Photo Collections">
+    {%- for collection in collections.collection | reverse | limit(4) -%}
+    <a class="card" href="{{ collection.url }}" aria-label="{{ collection.data.title }}">
+      {% image "./src/images/" + collection.data.img, collection.data.title + " Collection Image", 300 %}
+      <h3 class="h4">{{ collection.data.title }}</h3>
+      <p>{{ collection.data.numberofphotos }} Photos</p>
+      <span class="button">View</span>
+    </a>
+    {%- endfor -%}
+  </div>
+  <a class="button" href="/photography/collections">More Collections</a>
+</section>
 
-<h2>Code Projects</h2>
-<div class="cards" aria-label="Latest Code Projects">
-  {%- for code in collections.code | reverse | limit(4) -%}
-  <a class="card" href="{{ code.data.link }}" target="_blank" aria-label="{{ code.data.title }}">
-    <h3 class="h4">{{ code.data.title }}</h3>
-    <p>{{ code.data.tech }}</p>
-    <span class="button">View</span>
-  </a>
-  {%- endfor -%}
-</div>
-<a class="button" href="/code">More Projects</a>
+<section>
+  <h2>Featured Projects</h2>
+  <div class="cards wide">
+    {%- for project in collections.code | reverse -%}
+      {% if project.data.featured %}
+      <div class="card">
+        {% image "./src/images/"+project.data.img, project.data.title, 600 %}
+        <div class="text">
+          <h3 class="h4">{{ project.data.title }}</h3>
+          <div class="tags">
+            {%- for tag in project.data.tech -%}
+              <p class="tag">{{ tag }}</p>
+            {%- endfor -%}
+          </div>
+          {% if project.data.live %}<a class="button" href="{{ project.data.live }}" target="_blank">Live</a>{% endif %}
+          {% if project.data.source %}<a class="button" href="{{ project.data.source }}" target="_blank">Source</a>{% endif %}
+        </div>
+      </div>
+      {% endif %}
+    {%- endfor -%}
+  </div>
+  <a class="button" href="/code">More Projects</a>
+</section>

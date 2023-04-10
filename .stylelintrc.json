@@ -1,10 +1,9 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "no-descending-specificity": null,
-    "at-rule-empty-line-before": null,
     "rule-empty-line-before": null,
-    "selector-list-comma-newline-after": "always-multi-line",
-    "comment-empty-line-before": null
+    "comment-empty-line-before": null,
+    "number-leading-zero": "always",
+    "string-quotes": "single"
   }
 }

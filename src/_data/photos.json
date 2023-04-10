@@ -1,6 +1,6 @@
 [
   {
-    "src": "hummingbirds-1.JPG",
+    "src": "photography/hummingbirds-1.JPG",
     "alt": "Hummingbird sitting on a branch.",
     "collection": {
       "title": "Hummingbirds",
@@ -9,7 +9,7 @@
     "id": "1"
   },
   {
-    "src": "hummingbirds-2.JPG",
+    "src": "photography/hummingbirds-2.JPG",
     "alt": "Hummingbird sitting on a feeder.",
     "collection": {
       "title": "Hummingbirds",
@@ -18,7 +18,7 @@
     "id": "2"
   },
   {
-    "src": "hummingbirds-3.JPG",
+    "src": "photography/hummingbirds-3.JPG",
     "alt": "A hummingbird sitting on a feeder with its wings still in motion.",
     "collection": {
       "title": "Hummingbirds",
@@ -27,7 +27,7 @@
     "id": "3"
   },
   {
-    "src": "lizard-1.JPG",
+    "src": "photography/lizard-1.JPG",
     "alt": "",
     "collection": {
       "title": "Lizards",
@@ -36,7 +36,7 @@
     "id": "1"
   },
   {
-    "src": "lizard-2.JPG",
+    "src": "photography/lizard-2.JPG",
     "alt": "",
     "collection": {
       "title": "Lizards",
@@ -45,7 +45,7 @@
     "id": "2"
   },
   {
-    "src": "lizard-3.JPG",
+    "src": "photography/lizard-3.JPG",
     "alt": "",
     "collection": {
       "title": "Lizards",
@@ -54,7 +54,7 @@
     "id": "3"
   },
   {
-    "src": "cameras-1.jpg",
+    "src": "photography/cameras-1.jpg",
     "alt": "",
     "collection": {
       "title": "Cameras",
@@ -63,7 +63,7 @@
     "id": "1"
   },
   {
-    "src": "cameras-2.jpg",
+    "src": "photography/cameras-2.jpg",
     "alt": "",
     "collection": {
       "title": "Cameras",
@@ -72,7 +72,7 @@
     "id": "2"
   },
   {
-    "src": "cameras-3.jpg",
+    "src": "photography/cameras-3.jpg",
     "alt": "",
     "collection": {
       "title": "Cameras",
@@ -81,7 +81,7 @@
     "id": "3"
   },
   {
-    "src": "cameras-4.jpg",
+    "src": "photography/cameras-4.jpg",
     "alt": "",
     "collection": {
       "title": "Cameras",
@@ -90,7 +90,7 @@
     "id": "4"
   },
   {
-    "src": "air-show-1.jpg",
+    "src": "photography/air-show-1.jpg",
     "alt": "",
     "collection": {
       "title": "Air Show",
@@ -99,7 +99,7 @@
     "id": "1"
   },
   {
-    "src": "air-show-2.jpg",
+    "src": "photography/air-show-2.jpg",
     "alt": "",
     "collection": {
       "title": "Air Show",
@@ -108,7 +108,7 @@
     "id": "2"
   },
   {
-    "src": "air-show-3.jpg",
+    "src": "photography/air-show-3.jpg",
     "alt": "",
     "collection": {
       "title": "Air Show",
@@ -117,7 +117,7 @@
     "id": "3"
   },
   {
-    "src": "air-show-4.jpg",
+    "src": "photography/air-show-4.jpg",
     "alt": "",
     "collection": {
       "title": "Air Show",
@@ -126,7 +126,7 @@
     "id": "4"
   },
   {
-    "src": "air-show-5.jpg",
+    "src": "photography/air-show-5.jpg",
     "alt": "",
     "collection": {
       "title": "Air Show",
@@ -135,7 +135,7 @@
     "id": "5"
   },
   {
-    "src": "air-show-6.jpg",
+    "src": "photography/air-show-6.jpg",
     "alt": "",
     "collection": {
       "title": "Air Show",
@@ -144,7 +144,7 @@
     "id": "6"
   },
   {
-    "src": "air-show-7.jpg",
+    "src": "photography/air-show-7.jpg",
     "alt": "",
     "collection": {
       "title": "Air Show",
@@ -153,7 +153,7 @@
     "id": "7"
   },
   {
-    "src": "air-show-8.jpg",
+    "src": "photography/air-show-8.jpg",
     "alt": "",
     "collection": {
       "title": "Air Show",
@@ -162,7 +162,7 @@
     "id": "8"
   },
   {
-    "src": "air-show-9.jpg",
+    "src": "photography/air-show-9.jpg",
     "alt": "",
     "collection": {
       "title": "Air Show",
@@ -171,7 +171,7 @@
     "id": "9"
   },
   {
-    "src": "air-show-10.jpg",
+    "src": "photography/air-show-10.jpg",
     "alt": "",
     "collection": {
       "title": "Air Show",
@@ -180,7 +180,7 @@
     "id": "10"
   },
   {
-    "src": "air-show-11.jpg",
+    "src": "photography/air-show-11.jpg",
     "alt": "",
     "collection": {
       "title": "Air Show",
@@ -189,7 +189,7 @@
     "id": "11"
   },
   {
-    "src": "air-show-12.jpg",
+    "src": "photography/air-show-12.jpg",
     "alt": "",
     "collection": {
       "title": "Air Show",
@@ -198,7 +198,7 @@
     "id": "12"
   },
   {
-    "src": "lake-tahoe-1.jpg",
+    "src": "photography/lake-tahoe-1.jpg",
     "alt": "",
     "collection": {
       "title": "Lake Tahoe",
@@ -207,7 +207,7 @@
     "id": "1"
   },
   {
-    "src": "lake-tahoe-2.jpg",
+    "src": "photography/lake-tahoe-2.jpg",
     "alt": "",
     "collection": {
       "title": "Lake Tahoe",
@@ -216,7 +216,7 @@
     "id": "2"
   },
   {
-    "src": "lake-tahoe-3.jpg",
+    "src": "photography/lake-tahoe-3.jpg",
     "alt": "",
     "collection": {
       "title": "Lake Tahoe",
@@ -225,7 +225,7 @@
     "id": "3"
   },
   {
-    "src": "lake-tahoe-4.jpg",
+    "src": "photography/lake-tahoe-4.jpg",
     "alt": "",
     "collection": {
       "title": "Lake Tahoe",
@@ -234,7 +234,7 @@
     "id": "4"
   },
   {
-    "src": "lake-tahoe-5.jpg",
+    "src": "photography/lake-tahoe-5.jpg",
     "alt": "",
     "collection": {
       "title": "Lake Tahoe",
@@ -243,7 +243,7 @@
     "id": "5"
   },
   {
-    "src": "lake-tahoe-6.jpg",
+    "src": "photography/lake-tahoe-6.jpg",
     "alt": "",
     "collection": {
       "title": "Lake Tahoe",
@@ -252,7 +252,7 @@
     "id": "6"
   },
   {
-    "src": "lake-tahoe-7.jpg",
+    "src": "photography/lake-tahoe-7.jpg",
     "alt": "",
     "collection": {
       "title": "Lake Tahoe",
@@ -261,7 +261,7 @@
     "id": "7"
   },
   {
-    "src": "irvine-park-1.jpg",
+    "src": "photography/irvine-park-1.jpg",
     "alt": "",
     "collection": {
       "title": "Irvine Park",
@@ -270,7 +270,7 @@
     "id": "1"
   },
   {
-    "src": "irvine-park-2.jpg",
+    "src": "photography/irvine-park-2.jpg",
     "alt": "",
     "collection": {
       "title": "Irvine Park",
@@ -279,7 +279,7 @@
     "id": "2"
   },
   {
-    "src": "irvine-park-3.jpg",
+    "src": "photography/irvine-park-3.jpg",
     "alt": "",
     "collection": {
       "title": "Irvine Park",
@@ -288,7 +288,7 @@
     "id": "3"
   },
   {
-    "src": "irvine-park-4.jpg",
+    "src": "photography/irvine-park-4.jpg",
     "alt": "",
     "collection": {
       "title": "Irvine Park",
@@ -297,7 +297,7 @@
     "id": "4"
   },
   {
-    "src": "irvine-park-5.jpg",
+    "src": "photography/irvine-park-5.jpg",
     "alt": "",
     "collection": {
       "title": "Irvine Park",
@@ -306,7 +306,7 @@
     "id": "5"
   },
   {
-    "src": "irvine-park-6.jpg",
+    "src": "photography/irvine-park-6.jpg",
     "alt": "",
     "collection": {
       "title": "Irvine Park",
@@ -315,7 +315,7 @@
     "id": "6"
   },
   {
-    "src": "newport-1.jpg",
+    "src": "photography/newport-1.jpg",
     "alt": "",
     "collection": {
       "title": "Newport Beach",
@@ -324,7 +324,7 @@
     "id": "1"
   },
   {
-    "src": "newport-2.jpg",
+    "src": "photography/newport-2.jpg",
     "alt": "",
     "collection": {
       "title": "Newport Beach",
@@ -333,7 +333,7 @@
     "id": "2"
   },
   {
-    "src": "newport-3.jpg",
+    "src": "photography/newport-3.jpg",
     "alt": "",
     "collection": {
       "title": "Newport Beach",

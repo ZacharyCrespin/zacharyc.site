@@ -2,16 +2,15 @@
 title: Photo Collections
 SEOtitle: Collections | Photography
 description: Photo Collections
-layout: 'basic.njk'
-id: collections
+layout: default
 ---
 <div class="cards" aria-label="Photo Collections">
   {%- for collection in collections.collection | reverse -%}
   <a class="card" href="{{ collection.url }}" aria-label="{{ collection.data.title }}">
-    {% image "./src/images/banners/" + collection.data.id + ".jpg", collection.data.title + " Collection Image", 300 %}
+    {% image "./src/images/" + collection.data.img, collection.data.title + " Collection Image", 300 %}
     <h3 class="h4">{{ collection.data.title }}</h3>
     <p>{{ collection.data.numberofphotos }} Photos</p>
-    <p>Updated {{ collection.data.date | shortString }}</p>
+    <p>{{ collection.data.date | fullString }}</p>
     <span class="button">View Collection</span>
   </a>
   {%- endfor -%}

@@ -1,5 +1,6 @@
 {
-  "layout": "collection.njk",
+  "SEOtitle": "{{ title }} | Photography",
+  "layout": "collection",
   "tags": "collection",
   "permalink": "/photography/{{ id }}/index.html"
 }

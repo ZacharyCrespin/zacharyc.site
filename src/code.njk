@@ -1,36 +1,46 @@
 ---
 title: Code
-description: Code
-layout: 'basic.njk'
-id: code
+description: Code Projects and Experiments
+layout: default
 ---
-<h2>Featured Projects</h2>
-<div class="cards wide" aria-label="Featured Projects">
-  <a class="card wide" id="bellschedule" href="https://fhsbellschedule.web.app/" target="_blank">
-    {% image "./src/images/code/bellschedule.png", "FHS Bell Schedule", 600 %}
-    <div class="text">
-      <h3 class="h4">FHS Bell Schedule</h3>
-      <p>Python</p>
-      <span class="button">View</span>
-    </div>
-  </a>
-  <div class="card wide" id="quotes">
-    {% image "./src/images/code/quote.png", "Quiet people have the loudest minds. -Stephen Hawking", 600 %}
-    <div class="text">
-      <h3 class="h4">Quotes API & Website</h3>
-      <p>Express, Node JS</p>
-      <a class="button" href="https://quotes.zacharyc.site" target="_blank">Visit Website</a>
-      <a class="button" href="https://github.com/ZacharyCrespin/quote-api" target="_blank">Use API</a>
-    </div>
+<section>
+  <h2>Featured</h2>
+  <div class="cards wide">
+    {%- for project in collections.code | reverse -%}
+      {% if project.data.featured %}
+      <div class="card">
+        {% image "./src/images/"+project.data.img, project.data.title, 600 %}
+        <div class="text">
+          <h3 class="h4">{{ project.data.title }}</h3>
+          <div class="tags">
+            {%- for tag in project.data.tech -%}
+              <p class="tag">{{ tag }}</p>
+            {%- endfor -%}
+          </div>
+          {% if project.data.live %}<a class="button" href="{{ project.data.live }}" target="_blank">Live</a>{% endif %}
+          {% if project.data.source %}<a class="button" href="{{ project.data.source }}" target="_blank">Source</a>{% endif %}
+        </div>
+      </div>
+      {% endif %}
+    {%- endfor -%}
   </div>
-</div>
-<h2>All Projects</h2>
-<div class="cards" aria-label="All Projects">
-  {%- for code in collections.code | reverse -%}
-  <a class="card" href="{{ code.data.link }}" target="_blank" aria-label="{{ code.data.title }}">
-    <h3 class="h4">{{ code.data.title }}</h3>
-    <p>{{ code.data.tech }}</p>
-    <span class="button">View</span>
-  </a>
-  {%- endfor -%}
-</div>
+</section>
+
+<section>
+  <h2>More</h2>
+  <div class="cards">
+    {%- for project in collections.code | reverse -%}
+    <div class="card">
+      <h3 class="h4">{{ project.data.title }}</h3>
+      <p>{{ project.data.date | fullString }}</p>
+      <div class="tags">
+        {%- for tag in project.data.tech -%}
+          <p class="tag">{{ tag }}</p>
+        {%- endfor -%}
+      </div>
+      {% if project.data.live %}<a class="button" href="{{ project.data.live }}" target="_blank">Live</a>{% endif %}
+      {% if project.data.source %}<a class="button" href="{{ project.data.source }}" target="_blank">Source</a>{% endif %}
+    </div>
+    {%- endfor -%}
+  </div>
+</section>

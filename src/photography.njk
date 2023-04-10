@@ -1,51 +1,52 @@
 ---
 title: Photography
 description: Photography
-layout: 'basic.njk'
-id: photography
+layout: default
 ---
-<h2>Latest Collections</h2>
-<div class="cards" aria-label="Latest Collections">
-  {%- for collection in collections.collection | reverse | limit(4) -%}
-  <a class="card" href="{{ collection.url }}" aria-label="{{ collection.data.title }}">
-    {% image "./src/images/banners/" + collection.data.id + ".jpg", collection.data.title + " Collection Image", 300 %}
-    <h3 class="h4">{{ collection.data.title }}</h3>
-    <p>{{ collection.data.numberofphotos }} Photos</p>
-    <span class="button">View</span>
-  </a>
-  {%- endfor -%}
-</div>
-<a class="button" href="/photography/collections">All Collections</a>
-<h2>Latest Photos</h2>
+<section>
+  <h2>Latest Collections</h2>
+  <div class="cards" aria-label="Latest Collections">
+    {%- for collection in collections.collection | reverse | limit(4) -%}
+    <a class="card" href="{{ collection.url }}" aria-label="{{ collection.data.title }}">
+      {% image "./src/images/" + collection.data.img, collection.data.title + " Collection Image", 300 %}
+      <h3 class="h4">{{ collection.data.title }}</h3>
+      <p>{{ collection.data.numberofphotos }} Photos</p>
+      <span class="button">View</span>
+    </a>
+    {%- endfor -%}
+  </div>
+  <a class="button" href="/photography/collections">All Collections</a>
+</section>
+<h2 class="section-heading">Latest Photos</h2>
 <div class="gallery">
   <a class="photo" href="/photography/hummingbirds/1">
-    {% image "./src/images/collections/hummingbirds/1-Small.JPG", "Hummingbird sitting on a branch.", 600 %}
+    {% image "./src/images/photography/hummingbirds-1.JPG", "Hummingbird sitting on a branch.", 600 %}
   </a>
   <a class="photo" href="/photography/hummingbirds/2">
-    {% image "./src/images/collections/hummingbirds/2-Small.JPG", "Hummingbird sitting on a feeder.", 600 %}
+    {% image "./src/images/photography/hummingbirds-2.JPG", "Hummingbird sitting on a feeder.", 600 %}
   </a>
   <a class="photo" href="/photography/hummingbirds/3">
-    {% image "./src/images/collections/hummingbirds/3-Small.JPG", "A hummingbird sitting on a feeder with its wings still in motion.", 600 %}
+    {% image "./src/images/photography/hummingbirds-3.JPG", "A hummingbird sitting on a feeder with its wings still in motion.", 600 %}
   </a>
   <a class="photo" href="/photography/lizard/1">
-    {% image "./src/images/collections/lizard/1-Small.JPG", "Lizards 1", 600 %}
+    {% image "./src/images/photography/lizard-1.JPG", "Lizards 1", 600 %}
   </a>
   <a class="photo" href="/photography/lizard/2">
-    {% image "./src/images/collections/lizard/2-Small.JPG", "Lizards 2", 600 %}
+    {% image "./src/images/photography/lizard-2.JPG", "Lizards 2", 600 %}
   </a>
   <a class="photo" href="/photography/lizard/3">
-    {% image "./src/images/collections/lizard/3-Small.JPG", "Lizards 3", 600 %}
+    {% image "./src/images/photography/lizard-3.JPG", "Lizards 3", 600 %}
   </a>
   <a class="photo" href="/photography/cameras/1">
-    {% image "./src/images/collections/cameras/1-Small.jpg", "Cameras 1", 600 %}
+    {% image "./src/images/photography/cameras-1.jpg", "Cameras 1", 600 %}
   </a>
   <a class="photo" href="/photography/cameras/2">
-    {% image "./src/images/collections/cameras/2-Small.jpg", "Cameras 2", 600 %}
+    {% image "./src/images/photography/cameras-2.jpg", "Cameras 2", 600 %}
   </a>
   <a class="photo" href="/photography/cameras/3">
-    {% image "./src/images/collections/cameras/3-Small.jpg", "Cameras 3", 600 %}
+    {% image "./src/images/photography/cameras-3.jpg", "Cameras 3", 600 %}
   </a>
   <a class="photo" href="/photography/cameras/4">
-    {% image "./src/images/collections/cameras/4-Small.jpg", "Cameras 4", 600 %}
+    {% image "./src/images/photography/cameras-4.jpg", "Cameras 4", 600 %}
   </a>
 </div>
