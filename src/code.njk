@@ -3,16 +3,16 @@ title: Code
 description: Code Projects and Experiments
 layout: default
 ---
-<section>
+<section aria-label="Featured">
   <h2>Featured</h2>
   <div class="cards wide">
     {%- for project in collections.code | reverse -%}
       {% if project.data.featured %}
-      <div class="card">
+      <div class="card" aria-label="{{ project.data.title }}">
         {% image "./src/images/"+project.data.img, project.data.title, 600 %}
         <div class="text">
           <h3 class="h4">{{ project.data.title }}</h3>
-          <div class="tags">
+          <div class="tags" aria-label="Tech Used">
             {%- for tag in project.data.tech -%}
               <p class="tag">{{ tag }}</p>
             {%- endfor -%}
@@ -26,14 +26,14 @@ layout: default
   </div>
 </section>
 
-<section>
+<section aria-label="More">
   <h2>More</h2>
   <div class="cards">
     {%- for project in collections.code | reverse -%}
-    <div class="card">
+    <div class="card" aria-label="{{ project.data.title }}">
       <h3 class="h4">{{ project.data.title }}</h3>
       <p>{{ project.data.date | fullString }}</p>
-      <div class="tags">
+      <div class="tags" aria-label="Tech Used">
         {%- for tag in project.data.tech -%}
           <p class="tag">{{ tag }}</p>
         {%- endfor -%}
