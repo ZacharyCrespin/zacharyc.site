@@ -183,6 +183,7 @@ header {
 }
 header .logo img {
   height: 2rem; /* h4 sizing */
+  max-width: max-content;
 }
 header nav {
   display: flex;
@@ -191,8 +192,8 @@ header nav {
 }
 header nav a {
   text-decoration: none;
-  padding: 0 0.5em;
-  margin: 0 0.5em;
+  margin: 0;
+  padding: 0.5em 1em;
 }
 
 footer {
