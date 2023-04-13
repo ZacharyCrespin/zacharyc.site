@@ -331,6 +331,9 @@ a.card:focus-visible .button {
   header nav {
     justify-content: center;
   }
+  header nav a {
+    padding: 1em;
+  }
   h2.section-heading, .h2.section-heading, section h2:first-child, section .h2:first-child {
     text-align: center;
     padding-left: 0;
