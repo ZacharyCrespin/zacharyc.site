@@ -7,7 +7,7 @@ layout: 'layouts/base.njk'
   <section class="gallery" aria-label="Gallery">
     {% for photo in photos %}
       {% if photo.collection.id == id %}
-      <a class="photo" href="/photography/{{ id }}/{{ photo.id }}">
+      <a class="photo" href="/photography/{{ id }}/{{ photo.id }}/">
         {% image "./src/images/" + photo.src, photo.alt, 600 %}
       </a>
       {% endif %}

@@ -5,7 +5,7 @@ const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 async function imageShortcode(src, alt, sizes) {
   let metadata = await Image(src, {
     formats: ["webp", "jpeg", "svg"],
-    widths: [300, 600, "auto"],
+    widths: [150, 300, 600, "auto"],
     urlPath: "/images/",
     outputDir: "./public/images/"
   });
