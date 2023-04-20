@@ -3,36 +3,36 @@
     <loc>https://zacharyc.site</loc>
   </url>
   <url>
-    <loc>https://zacharyc.site/code</loc>
+    <loc>https://zacharyc.site/code/</loc>
     <url>
-    <loc>https://zacharyc.site/photography</loc>
+    <loc>https://zacharyc.site/photography/</loc>
   </url>
   <url>
-    <loc>https://zacharyc.site/photography/collections</loc>
+    <loc>https://zacharyc.site/photography/collections/</loc>
   </url>
   <url>
-    <loc>https://zacharyc.site/photography/air-show</loc>
+    <loc>https://zacharyc.site/photography/air-show/</loc>
   </url>
   <url>
-    <loc>https://zacharyc.site/photography/cameras</loc>
+    <loc>https://zacharyc.site/photography/cameras/</loc>
   </url>
   <url>
-    <loc>https://zacharyc.site/photography/hummingbirds</loc>
+    <loc>https://zacharyc.site/photography/hummingbirds/</loc>
   </url>
   <url>
-    <loc>https://zacharyc.site/photography/irvine-park</loc>
+    <loc>https://zacharyc.site/photography/irvine-park/</loc>
   </url>
   <url>
-    <loc>https://zacharyc.site/photography/lake-tahoe</loc>
-  </url>
-    <url>
-    <loc>https://zacharyc.site/photography/lizard</loc>
-  </url>
-  <url>
-    <loc>https://zacharyc.site/photography/newport</loc>
-  </url>
+    <loc>https://zacharyc.site/photography/lake-tahoe/</loc>
   </url>
     <url>
-    <loc>https://zacharyc.site/wallpapers</loc>
+    <loc>https://zacharyc.site/photography/lizard/</loc>
+  </url>
+  <url>
+    <loc>https://zacharyc.site/photography/newport/</loc>
+  </url>
+  </url>
+    <url>
+    <loc>https://zacharyc.site/wallpapers/</loc>
   </url>
 </urlset>
