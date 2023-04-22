@@ -32,6 +32,7 @@
 
 body {
   font-family: var(--font);
+  font-size: 1rem;
   font-weight: var(--font-weight);
   background-color: var(--black);
   color: var(--white);
@@ -129,16 +130,10 @@ h6, .h6 {
 }
 
 p, .p {
-  font-family: var(--font);
-  font-size: 1rem;
-  font-weight: var(--font-weight);
   margin: 0.25em 0;
 }
 
 a, .a {
-  font-family: var(--font);
-  font-size: 1rem;
-  font-weight: var(--font-weight);
   margin: 0.25em 0;
   color: var(--white);
 }
@@ -247,7 +242,7 @@ a.card:focus-visible .button {
 }
 .card.full img {
   width: auto;
-  max-width: 100%;
+  max-width: 60vw;
   max-height: 80vh;
 }
 .card.full .text {
@@ -273,6 +268,14 @@ a.card:focus-visible .button {
 .tag::selection {
   background: var(--black);
   color: var(--white);
+}
+
+pre, code {
+  background-color: var(--darkgrey);
+  color: var(--white);
+}
+pre {
+  padding: 0.5rem 1rem;
 }
 
 /* Gallery */
