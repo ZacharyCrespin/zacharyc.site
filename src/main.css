@@ -312,6 +312,20 @@ pre {
   .cards {
     grid-template-columns: 1fr 1fr;
   }
+  .card.full {
+    grid-template-columns: 100%;
+  }
+  .card.full img {
+    margin: 0;
+    max-width: 100%;
+  }
+  .card.full .text {
+    margin-left: 0;
+    text-align: center;
+  }
+  .card.full .text .button {
+    margin-left: 0.5rem;
+  }
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
@@ -346,18 +360,5 @@ pre {
   }
   .gallery {
     grid-template-columns: 100%;
-  }
-  .card.full {
-    grid-template-columns: 100%;
-  }
-  .card.full img {
-    margin: 0;
-  }
-  .card.full .text {
-    margin-left: 0;
-    text-align: center;
-  }
-  .card.full .text .button {
-    margin-left: 0.5rem;
   }
 }
