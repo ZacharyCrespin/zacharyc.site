@@ -6,7 +6,7 @@ layout: default
 <div class="card full" id="this-video-isnt-perfect" aria-label="This video isn't perfect.">
   {% image './src/images/film/this-video-isnt-perfect.jpg', 'Zachary is in a podcast room with equipment visible in the background. There\'s text on screen that reads "This video isn\'t perfect." with "isn\'t" underlined in pen.', 600 %}
   <div class="text">
-    <h3>This video isn't perfect.</h3>
+    <h2 class="h3">This video isn't perfect.</h2>
     <p>"This video isn't perfect." was selected for scringing at the Tustin Student Film Festival, where it won Best Experimental Film and Best Story.</p>
     <a href="https://youtu.be/DnIjLDGCDhg" class="button">Watch</a>
   </div>
@@ -18,7 +18,7 @@ layout: default
     {%- for collection in collections.collection | reverse | limit(4) -%}
     <a class="card" href="{{ collection.url }}" aria-label="{{ collection.data.title }}">
       {% image "./src/images/" + collection.data.img, collection.data.title + " Collection Image", 300 %}
-      <h3 class="h4">{{ collection.data.title }}</h3>
+      <h3>{{ collection.data.title }}</h3>
       <p>{{ collection.data.numberofphotos }} Photos</p>
       <span class="button">View</span>
     </a>
@@ -35,7 +35,7 @@ layout: default
       <div class="card" aria-label="{{ project.data.title }}">
         {% image "./src/images/"+project.data.img, project.data.title, 600 %}
         <div class="text">
-          <h3 class="h4">{{ project.data.title }}</h3>
+          <h3>{{ project.data.title }}</h3>
           <div class="tags" aria-label="Tech Used">
             {%- for tag in project.data.tech -%}
               <p class="tag">{{ tag }}</p>

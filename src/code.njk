@@ -11,7 +11,7 @@ layout: default
       <div class="card" aria-label="{{ project.data.title }}">
         {% image "./src/images/"+project.data.img, project.data.title, 600 %}
         <div class="text">
-          <h3 class="h4">{{ project.data.title }}</h3>
+          <h3>{{ project.data.title }}</h3>
           <div class="tags" aria-label="Tech Used">
             {%- for tag in project.data.tech -%}
               <p class="tag">{{ tag }}</p>
@@ -31,7 +31,7 @@ layout: default
   <div class="cards">
     {%- for project in collections.code | reverse -%}
     <div class="card" aria-label="{{ project.data.title }}">
-      <h3 class="h4">{{ project.data.title }}</h3>
+      <h3>{{ project.data.title }}</h3>
       <p>{{ project.data.date | fullString }}</p>
       <div class="tags" aria-label="Tech Used">
         {%- for tag in project.data.tech -%}
