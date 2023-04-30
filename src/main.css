@@ -171,6 +171,12 @@ em, i {
   color: var(--black);
 }
 
+.button.center {
+  display: block;
+  max-width: max-content;
+  margin: 1rem auto;
+}
+
 header {
   display: grid;
   grid-template-columns: max-content auto;
@@ -227,7 +233,7 @@ a.card:focus-visible .button {
   background-color: var(--white);
   color: var(--black);
 }
-.card img {
+.card:not(.full) img {
   width: calc(100% + 1rem);
   margin-top: -0.5rem;
   margin-left: -0.5rem;
@@ -246,7 +252,7 @@ a.card:focus-visible .button {
   max-height: 80vh;
 }
 .card.full .text {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   text-align: left;
 }
 .card.full .text .button {
@@ -258,24 +264,22 @@ a.card:focus-visible .button {
   flex-wrap: wrap;
   justify-content: center;
 }
-.tag {
+.tags .tag {
   background-color: var(--white);
   color: var(--black);
   margin: 0.5rem 0.25rem;
   padding: 0.25rem 1rem;
   border-radius: 100vmax;
 }
-.tag::selection {
+.tags .tag::selection {
   background: var(--black);
   color: var(--white);
 }
-
-pre, code {
-  background-color: var(--darkgrey);
-  color: var(--white);
+.card.full .tags {
+  justify-content: flex-start;
 }
-pre {
-  padding: 0.5rem 1rem;
+.card.full .tag:first-of-type {
+  margin-left: 0;
 }
 
 /* Gallery */

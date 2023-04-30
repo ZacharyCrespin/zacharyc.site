@@ -21,6 +21,9 @@
     <meta name="author" content="Zachary Crespin">
     <meta name="generator" content="{{ eleventy.generator }}">
     <link rel="stylesheet" href="/main.css">
+    {% if containsCode %}
+      <link rel="stylesheet" href="/prism.min.css">
+    {% endif %}
     <!-- Open Graph -->
     <meta property="og:url" content="https://zacharyc.site{{ page.url }}">
     <meta property="og:locale" content="en_US">
@@ -43,9 +46,11 @@
     <meta name="twitter:image:alt" content="{{ title }}">
     <meta name="twitter:site" content="@ZacharyCrespin">
     <meta name="twitter:creator" content="@ZacharyCrespin">
+    {{ extraHeadCode | safe }}
   </head>
   <body>
     {{ content | safe }}
-    <script async src="https://analytics.zacharyc.site/tracker.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11"></script>
+    {{ extraBodyCode | safe }}
+    <script async src="/tracker.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11"></script>
   </body>
 </html>
