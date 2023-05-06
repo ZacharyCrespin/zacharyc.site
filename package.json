@@ -27,6 +27,7 @@
     "@11ty/eleventy-img": "^3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
+    "11ty-external-file-downloader": "^1.0.0",
     "eslint": "^8.37.0",
     "stylelint": "^15.2.0",
     "stylelint-config-standard": "^33.0.0"
