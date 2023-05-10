@@ -248,6 +248,7 @@ a.card:focus-visible .button {
 }
 .card.full img {
   width: auto;
+  height: auto;
   max-width: 60vw;
   max-height: 80vh;
 }

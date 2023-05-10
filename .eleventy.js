@@ -3,7 +3,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const downloader = require('11ty-external-file-downloader');
 
-async function imageShortcode(src, alt, sizes) {
+async function imageShortcode(src, alt, sizes, lazyLoad = false) {
   let metadata = await Image(src, {
     formats: ["webp", "jpeg", "svg"],
     widths: [150, 300, 600, "auto"],
@@ -12,7 +12,9 @@ async function imageShortcode(src, alt, sizes) {
   });
   let imageAttributes = {
     alt,
-    sizes
+    sizes,
+    loading: lazyLoad ? "lazy" : "eager",
+    decoding: "async",
   };
   return Image.generateHTML(metadata, imageAttributes);
 }

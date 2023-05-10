@@ -8,7 +8,7 @@ layout: 'layouts/base.njk'
     {% for photo in photos %}
       {% if photo.collection.id == id %}
       <a class="photo" href="/photography/{{ id }}/{{ photo.id }}/">
-        {% image "./src/images/" + photo.src, photo.alt, 600 %}
+        {% image "./src/images/" + photo.src, photo.alt, 600, true %}
       </a>
       {% endif %}
     {% endfor %}
