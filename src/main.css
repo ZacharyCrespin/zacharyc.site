@@ -74,8 +74,6 @@ body {
 }
 .skip-nav:focus {
   transform: translateY(0);
-  color: var(--black);
-  text-decoration: none;
 }
 
 ::selection {
@@ -301,19 +299,19 @@ a.card:focus-visible .button {
   height: auto;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (width < 1200px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-@media (max-width: 1000px) {
+@media (width < 1000px) {
   .cards.wide {
     grid-template-columns: 100%;
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (width < 900px) {
   .cards {
     grid-template-columns: 1fr 1fr;
   }
@@ -336,7 +334,7 @@ a.card:focus-visible .button {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (width < 600px) {
   body {
     margin: 0 1rem;
   }
