@@ -1,11 +1,26 @@
 backend:
   name: git-gateway
-  branch: dev # Branch to update (optional; defaults to master)
+  branch: master
 publish_mode: editorial_workflow
-media_folder: "src/images/uploads" # Media files will be stored in the repo under src/images/uploads
+media_folder: "src/images/uploads" # Media files will be stored under src/images/uploads
 public_folder: "uploads" # The src attribute for uploaded media will begin with uploads
 collections:
-  - name: "code" # Used in routes, e.g., /admin/collections/blog
+  - name: "collection" # Used in routes
+    label: "Photo Collection" # Used in the UI
+    folder: "src/photography/collections" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    editor:
+      preview: false
+    slug: "{{slug}}" # Filename template
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "SEO Title", name: "SEOtitle", widget: "string", default: <title> | Photography}
+      - {label: "Description", name: "description", widget: "string", default: <title> Photo Collection}
+      - {label: "Number of Photos", name: "numberofphotos", widget: "number"}
+      - {label: "Date", name: "date", widget: "date"}
+      - {lapel: "ID", name: id, widget: "string"}
+      - {label: "Image", name: "img", widget: "image"}
+  - name: "code" # Used in routes
     label: "Code Project" # Used in the UI
     folder: "src/code-projects" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
@@ -21,9 +36,9 @@ collections:
       - {label: "Featured", name: "featured", widget: "boolean"}
       - {label: "Image", name: "img", widget: "image", required: false}
       - {label: "Date", name: "date", widget: "date"}
-  - name: "film" # Used in routes, e.g., /admin/collections/blog
+  - name: "film" # Used in routes
     label: "Film" # Used in the UI
-    folder: "src/film" # The path to the folder where the documents are stored
+    folder: "src/films" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     editor:
       preview: false
@@ -36,16 +51,3 @@ collections:
       - {label: "Watch Link", name: "watchlink", widget: "string", required: false}
       - {label: "Info Link", name: "infolink", widget: "string", required: false}
       - {label: "Date", name: "date", widget: "date"}
-  - name: "collection" # Used in routes, e.g., /admin/collections/blog
-    label: "Photo Collection" # Used in the UI
-    folder: "src/photography/collections" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    editor:
-      preview: false
-    slug: "{{slug}}" # Filename template
-    fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "SEO Title", name: "SEOtitle", widget: "string", required: false}
-      - {label: "Number of Photos", name: "numberofphotos", widget: "number"}
-      - {label: "Date", name: "date", widget: "date"}
-      - {label: "Image", name: "img", widget: "image"}
