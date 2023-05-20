@@ -1,5 +1,5 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* stylelint-disable-line */html{line-height:1.15;-webkit-text-size-adjust:100%}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+/* stylelint-disable-line */html{line-height:1.15;-webkit-text-size-adjust:100%}main{display:block}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
 
 @font-face {
   font-family: Inter;
@@ -18,11 +18,26 @@
   --white: #fff;
 
   /* Typography */
+  font-size: 1rem;
+
   --font: 'Inter', sans-serif;
   --italic-font: 'Georgia', serif;
   --font-weight: 300;
   --heading-font-weight: 900;
   --subheading-font-weight: 600;
+
+  /* Type Scale */
+  --double-canon: 4.666em;
+  --canon: 3.999em;
+  --double-great-primer: 2.999em;
+  --double-english: 2.333em;
+  --double-pica: 2em;
+  --paragon: 1.666em;
+  --english: 1.166em;
+  --pica: 1em;
+  --small-pica: 0.916em;
+  --long-primer: 0.833em;
+  --bourgeois: 0.75em;
 
   /* More */
   --stroke: 1px;
@@ -32,7 +47,6 @@
 
 body {
   font-family: var(--font);
-  font-size: 1rem;
   font-weight: var(--font-weight);
   background-color: var(--black);
   color: var(--white);
@@ -83,7 +97,7 @@ body {
 
 h1, .h1 {
   font-family: var(--font);
-  font-size: 3.999rem;
+  font-size: var(--canon);
   font-weight: var(--heading-font-weight);
   margin: 0.25em 0;
 }
@@ -92,7 +106,7 @@ h1.title {
 }
 h2, .h2 {
   font-family: var(--font);
-  font-size: 2.999rem;
+  font-size: var(--double-great-primer);
   font-weight: var(--subheading-font-weight);
   margin: 0.25em 0;
 }
@@ -104,30 +118,33 @@ h2.section-heading, .h2.section-heading, section h2:first-child, section .h2:fir
 }
 h3, .h3 {
   font-family: var(--font);
-  font-size: 2.333rem;
+  font-size: var(--double-english);
   font-weight: var(--font-weight);
   margin: 0.25em 0;
 }
 h4, .h4 {
   font-family: var(--font);
-  font-size: 2rem;
+  font-size: var(--double-pica);
   font-weight: var(--font-weight);
   margin: 0.25em 0;
 }
 h5, .h5 {
   font-family: var(--font);
-  font-size: 1.666rem;
+  font-size: var(--paragon);
   font-weight: var(--font-weight);
   margin: 0.25em 0;
 }
 h6, .h6 {
   font-family: var(--font);
-  font-size: 1.166rem;
+  font-size: var(--english);
   font-weight: var(--font-weight);
   margin: 0.25em 0;
 }
 
 p, .p {
+  font-family: var(--font);
+  font-size: var(--pica);
+  font-weight: var(--font-weight);
   margin: 0.25em 0;
 }
 
@@ -312,6 +329,27 @@ a.card:focus-visible .button {
 }
 
 @media screen and (width < 900px) {
+  h1, .h1 {
+    font-size: var(--double-great-primer);
+  }
+  h2, .h2 {
+    font-size: var(--double-english);
+  }
+  h3, .h3 {
+    font-size: var(--double-pica);
+  }
+  h4, .h4 {
+    font-size: var(--paragon);
+  }
+  h5, .h5 {
+    font-size: var(--english);
+  }
+  h6, .h6 {
+    font-size: var(--pica);
+  }
+  p, .p {
+    font-size: var(--small-pica);
+  }
   .cards {
     grid-template-columns: 1fr 1fr;
   }
@@ -340,6 +378,27 @@ a.card:focus-visible .button {
   }
   .skip-nav {
     display: none;
+  }
+  h1, .h1 {
+    font-size: var(--double-english);
+  }
+  h2, .h2 {
+    font-size: var(--double-pica);
+  }
+  h3, .h3 {
+    font-size: var(--paragon);
+  }
+  h4, .h4 {
+    font-size: var(--english);
+  }
+  h5, .h5 {
+    font-size: var(--pica);
+  }
+  h6, .h6 {
+    font-size: var(--small-pica);
+  }
+  p, .p {
+    font-size: var(--long-primer);
   }
   header {
     grid-template-columns: 100%;

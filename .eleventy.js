@@ -22,8 +22,7 @@ async function imageShortcode(src, alt, sizes, lazyLoad = false) {
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(downloader, {
     urls: [
-      'https://analytics.zacharyc.site/tracker.js',
-      'https://zcss.zacharyc.site/prism.min.css'
+      'https://analytics.zacharyc.site/tracker.js'
     ],
     directory: 'public'
   });
@@ -49,17 +48,17 @@ module.exports = function(eleventyConfig) {
 
   // format dates
   eleventyConfig.addFilter("shortString", (dateObj) => {
-    let year = dateObj.getUTCFullYear();
+    const year = dateObj.getUTCFullYear();
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    let month = months[dateObj.getUTCMonth()];
-    let day = dateObj.getUTCDate();
+    const month = months[dateObj.getUTCMonth()];
+    const day = dateObj.getUTCDate();
     return `${month} ${day}, ${year}`;
   });
   eleventyConfig.addFilter("fullString", (dateObj) => {
-    let year = dateObj.getUTCFullYear();
-    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    let month = months[dateObj.getUTCMonth()];
-    let day = dateObj.getUTCDate();
+    const year = dateObj.getUTCFullYear();
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const month = months[dateObj.getUTCMonth()];
+    const day = dateObj.getUTCDate();
     return `${month} ${day}, ${year}`;
   });
 
