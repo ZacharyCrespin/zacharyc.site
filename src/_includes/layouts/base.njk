@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if SEOtitle %}
-      <title>{{ SEOtitle }} | Zachary Crespin</title>
+      <title>{{ SEOtitle }}{% if not titleOverride %} | Zachary Crespin{% endif %}</title>
     {% else %}
       <title>{{ title }} | Zachary Crespin</title>
     {% endif %}

@@ -53,6 +53,11 @@ body {
   margin: 0 3rem;
 }
 
+main {
+  min-height: calc(100vh - 8rem);
+  min-height: calc(100dvh - 8rem);
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
