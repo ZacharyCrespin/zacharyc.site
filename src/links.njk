@@ -1,0 +1,19 @@
+---
+SEOtitle: Links
+title: My Links
+description: My Links
+layout: default
+extraHeadCode: | 
+  <style>
+    .links .button {
+      width: calc(100% - 4rem);
+      margin: 1rem auto;
+      padding: 1rem 1.5rem;
+    }
+  </style>
+---
+<div class="links">
+  {%- for link in links -%}
+  <a class="button" href="{{ link.url }}" target="_blank">{{ link.text }}</a>
+  {%- endfor -%}
+</div>
