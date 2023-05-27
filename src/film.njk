@@ -5,7 +5,7 @@ layout: default
 ---
 <div class="cards wide">
   {%- for film in collections.film | reverse -%}
-  <div class="card" id="{{ page.fileSlug }}" aria-label="{{ film.data.title }}">
+  <div class="card" id="{{ film.data.id }}" aria-label="{{ film.data.title }}">
     {% image "./src/images/"+film.data.img, film.data.imgalt, 600 %}
     <div class="text">
       <h3>{{ film.data.title }}</h3>

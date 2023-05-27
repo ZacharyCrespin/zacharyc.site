@@ -164,6 +164,11 @@ em, i {
   font-family: var(--italic-font);
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+}
+
 .center {
   text-align: center;
 }
