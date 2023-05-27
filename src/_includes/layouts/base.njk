@@ -8,7 +8,11 @@
     {% else %}
       <title>{{ title }} | Zachary Crespin</title>
     {% endif %}
-    <meta name="description" content="{{ description }}">
+    {% if description %}
+      <meta name="description" content="{{ description }}">
+    {% else %}
+      <meta name="description" content="{{ title }}">
+    {% endif %}
     <link rel="icon" href="/favicon.png">
     <link rel="icon" href="/favicon-light.png" media="(prefers-color-scheme: light)">
     <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)">

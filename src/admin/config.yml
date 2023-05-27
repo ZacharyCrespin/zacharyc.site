@@ -4,6 +4,7 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "src/images/uploads" # Media files will be stored under src/images/uploads
 public_folder: "uploads" # The src attribute for uploaded media will begin with uploads
+site_url: https://zacharyc.site
 collections:
   - name: "collection" # Used in routes
     label: "Photo Collection" # Used in the UI
@@ -38,7 +39,7 @@ collections:
       - {label: "Date", name: "date", widget: "date"}
   - name: "film" # Used in routes
     label: "Film" # Used in the UI
-    folder: "src/films" # The path to the folder where the documents are stored
+    folder: "src/_films" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     editor:
       preview: false
