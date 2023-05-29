@@ -16,8 +16,8 @@ const downloader = require('11ty-external-file-downloader');
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(downloader, {
     urls: [
-      'https://zcss.zacharyc.site/z.min.css',
-      'https://zcss.zacharyc.site/prism.min.css'
+      'https://example.com/cool.css',
+      'https://example.com/dope.js'
     ]
   });
 }
