@@ -1,8 +1,7 @@
 ---
 title: 11ty-external-file-downloader
-description: 11ty-external-file-downloader
 layout: default
-containsCode: true
+highlightCode: true
 ---
 ## Usage
 ### Install

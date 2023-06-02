@@ -2,7 +2,7 @@
 title: Snow
 description: snow for your website
 layout: default
-containsCode: true
+highlightCode: true
 extraHeadCode: <link rel="stylesheet" href="https://snow.zacharyc.site/snow.min.css">
 extraBodyCode: |
   <div class="snow-contaner">

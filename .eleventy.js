@@ -30,6 +30,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(filesMinifier);
 
   eleventyConfig.addWatchTarget("./src/main.css");
+  eleventyConfig.addWatchTarget("./src/prism.css");
 
   eleventyConfig.addPassthroughCopy('./src/admin');
   eleventyConfig.addPassthroughCopy('./src/fonts');

@@ -3,7 +3,7 @@ title: Code
 description: Code Projects and Experiments
 layout: default
 ---
-<section aria-label="Featured">
+<section class="page-section" aria-label="Featured Code Projects">
   <h2>Featured</h2>
   <div class="cards wide">
     {%- for project in collections.code | reverse -%}
@@ -26,7 +26,7 @@ layout: default
   </div>
 </section>
 
-<section aria-label="More">
+<section class="page-section" aria-label="More Code Projects">
   <h2>More</h2>
   <div class="cards">
     {%- for project in collections.code | reverse -%}
