@@ -15,7 +15,7 @@ collections:
     slug: "{{slug}}" # Filename template
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "SEO Title", name: "SEOtitle", widget: "string", default: <title> | Photography}
+      - {label: "SEO Title", name: "SEOtitle", widget: "string", default: <title> — Photography}
       - {label: "Description", name: "description", widget: "string", default: <title> Photo Collection}
       - {label: "Number of Photos", name: "numberofphotos", widget: "number"}
       - {label: "Date", name: "date", widget: "date"}
@@ -23,7 +23,7 @@ collections:
       - {label: "Image", name: "img", widget: "image"}
   - name: "code" # Used in routes
     label: "Code Project" # Used in the UI
-    folder: "src/code-projects" # The path to the folder where the documents are stored
+    folder: "src/_projects" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     editor:
       preview: false

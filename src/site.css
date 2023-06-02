@@ -1,0 +1,256 @@
+body {
+  margin: 0 3rem;
+}
+
+main {
+  min-height: calc(100vh - 8rem);
+  min-height: calc(100dvh - 8rem);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--white);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--lightgrey);
+}
+::-webkit-scrollbar-corner {
+  background-color: var(--black);
+}
+
+h1.title {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+.button.center {
+  display: block;
+  max-width: max-content;
+  margin: 1rem auto;
+}
+
+
+.skip-nav {
+  z-index: 2;
+  background: var(--white);
+  color: var(--black);
+  margin: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  position: absolute;
+  left: 0.5rem;
+  transform: translateY(-300%);
+  transition: transform 0.2s ease-in;
+}
+.skip-nav:focus {
+  transform: translateY(0);
+}
+
+header.main-header {
+  display: grid;
+  grid-template-columns: max-content auto;
+  margin: 1rem 0;
+}
+.header-logo img {
+  height: var(--double-pica); /* h4 sizing */
+  max-width: max-content;
+}
+header.main-header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header.main-header .nav-link {
+  text-decoration: none;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+footer.main-footer {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+section.page-section {
+  text-align: center;
+}
+h2.section-heading, .h2.section-heading, .page-section > h2, .page-section > .h2 {
+  text-align: left;
+  padding-left: 0.5rem;
+  padding-bottom: 0.25em;
+  border-bottom: var(--stroke) solid var(--white);
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.cards.wide {
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: var(--stroke) solid var(--white);
+  border-radius: var(--corner);
+}
+a.card {
+  display: block;
+}
+a.card, .card * {
+  text-decoration: none;
+}
+a.card:hover, a.card:focus-visible {
+  color: var(--white);
+}
+a.card:focus-visible .button {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.cards .card {
+  text-align: center;
+}
+.cards .card:not(.full) img {
+  width: calc(100% + 1rem);
+  margin-top: -0.5rem;
+  margin-left: -0.5rem;
+  height: auto;
+  border-radius: var(--corner) var(--corner) 0 0;
+}
+
+/* Full Width Cards */
+.cards .card.full {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+.cards .card.full img {
+  width: auto;
+  height: auto;
+  max-width: 60vw;
+  max-height: 80vh;
+}
+.cards .card.full .text {
+  margin-left: 1rem;
+  text-align: left;
+}
+.cards .card.full .text .button {
+  margin-left: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tags .tag {
+  background-color: var(--white);
+  color: var(--black);
+  margin: 0.5rem 0.25rem;
+  padding: 0.25rem 1rem;
+  border-radius: 100vmax;
+}
+.tags .tag::selection {
+  background: var(--black);
+  color: var(--white);
+}
+.card.full .tags {
+  justify-content: flex-start;
+}
+.card.full .tag:first-of-type {
+  margin-left: 0;
+}
+
+/* Gallery */
+.gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+.photo {
+  margin: 0.5rem;
+  padding: 0;
+}
+.gallery .photo img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (width < 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (width < 1000px) {
+  .cards.wide {
+    grid-template-columns: 100%;
+  }
+}
+
+@media screen and (width < 900px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card.full {
+    grid-template-columns: 100%;
+  }
+  .card.full img {
+    margin: 0;
+    max-width: 100%;
+  }
+  .card.full .text {
+    margin-left: 0;
+    text-align: center;
+  }
+  .card.full .text .button {
+    margin-left: 0.5rem;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (width < 600px) {
+  body {
+    margin: 0 1rem;
+  }
+  .skip-nav {
+    display: none;
+  }
+  header {
+    grid-template-columns: 100%;
+    padding: 0;
+  }
+  header .logo {
+    text-align: center;
+  }
+  header nav {
+    justify-content: center;
+  }
+  header nav a {
+    padding: 1em;
+  }
+  h2.section-heading, .h2.section-heading, section h2:first-child, section .h2:first-child {
+    text-align: center;
+    padding-left: 0;
+  }
+  .cards {
+    grid-template-columns: 100%;
+  }
+  .gallery {
+    grid-template-columns: 100%;
+  }
+}
