@@ -220,6 +220,7 @@ header {
   display: grid;
   grid-template-columns: max-content auto;
   margin: 1rem 0;
+  text-align: center;
 }
 .header-logo img {
   height: var(--double-pica); /* h4 sizing */
