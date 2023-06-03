@@ -38,7 +38,7 @@ layout: default
           <p class="tag">{{ tag }}</p>
         {%- endfor -%}
       </div>
-      {% if project.data.moreInfo %}<a class="button" href="{{ project.data.moreInfo }}" target="_blank">More Info</a>{% endif %}
+      {% if project.data.moreInfo %}<a class="button" href="{{ project.data.moreInfo }}">More Info</a>{% endif %}
       {% if project.data.live %}<a class="button" href="{{ project.data.live }}" target="_blank">Live</a>{% endif %}
       {% if project.data.source %}<a class="button" href="{{ project.data.source }}" target="_blank">Source</a>{% endif %}
     </div>

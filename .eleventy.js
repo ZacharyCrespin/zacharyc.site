@@ -29,7 +29,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(filesMinifier);
 
-  eleventyConfig.addWatchTarget("./src/main.css");
+  eleventyConfig.addWatchTarget("./src/base.css");
+  eleventyConfig.addWatchTarget("./src/site.css");
   eleventyConfig.addWatchTarget("./src/prism.css");
 
   eleventyConfig.addPassthroughCopy('./src/admin');

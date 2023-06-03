@@ -57,6 +57,7 @@ header.main-header {
   display: grid;
   grid-template-columns: max-content auto;
   margin: 1rem 0;
+  text-align: center;
 }
 .header-logo img {
   height: var(--double-pica); /* h4 sizing */
@@ -230,17 +231,17 @@ a.card:focus-visible .button {
   .skip-nav {
     display: none;
   }
-  header {
+  header.main-header {
     grid-template-columns: 100%;
     padding: 0;
   }
-  header .logo {
+  header.main-header .logo {
     text-align: center;
   }
-  header nav {
+  header.main-header nav {
     justify-content: center;
   }
-  header nav a {
+  header.main-header nav a {
     padding: 1em;
   }
   h2.section-heading, .h2.section-heading, section h2:first-child, section .h2:first-child {
