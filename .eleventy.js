@@ -42,9 +42,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
   eleventyConfig.addPassthroughCopy('./src/favicon.png');
   eleventyConfig.addPassthroughCopy('./src/robots.txt');
-  eleventyConfig.addPassthroughCopy('./src/sitemap.xml');
 
   // layouts
+  eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
   eleventyConfig.addLayoutAlias('default', 'layouts/default.njk');
   eleventyConfig.addLayoutAlias('collection', 'layouts/collection.njk');
 
@@ -76,6 +76,10 @@ module.exports = function(eleventyConfig) {
     dir: {
       input: "src",
       output: "public"
-    }
+    },
+    templateFormats: [
+			"md",
+			"njk",
+		],
   };
 }
