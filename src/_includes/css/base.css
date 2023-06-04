@@ -1,12 +1,3 @@
-@font-face {
-  font-family: Inter;
-  src: 
-    local("Inter"),
-    url("/fonts/Inter/Inter.woff2") format("woff2"),
-    url("/fonts/Inter/Inter.ttf") format("truetype");
-  font-display: swap;
-}
-
 :root {
   /* Colors */
   --black: #000;
@@ -18,9 +9,9 @@
   /* Typography */
   --font: "Inter", sans-serif;
   --italic-font: "Georgia", serif;
-  --font-weight: 300;
-  --heading-font-weight: 900;
-  --subheading-font-weight: 600;
+  --fw-main: 300;
+  --fw-heading: 900;
+  --fw-subheading: 600;
 
   /* Type Scale */
   --double-canon: 4.666em;
@@ -43,7 +34,7 @@
 
 body {
   font-size: var(--pica);
-  font-weight: var(--font-weight);
+  font-weight: var(--fw-main);
   line-height: 1.5;
   font-family: var(--font);
   background-color: var(--black);
@@ -67,28 +58,28 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6  {
 }
 h1, .h1 {
   font-size: var(--canon);
-  font-weight: var(--heading-font-weight);
+  font-weight: var(--fw-heading);
 }
 h2, .h2 {
   font-size: var(--double-great-primer);
-  font-weight: var(--subheading-font-weight);
+  font-weight: var(--fw-subheading);
 }
 h3, .h3 {
   font-size: var(--double-english);
-  font-weight: var(--font-weight);
+  font-weight: var(--fw-main);
 }
 h4, .h4 {
   font-family: var(--font);
   font-size: var(--double-pica);
-  font-weight: var(--font-weight);
+  font-weight: var(--fw-main);
 }
 h5, .h5 {
   font-size: var(--paragon);
-  font-weight: var(--font-weight);
+  font-weight: var(--fw-main);
 }
 h6, .h6 {
   font-size: var(--english);
-  font-weight: var(--font-weight);
+  font-weight: var(--fw-main);
 }
 
 p, .p {
