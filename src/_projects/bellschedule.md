@@ -2,7 +2,7 @@
 title: FHS Bell Schedule
 source: https://github.com/ZacharyCrespin/FHS-Bell-Schedule
 sourceType: github
-live: https://fhsbellschedule.web.app
+live: https://fhsbellschedule.netlify.app
 tech:
   - Python
 featured: true
