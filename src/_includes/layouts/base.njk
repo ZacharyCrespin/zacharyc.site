@@ -6,7 +6,7 @@
     {% if SEOtitle %}
       <title>{{ SEOtitle }}{% if not titleOverride %} — Zachary Crespin{% endif %}</title>
     {% else %}
-      <title>{{ title }} — Zachary Crespin</title>
+      <title>{{ title }}{% if not titleOverride %} — Zachary Crespin{% endif %}</title>
     {% endif %}
     {% if description %}
       <meta name="description" content="{{ description }}">

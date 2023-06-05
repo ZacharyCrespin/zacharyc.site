@@ -1,0 +1,5 @@
+{
+  "tags": "photo",
+  "layout": "photo",
+  "permalink": "/photography/{{ id }}/index.html"
+}

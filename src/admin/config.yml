@@ -6,6 +6,19 @@ media_folder: "src/images/uploads" # Media files will be stored under src/images
 public_folder: "uploads" # The src attribute for uploaded media will begin with uploads
 site_url: https://zacharyc.site
 collections:
+  - name: "photo" # Used in routes
+    label: "Photo" # Used in the UI
+    folder: "src/_photos" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    editor:
+      preview: false
+    slug: "{{slug}}" # Filename template
+    fields: # The fields for each document, usually in front matter
+      - {label: "Image", name: "src", widget: "image"}
+      - {label: "Alt Text", name: "alt", widget: "string"}
+      - {label: "Collection", name: "collection", widget: "string", required: false}
+      - {lapel: "ID", name: id, widget: "string"}
+      - {label: "Date", name: "date", widget: "date"}
   - name: "collection" # Used in routes
     label: "Photo Collection" # Used in the UI
     folder: "src/photography/collections" # The path to the folder where the documents are stored

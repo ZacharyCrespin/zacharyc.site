@@ -1,17 +1,12 @@
 ---
-layout: 'layouts/base.njk'
+layout: default
 ---
-{% include 'components/header.njk'  %}
-<main role="main" id="content">
-  <h1 class="title">{{ title }}</h1>
-  <section class="gallery" aria-label="Gallery">
-    {% for photo in photos %}
-      {% if photo.collection.id == id %}
-      <a class="photo" href="/photography/{{ id }}/{{ photo.id }}/">
-        {% image "./src/images/" + photo.src, photo.alt, 600, true %}
-      </a>
-      {% endif %}
-    {% endfor %}
-  </section>
-</main>
-{% include 'components/footer.njk' %}
+<section class="gallery" aria-label="Gallery">
+  {% for photo in collections.photo %}
+    {% if photo.data.collection == id %}
+    <a class="photo" href="/photography/{{ photo.data.id }}/">
+      {% image "./src/images/" + photo.data.src, photo.data.alt, 600, true %}
+    </a>
+    {% endif %}
+  {% endfor %}
+</section>
