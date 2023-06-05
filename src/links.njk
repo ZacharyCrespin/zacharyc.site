@@ -2,10 +2,25 @@
 SEOtitle: Links
 title: My Links
 description: My Links
-layout: default
+layout: base
 eleventyExcludeFromCollections: true
+onlyBaseCSS: true
 extraHeadCode: | 
   <style>
+    body {
+      text-align: center;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 3rem;
+    }
+    @media screen and (width < 600px) {
+      body {
+        margin: 0 1rem;
+      }
+    }
     .links .button {
       width: calc(100% - 4rem);
       margin: 1rem auto;
@@ -13,8 +28,12 @@ extraHeadCode: |
     }
   </style>
 ---
-<div class="links">
+<header>
+  <h2 class="h1">Hi, I’m Zachary Crespin</h2>
+  <h3 class="h2">Cheak Out My Links</h3>
+</header>
+<main class="links">
   {%- for link in links -%}
   <a class="button" href="{{ link.url }}" target="_blank">{{ link.text }}</a>
   {%- endfor -%}
-</div>
+</main>

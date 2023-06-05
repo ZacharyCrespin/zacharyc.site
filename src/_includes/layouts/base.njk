@@ -24,7 +24,11 @@
     <meta name="theme-color" content="#2e2e2e">
     <meta name="author" content="Zachary Crespin">
     <meta name="generator" content="{{ eleventy.generator }}">
-    <link rel="stylesheet" href="/main.css">
+    {% if not onlyBaseCSS %}
+      <link rel="stylesheet" href="/main.css">
+    {% else %}
+      <link rel="stylesheet" href="/base.css">
+    {% endif %}
     {% if highlightCode %}
       <link rel="stylesheet" href="/prism.css">
     {% endif %}

@@ -195,7 +195,7 @@ a.card:focus-visible .button {
   }
 }
 
-@media (width < 1000px) {
+@media screen and (width < 1000px) {
   .cards.wide {
     grid-template-columns: 100%;
   }
