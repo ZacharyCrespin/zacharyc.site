@@ -44,6 +44,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
   eleventyConfig.addLayoutAlias('default', 'layouts/default.njk');
   eleventyConfig.addLayoutAlias('collection', 'layouts/collection.njk');
+  eleventyConfig.addLayoutAlias('photo', 'layouts/photo.njk');
 
   // format dates
   eleventyConfig.addFilter("shortString", (dateObj) => {

@@ -21,35 +21,10 @@ layout: default
 <section class="page-section" aria-label="Latest Photos">
   <h2>Latest Photos</h2>
   <div class="gallery" aria-label="Gallery">
-    <a class="photo" href="/photography/hummingbirds/1/">
-      {% image "./src/images/photography/hummingbirds-1.JPG", "Hummingbird sitting on a branch.", 600 %}
+    {%- for photo in collections.photo -%}
+    <a class="photo" href="/photography/{{ photo.data.id }}/">
+      {% image "./src/images/" + photo.data.src , photo.data.alt, 600 %}
     </a>
-    <a class="photo" href="/photography/hummingbirds/2/">
-      {% image "./src/images/photography/hummingbirds-2.JPG", "Hummingbird sitting on a feeder.", 600 %}
-    </a>
-    <a class="photo" href="/photography/hummingbirds/3/">
-      {% image "./src/images/photography/hummingbirds-3.JPG", "A hummingbird sitting on a feeder with its wings still in motion.", 600 %}
-    </a>
-    <a class="photo" href="/photography/lizard/1/">
-      {% image "./src/images/photography/lizard-1.JPG", "Lizards 1", 600 %}
-    </a>
-    <a class="photo" href="/photography/lizard/2/">
-      {% image "./src/images/photography/lizard-2.JPG", "Lizards 2", 600 %}
-    </a>
-    <a class="photo" href="/photography/lizard/3/">
-      {% image "./src/images/photography/lizard-3.JPG", "Lizards 3", 600 %}
-    </a>
-    <a class="photo" href="/photography/cameras/1/">
-      {% image "./src/images/photography/cameras-1.jpg", "Cameras 1", 600 %}
-    </a>
-    <a class="photo" href="/photography/cameras/2/">
-      {% image "./src/images/photography/cameras-2.jpg", "Cameras 2", 600 %}
-    </a>
-    <a class="photo" href="/photography/cameras/3/">
-      {% image "./src/images/photography/cameras-3.jpg", "Cameras 3", 600 %}
-    </a>
-    <a class="photo" href="/photography/cameras/4/">
-      {% image "./src/images/photography/cameras-4.jpg", "Cameras 4", 600 %}
-    </a>
+    {%- endfor -%}
   </div>
 </section>

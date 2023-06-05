@@ -1,0 +1,48 @@
+---
+layout: 'layouts/base.njk'
+extraHeadCode: | 
+  <style>
+    body {
+      margin: 0;
+    }
+    main {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #close {
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      border: none;
+      background-color: transparent;
+    }
+    #close:hover {
+      cursor: pointer;
+    }
+    #close svg path {
+      fill: var(--white);
+    }
+    #close:hover svg path, #close:focus-visible svg path {
+      fill: var(--lightgrey);
+    }
+    img {
+      width: auto;
+      height: auto;
+      max-width: calc(100vw - 1rem);
+      max-height: calc(100vh - 1rem);
+    }
+  </style>
+---
+<main>
+  <button id="close" onclick="history.back()" aria-label="Close">
+    <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.07812 27.4531L7.54688 25.9219L15.9687 17.5L7.54688 9.07812L9.07812 7.54688L17.5 15.9687L25.9219 7.54688L27.4531 9.07812L19.0313 17.5L27.4531 25.9219L25.9219 27.4531L17.5 19.0313L9.07812 27.4531Z" fill="white"/>
+    </svg>
+  </button>
+  {% image "./src/images/" + src, alt, "auto" %}
+</main>
