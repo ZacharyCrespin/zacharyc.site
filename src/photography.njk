@@ -3,7 +3,7 @@ title: Photography
 description: Photography
 layout: default
 ---
-<section aria-label="Latest Collections">
+<section class="page-section" aria-label="Latest Collections">
   <h2>Latest Collections</h2>
   <div class="cards">
     {%- for collection in collections.collection | reverse | limit(4) -%}
@@ -18,36 +18,38 @@ layout: default
   <a class="button" href="/photography/collections/">All Collections</a>
 </section>
 
-<h2 class="section-heading">Latest Photos</h2>
-<div class="gallery" aria-label="Gallery">
-  <a class="photo" href="/photography/hummingbirds/1/">
-    {% image "./src/images/photography/hummingbirds-1.JPG", "Hummingbird sitting on a branch.", 600 %}
-  </a>
-  <a class="photo" href="/photography/hummingbirds/2/">
-    {% image "./src/images/photography/hummingbirds-2.JPG", "Hummingbird sitting on a feeder.", 600 %}
-  </a>
-  <a class="photo" href="/photography/hummingbirds/3/">
-    {% image "./src/images/photography/hummingbirds-3.JPG", "A hummingbird sitting on a feeder with its wings still in motion.", 600 %}
-  </a>
-  <a class="photo" href="/photography/lizard/1/">
-    {% image "./src/images/photography/lizard-1.JPG", "Lizards 1", 600 %}
-  </a>
-  <a class="photo" href="/photography/lizard/2/">
-    {% image "./src/images/photography/lizard-2.JPG", "Lizards 2", 600 %}
-  </a>
-  <a class="photo" href="/photography/lizard/3/">
-    {% image "./src/images/photography/lizard-3.JPG", "Lizards 3", 600 %}
-  </a>
-  <a class="photo" href="/photography/cameras/1/">
-    {% image "./src/images/photography/cameras-1.jpg", "Cameras 1", 600 %}
-  </a>
-  <a class="photo" href="/photography/cameras/2/">
-    {% image "./src/images/photography/cameras-2.jpg", "Cameras 2", 600 %}
-  </a>
-  <a class="photo" href="/photography/cameras/3/">
-    {% image "./src/images/photography/cameras-3.jpg", "Cameras 3", 600 %}
-  </a>
-  <a class="photo" href="/photography/cameras/4/">
-    {% image "./src/images/photography/cameras-4.jpg", "Cameras 4", 600 %}
-  </a>
-</div>
+<section class="page-section" aria-label="Latest Photos">
+  <h2>Latest Photos</h2>
+  <div class="gallery" aria-label="Gallery">
+    <a class="photo" href="/photography/hummingbirds/1/">
+      {% image "./src/images/photography/hummingbirds-1.JPG", "Hummingbird sitting on a branch.", 600 %}
+    </a>
+    <a class="photo" href="/photography/hummingbirds/2/">
+      {% image "./src/images/photography/hummingbirds-2.JPG", "Hummingbird sitting on a feeder.", 600 %}
+    </a>
+    <a class="photo" href="/photography/hummingbirds/3/">
+      {% image "./src/images/photography/hummingbirds-3.JPG", "A hummingbird sitting on a feeder with its wings still in motion.", 600 %}
+    </a>
+    <a class="photo" href="/photography/lizard/1/">
+      {% image "./src/images/photography/lizard-1.JPG", "Lizards 1", 600 %}
+    </a>
+    <a class="photo" href="/photography/lizard/2/">
+      {% image "./src/images/photography/lizard-2.JPG", "Lizards 2", 600 %}
+    </a>
+    <a class="photo" href="/photography/lizard/3/">
+      {% image "./src/images/photography/lizard-3.JPG", "Lizards 3", 600 %}
+    </a>
+    <a class="photo" href="/photography/cameras/1/">
+      {% image "./src/images/photography/cameras-1.jpg", "Cameras 1", 600 %}
+    </a>
+    <a class="photo" href="/photography/cameras/2/">
+      {% image "./src/images/photography/cameras-2.jpg", "Cameras 2", 600 %}
+    </a>
+    <a class="photo" href="/photography/cameras/3/">
+      {% image "./src/images/photography/cameras-3.jpg", "Cameras 3", 600 %}
+    </a>
+    <a class="photo" href="/photography/cameras/4/">
+      {% image "./src/images/photography/cameras-4.jpg", "Cameras 4", 600 %}
+    </a>
+  </div>
+</section>

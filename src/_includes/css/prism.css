@@ -1,55 +1,4 @@
 /*! VS Code Dark+ (by tabuckner) */
-pre[class*="language-"],
-code[class*="language-"] {
-	color: #d4d4d4;
-	font-size: 0.916rem;
-	text-shadow: none;
-	font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace;
-	direction: ltr;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	line-height: 1.5;
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-}
-
-pre[class*="language-"]::selection,
-code[class*="language-"]::selection,
-pre[class*="language-"] *::selection,
-code[class*="language-"] *::selection {
-	text-shadow: none;
-}
-
-@media print {
-	pre[class*="language-"],
-	code[class*="language-"] {
-		text-shadow: none;
-	}
-}
-
-pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
-	background: #1e1e1e;
-}
-
-:not(pre) > code[class*="language-"] {
-	padding: .1em .3em;
-	border-radius: .3em;
-	color: #db4c69;
-	background: #1e1e1e;
-}
-/*********************************************************
-* Tokens
-*/
 .namespace {
 	opacity: .7;
 }
@@ -259,13 +208,6 @@ code[class*="language-html"] {
 
 .language-html .token.punctuation {
 	color: #808080;
-}
-/*********************************************************
-* Line highlighting
-*/
-pre[class*="language-"] > code[class*="language-"] {
-	position: relative;
-	z-index: 1;
 }
 
 .line-highlight.line-highlight {

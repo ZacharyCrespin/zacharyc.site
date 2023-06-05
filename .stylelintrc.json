@@ -3,8 +3,7 @@
   "rules": {
     "rule-empty-line-before": null,
     "comment-empty-line-before": null,
-    "number-leading-zero": "always",
-    "string-quotes": "single"
+    "number-leading-zero": "always"
   },
   "ignoreFiles": ["src/prism.css"]
 }

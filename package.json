@@ -1,7 +1,7 @@
 {
   "name": "zacharyc.site",
   "description": "My Personal Website",
-  "version": "7.6.4",
+  "version": "7.9.2",
   "author": "Zachary Crespin <contact@zacharyc.site> (https://zacharyc.site)",
   "homepage": "https://zacharyc.site",
   "repository": {
@@ -20,7 +20,7 @@
   "scripts": {
     "start": "eleventy --quiet --serve",
     "build": "eleventy",
-    "lint": "stylelint src/**/*.css && eslint src/**/*.js"
+    "lint": "stylelint src/**/*.css"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
@@ -28,7 +28,6 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
     "11ty-external-file-downloader": "^1.0.1",
-    "eslint": "^8.37.0",
     "stylelint": "^15.2.0",
     "stylelint-config-standard": "^33.0.0"
   }

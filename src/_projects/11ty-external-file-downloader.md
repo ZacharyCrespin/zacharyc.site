@@ -1,6 +1,6 @@
 ---
 title: 11ty-external-file-downloader
-live: https://www.npmjs.com/package/11ty-external-file-downloader
+moreInfo: /code/11ty-external-file-downloader/
 source: https://github.com/ZacharyCrespin/11ty-external-file-downloader
 sourceType: github
 tech:

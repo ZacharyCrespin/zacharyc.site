@@ -2,6 +2,7 @@ const Image = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const downloader = require('11ty-external-file-downloader');
+const pkg = require('./package.json');
 
 async function imageShortcode(src, alt, sizes, lazyLoad = false) {
   let metadata = await Image(src, {
@@ -29,7 +30,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(filesMinifier);
 
-  eleventyConfig.addWatchTarget("./src/main.css");
+  eleventyConfig.addWatchTarget("./src/base.css");
+  eleventyConfig.addWatchTarget("./src/site.css");
+  eleventyConfig.addWatchTarget("./src/prism.css");
 
   eleventyConfig.addPassthroughCopy('./src/admin');
   eleventyConfig.addPassthroughCopy('./src/fonts');
@@ -40,9 +43,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
   eleventyConfig.addPassthroughCopy('./src/favicon.png');
   eleventyConfig.addPassthroughCopy('./src/robots.txt');
-  eleventyConfig.addPassthroughCopy('./src/sitemap.xml');
 
   // layouts
+  eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
   eleventyConfig.addLayoutAlias('default', 'layouts/default.njk');
   eleventyConfig.addLayoutAlias('collection', 'layouts/collection.njk');
 
@@ -74,6 +77,10 @@ module.exports = function(eleventyConfig) {
     dir: {
       input: "src",
       output: "public"
-    }
+    },
+    templateFormats: [
+			"md",
+			"njk",
+		],
   };
 }

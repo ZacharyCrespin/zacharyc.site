@@ -1,0 +1,251 @@
+:root {
+  /* Colors */
+  --black: #000;
+  --darkgrey: #404040;
+  --grey: #808080;
+  --lightgrey: #bfbfbf;
+  --white: #fff;
+
+  /* Typography */
+  --font: "Inter", sans-serif;
+  --italic-font: "Georgia", serif;
+  --fw-main: 300;
+  --fw-heading: 900;
+  --fw-subheading: 600;
+
+  /* Type Scale */
+  --double-canon: 4.666em;
+  --canon: 3.999em;
+  --double-great-primer: 2.999em;
+  --double-english: 2.333em;
+  --double-pica: 2em;
+  --paragon: 1.666em;
+  --english: 1.166em;
+  --pica: 1em;
+  --small-pica: 0.916em;
+  --long-primer: 0.833em;
+  --bourgeois: 0.75em;
+
+  /* More */
+  --stroke: 1px;
+  --corner: 0.25rem;
+  --transition: 150ms;
+}
+
+body {
+  font-size: var(--pica);
+  font-weight: var(--fw-main);
+  line-height: 1.5;
+  font-family: var(--font);
+  background-color: var(--black);
+  color: var(--white);
+  margin: 0;
+}
+
+::selection {
+  background: var(--white);
+  color: var(--black);
+}
+
+*:focus-visible {
+  outline-offset: 0.25rem;
+  outline: var(--stroke) solid var(--white);
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6  {
+  line-height: 1;
+  margin: 0.25em 0;
+}
+h1, .h1 {
+  font-size: var(--canon);
+  font-weight: var(--fw-heading);
+}
+h2, .h2 {
+  font-size: var(--double-great-primer);
+  font-weight: var(--fw-subheading);
+}
+h3, .h3 {
+  font-size: var(--double-english);
+  font-weight: var(--fw-main);
+}
+h4, .h4 {
+  font-family: var(--font);
+  font-size: var(--double-pica);
+  font-weight: var(--fw-main);
+}
+h5, .h5 {
+  font-size: var(--paragon);
+  font-weight: var(--fw-main);
+}
+h6, .h6 {
+  font-size: var(--english);
+  font-weight: var(--fw-main);
+}
+
+p, .p {
+  margin: 0.25em 0;
+}
+
+a, .a {
+  margin: 0.25em 0;
+  background-color: transparent;
+  color: var(--white);
+}
+p a {
+  margin: 0;
+}
+a:hover, .a:hover, a:focus-visible, .a:focus-visible {
+  color: var(--lightgrey);
+  cursor: pointer;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+em, i {
+  font-family: var(--italic-font);
+}
+
+small{
+  font-size:80%;
+}
+
+img {
+  border-style: none;
+  height: auto;
+  width: 100%;
+}
+
+figure figcaption {
+  text-align: center;
+}
+
+hr {
+  box-sizing: content-box;
+  overflow: visible;
+  height: 0;
+  margin: 2rem 0;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  accent-color: var(--white);
+}
+
+button, .button {
+  display: inline-block;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border: var(--stroke) solid var(--white);
+  border-radius: var(--corner);
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  transition: var(--transition);
+}
+button:hover, .button:hover, 
+button:focus-visible, .button:focus-visible {
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+input:not([type="radio"], [type="checkbox"], [type="file"]), textarea, select {
+  margin: 1rem 0.5rem;
+  padding: 0.5rem;
+  border: var(--stroke) solid var(--white);
+  border-radius: var(--corner);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+pre,
+code {
+	color: #fff;
+	font-size: 0.916rem;
+	font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+	tab-size: 4;
+	hyphens: none;
+  border-radius: var(--corner);
+}
+
+pre {
+	padding: 1em;
+	margin: 0.5em 0;
+	overflow: auto;
+	background: #1e1e1e;
+}
+
+:not(pre) > code {
+	padding: 0.1em 0.3em;
+	border-radius: 0.3em;
+	color: #fff;
+	background: #1e1e1e;
+}
+
+pre > code {
+	position: relative;
+	z-index: 1;
+}
+
+@media screen and (width < 900px) {
+  h1, .h1 {
+    font-size: var(--double-great-primer);
+  }
+  h2, .h2 {
+    font-size: var(--double-english);
+  }
+  h3, .h3 {
+    font-size: var(--double-pica);
+  }
+  h4, .h4 {
+    font-size: var(--paragon);
+  }
+  h5, .h5 {
+    font-size: var(--english);
+  }
+  h6, .h6 {
+    font-size: var(--pica);
+  }
+  p, .p {
+    font-size: var(--small-pica);
+  }
+}
+
+@media screen and (width < 600px) {
+  h1, .h1 {
+    font-size: var(--double-english);
+  }
+  h2, .h2 {
+    font-size: var(--double-pica);
+  }
+  h3, .h3 {
+    font-size: var(--paragon);
+  }
+  h4, .h4 {
+    font-size: var(--english);
+  }
+  h5, .h5 {
+    font-size: var(--pica);
+  }
+  h6, .h6 {
+    font-size: var(--small-pica);
+  }
+  p, .p {
+    font-size: var(--long-primer);
+  }
+}

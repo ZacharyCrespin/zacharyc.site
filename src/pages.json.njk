@@ -1,0 +1,18 @@
+---
+permalink: "pages.json"
+eleventyExcludeFromCollections: true
+---
+[
+  {%- set pages = collections.all -%}
+  {%- for page in pages -%}
+  {%- if page.url -%}
+  {
+    "url": "https://zacharyc.site{{ page.url }}",
+    "title": "{{ page.data.title }}",
+    "description": "{{ page.data.description }}",
+    "tags": "{{ page.data.tags }}"
+  }
+  {%- if not loop.last -%},{%- endif -%}
+  {%- endif -%}
+  {%- endfor -%}
+]
