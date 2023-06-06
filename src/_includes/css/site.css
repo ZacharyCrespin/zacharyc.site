@@ -98,12 +98,6 @@ h2.section-heading, .h2.section-heading, .page-section > h2, .page-section > .h2
   grid-template-columns: 1fr 1fr;
 }
 
-.card {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border: var(--stroke) solid var(--white);
-  border-radius: var(--corner);
-}
 a.card {
   display: block;
 }

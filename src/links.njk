@@ -2,6 +2,7 @@
 SEOtitle: Links
 title: My Links
 description: My Links
+id: links
 layout: base
 eleventyExcludeFromCollections: true
 onlyBaseCSS: true
@@ -32,7 +33,7 @@ extraHeadCode: |
   <h2 class="h1">Hi, I’m Zachary Crespin</h2>
   <h3 class="h2">Cheak Out My Links</h3>
 </header>
-<main class="links">
+<main role="main" class="links">
   {%- for link in links -%}
   <a class="button" href="{{ link.url }}" target="_blank">{{ link.text }}</a>
   {%- endfor -%}

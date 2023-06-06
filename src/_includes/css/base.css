@@ -202,6 +202,13 @@ pre > code {
 	z-index: 1;
 }
 
+.card {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: var(--stroke) solid var(--white);
+  border-radius: var(--corner);
+}
+
 @media screen and (width < 900px) {
   h1, .h1 {
     font-size: var(--double-great-primer);
