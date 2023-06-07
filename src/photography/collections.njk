@@ -7,12 +7,12 @@ layout: default
 ---
 <div class="cards">
   {%- for collection in collections.collection | reverse -%}
-  <a class="card" href="{{ collection.url }}" aria-label="{{ collection.data.title }}">
+  <a class="card" href="{{ collection.url }}" aria-label="{{ collection.data.title }} Photo Collection">
     {% image "./src/images/" + collection.data.img, collection.data.title + " Collection Image", 300 %}
     <h2 class="h3">{{ collection.data.title }}</h2>
     <p>{{ collection.data.numberofphotos }} Photos</p>
     <p>{{ collection.data.date | fullString }}</p>
-    <span class="button">View Collection</span>
+    <span class="button">View</span>
   </a>
   {%- endfor -%}
 </div>
