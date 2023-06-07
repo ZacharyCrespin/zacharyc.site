@@ -30,6 +30,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(filesMinifier);
 
+  eleventyConfig.addWatchTarget("./src/search.js");
+
   eleventyConfig.addPassthroughCopy('./src/admin');
   eleventyConfig.addPassthroughCopy('./src/fonts');
   eleventyConfig.addPassthroughCopy('./src/files');

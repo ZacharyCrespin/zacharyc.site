@@ -1,19 +1,18 @@
 const searchParams = new URLSearchParams(window.location.search)
-const query = searchParams.get("query")
-const searchResults = searchParams.get("searchResults")
+const query = searchParams.get("q")
+const searchResults = document.getElementById("searchResults")
 
-document.getElementById("query").value = query
-
-let result
-fetch("/api/search")
-.then(res => {
-  res.json()
-})
-.then(res => {
-  result = res
-})
-
-searchResults.innerHTML = result.length > 0 ? result.map(generateHTML).join("") : "No results found";
+if (query) {
+  document.getElementById("query").value = query;
+  fetch(`/api/search?q=${query}`)
+  .then(res => {
+    return res.json()
+  })
+  .then(res => {
+    result = (res.length > 0) ? res.map(generateHTML).join("") : "<p>No results found</p>"
+    searchResults.innerHTML = result;
+  })
+  }
 
 function generateHTML(page) {
   return `
