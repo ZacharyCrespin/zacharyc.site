@@ -11,8 +11,32 @@ eleventyExcludeFromCollections: true
     "title": "{{ page.data.title }}",
     "description": "{{ page.data.description }}",
     "tags": "{{ page.data.tags }}"
-  }
-  {%- if not loop.last -%},{%- endif -%}
+  },
   {%- endif -%}
   {%- endfor -%}
+  {
+    "url": "https://fhsbellschedule.netlify.app/",
+    "title": "Today — FHS Bell Schedule",
+    "description": "Today's Foothill High School Bell Schedule"
+  },
+  {
+    "url": "https://periodictables.zacharyc.site/",
+    "title": "Home | Free Periodic Tables",
+    "description": "Home | Free Periodic Tables"
+  },
+  {
+    "url": "https://math-to-svg.netlify.app/",
+    "title": "Math To SVG",
+    "description": "Convert AsciiMath strings into beautiful SVGs"
+  },
+  {
+    "url": "https://quotes.zacharyc.site/",
+    "title": "Quotes",
+    "description": "A random quote every time."
+  },
+  {
+    "url": "https://christmascountdown.zacharyc.site/",
+    "title": "Christmas Countdown",
+    "description": "Christmas Countdown"
+  }
 ]

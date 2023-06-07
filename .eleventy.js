@@ -75,9 +75,6 @@ module.exports = function(eleventyConfig) {
       input: "src",
       output: "public"
     },
-    templateFormats: [
-			"md",
-			"njk",
-		],
+    templateFormats: ["njk", "md"],
   };
 }
