@@ -17,9 +17,9 @@ if (query) {
 function generateHTML(page) {
   return `
     <a class="card" href="${page.item.url}">
-    <h2 class="h3">${page.item.title}</h2>
-    <p>${page.item.description}</p>
+      <h2 class="h3">${page.item.title}</h2>
+      <p>${page.item.description}</p>
+      <span class="button">View Page</span>
     </a>
   `;
 }
-

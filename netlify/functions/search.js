@@ -33,7 +33,7 @@ async function search(query) {
       },
     ],
   });
-  const results = fuse.search(query);
+  const results = fuse.search(query, {limit: 12});
   return results;
 }
 
