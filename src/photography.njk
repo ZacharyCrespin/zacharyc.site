@@ -25,7 +25,7 @@ layout: default
   <div class="gallery" aria-label="Gallery">
     {%- for photo in collections.photo | reverse | limit(12) -%}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src , photo.data.alt, 600 %}
+      {% image photo.data.src, photo.data.alt, 600 %}
     </a>
     {%- endfor -%}
   </div>
