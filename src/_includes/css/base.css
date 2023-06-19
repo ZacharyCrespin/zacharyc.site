@@ -42,6 +42,11 @@ body {
   margin: 0;
 }
 
+article {
+  margin: 0 auto;
+  max-width: 80ch;
+}
+
 ::selection {
   background: var(--white);
   color: var(--black);
