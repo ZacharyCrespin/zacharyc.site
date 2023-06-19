@@ -5,7 +5,7 @@ layout: default
   {% for photo in collections.photo %}
     {% if photo.data.collection == id %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image "./src/images/" + photo.data.src, photo.data.alt, 600, true %}
+      {% image photo.data.src, photo.data.alt, 600, true %}
     </a>
     {% endif %}
   {% endfor %}

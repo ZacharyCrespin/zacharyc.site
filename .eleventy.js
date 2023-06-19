@@ -5,11 +5,11 @@ const downloader = require('11ty-external-file-downloader');
 const pkg = require('./package.json');
 
 async function imageShortcode(src, alt, sizes, lazyLoad = false) {
-  let metadata = await Image(src, {
+  let metadata = await Image("./src/images/" + src, {
     formats: ["webp", "jpeg", "svg"],
     widths: [150, 300, 600, "auto"],
-    urlPath: "/images/",
-    outputDir: "./public/images/"
+    urlPath: "/images",
+    outputDir: "public/images"
   });
   let imageAttributes = {
     alt,
