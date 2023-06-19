@@ -29,4 +29,12 @@ eleventyExcludeFromCollections: true
   <url>
     <loc>https://zacharyc.site/wallpapers/</loc>
   </url>
+  <url>
+    <loc>https://zacharyc.site/blog/</loc>
+  </url>
+  {%- for post in collections.post | reverse -%}
+  <url>
+    <loc>https://zacharyc.site/blog/{{ post.fileSlug }}/</loc>
+  </url>
+  {%- endfor -%}
 </urlset>

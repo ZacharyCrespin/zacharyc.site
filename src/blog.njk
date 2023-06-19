@@ -1,0 +1,13 @@
+---
+title: Blog
+layout: default
+---
+<div class="cards">
+  {%- for post in collections.post | reverse | limit(8) -%}
+  <a class="card" href="{{ post.url }}" aria-label="{{ post.data.title }}">
+    <h3>{{ post.data.title }}</h3>
+    <p>{{ post.data.date | fullString }}</p>
+    <span class="button">Read</span>
+  </a>
+  {%- endfor -%}
+</div>

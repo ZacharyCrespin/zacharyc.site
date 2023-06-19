@@ -10,7 +10,7 @@ layout: default
     {%- for project in collections.code | reverse -%}
       {% if project.data.featured %}
       <div class="card" aria-label="{{ project.data.title }}">
-        {% image "./src/images/"+project.data.img, project.data.title, 600 %}
+        {% image project.data.img, project.data.title, 600 %}
         <div class="text">
           <h3>{{ project.data.title }}</h3>
           <div class="tags" aria-label="Tech Used">
