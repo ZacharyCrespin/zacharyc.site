@@ -6,7 +6,7 @@ live: https://periodictables.zacharyc.site
 tech:
   - 11ty
   - Figma
-featured: false
+featured: true
 img: code/periodictables.png
 date: 2022-04-15
 ---
