@@ -1,6 +1,6 @@
 ---
 src: photography/cameras/2.jpg
-alt: 
+alt: The side of an old 8mm film camera.
 collection: cameras
 id: cameras/2
 ---
