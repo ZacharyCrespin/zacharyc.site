@@ -9,7 +9,7 @@ layout: default
   <div class="card" id="{{ film.data.id }}" aria-label="{{ film.data.title }}">
     {% image film.data.img, film.data.imgalt, 600 %}
     <div class="text">
-      <h3>{{ film.data.title }}</h3>
+      <h2 class="h3">{{ film.data.title }}</h2>
       {% if film.data.description %}
       <p>{{ film.data.description }}</p>
       {% endif %}

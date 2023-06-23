@@ -1,6 +1,7 @@
 ---
 title: 11ty-external-file-downloader
-moreInfo: /code/11ty-external-file-downloader/
+extraLink: /code/11ty-external-file-downloader/
+extraLinkText: View Docs
 source: https://github.com/ZacharyCrespin/11ty-external-file-downloader
 sourceType: github
 tech:
