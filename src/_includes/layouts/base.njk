@@ -24,10 +24,10 @@
     <meta name="theme-color" content="#2e2e2e">
     <meta name="author" content="Zachary Crespin">
     <meta name="generator" content="{{ eleventy.generator }}">
-    {% if not onlyBaseCSS %}
-      <link rel="stylesheet" href="/main.css">
-    {% else %}
+    {% if onlyBaseCSS %}
       <link rel="stylesheet" href="/base.css">
+    {% else %}
+      <link rel="stylesheet" href="/main.css">
     {% endif %}
     {% if highlightCode %}
       <link rel="stylesheet" href="/prism.css">
@@ -59,6 +59,6 @@
   <body>
     {{ content | safe }}
     {{ extraBodyCode | safe }}
-    <script async src="/tracker.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11"></script>
+    <script async src="/analytics.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11"></script>
   </body>
 </html>

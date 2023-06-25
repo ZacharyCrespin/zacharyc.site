@@ -23,7 +23,7 @@ async function imageShortcode(src, alt, sizes, lazyLoad = false) {
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(downloader, {
     urls: [
-      'https://analytics.zacharyc.site/tracker.js'
+      'https://analytics.zacharyc.site/analytics.js'
     ],
     directory: 'public'
   });
