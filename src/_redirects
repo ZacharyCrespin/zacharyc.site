@@ -1,5 +1,6 @@
+/api/search            /.netlify/functions/search    200
 /photos                /photography
-/11ty-external-file-downloader        /code/11ty-external-file-downloader
+/11ty-external-file-downloader    /code/11ty-external-file-downloader
 /periodic-tables       https://periodictables.zacharyc.site
 /periodictables        https://periodictables.zacharyc.site
 /fhsbellschedule       https://fhsbellschedule.netlify.app

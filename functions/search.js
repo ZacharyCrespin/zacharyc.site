@@ -37,7 +37,7 @@ async function search(query) {
   return results;
 }
 
-exports.handler = async (event, context) => {
+exports.handler = async (event) => {
   const query = event.queryStringParameters.q;
   const results = await search(query);
 
