@@ -1,10 +1,10 @@
 /api/search            /.netlify/functions/search    200
 /photos                /photography
-/11ty-external-file-downloader    /code/11ty-external-file-downloader
-/periodic-tables       https://periodictables.zacharyc.site
-/periodictables        https://periodictables.zacharyc.site
-/fhsbellschedule       https://fhsbellschedule.netlify.app
-/bellschedule          https://fhsbellschedule.netlify.app
+/code/11ty-external-file-downloader    /11ty-external-file-downloader
+/periodic-tables/*     https://periodictables.zacharyc.site/:splat
+/periodictables/*      https://periodictables.zacharyc.site/:splat
+/fhsbellschedule/*     https://fhsbellschedule.netlify.app/:splat
+/bellschedule/*        https://fhsbellschedule.netlify.app/:splat
 /christmas-countdown   https://christmascountdown.zacharyc.site
 /christmascountdown    https://christmascountdown.zacharyc.site
-/quotes                https://quotes.zacharyc.site
+/quotes/*              https://quotes.zacharyc.site/:splat    200
