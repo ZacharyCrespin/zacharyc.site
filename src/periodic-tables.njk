@@ -1,0 +1,64 @@
+---
+title: Periodic Tables
+description: Free Periodic Tables
+id: periodic-tables
+layout: default
+extraHeadCode: | 
+  <!-- Pinterest Tag -->
+  <script>
+    !function(e){if(!window.pintrk){window.pintrk = function () {
+    window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+      n=window.pintrk;n.queue=[],n.version="3.0";var
+      t=document.createElement("script");t.async=!0,t.src=e;var
+      r=document.getElementsByTagName("script")[0];
+      r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+    pintrk('load', '2612840119152');
+    pintrk('page');
+    pintrk('track', 'pagevisit', {
+      property: 'Periodic Tables'
+    });
+  </script>
+  <noscript>
+  <img height="1" width="1" style="display:none;" alt=""
+  src="https://ct.pinterest.com/v3/?event=init&tid=2612840119152&noscript=1" />
+  </noscript>
+  <!-- end Pinterest Tag -->
+  <!-- Download -->
+  <script>
+    function download(file) {
+      // Pinterest
+      pintrk('track', 'checkout', {
+        value: 0.00,
+        order_quantity: 1,
+        currency: 'USD',
+        line_items: [
+          {
+            product_name: file,
+            product_price: 0.00,
+            product_quantity: 1
+          }
+        ]
+      });
+
+      // Initiate file download
+      var link = document.createElement('a');
+      link.href = file;
+      link.download = file;
+      link.click();
+    };
+  </script>
+---
+{%- for table in collections.table | reverse -%}
+<div class="card full" id="{{ table.data.id }}" aria-label="{{ table.data.name }}">
+  {% image "periodic-tables/" + table.data.id + ".png", table.data.name + "Periodic Table", 600, true %}
+  <div class="text">
+    <h2 class="h3">{{ table.data.name }}</h2>
+    <div class="tags">
+      {% for tag in table.data.tags | filterTags %}
+        <p class="tag">{{ tag }}</p>
+      {% endfor %}
+    </div>
+    <button onclick="download('/files/{{- table.data.id -}}.zip')">Download</button>
+  </div>
+</div>
+{%- endfor -%}

@@ -1,28 +1,38 @@
 ---
-permalink: "pages.json"
+permalink: pages.json
 eleventyExcludeFromCollections: true
 ---
 [
-  {%- set pages = collections.all -%}
-  {%- for page in pages -%}
+  {%- for page in collections.all -%}
   {%- if page.url -%}
   {
     "url": "https://zacharyc.site{{ page.url }}",
     "title": "{{ page.data.title }}",
     "description": "{{ page.data.description }}",
-    "tags": "{{ page.data.tags }}"
+    "tags": "{{ page.data.tags | filterTags }}"
   },
   {%- endif -%}
+  {%- endfor -%}
+  {%- for table in collections.table -%}
+  {
+    "url": "https://zacharyc.site/periodic-tables/#{{ table.data.id }}",
+    "title": "{{ table.data.name }}",
+    "description": "{{ page.data.name }} Periodic Table",
+    "tags": "{{ page.data.tags | filterTags }}"
+  },
+  {%- endfor -%}
+  {%- for wallpaper in collections.wallpaper -%}
+  {
+    "url": "https://zacharyc.site/wallpapers/#{{ wallpaper.data.id }}",
+    "title": "{{ wallpaper.data.name }}",
+    "description": "{{ page.data.name }} Wallpapers",
+    "tags": "{{ page.data.tags | filterTags }}"
+  },
   {%- endfor -%}
   {
     "url": "https://fhsbellschedule.netlify.app/",
     "title": "Today — FHS Bell Schedule",
     "description": "Today's Foothill High School Bell Schedule"
-  },
-  {
-    "url": "https://periodictables.zacharyc.site/",
-    "title": "Home | Free Periodic Tables",
-    "description": "Home | Free Periodic Tables"
   },
   {
     "url": "https://math-to-svg.netlify.app/",
