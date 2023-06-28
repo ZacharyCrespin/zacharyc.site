@@ -48,7 +48,7 @@ extraHeadCode: |
     };
   </script>
 ---
-{%- for table in collections.table | reverse -%}
+{%- for table in collections.table | sort('order') | reverse -%}
 <div class="card full" id="{{ table.data.id }}" aria-label="{{ table.data.name }}">
   {% image "periodic-tables/" + table.data.id + ".png", table.data.name + "Periodic Table", 600, true %}
   <div class="text">
