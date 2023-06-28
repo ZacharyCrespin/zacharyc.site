@@ -17,16 +17,16 @@ eleventyExcludeFromCollections: true
   {
     "url": "https://zacharyc.site/periodic-tables/#{{ table.data.id }}",
     "title": "{{ table.data.name }}",
-    "description": "{{ page.data.name }} Periodic Table",
-    "tags": "{{ page.data.tags | filterTags }}"
+    "description": "{{ table.data.name }} Periodic Table",
+    "tags": "{{ table.data.tags | filterTags }}"
   },
   {%- endfor -%}
   {%- for wallpaper in collections.wallpaper -%}
   {
     "url": "https://zacharyc.site/wallpapers/#{{ wallpaper.data.id }}",
     "title": "{{ wallpaper.data.name }}",
-    "description": "{{ page.data.name }} Wallpapers",
-    "tags": "{{ page.data.tags | filterTags }}"
+    "description": "{{ wallpaper.data.name }} Wallpapers",
+    "tags": "{{ wallpaper.data.tags | filterTags }}"
   },
   {%- endfor -%}
   {
