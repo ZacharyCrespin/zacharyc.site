@@ -21,12 +21,6 @@ async function imageShortcode(src, alt, sizes, lazyLoad = false) {
 }
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPlugin(downloader, {
-    urls: [
-      'https://analytics.zacharyc.site/analytics.js'
-    ],
-    directory: 'public'
-  });
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(filesMinifier);
 
@@ -35,6 +29,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/files');
   eleventyConfig.addPassthroughCopy('./src/images');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
+  eleventyConfig.addPassthroughCopy('./src/analytics.js');
   eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');
   eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
   eleventyConfig.addPassthroughCopy('./src/favicon.png');
