@@ -2,5 +2,6 @@
 {
   "tags": "post",
   "permalink": "/blog/{{ page.fileSlug }}/index.html",
-  "layout": "blog"
+  "layout": "blog",
+  "article": true
 }
