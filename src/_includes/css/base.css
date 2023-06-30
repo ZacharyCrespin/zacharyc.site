@@ -9,7 +9,7 @@
   /* Typography */
   --font: "Inter", sans-serif;
   --font-italic: "Georgia", serif;
-  --font-code: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace;
+  --font-code: Consolas, 'Courier New', monospace;
   --fw-regular: 300;
   --fw-semibold: 600;
   --fw-bold: 900;
@@ -111,6 +111,10 @@ b, strong {
 
 em, i {
   font-family: var(--font-italic);
+}
+
+.display {
+  font-size: var(--double-canon);
 }
 
 small{
