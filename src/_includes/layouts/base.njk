@@ -17,7 +17,11 @@
     <link rel="icon" href="/favicon-light.png" media="(prefers-color-scheme: light)">
     <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <meta name="image" content="/images/share/{{ id }}.jpg">
+    {% if shareImage %}
+      <meta name="image" content="/images/{{ shareImage }}">
+    {% else %}
+      <meta name="image" content="/images/share/{{ id }}.jpg">
+    {% endif %}
     <meta name="color-scheme" content="dark">
     <meta name="author" content="Zachary Crespin">
     <meta name="generator" content="{{ eleventy.generator }}">
@@ -48,7 +52,11 @@
     {% else %}
       <meta property="og:description" content="{{ title }}">
     {% endif %}
-    <meta property="og:image" content="https://zacharyc.site/images/share/{{ id }}.jpg">
+    {% if shareImage %}
+      <meta property="og:image" content="https://zacharyc.site/images/{{ shareImage }}">
+    {% else %}
+      <meta property="og:image" content="https://zacharyc.site/images/share/{{ id }}.jpg">
+    {% endif %}
     <meta property="og:site_name" content="Zachary Crespin">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -57,7 +65,11 @@
     {% else %}
       <meta name="twitter:title" content="{{ title }}{% if not titleOverride %} — Zachary Crespin{% endif %}">
     {% endif %}
-    <meta name="twitter:image" content="https://zacharyc.site/images/share/{{ id }}.jpg">
+    {% if shareImage %}
+      <meta property="twitter:image" content="https://zacharyc.site/images/{{ shareImage }}">
+    {% else %}
+      <meta property="twitter:image" content="https://zacharyc.site/images/share/{{ id }}.jpg">
+    {% endif %}
     <meta name="twitter:site" content="@ZacharyCrespin">
     <meta name="twitter:creator" content="@ZacharyCrespin">
     {{ extraHeadCode | safe }}
