@@ -33,6 +33,7 @@
     "stylelint-config-standard": "^33.0.0"
   },
   "dependencies": {
-    "fuse.js": "^6.6.2"
+    "fuse.js": "^6.6.2",
+    "web-vitals": "^3.3.2"
   }
 }
