@@ -1,13 +1,6 @@
 ---
-layout: base
+layout: default
 ---
-{% include 'components/header.njk' %}
-<article role="main" id="content">
-  <div class="title-div">
-    <h1>{{ title }}</h1>
-    <p>{{ author }} &bull; {{ date | fullString }}</p>
-  </div>
-  <hr>
-  {{ content | safe }}
-</article>
-{% include 'components/footer.njk' %}
+<p>{{ date | fullString }}</p>
+<hr>
+{{ content | safe }}

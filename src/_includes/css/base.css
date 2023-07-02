@@ -9,7 +9,7 @@
   /* Typography */
   --font: "Inter", sans-serif;
   --font-italic: "Georgia", serif;
-  --font-code: Consolas, 'Courier New', monospace;
+  --font-code: "Consolas", 'Courier New', monospace;
   --fw-regular: 300;
   --fw-semibold: 600;
   --fw-bold: 900;
@@ -193,15 +193,15 @@ code {
 }
 
 pre {
-	padding: 1em;
-	margin: 0.5em 0;
+	padding: 2em;
+	margin: 1rem 0;
 	overflow: auto;
 	background: #1e1e1e;
 }
 
 :not(pre) > code {
-	padding: 0.1em 0.3em;
-	border-radius: 0.3em;
+	padding: 0.2em 0.3em;
+	border-radius: var(--border-radius);
 	color: #fff;
 	background: #1e1e1e;
 }
@@ -212,7 +212,7 @@ pre > code {
 }
 
 kbd {
-  padding: 0.1em 0.3em;
+  padding: 0.2em var(--border-radius);
 	color: var(--color-text);
 	background: var(--color-bg);
   border: var(--border);

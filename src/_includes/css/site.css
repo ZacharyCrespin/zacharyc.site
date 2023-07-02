@@ -75,13 +75,9 @@ footer.main-footer {
   text-align: center;
 }
 
-section.page-section {
-  text-align: center;
-}
 h2.section-heading, .h2.section-heading, .page-section > h2, .page-section > .h2 {
-  text-align: left;
-  padding-left: 0.5rem;
   padding-bottom: 0.25em;
+  border: none;
   border-bottom: var(--border);
 }
 
@@ -127,7 +123,7 @@ a.card:focus-visible .button {
 .card.full img {
   width: auto;
   height: auto;
-  max-width: 60vw;
+  max-width: 55vw;
   max-height: 80vh;
 }
 .card.full .text {
