@@ -19,21 +19,18 @@ extraHeadCode: |
     }
     #close {
       margin: 0;
-      padding: 0;
+      padding: 0.25rem;
       position: fixed;
       top: 1rem;
       right: 1rem;
-      border: none;
-      background-color: transparent;
-    }
-    #close:hover {
-      cursor: pointer;
+      line-height: 1;
+      border-radius: 100vmax;
     }
     #close svg path {
       fill: var(--color-text);
     }
     #close:hover svg path, #close:focus-visible svg path {
-      fill: var(--color-light);
+      fill: var(--color-bg);
     }
     img {
       width: auto;

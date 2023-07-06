@@ -4,7 +4,6 @@
   --color-bg: #000;
   --color-light: #bfbfbf;
   --color-dark: #404040;
-  --color-hov: var(--color-light);
 
   /* Typography */
   --font: "Inter", sans-serif;
@@ -37,6 +36,10 @@
   accent-color: var(--color-text);
 }
 
+@supports (font-variation-settings: normal) {
+  :root { --font: "Inter var", sans-serif; }
+}
+
 body {
   font-family: var(--font);
   font-size: var(--pica);
@@ -48,11 +51,11 @@ body {
 }
 
 main {
-  margin: 0 var(--gutter);
+  margin: 2rem var(--gutter);
 }
 
 article {
-  margin: 0 auto;
+  margin-inline: auto;
   max-width: var(--max-line);
 }
 
@@ -99,10 +102,14 @@ h6, .h6 {
 a, .a {
   background-color: transparent;
   color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-thickness: var(--stroke-width);
+  text-underline-offset: calc(var(--stroke-width) * 2);
 }
 a:hover, .a:hover, a:focus-visible, .a:focus-visible {
-  color: var(--color-hov);
+  color: var(--color-text);
   cursor: pointer;
+  text-decoration-thickness: calc(var(--stroke-width) * 2);
 }
 
 b, strong {
@@ -136,7 +143,7 @@ button, input, optgroup, select, textarea {
 
 button, .button {
   display: inline-block;
-  margin: 1rem 0.5rem;
+  margin: 0.5rem;
   padding: 0.5rem 1.5rem;
   border: var(--border);
   border-radius: var(--border-radius);
@@ -144,29 +151,13 @@ button, .button {
   color: var(--color-text);
   text-align: center;
   text-decoration: none;
-  transition: 150ms;
+  transition: all ease 150ms;
 }
 button:hover, .button:hover, 
 button:focus-visible, .button:focus-visible {
   cursor: pointer;
   background-color: var(--color-text);
   color: var(--color-bg);
-}
-
-input:not([type="radio"], [type="checkbox"], [type="file"]), textarea, select {
-  margin: 1rem 0.5rem;
-  padding: 0.5rem;
-  border: var(--border);
-  border-radius: var(--border-radius);
-  background-color: var(--color-bg);
-  color: var(--color-text);
-}
-
-figure img {
-  border-radius: var(--border-radius);
-}
-figure figcaption {
-  text-align: center;
 }
 
 hr {
@@ -202,8 +193,8 @@ pre {
 :not(pre) > code {
 	padding: 0.2em 0.3em;
 	border-radius: var(--border-radius);
-	color: #fff;
-	background: #1e1e1e;
+	color: var(--color-text);
+	background: var(--color-dark);
 }
 
 pre > code {
@@ -217,6 +208,77 @@ kbd {
 	background: var(--color-bg);
   border: var(--border);
   border-radius: var(--border-radius);
+}
+
+details summary:hover {
+  cursor: pointer;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+fieldset label {
+  margin-inline: 1rem;
+}
+
+input:not([type="radio"], [type="checkbox"], [type="file"]), textarea, select {
+  margin: 1rem 0.5rem;
+  padding: 0.5rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+fieldset input:not([type="radio"], [type="checkbox"], [type="file"]), fieldset textarea, fieldset select {
+  margin-top: 0;
+}
+
+fieldset textarea {
+  resize: vertical;
+}
+
+figure img {
+  border-radius: var(--border-radius);
+}
+figure figcaption {
+  text-align: center;
+}
+
+/* Table based on SuperMinimalCSS by Mike Mai */
+/* https://codepen.io/mikemai2awesome/pen/KKvMZVz?editors=1100 */
+table {
+  caption-side: bottom;
+  background-color: var(--color-text);
+  border-spacing: var(--stroke-width);
+  border-radius: var(--border-radius);
+}
+th, td {
+  padding: 0.25em 0.5em;
+  vertical-align: baseline;
+  background-color: var(--color-bg);
+}
+th {
+  text-align: start;
+}
+:where(tr > *:first-child) {
+  white-space: nowrap;
+}
+:where(table > *:first-child tr:first-child > *:first-child, table > caption + * tr:first-child > *:first-child) {
+  border-start-start-radius: var(--border-radius);
+}
+:where(table > *:first-child tr:first-child > *:last-child, table > caption + * tr:first-child > *:last-child) {
+  border-start-end-radius: var(--border-radius);
+}
+:where(table > *:last-child tr:last-child > *:first-child) {
+  border-end-start-radius: var(--border-radius);
+}
+:where(table > *:last-child tr:last-child > *:last-child) {
+  border-end-end-radius: var(--border-radius);
 }
 
 .card {
