@@ -34,8 +34,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/favicon.png');
   eleventyConfig.addPassthroughCopy('./src/robots.txt');
 
-  eleventyConfig.addPassthroughCopy({'./node_modules/web-vitals/dist/web-vitals.js':'web-vitals.js'});
-
   // layouts
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
   eleventyConfig.addLayoutAlias('default', 'layouts/default.njk');
