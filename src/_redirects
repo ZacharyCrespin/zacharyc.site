@@ -2,5 +2,7 @@
 /photos                /photography
 /code/11ty-external-file-downloader    /11ty-external-file-downloader
 /periodictables        /periodic-tables
-/bs                    https://fhsbellschedule.netlify.app/
-/quotes/*              https://quotes.zacharyc.site/:splat
+/fhsbellschedule       https://fhsbellschedule.netlify.app
+/bellschedule          https://fhsbellschedule.netlify.app
+/bs                    https://fhsbellschedule.netlify.app
+/quotes                https://quotes.zacharyc.site
