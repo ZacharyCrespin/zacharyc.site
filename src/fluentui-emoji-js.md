@@ -5,7 +5,7 @@ layout: default
 highlightCode: true
 article: true
 ---
-### A JavaScript wrapper for Microsoft's [Fluent Emojis](https://github.com/microsoft/fluentui-emoji).
+### A JavaScript wrapper for Microsoft's <a href="https://github.com/microsoft/fluentui-emoji" target="_blank">Fluent Emojis</a>.
 
 <a href="https://www.npmjs.com/package/fluentui-emoji-js" target="_blank" class="button">View on NPM</a>
 <a href="https://fluentui-emoji-js-demo.netlify.app" target="_blank" class="button">Live Demo</a>
