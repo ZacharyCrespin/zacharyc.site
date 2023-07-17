@@ -1,5 +1,6 @@
 /api/search            /.netlify/functions/search    200!
 /api/quote             /.netlify/functions/quote    200!
+/api/math              /.netlify/functions/math    200!
 /photos                /photography
 /code/11ty-external-file-downloader    /11ty-external-file-downloader
 /periodictables        /periodic-tables

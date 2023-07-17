@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-plugin-webc": "^0.11.1",
-    "fuse.js": "^6.6.2"
+    "fuse.js": "^6.6.2",
+    "mathjax-node": "^2.1.1"
   }
 }
