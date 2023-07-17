@@ -1,25 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quotes | Zachary Crespin</title>
-  <meta name="description" content="A random quote every time.">
-  <meta name="color-scheme" content="light dark">
-  <meta name="author" content="Zachary Crespin">
-  <style>
-    {% include "./style.css" %}
-  </style>
-</head>
-<body>
-  <div id="quote">
-    <h1 id="quoteQuote"></h1>
-    <p id="quoteAuthor"></p>
-  </div>
-  <script>
-    {% include "./script.js" %}
-  </script>
-  <script async src="https://analytics.zacharyc.site/tracker.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="010f26e9-05e1-41f5-86df-c0f7d3cc752e"></script>
-</body>
-</html>
+---
+layout: base
+nocss: true
+title: Quotes
+description: A random quote every time.
+---
+<style>
+  {% include "./style.css" %}
+</style>
+<div id="quote">
+  <h1 id="quoteQuote"></h1>
+  <p id="quoteAuthor"></p>
+</div>
+<script>
+  {% include "./script.js" %}
+</script>

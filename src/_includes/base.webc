@@ -8,29 +8,30 @@
     <title webc:elseif="seoTitle" @text="seoTitle + ' — Zachary Crespin'"></title>
     <title webc:else @text="title + ' — Zachary Crespin'"></title>
 
-    <meta webc:if="description" name="description" content="{{ description }}">
-    <meta webc:else name="description" content="{{ title }}">
+    <meta webc:if="description" name="description" :content="description">
+    <meta webc:else name="description" :content="title">
 
     <link rel="icon" href="/favicon.png">
     <link rel="icon" href="/favicon-light.png" media="(prefers-color-scheme: light)">
     <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <meta webc:if="shareImage" name="image" :content="'/images/' + shareImage">
-    <meta webc:else name="image" content="'/images/share/' + id + '.jpg'">
+    <meta webc:else name="image" :content="'/images/share/' + id + '.jpg'">
     <meta name="color-scheme" content="dark">
     <meta name="author" content="Zachary Crespin">
     <meta name="generator" :content="eleventy.generator">
     <link rel="canonical" :href="'https://zacharyc.site' + page.url">
 
-    <link rel="stylesheet" href="../css/inter.css">
-    <link rel="stylesheet" href="../css/meshed-display.css">
-    <link rel="stylesheet" href="../css/base.css">
-    <link webc:if="!onlyBaseCSS" rel="stylesheet" href="../css/site.css">
+    <link webc:if="!nocss" rel="stylesheet" href="../css/inter.css">
+    <link webc:if="!nocss" rel="stylesheet" href="../css/meshed-display.css">
+    <link webc:if="!nocss" rel="stylesheet" href="../css/base.css">
+    <link webc:if="!nocss || !onlyBaseCSS" rel="stylesheet" href="../css/site.css">
 
-    <link rel="stylesheet" :href="getBundleFileUrl('css')" webc:keep>
+    <link webc:if="!nocss" rel="stylesheet" :href="getBundleFileUrl('css')" webc:keep>
+    <style webc:if="nocss" @raw="getBundle('css')" webc:keep></style>
 
     <!-- Open Graph -->
-    <meta property="og:url" content="'https://zacharyc.site' + page.url">
+    <meta property="og:url" :content="'https://zacharyc.site' + page.url">
     <meta webc:if="article" property="og:type" content="article">
     <meta webc:else property="og:type" content="website">
     <meta property="og:locale" content="en_US">
