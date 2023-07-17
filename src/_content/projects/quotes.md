@@ -1,7 +1,7 @@
 ---
 title: Quotes API & Website
 id: quotes
-live: https://quotes.zacharyc.site
+live: /quote
 source: https://github.com/ZacharyCrespin/quote-api
 sourceType: github
 tech:
