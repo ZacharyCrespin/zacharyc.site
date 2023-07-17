@@ -1,6 +1,8 @@
-const Image = require("@11ty/eleventy-img");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pkg = require('./package.json');
+const pluginWebc = require("@11ty/eleventy-plugin-webc");
+const Image = require("@11ty/eleventy-img");
+const { eleventyImagePlugin } = require("@11ty/eleventy-img");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 
 async function imageShortcode(src, alt, sizes, lazyLoad = false) {
@@ -20,6 +22,25 @@ async function imageShortcode(src, alt, sizes, lazyLoad = false) {
 }
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(pluginWebc, {
+    components: [
+			"./src/_components/**/*.webc",
+			"npm:@11ty/eleventy-plugin-syntaxhighlight/*.webc",
+			"npm:@11ty/eleventy-img/*.webc",
+		]
+  });
+  eleventyConfig.addPlugin(eleventyImagePlugin, {
+		// Set global default options
+		formats: ["webp", "jpeg", "svg"],
+    widths: [150, 300, 600, "auto"],
+		urlPath: "/images/",
+    outputDir: "public/images/",
+
+		defaultAttributes: {
+			loading: "eager",
+			decoding: "async"
+		}
+	});
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(filesMinifier);
 
@@ -35,11 +56,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/robots.txt');
 
   // layouts
-  eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
-  eleventyConfig.addLayoutAlias('default', 'layouts/default.njk');
-  eleventyConfig.addLayoutAlias('collection', 'layouts/collection.njk');
-  eleventyConfig.addLayoutAlias('photo', 'layouts/photo.njk');
-  eleventyConfig.addLayoutAlias('blog', 'layouts/blog.njk');
+  eleventyConfig.addLayoutAlias('base', 'base.webc');
+  eleventyConfig.addLayoutAlias('default', 'default.webc');
+  eleventyConfig.addLayoutAlias('collection', 'collection.njk');
+  eleventyConfig.addLayoutAlias('photo', 'photo.webc');
+  eleventyConfig.addLayoutAlias('blog', 'blog.njk');
 
   // format dates
   eleventyConfig.addFilter("shortString", (dateObj) => {
@@ -86,8 +107,9 @@ module.exports = function(eleventyConfig) {
       output: "public"
     },
     templateFormats: [
-			"md",
 			"njk",
+			"webc",
+			"md",
 		],
   };
 }

@@ -33,6 +33,7 @@
     "stylelint-config-standard": "^34.0.0"
   },
   "dependencies": {
+    "@11ty/eleventy-plugin-webc": "^0.11.1",
     "fuse.js": "^6.6.2"
   }
 }
