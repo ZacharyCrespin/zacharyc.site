@@ -1,6 +1,6 @@
 ---
 title: Newport Beach
-SEOtitle: Newport Beach — Photography
+seoTitle: Newport Beach — Photography
 description: Newport Beach Photo Collection
 numberofphotos: 3
 date: 2020-06-22
