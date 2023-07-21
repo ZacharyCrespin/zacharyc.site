@@ -32,7 +32,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');
   eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
   eleventyConfig.addPassthroughCopy('./src/favicon.png');
+  eleventyConfig.addPassthroughCopy('./src/quotes.json');
   eleventyConfig.addPassthroughCopy('./src/robots.txt');
+  eleventyConfig.addPassthroughCopy('./src/sites.json');
 
   // layouts
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
