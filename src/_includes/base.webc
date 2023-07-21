@@ -22,13 +22,15 @@
     <meta name="generator" :content="eleventy.generator">
     <link rel="canonical" :href="'https://zacharyc.site' + page.url">
 
-    <link webc:if="!nocss" rel="stylesheet" href="../css/inter.css">
-    <link webc:if="!nocss" rel="stylesheet" href="../css/meshed-display.css">
-    <link webc:if="!nocss" rel="stylesheet" href="../css/base.css">
-    <link webc:if="!nocss || !onlyBaseCSS" rel="stylesheet" href="../css/site.css">
+    <link webc:if="!nocss" rel="stylesheet" href="../css/inter.css" webc:bucket="site">
+    <link webc:if="!nocss" rel="stylesheet" href="../css/meshed-display.css" webc:bucket="site">
+    <link webc:if="!nocss" rel="stylesheet" href="../css/base.css" webc:bucket="site">
+    <link webc:if="!(nocss || onlyBaseCSS)" rel="stylesheet" href="../css/site.css" webc:bucket="site">
 
-    <link webc:if="!nocss" rel="stylesheet" :href="getBundleFileUrl('css')" webc:keep>
-    <style webc:if="nocss" @raw="getBundle('css')" webc:keep></style>
+    <!-- Main Site CSS -->
+    <link rel="stylesheet" :href="getBundleFileUrl('css', 'site')" webc:keep>
+    <!-- Page CSS -->
+    <style @raw="getBundle('css')" webc:keep></style>
 
     <!-- Open Graph -->
     <meta property="og:url" :content="'https://zacharyc.site' + page.url">
