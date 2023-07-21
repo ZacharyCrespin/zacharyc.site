@@ -1,7 +1,9 @@
-/api/search            /.netlify/functions/search    200
+/api/search            /.netlify/functions/search    200!
+/api/quote             /.netlify/functions/quote     200!
 /photos                /photography
 /code/11ty-external-file-downloader    /11ty-external-file-downloader
 /periodictables        /periodic-tables
+/quotes                /quote
 /fhsbellschedule       https://fhsbellschedule.netlify.app
 /bellschedule          https://fhsbellschedule.netlify.app
 /bs                    https://fhsbellschedule.netlify.app
