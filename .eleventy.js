@@ -45,15 +45,18 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(filesMinifier);
 
   eleventyConfig.addPassthroughCopy('./src/admin');
-  eleventyConfig.addPassthroughCopy('./src/fonts');
   eleventyConfig.addPassthroughCopy('./src/files');
+  eleventyConfig.addPassthroughCopy('./src/fonts');
   eleventyConfig.addPassthroughCopy('./src/images');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
   eleventyConfig.addPassthroughCopy('./src/analytics.js');
   eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');
   eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
+  eleventyConfig.addPassthroughCopy('./src/favicon.ico');
   eleventyConfig.addPassthroughCopy('./src/favicon.png');
+  eleventyConfig.addPassthroughCopy('./src/quotes.json');
   eleventyConfig.addPassthroughCopy('./src/robots.txt');
+  eleventyConfig.addPassthroughCopy('./src/sites.json');
 
   // layouts
   eleventyConfig.addLayoutAlias('base', 'base.webc');
