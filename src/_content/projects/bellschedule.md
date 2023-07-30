@@ -4,7 +4,8 @@ source: https://github.com/ZacharyCrespin/FHS-Bell-Schedule
 sourceType: github
 live: https://fhsbellschedule.netlify.app
 tech:
-  - Python
+  - Eleventy
+  - JavaScript
 featured: true
 img: code/bellschedule.png
 date: 2022-07-18T02:10:25Z
