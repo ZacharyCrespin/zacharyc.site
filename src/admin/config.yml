@@ -1,0 +1,117 @@
+backend:
+  name: git-gateway
+  branch: "8.0"
+publish_mode: editorial_workflow
+media_folder: "src/images" # Media files will be stored under src/images
+public_folder: "/images" # The src attribute for uploaded media will begin with /images
+site_url: https://zacharyc.site
+collections:
+  - name: "photos" # Used in routes
+    label: "Photos" # Used in the UI
+    folder: "src/_content/photos" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    editor:
+      preview: false
+    slug: "{{slug}}" # Filename template
+    media_folder: '{{media_folder}}/photogrpahy'
+    public_folder: '{{public_folder}}/photogrpahy'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Image src", name: "src", widget: "image"}
+      - {label: "Alt Text", name: "alt", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {lapel: "ID", name: id, widget: "string"}
+      - {label: "Date", name: "date", widget: "date"}
+  - name: "collection" # Used in routes
+    label: "Photo Collection" # Used in the UI
+    folder: "src/photography/collections" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    editor:
+      preview: false
+    slug: "{{slug}}" # Filename template
+    media_folder: '{{media_folder}}/banners'
+    public_folder: '{{public_folder}}/banners'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Number of Photos", name: "numberofphotos", widget: "number"}
+      - {label: "Date", name: "date", widget: "date"}
+      - {lapel: "ID", name: id, widget: "string"}
+      - {label: "Image", name: "img", widget: "image"}
+  - name: "code" # Used in routes
+    label: "Code Project" # Used in the UI
+    folder: "src/_content/projects" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    editor:
+      preview: false
+    slug: "{{slug}}" # Filename template
+    media_folder: '{{media_folder}}/code'
+    public_folder: '{{public_folder}}/code'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Live URL", name: "live", widget: "string", required: false}
+      - {label: "Extra Link", name: "extraLink", widget: "string", required: false}
+      - {label: "Extra Link Text", name: "extraLinkText", widget: "string", required: false}
+      - {label: "Source URL", name: "source", widget: "string", required: false}
+      - {label: "Source Type (`github` or `codepen`)", name: "sourceType", widget: "string", required: false}
+      - {label: "Tech", name: "tech", widget: "list"}
+      - {label: "Featured", name: "featured", widget: "boolean"}
+      - {label: "Image", name: "img", widget: "image", required: false}
+      - {label: "Date", name: "date", widget: "date"}
+  - name: "film" # Used in routes
+    label: "Film" # Used in the UI
+    folder: "src/_content/films" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    editor:
+      preview: false
+    slug: "{{slug}}" # Filename template
+    media_folder: '{{media_folder}}/film'
+    public_folder: '{{public_folder}}/film'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Image", name: "img", widget: "image"}
+      - {label: "Image alt", name: "imgalt", widget: "string"}
+      - {label: "Watch Link", name: "watchlink", widget: "string", required: false}
+      - {label: "Info Link", name: "infolink", widget: "string", required: false}
+      - {label: "Date", name: "date", widget: "date"}
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "src/_content/posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "hidden", default: "Zachary Crespin"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "wallpapers" # Used in routes, e.g., /admin/collections/tables
+    label: "Wallpapers" # Used in the UI
+    folder: "src/_content/wallpapers" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false
+    media_folder: '{{media_folder}}/wallpapers'
+    public_folder: '{{public_folder}}/wallpapers'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Image", name: "img", widget: "image"}
+      - {label: "ID", name: "id", widget: "string"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Date", name: "date", widget: "datetime"}
+  - name: "tables" # Used in routes, e.g., /admin/collections/tables
+    label: "Periodic Tables" # Used in the UI
+    folder: "src/_content/tables" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false
+    media_folder: '{{media_folder}}/periodic-tables'
+    public_folder: '{{public_folder}}/periodic-tables'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Image", name: "img", widget: "image"}
+      - {label: "ID", name: "id", widget: "string"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Author", name: "author", widget: "hidden", default: "Zachary Crespin"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Pin ID", name: "pinid", widget: "number", required: false}

@@ -20,6 +20,7 @@
   "scripts": {
     "dev": "netlify dev",
     "start": "eleventy --quiet --serve",
+    "start-cms": "npx netlify-cms-proxy-server",
     "build": "eleventy",
     "lint": "stylelint src/**/*.css"
   },

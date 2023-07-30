@@ -4,9 +4,9 @@
   font-weight: 600;
   font-display: swap;
   src: local("MeshedDisplay-SemiBold"),
-       url("https://zacharyc.site/fonts/Meshed Display/MeshedDisplay-SemiBold.woff2") format("woff2"),
-       url("https://zacharyc.site/fonts/Meshed Display/MeshedDisplay-SemiBold.woff") format("woff"),
-       url("https://zacharyc.site/fonts/Meshed Display/MeshedDisplay-SemiBold.ttf") format("truetype");
+       url("/fonts/Meshed Display/MeshedDisplay-SemiBold.woff2") format("woff2"),
+       url("/fonts/Meshed Display/MeshedDisplay-SemiBold.woff") format("woff"),
+       url("/fonts/Meshed Display/MeshedDisplay-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   font-weight: 900;
   font-display: swap;
   src: local("MeshedDisplay-Black"),
-       url("https://zacharyc.site/fonts/Meshed Display/MeshedDisplay-Black.woff2") format("woff2"),
-       url("https://zacharyc.site/fonts/Meshed Display/MeshedDisplay-Black.woff") format("woff"),
-       url("https://zacharyc.site/fonts/Meshed Display/MeshedDisplay-Black.ttf") format("truetype");
+       url("/fonts/Meshed Display/MeshedDisplay-Black.woff2") format("woff2"),
+       url("/fonts/Meshed Display/MeshedDisplay-Black.woff") format("woff"),
+       url("/fonts/Meshed Display/MeshedDisplay-Black.ttf") format("truetype");
 }

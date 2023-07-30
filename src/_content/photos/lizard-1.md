@@ -1,6 +1,7 @@
 ---
 src: photography/lizard/1.jpg
 alt: A lizard.
-collection: lizard
+tags: 
+  - lizard
 id: lizard/1
 ---

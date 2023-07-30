@@ -3,10 +3,12 @@ layout: default
 ---
 <section class="gallery" aria-label="Gallery">
   {% for photo in collections.photo %}
-    {% if photo.data.collection == id %}
+  {% for tag in photo.data.tags %}
+    {% if tag == id %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
       {% image photo.data.src, photo.data.alt, 600, true %}
     </a>
     {% endif %}
+  {% endfor %}
   {% endfor %}
 </section>
