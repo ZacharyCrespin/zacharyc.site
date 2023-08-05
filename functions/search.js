@@ -1,14 +1,10 @@
+const axios = require('axios');
 const Fuse = require('fuse.js');
 
 async function getPages() {
   try {
-    return fetch("https://zacharyc.site/pages.json")
-    .then(res => {
-      return res.json()
-    })
-    .then(res => {
-      return res
-    })
+    const response = await axios.get("https://zacharyc.site/pages.json");
+    return response.data;
   } catch (error) {
     console.log(error);
     return error.message;
