@@ -23,7 +23,6 @@
     <link rel="canonical" :href="'https://zacharyc.site' + page.url">
 
     <link webc:if="!nocss" rel="stylesheet" href="../css/inter.css" webc:bucket="site">
-    <link webc:if="!nocss" rel="stylesheet" href="../css/meshed-display.css" webc:bucket="site">
     <link webc:if="!nocss" rel="stylesheet" href="../css/base.css" webc:bucket="site">
     <link webc:if="!(nocss || onlyBaseCSS)" rel="stylesheet" href="../css/site.css" webc:bucket="site">
 

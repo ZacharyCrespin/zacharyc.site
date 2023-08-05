@@ -1,4 +1,25 @@
 /*! VS Code Dark+ (by tabuckner) */
+pre,
+code {
+	text-shadow: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	hyphens: none;
+}
+
+@media print {
+	pre,
+	code {
+		text-shadow: none;
+	}
+}
+
+/*********************************************************
+* Tokens
+*/
 .namespace {
 	opacity: .7;
 }
@@ -177,10 +198,10 @@
 .token.namespace {
 	color: #4ec9b0;
 }
+
 /*********************************************************
 * Language Specific
 */
-
 pre[class*="language-javascript"],
 code[class*="language-javascript"],
 pre[class*="language-jsx"],
