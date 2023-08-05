@@ -4,20 +4,26 @@ description: Film
 id: film
 layout: default
 ---
-{%- for film in collections.film | reverse -%}
-<div class="card full" id="{{ film.data.id }}" aria-label="{{ film.data.title }}">
-  {% image film.data.img, film.data.imgalt, 600 %}
-  <div class="text">
-    <h2 class="h3">{{ film.data.title }}</h2>
-    {% if film.data.description %}
-    <p>{{ film.data.description }}</p>
-    {% endif %}
-    {% if film.data.infolink %}
-    <a href="{{ film.data.infolink }}" class="button">More Info</a>
-    {% endif %}
+<div class="cards wide">
+  {%- for film in collections.film | reverse -%}
+  <div class="card video" id="{{ film.data.id }}" aria-label="{{ film.data.title }}">
     {% if film.data.watchlink %}
-    <a href="{{ film.data.watchlink }}" class="button">Watch</a>
+    <a href="{{ film.data.watchlink }}" class="video-preview" aria-label="Watch Now">
+      <img src="/images/icons/play_circle.svg" class="play-circle" alt="play icon">
+      {% image film.data.img, film.data.imgalt, 600 %}
+    </a>
+    {% else %}
+    {% image film.data.img, film.data.imgalt, 600 %}
     {% endif %}
+    <div class="text">
+      <h2 class="h3">{{ film.data.title }}</h2>
+      {% if film.data.description %}
+      <p>{{ film.data.description }}</p>
+      {% endif %}
+      {% if film.data.infolink %}
+      <a href="{{ film.data.infolink }}" class="button">More Info</a>
+      {% endif %}
+    </div>
   </div>
+  {%- endfor -%}
 </div>
-{%- endfor -%}

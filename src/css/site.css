@@ -117,6 +117,20 @@ a.card:focus-visible .button {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
+.card.video .video-preview {
+  display: inline-block;
+  position: relative;
+}
+
+.card.video .play-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4rem !important;
+  height: 4rem !important;
+}
+
 /* Full Width Cards */
 .card.full {
   display: grid;

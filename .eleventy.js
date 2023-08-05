@@ -67,6 +67,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias('photo', 'photo.webc');
   eleventyConfig.addLayoutAlias('blog', 'blog.njk');
 
+  eleventyConfig.addWatchTarget("./src/css/");
+
   // format dates
   eleventyConfig.addFilter("shortString", (dateObj) => {
     const year = dateObj.getUTCFullYear();
