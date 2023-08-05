@@ -1,9 +1,12 @@
+const axios = require('axios')
+
 async function getQuotes() {
-  const response = await fetch("https://zacharyc.site/quotes.json")
-  if (!response.ok) {
-    console.error("Failed to fetch quotes")
+  try {
+    const response = await axios.get("https://zacharyc.site/quotes.json")
+    return response.data
+  } catch (error) {
+    console.error("Error fetching quotes")
   }
-  return response.json()
 }
 
 async function randomQuote() {
