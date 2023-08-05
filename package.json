@@ -30,12 +30,12 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
     "11ty-external-file-downloader": "^1.0.3",
-    "stylelint": "^15.10.1",
+    "stylelint": "^15.10.2",
     "stylelint-config-standard": "^34.0.0"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-webc": "^0.11.1",
-    "fuse.js": "^6.6.2",
-    "mathjax-node": "^2.1.1"
+    "fluentui-emoji-js": "^1.1.1",
+    "fuse.js": "^6.6.2"
   }
 }

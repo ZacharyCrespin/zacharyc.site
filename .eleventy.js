@@ -44,6 +44,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(filesMinifier);
 
+  eleventyConfig.addPassthroughCopy('./src/**/*.html');
+
   eleventyConfig.addPassthroughCopy('./src/admin');
   eleventyConfig.addPassthroughCopy('./src/files');
   eleventyConfig.addPassthroughCopy('./src/fonts');
