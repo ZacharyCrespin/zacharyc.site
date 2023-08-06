@@ -8,6 +8,7 @@
 # Avoid confusion
 /periodictables        /periodic-tables
 /quotes                /quote
+/christmascountdown    /christmas-countdown
 /fhsbellschedule       https://fhsbellschedule.netlify.app
 /bellschedule          https://fhsbellschedule.netlify.app
 /bs                    https://fhsbellschedule.netlify.app
