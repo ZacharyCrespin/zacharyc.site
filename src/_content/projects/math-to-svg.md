@@ -6,7 +6,6 @@ sourceType: github
 tech: 
   - Netlify Functions
   - JavaScript
-featured: true
 img: code/math-to-svg.png
 date: 2023-05-25T07:00:00.000Z
 ---

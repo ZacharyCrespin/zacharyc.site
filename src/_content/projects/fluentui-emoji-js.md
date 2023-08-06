@@ -6,7 +6,8 @@ source: https://github.com/ZacharyCrespin/fluentui-emoji-js
 sourceType: github
 tech:
   - JavaScript
-  - npm
-featured: false
+img: code/emoji.png
+featured: true
+featuredOrder: 1
 date: 2023-07-13
 ---

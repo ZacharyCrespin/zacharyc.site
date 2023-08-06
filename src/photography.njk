@@ -19,14 +19,15 @@ layout: default
   <a class="button center" href="/photography/collections/">More Collections</a>
 </section>
 
-<section class="page-section" aria-label="Latest Photos">
-  <h2>Latest Photos</h2>
-  <p>ps. I broke this; these aren't actually the latest photos.</p>
+<section class="page-section" aria-label="Featured Photos">
+  <h2>Featured Photos</h2>
   <div class="gallery" aria-label="Gallery">
-    {%- for photo in collections.photo | reverse | limit(12) -%}
+    {%- for photo in collections.photo | sort('featuredOrder') -%}
+    {% if photo.data.featured %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
       {% image photo.data.src, photo.data.alt, 600, true %}
     </a>
+    {% endif %}
     {%- endfor -%}
   </div>
 </section>

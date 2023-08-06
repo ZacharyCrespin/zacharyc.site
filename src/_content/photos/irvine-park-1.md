@@ -6,4 +6,6 @@ tags:
 id: irvine-park/1
 date: 2021-01-18
 location: Irvine Park
+featured: true
+featuredOrder: 1
 ---

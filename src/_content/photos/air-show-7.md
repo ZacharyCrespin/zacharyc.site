@@ -4,4 +4,6 @@ alt: Six fighter jets fly in formation.
 tags: 
   - air-show
 id: air-show/7
+featured: true
+featuredOrder: 5
 ---

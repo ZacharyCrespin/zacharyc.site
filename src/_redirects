@@ -1,6 +1,11 @@
+# Let Netlify functions live at /api
 /api/*                 /.netlify/functions/:splat    200!
+
+# Old/Moved URLs
 /photos                /photography
 /code/11ty-external-file-downloader    /11ty-external-file-downloader
+
+# Avoid confusion
 /periodictables        /periodic-tables
 /quotes                /quote
 /fhsbellschedule       https://fhsbellschedule.netlify.app

@@ -16,11 +16,13 @@ collections:
     media_folder: '{{media_folder}}/photogrpahy'
     public_folder: '{{public_folder}}/photogrpahy'
     fields: # The fields for each document, usually in front matter
+      - {lapel: "ID", name: id, widget: "string"}
       - {label: "Image src", name: "src", widget: "image"}
       - {label: "Alt Text", name: "alt", widget: "string"}
       - {label: "Tags", name: "tags", widget: "list", required: false}
-      - {lapel: "ID", name: id, widget: "string"}
       - {label: "Date", name: "date", widget: "date"}
+      - {label: "Featured", name: "featured", widget: "boolean", required: false}
+      - {label: "Featured Order", name: "featuredOrder", widget: "number", required: false}
   - name: "collection" # Used in routes
     label: "Photo Collection" # Used in the UI
     folder: "src/photography/collections" # The path to the folder where the documents are stored
@@ -52,8 +54,9 @@ collections:
       - {label: "Extra Link Text", name: "extraLinkText", widget: "string", required: false}
       - {label: "Source URL", name: "source", widget: "string", required: false}
       - {label: "Source Type (`github` or `codepen`)", name: "sourceType", widget: "string", required: false}
-      - {label: "Tech", name: "tech", widget: "list"}
-      - {label: "Featured", name: "featured", widget: "boolean"}
+      - {label: "Tech", name: "tech", widget: "list", required: false}
+      - {label: "Featured", name: "featured", widget: "boolean", required: false}
+      - {label: "Featured Order", name: "featuredOrder", widget: "number", required: false}
       - {label: "Image", name: "img", widget: "image", required: false}
       - {label: "Date", name: "date", widget: "date"}
   - name: "film" # Used in routes

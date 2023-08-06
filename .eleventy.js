@@ -99,6 +99,15 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => collectionTags.indexOf(tag) === -1);
 	});
 
+  // sort list by a frontmatter value
+  eleventyConfig.addFilter("sort", function (list, property) {
+    return list.sort((a, b) => {
+      const orderA = a.data[property] || 0;
+      const orderB = b.data[property] || 0;
+      return orderA - orderB;
+    });
+  });
+
   return {
     dir: {
       input: "src",
