@@ -1,0 +1,10 @@
+---
+layout: base
+---
+<siteheader webc:nokeep></siteheader>
+<main role="main" id="content">
+  <h1 class="title display" @text="title"></h1>
+  <article webc:if="article" @html="content"></article>
+  <template @html="content" webc:else webc:nokeep></template>
+</main>
+<sitefooter webc:nokeep></sitefooter>

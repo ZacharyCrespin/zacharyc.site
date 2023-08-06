@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title webc:if="seoTitle && titleOverride" @text="seoTitle"></title>
+    <title webc:elseif="seoTitle" @text="seoTitle + ' — Zachary Crespin'"></title>
+    <title webc:else @text="title + ' — Zachary Crespin'"></title>
+
+    <meta webc:if="description" name="description" :content="description">
+    <meta webc:else name="description" :content="title">
+
+    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon-light.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <meta webc:if="shareImage" name="image" :content="'/images/' + shareImage">
+    <meta webc:else name="image" :content="'/images/share/' + id + '.jpg'">
+    <meta name="color-scheme" content="dark">
+    <meta name="author" content="Zachary Crespin">
+    <meta name="generator" :content="eleventy.generator">
+    <link rel="canonical" :href="'https://zacharyc.site' + page.url">
+
+    <link webc:if="!nocss" rel="stylesheet" href="../css/inter.css" webc:bucket="site">
+    <link webc:if="!nocss" rel="stylesheet" href="../css/base.css" webc:bucket="site">
+    <link webc:if="!(nocss || onlyBaseCSS)" rel="stylesheet" href="../css/site.css" webc:bucket="site">
+
+    <!-- Main Site CSS -->
+    <link rel="stylesheet" :href="getBundleFileUrl('css', 'site')" webc:keep>
+    <!-- Page CSS -->
+    <style @raw="getBundle('css')" webc:keep></style>
+
+    <!-- Open Graph -->
+    <meta property="og:url" :content="'https://zacharyc.site' + page.url">
+    <meta webc:if="article" property="og:type" content="article">
+    <meta webc:else property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta webc:if="seoTitle && titleOverride" property="og:title" :content="seoTitle">
+    <meta webc:elseif="seoTitle" property="og:title" :content="seoTitle + ' — Zachary Crespin'">
+    <meta webc:else property="og:title" :content="title + ' — Zachary Crespin'">
+    <meta webc:if="description" property="og:description" :content="description">
+    <meta webc:else property="og:description" :content="title">
+    <meta webc:if="shareImage" property="og:image" :content="'https://zacharyc.site/images/' + shareImage">
+    <meta webc:else property="og:image" :content="'https://zacharyc.site/images/share/' + id  + '.jpg'">
+    <meta property="og:site_name" content="Zachary Crespin">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ZacharyCrespin">
+    <meta name="twitter:creator" content="@ZacharyCrespin">
+
+    <template @html="extraHeadCode" webc:nokeep></template>
+  </head>
+  <body>
+    <template @html="content" webc:nokeep></template>
+    <template @html="extraBodyCode" webc:nokeep></template>
+    <codeHighlight webc:if="highlightCode" webc:nokeep></codeHighlight>
+    <script @html="getBundle('js')" webc:keep></script>
+    <script webc:keep async src="/analytics.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11"></script>
+  </body>
+</html>

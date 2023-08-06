@@ -19,8 +19,7 @@ extraHeadCode: |
     });
   </script>
   <noscript>
-  <img height="1" width="1" style="display:none;" alt=""
-  src="https://ct.pinterest.com/v3/?event=init&tid=2612840119152&noscript=1" />
+    <img height="1" width="1" style="display:none;" alt="" src="https://ct.pinterest.com/v3/?event=init&tid=2612840119152&noscript=1">
   </noscript>
   <!-- end Pinterest Tag -->
   <!-- Download -->
@@ -42,26 +41,21 @@ extraHeadCode: |
           }
         ]
       });
-
-      // Initiate file download
-      var link = document.createElement('a');
-      link.href = file;
-      link.download = file;
-      link.click();
     };
   </script>
 ---
-{% for wallpaper in collections.wallpaper | sort('order') | reverse %}
+{% for wallpaper in collections.wallpaper | reverse %}
 <div class="card full" id="{{ wallpaper.data.id }}" aria-label="{{ wallpaper.data.name }}">
-  {% image "wallpapers/" + wallpaper.data.id + ".png", wallpaper.data.name + " phone wallpapers", 300, true %}
+  {% image wallpaper.data.img, wallpaper.data.name + " phone wallpapers", 300, true %}
   <div class="text">
     <h2 class="h3">{{ wallpaper.data.name }}</h2>
+    {% if not wallpaper.data.legacy %}<p>{{ wallpaper.data.date | fullString }}</p>{% endif %}
     <div class="tags">
       {% for tag in wallpaper.data.tags | filterTags %}
         <p class="tag">{{ tag }}</p>
       {% endfor %}
     </div>
-    <button onclick="download('/files/{{- wallpaper.data.id -}}.zip')">Download</button>
+    <a class="button" href="/files/{{- wallpaper.data.id -}}.zip" onclick="download('/files/{{- wallpaper.data.id -}}.zip')">Download</a>
   </div>
 </div>
 {% endfor %}

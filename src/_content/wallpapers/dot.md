@@ -1,7 +1,9 @@
 ---
+img: wallpapers/dot.png
 id: dot
 name: Dot
 tags: 
   - 2 Variants
-order: 5
+date: 2022-02-24
+legacy: true
 ---

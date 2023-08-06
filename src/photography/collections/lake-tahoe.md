@@ -1,6 +1,6 @@
 ---
 title: Lake Tahoe
-SEOtitle: Lake Tahoe — Photography
+seoTitle: Lake Tahoe — Photography
 description: Lake Tahoe Photo Collection
 numberofphotos: 7
 date: 2021-06-25

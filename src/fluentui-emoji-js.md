@@ -7,8 +7,9 @@ article: true
 ---
 ### A JavaScript wrapper for Microsoft's <a href="https://github.com/microsoft/fluentui-emoji" target="_blank">Fluent Emojis</a>.
 
-<a href="https://www.npmjs.com/package/fluentui-emoji-js" target="_blank" class="button">View on NPM</a>
-<a href="https://fluentui-emoji-js-demo.netlify.app" target="_blank" class="button">Live Demo</a>
+<a href="https://www.npmjs.com/package/fluentui-emoji-js" target="_blank" class="button">NPM</a>
+<a href="https://github.com/ZacharyCrespin/fluentui-emoji-js" target="_blank" class="button">Github</a>
+<a href="/fluentui-emoji-js/demo" class="button">Live Demo</a>
 
 ## Usage
 ### Install
@@ -16,14 +17,6 @@ article: true
 npm install fluentui-emoji-js
 ```
 
-### Import
-```js
-const emoji = require('fluentui-emoji-js')
-// or
-import * as emoji from 'fluentui-emoji-js'
-```
-
-### Examples
 #### Common JS
 ```js
 const emoji = require('fluentui-emoji-js')
@@ -39,6 +32,19 @@ import * as emoji from 'fluentui-emoji-js'
 
 const emojiFile = await emoji.fromGlyph('👋','3D')
 console.log(emojiFile)
+```
+
+## Displaying the emoji
+Both `fromGlyph(glyph, style)` and `fromCode(code, style)` return the location of the emoji image relative to the base emoji folder. You can download the assets folder from the [fluentui-emoji repo](https://github.com/microsoft/fluentui-emoji) or use a service like [jsdelivr](https://jsdelivr.com) to get the emoji image.
+
+#### Getting emoji image via jsdelivr
+```js
+const emojiImage = document.querySelector('#emojiImage');
+const emoji = '🍕';
+
+emoji.fromGlyph(emoji,'3D').then((emojiFile) => {
+  emojiImage.src = `https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets${emojiFile}`
+})
 ```
 
 ### More Info
