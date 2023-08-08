@@ -1,7 +1,7 @@
 ---
 title: Christmas Countdown
 id: christmas-countdown
-live: https://christmascountdown.zacharyc.site
+live: /christmas-countdown
 source: https://codepen.io/ZacharyCrespin/pen/vYRORdP
 sourceType: codepen
 tech:
