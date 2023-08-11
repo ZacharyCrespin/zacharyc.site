@@ -5,29 +5,6 @@ description: My Links
 id: links
 layout: base
 eleventyExcludeFromCollections: true
-onlyBaseCSS: true
-extraHeadCode: | 
-  <style>
-    body {
-      text-align: center;
-      min-height: 100vh;
-      min-height: 100dvh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: 0 3rem;
-    }
-    @media screen and (width < 600px) {
-      body {
-        margin: 0 1rem;
-      }
-    }
-    .links .button {
-      width: calc(100% - 4rem);
-      margin: 1rem auto;
-      padding: 1rem 1.5rem;
-    }
-  </style>
 ---
 <header>
   <h2 class="h1">Hi, I’m Zachary Crespin</h2>
@@ -38,3 +15,24 @@ extraHeadCode: |
   <a class="button" href="{{ link.url }}" target="_blank">{{ link.text }}</a>
   {%- endfor -%}
 </main>
+
+<style>
+  body {
+    text-align: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main {
+    padding: 0;
+    min-height: max-content;
+  }
+  .links .button {
+    width: calc(100% - 4rem);
+    max-width: var(--max-line);
+    margin: 1rem auto;
+    padding: 1rem 1.5rem;
+  }
+</style>
