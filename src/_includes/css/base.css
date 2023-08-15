@@ -433,6 +433,7 @@ a.card:focus-visible .button {
   margin-left: 0;
 }
 
+/* Tags */
 .tags {
   display: flex;
   flex-wrap: wrap;
