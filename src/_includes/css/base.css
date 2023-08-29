@@ -13,18 +13,15 @@
   --fw-semibold: 600;
   --fw-bold: 900;
 
-  /* Type Scale */
-  --double-canon: 4.666em;
-  --canon: 3.999em;
-  --double-great-primer: 2.999em;
-  --double-english: 2.333em;
-  --double-pica: 2em;
-  --paragon: 1.666em;
-  --english: 1.166em;
-  --pica: 1em;
-  --small-pica: 0.916em;
-  --long-primer: 0.833em;
-  --bourgeois: 0.75em;
+  /* Text Size */
+  --ts-display: 3.1rem;
+  --ts-h1: 2.8rem;
+  --ts-h2: 2.5rem;
+  --ts-h3: 2.2rem;
+  --ts-h4: 1.9rem;
+  --ts-h5: 1.6rem;
+  --ts-h6: 1.3rem;
+  --ts-body: 1rem;
 
   /* More */
   --gutter: 3rem;
@@ -33,7 +30,6 @@
   --border-radius: 0.25em;
   --border: var(--stroke-width) solid var(--color-text);
 
-  font-size: 100%;
   accent-color: var(--color-text);
 }
 
@@ -43,7 +39,7 @@
 
 body {
   font-family: var(--font);
-  font-size: var(--pica);
+  font-size: var(--ts-body);
   font-weight: var(--fw-regular);
   line-height: 1.5;
   color: var(--color-text);
@@ -77,35 +73,34 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .display  {
   margin: 0.25em 0;
 }
 .display {
-  font-size: var(--double-canon);
+  font-size: var(--ts-display);
   font-weight: var(--fw-bold);
 }
 h1, .h1 {
-  font-size: var(--canon);
+  font-size: var(--ts-h1);
   font-weight: var(--fw-bold);
 }
 h1.title {
   text-align: center;
 }
 h2, .h2 {
-  font-size: var(--double-great-primer);
+  font-size: var(--ts-h2);
   font-weight: var(--fw-semibold);
 }
 h3, .h3 {
-  font-size: var(--double-english);
+  font-size: var(--ts-h3);
   font-weight: var(--fw-regular);
 }
 h4, .h4 {
-  font-family: var(--font);
-  font-size: var(--double-pica);
+  font-size: var(--ts-h4);
   font-weight: var(--fw-regular);
 }
 h5, .h5 {
-  font-size: var(--paragon);
+  font-size: var(--ts-h5);
   font-weight: var(--fw-regular);
 }
 h6, .h6 {
-  font-size: var(--english);
+  font-size: var(--ts-h6);
   font-weight: var(--fw-regular);
 }
 
@@ -151,7 +146,7 @@ img {
 
 button, input, optgroup, select, textarea {
   font-family: var(--font);
-  font-size: var(--pica);
+  font-size: var(--ts-body);
   font-weight: var(--fw-regular);
   line-height: 1.5;
 }
@@ -185,7 +180,7 @@ hr {
 pre,
 code {
 	color: #fff;
-	font-size: 0.916rem;
+	font-size: var(--ts-body);
 	font-family: var(--font-code);
 	line-height: 1.5;
 	tab-size: 4;
@@ -196,7 +191,7 @@ pre {
   position: relative;
 	padding: 2rem;
 	margin: 1rem 0;
-	overflow: auto;
+  overflow: auto;
 	background: #1e1e1e;
 }
 
@@ -315,7 +310,7 @@ header.main-header {
   text-align: center;
 }
 .header-logo img {
-  height: var(--double-pica); /* h4 sizing */
+  height: var(--ts-h4);
   max-width: max-content;
 }
 header.main-header nav {
@@ -345,12 +340,16 @@ footer.main-footer {
 
 /* Copy code button */
 pre button {
+  opacity: 0;
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
   padding: 0.5rem;
   line-height: 1;
   fill: var(--color-text)
+}
+pre:hover button {
+  opacity: 1;
 }
 pre button:hover {
   fill: var(--color-bg)
@@ -544,14 +543,12 @@ a.card:focus-visible .button {
 
 @media screen and (width < 900px) {
   :root {
-    font-size: 90%;
     --gutter: 2rem;
   }
 }
 
 @media screen and (width < 600px) {
   :root {
-    font-size: 80%;
     --gutter: 1rem;
   }
 }
