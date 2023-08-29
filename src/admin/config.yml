@@ -25,7 +25,7 @@ collections:
       - {label: "Featured Order", name: "featuredOrder", widget: "number", required: false}
   - name: "collection" # Used in routes
     label: "Photo Collection" # Used in the UI
-    folder: "src/photography/collections" # The path to the folder where the documents are stored
+    folder: "src/_content/collections" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     editor:
       preview: false
@@ -76,16 +76,6 @@ collections:
       - {label: "Watch Link", name: "watchlink", widget: "string", required: false}
       - {label: "Info Link", name: "infolink", widget: "string", required: false}
       - {label: "Date", name: "date", widget: "date"}
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "src/_content/posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "hidden", default: "Zachary Crespin"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
   - name: "wallpapers" # Used in routes, e.g., /admin/collections/tables
     label: "Wallpapers" # Used in the UI
     folder: "src/_content/wallpapers" # The path to the folder where the documents are stored

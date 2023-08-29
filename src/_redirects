@@ -4,6 +4,7 @@
 # Old/Moved URLs
 /photos                /photography
 /code/11ty-external-file-downloader    /11ty-external-file-downloader
+/files/wisp.zip        /files/wisps.zip
 
 # Avoid confusion
 /periodictables        /periodic-tables

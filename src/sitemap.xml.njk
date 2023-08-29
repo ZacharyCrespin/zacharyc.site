@@ -35,12 +35,4 @@ eleventyExcludeFromCollections: true
   <url>
     <loc>https://zacharyc.site/periodic-tables/</loc>
   </url>
-  <url>
-    <loc>https://zacharyc.site/blog/</loc>
-  </url>
-  {%- for post in collections.post | reverse -%}
-  <url>
-    <loc>https://zacharyc.site/blog/{{ post.fileSlug }}/</loc>
-  </url>
-  {%- endfor -%}
 </urlset>

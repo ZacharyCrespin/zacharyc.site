@@ -1,6 +1,5 @@
 ---
 layout: base
-onlyBaseCSS: true
 title: Photo by Zachary Crespin
 titleOverride: true
 eleventyComputed:

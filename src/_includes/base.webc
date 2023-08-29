@@ -22,10 +22,10 @@
     <meta name="generator" :content="eleventy.generator">
     <link rel="canonical" :href="'https://zacharyc.site' + page.url">
 
-    <link webc:if="!nocss" rel="stylesheet" href="../css/inter.css" webc:bucket="site">
-    <link webc:if="!nocss" rel="stylesheet" href="../css/base.css" webc:bucket="site">
-    <link webc:if="!(nocss || onlyBaseCSS)" rel="stylesheet" href="../css/site.css" webc:bucket="site">
-    <link webc:if="highlightCode" rel="stylesheet" href="../css/prism.css" webc:bucket="site">
+    <!-- CSS -->
+    <link webc:if="!nocss" rel="stylesheet" href="css/inter.css" webc:bucket="site">
+    <link webc:if="!nocss" rel="stylesheet" href="css/base.css" webc:bucket="site">
+    <link webc:if="highlightCode" rel="stylesheet" href="css/prism.css" webc:bucket="site">
 
     <!-- Main Site CSS -->
     <link rel="stylesheet" :href="getBundleFileUrl('css', 'site')" webc:keep>
@@ -50,13 +50,16 @@
     <meta name="twitter:site" content="@ZacharyCrespin">
     <meta name="twitter:creator" content="@ZacharyCrespin">
 
-    <template @html="extraHeadCode" webc:nokeep></template>
+    <!-- Analytics -->
+    <script webc:keep src="/analytics.js"></script>
+    <script>
+      const analytics = ackeeTracker.create('https://analytics.zacharyc.site').record('133c9354-5976-48e5-803f-809c8aeeda11')
+    </script>  
   </head>
   <body>
     <template @html="content" webc:nokeep></template>
-    <template @html="extraBodyCode" webc:nokeep></template>
-    <script src="../js/codeCopy.js" webc:if="highlightCode"></script>
+    <script webc:if="highlightCode" src="js/codeCopy.js"></script>
+    <script webc:if="trackDownloads" src="js/trackDownload.js"></script>
     <script @html="getBundle('js')" webc:keep></script>
-    <script webc:keep async src="/analytics.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11"></script>
   </body>
 </html>

@@ -65,7 +65,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias('default', 'default.webc');
   eleventyConfig.addLayoutAlias('collection', 'collection.njk');
   eleventyConfig.addLayoutAlias('photo', 'photo.webc');
-  eleventyConfig.addLayoutAlias('blog', 'blog.njk');
 
   eleventyConfig.addWatchTarget("./src/css/");
 
@@ -94,7 +93,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
 
   // filter out tags used for collections
-  const collectionTags = ["film", "photo", "collection", "post", "code", "table", "wallpaper"];
+  const collectionTags = ["film", "photo", "collection", "code", "table", "wallpaper"];
 	eleventyConfig.addFilter("filterTags", function filterTags(tags) {
 		return (tags || []).filter(tag => collectionTags.indexOf(tag) === -1);
 	});
