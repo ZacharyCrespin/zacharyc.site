@@ -1,4 +1,5 @@
 ---
+name: Newport 2
 src: photography/newport/2.jpg
 alt: The beach on a cloudy day.
 tags: 

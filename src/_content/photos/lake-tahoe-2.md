@@ -1,4 +1,5 @@
 ---
+name: Lake Tahoe 2
 src: photography/lake-tahoe/2.jpg
 alt: A small chipmunk at the base of a tree.
 tags: 

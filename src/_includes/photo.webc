@@ -1,8 +1,9 @@
 ---
 layout: base
-title: Photo by Zachary Crespin
 titleOverride: true
 eleventyComputed:
+  title: "{{ name }} — Photography"
+  description: "{{ name }}, a photo by Zachary Crespin"
   shareImage: "{{ src }}"
 ---
 <main>

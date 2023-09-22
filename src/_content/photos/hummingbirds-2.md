@@ -1,4 +1,5 @@
 ---
+name: Hummingbird drinking from a feeder
 src: photography/hummingbirds/2.jpg
 alt: Hummingbird sitting on a feeder.
 tags: 

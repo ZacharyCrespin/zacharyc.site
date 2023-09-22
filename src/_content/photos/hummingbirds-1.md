@@ -1,4 +1,5 @@
 ---
+name: Hummingbird resting on a branch
 src: photography/hummingbirds/1.jpg
 alt: Hummingbird sitting on a branch.
 tags: 

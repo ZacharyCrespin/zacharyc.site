@@ -1,4 +1,5 @@
 ---
+name: Lake Tahoe 1
 src: photography/lake-tahoe/1.jpg
 alt: Two chipmunks on top of a large tree stump.
 tags: 
