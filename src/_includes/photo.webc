@@ -5,6 +5,19 @@ eleventyComputed:
   title: "{{ name }} — Photography"
   description: "{{ name }}, a photo by Zachary Crespin"
   shareImage: "{{ src }}"
+  headCode: |
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "ImageObject",
+        "contentUrl": "https://zacharyc.site/images/{{ src }}",
+        "creator": {
+          "@type": "Person",
+          "name": "Zachary Crespin"
+        },
+        "copyrightNotice": "Zachary Crespin"
+      }
+    </script>
 ---
 <main>
   <button id="close" onclick="history.back()" aria-label="Close">

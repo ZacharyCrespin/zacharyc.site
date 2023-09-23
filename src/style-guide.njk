@@ -1,0 +1,244 @@
+---
+title: Style Guide
+layout: default
+article: true
+highlightCode: true
+---
+<section class="page-section" aria-label="color">
+  <h2 id="color">Color</h2>
+  <div class="colors">
+    <p class="color" style="background-color: #fff; color: #000;">White - #FFF</p>
+    <p class="color" style="background-color: #bfbfbf; color: #000;">Light Grey - #BFBFBF</p>
+    <p class="color" style="background-color: #808080; color: #000;">Grey - #808080</p>
+    <p class="color" style="background-color: #404040; color: #fff;">Dark Grey - #404040</p>
+    <p class="color" style="background-color: #000; color: #fff;">Black - #000</p>
+    <p class="color" style="background: linear-gradient(135deg, #2E2E2E 0%, #000 100%); color: #fff;">Linear - 135deg #2E2E2E, #000</p>
+  </div>
+</section>
+<style>
+  .colors .color {
+    padding: 1em 2em;
+    margin: 0.5rem 0;
+    border-radius: var(--border-radius);
+  }
+</style>
+
+<section class="page-section" aria-label="typography">
+  <h2 id="typography">Typography</h2>
+  <br>
+  <a href="https://rsms.me/inter/" class="h4">Inter</a>
+
+  <p class="display">Display Heading</p>
+  <p class="h1">Heading 1</p>
+  <p class="h2">Heading 2</p>
+  <p class="h3">Heading 3</p>
+  <p class="h4">Heading 4</p>
+  <p class="h5">Heading 5</p>
+  <p class="h6">Heading 6</p>
+  <p class="p">Body</p>
+</section>
+
+<section class="page-section" aria-label="icons">
+  <h2 id="icons">Icons</h2>
+  <a href="https://fonts.google.com/icons/" class="h4">Material Symbols</a>
+  <ul>
+    <li><b>Style:</b> Rounded</li>
+    <li><b>Weight:</b> 300</li>
+    <li><b>Grade:</b> 0</li>
+  </ul>
+</section>
+
+<section class="page-section" aria-label="elements">
+  <h2 id="elements">Elements</h2>
+  <p>This demo is taken from <a href="https://codepen.io/mikemai2awesome/pen/KKvMZVz" target="_blank">SuperMinimalCSS</a> by <a href="https://mikemai.net/" target="_blank">Mike Mai</a>.</p>
+  <details>
+    <summary class="h3">Details and Summary</summary>
+    <p>You are looking at it. This is the <q>details</q> and you just clicked <q>summary</q> to expand it.</p>
+  </details>
+  <details>
+    <summary class="h3">Inline Text</summary>
+    <p>There are various ways to style text: <em>emphasis (italic)</em>, <strong>strong emphasis (bold)</strong>, <a href="#!">link</a>, <abbr title="Abbreviation">abbr</abbr>, <code>code</code>, <kbd>key</kbd>, super<sup>script</sup>, sub<sub>script</sub>, <small>small</small>, and <q>quote</q>.</p>
+  </details>
+  <details>
+    <summary class="h3">Blockquote</summary>
+    <blockquote>
+      <p>
+        <q>Simplicity is the ultimate sophistication.</q>
+      </p>
+      <footer>
+        <small>&mdash;&thinsp;Leonardo da Vinci</small>
+      </footer>
+    </blockquote>
+  </details>
+  <details>
+    <summary class="h3">Code Block</summary>
+{% highlight "css" %}
+/* This is a block of code with eleventy syntax highlighting. */
+pre { display: block; }
+{% endhighlight %}
+  </details>
+  <details>
+    <summary class="h3">Un-ordered List</summary>
+    <ul>
+      <li>This is a list item.</li>
+      <li>
+        This is 1st level.
+        <ul>
+          <li>
+            This is 2nd level.
+            <ul>
+              <li>
+                This is 3rd level.
+              </li>
+              <li>
+                This is 3rd level.
+              </li>
+            </ul>
+          </li>
+          <li>
+            This is 2nd level.
+          </li>
+        </ul>
+      </li>
+      <li>This is a list item.</li>
+    </ul>
+  </details>
+  <details>
+    <summary class="h3">Ordered List</summary>
+    <ol>
+      <li>This is a list item.</li>
+      <li>
+        This is 1st level.
+        <ol>
+          <li>
+            This is 2nd level.
+            <ol>
+              <li>
+                This is 3rd level.
+              </li>
+              <li>
+                This is 3rd level.
+              </li>
+            </ol>
+          </li>
+          <li>
+            This is 2nd level.
+          </li>
+        </ol>
+      </li>
+      <li>This is a list item.</li>
+    </ol>
+  </details>
+  <details>
+    <summary class="h3">Figure</summary>
+    <figure>
+      <img src="https://via.placeholder.com/1600x900" alt="Placeholder" width=1600 height=900>
+      <figcaption>
+        Fig 1: This figure has an image and figcaption.
+      </figcaption>
+    </figure>
+  </details>
+  <details>
+    <summary class="h3">Table</summary>
+    <figure>
+      <table>
+        <caption>Table caption.</caption>
+        <thead>
+          <tr>
+            <td></td>
+            <th>Top Heading</th>
+            <th>Top Heading</th>
+            <th>Top Heading</th>
+            <th>Top Heading</th>
+            <th>Top Heading</th>
+            <th>Top Heading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Side Heading</th>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr>
+            <th>Side Heading</th>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Footer Side Heading</th>
+            <td>Footer cell</td>
+            <td>Footer cell</td>
+            <td>Footer cell</td>
+            <td>Footer cell</td>
+            <td>Footer cell</td>
+            <td>Footer cell</td>
+          </tr>
+        </tfoot>
+      </table>
+    </figure>
+  </details>
+  <details>
+    <summary class="h3">Form Elements</summary>
+    <form>
+      <fieldset>
+        <legend>This is a fieldset</legend>
+        <label for="select">Select</label>
+        <select name="select" id="select">
+          <option value="" disabled selected>Select an option 👇</option>
+          <option value="Option 1">Option 1</option>
+          <option value="Option 2">Option 2</option>
+        </select>
+        <label for="regular">Text input</label>
+        <input type="text" id="regular" aria-describedby="hint-text">
+        <label for="valid">Valid (required)</label>
+        <input type="email" id="valid" value="lol@omg.com" required>
+        <label for="invalid">Invalid (required)</label>
+        <input type="email" id="invalid" value="@omg" required>
+        <label for="disabled">Disabled</label>
+        <input type="text" id="disabled" value="Inaccessible" disabled>
+        <label for="readonly">Read-only</label>
+        <input type="text" id="readonly" value="You can only read" readonly>
+        <label>Text area</label>
+        <textarea name="textarea" rows="5" aria-describedby="hint"></textarea>
+        <label for="upload">Upload an image</label>
+        <input name="upload" type="file">
+      </fieldset>
+      <fieldset>
+        <legend>This is another fieldset</legend>
+        <label>
+          <input type="radio" name="radio">
+          This is a radio input.
+        </label>
+        <label>
+          <input type="radio" name="radio">
+          This is a radio input.
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>This is yet another fieldset</legend>
+        <label>
+          <input type="checkbox" name="checkbox">
+          This is a checkbox input.
+        </label>
+        <label>
+          <input type="checkbox" name="checkbox">
+          This is a checkbox input.
+        </label>
+      </fieldset>
+      <p>
+        <button type="submit">Submit</button> <button type="reset">Cancel</button>
+      </p>
+    </form>
+  </details>
+</section>
