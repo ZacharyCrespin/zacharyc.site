@@ -2,7 +2,8 @@
 layout: base
 titleOverride: true
 eleventyComputed:
-  title: "{{ name }} — Photography"
+  title: "{{ name }}"
+  seoTitle: "{{ name }} — Photography"
   description: "{{ name }}, a photo by Zachary Crespin"
   shareImage: "{{ src }}"
   headCode: |
@@ -15,6 +16,7 @@ eleventyComputed:
           "@type": "Person",
           "name": "Zachary Crespin"
         },
+        "creditText": "Zachary Crespin",
         "copyrightNotice": "Zachary Crespin"
       }
     </script>
