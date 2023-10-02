@@ -3,9 +3,36 @@ title: Search
 layout: default
 ---
 <form id="searchForm" class="center">
-  <input type="search" name="q" id="query">
-  <button type="submit">Search</button>
+  <input type="text" name="q" placeholder="Search...">
+  <button type="submit" aria-label="Search" class="search-icon"><img src="/images/icons/search.svg" alt="Search Icon"></button>
 </form>
+<style>
+  #searchForm {
+    display: grid;
+    grid-template-columns: auto max-content;
+    border-bottom: var(--border);
+    max-width: var(--max-line);
+    margin: auto;
+  }
+  #searchForm > * {
+    margin: 0;
+    border: none;
+  }
+  #searchForm input {
+    padding-inline: 0;
+    border-radius: 0;
+  }
+  #searchForm button {
+    padding: 0;
+  }
+  #searchForm button:hover {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+  #searchForm .search-icon img {
+    height: var(--ts-h4);
+  }
+</style>
 <div id="searchResults"></div>
 <script>
   const searchParams = new URLSearchParams(window.location.search)

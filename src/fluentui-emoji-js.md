@@ -4,6 +4,7 @@ id: fluentui-emoji-js
 layout: default
 highlightCode: true
 article: true
+shareImage: code/emoji.png
 ---
 ## A JavaScript wrapper for Microsoft's <a href="https://github.com/microsoft/fluentui-emoji" target="_blank">Fluent Emojis</a>.
 
