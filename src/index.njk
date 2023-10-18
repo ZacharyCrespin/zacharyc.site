@@ -8,7 +8,7 @@ layout: default
 ---
 <section class="page-section" aria-label="Latest Collections">
   <h2>Latest Collections</h2>
-  <div class="cards">
+  <div class="cards" data-nosnippet>
     {%- for collection in collections.collection | reverse | limit(4) -%}
     <a class="card" href="{{ collection.url }}">
       {% image collection.data.img, collection.data.title + " Collection Image", 300 %}
@@ -23,7 +23,7 @@ layout: default
 
 <section class="page-section" aria-label="Featured Projects">
   <h2>Featured Projects</h2>
-  <div class="cards wide">
+  <div class="cards wide" data-nosnippet>
     {%- for project in collections.code | sort('featuredOrder') -%}
       {% if project.data.featured %}
       <div class="card" aria-label="{{ project.data.title }}">

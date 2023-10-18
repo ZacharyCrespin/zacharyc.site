@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-plugin-webc": "^0.11.1",
-    "axios": "^1.5.0",
+    "axios": "^1.5.1",
     "fluentui-emoji-js": "^1.1.1",
     "fuse.js": "^6.6.2"
   }

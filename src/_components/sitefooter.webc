@@ -1,3 +1,9 @@
 <footer class="main-footer">
   <p>Created By <a href="https://zacharyc.site" target="_blank">Zachary Crespin</a> on <a href="https://github.com/ZacharyCrespin/zacharyc.site" target="_blank">GitHub</a>.</p>
 </footer>
+<style>
+  footer.main-footer {
+    margin: 1rem 0;
+    text-align: center;
+  }
+</style>

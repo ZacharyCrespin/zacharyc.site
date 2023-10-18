@@ -6,7 +6,7 @@ layout: default
 ---
 <section class="page-section" aria-label="Featured Code Projects">
   <h2>Featured</h2>
-  <div class="cards wide">
+  <div class="cards wide" data-nosnippet>
     {%- for project in collections.code | sort('featuredOrder') -%}
       {% if project.data.featured %}
       <div class="card" aria-label="{{ project.data.title }}">
@@ -30,7 +30,7 @@ layout: default
 
 <section class="page-section" aria-label="More Code Projects">
   <h2>More</h2>
-  <div class="cards">
+  <div class="cards" data-nosnippet>
     {%- for project in collections.code | sort('date') | reverse -%}
     <div class="card" aria-label="{{ project.data.title }}">
       <h3>{{ project.data.title }}</h3>

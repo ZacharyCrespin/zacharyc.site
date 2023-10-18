@@ -9,3 +9,30 @@
     <a class="nav-link" href="/code/" role="menuitem">Code</a>
   </nav>
 </header>
+<style>
+  header.main-header {
+    display: grid;
+    grid-template-columns: max-content auto;
+    margin: 1rem var(--gutter);
+    text-align: center;
+  }
+  .header-logo img {
+    height: var(--ts-h4);
+    max-width: max-content;
+  }
+  header.main-header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  header.main-header .nav-link {
+    text-decoration: none;
+    margin: 0;
+    padding: 0.5em 1em;
+  }
+  header.main-header .nav-link:hover, header.main-header .nav-link:focus-visible {
+    text-decoration: underline;
+    text-decoration-thickness: calc(var(--stroke-width) * 2);
+    text-underline-offset: calc(var(--stroke-width) * 2);
+  }
+</style>
