@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: auto max-content;
     margin: 1rem var(--gutter);
+    align-items: center;
   }
 
   .footer-links {
