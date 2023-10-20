@@ -1,0 +1,109 @@
+/* Webfont: MeshedDisplay-Thin */
+@font-face {
+  font-family: 'Meshed Display';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('/fonts/Meshed Display/MeshedDisplay-Thin.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-Thin.woff2') format('woff2'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-Thin.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* Webfont: MeshedDisplay-ExtraLight */
+@font-face {
+  font-family: 'Meshed Display';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('/fonts/Meshed Display/MeshedDisplay-ExtraLight.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-ExtraLight.woff2') format('woff2'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-ExtraLight.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* Webfont: MeshedDisplay-Light */
+@font-face {
+  font-family: 'Meshed Display';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/Meshed Display/MeshedDisplay-Light.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-Light.woff2') format('woff2'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-Light.ttf') format('truetype'); /* Safari, Android, iOS */
+  
+}
+
+/* Webfont: MeshedDisplay-Regular */
+@font-face {
+  font-family: 'Meshed Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Meshed Display/MeshedDisplay-Regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* Webfont: MeshedDisplay-Medium */
+@font-face {
+  font-family: 'Meshed Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Meshed Display/MeshedDisplay-Medium.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-Medium.woff2') format('woff2'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-Medium.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* Webfont: MeshedDisplay-SemiBold */
+@font-face {
+  font-family: 'Meshed Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Meshed Display/MeshedDisplay-SemiBold.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-SemiBold.woff2') format('woff2'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-SemiBold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* Webfont: MeshedDisplay-Bold */
+@font-face {
+  font-family: 'Meshed Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Meshed Display/MeshedDisplay-Bold.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-Bold.woff2') format('woff2'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* Webfont: MeshedDisplay-ExtraBold */
+@font-face {
+  font-family: 'Meshed Display';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/Meshed Display/MeshedDisplay-ExtraBold.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-ExtraBold.woff2') format('woff2'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-ExtraBold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* Webfont: MeshedDisplay-Black */
+@font-face {
+  font-family: 'Meshed Display';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/fonts/Meshed Display/MeshedDisplay-Black.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-Black.woff2') format('woff2'), /* Modern Browsers */
+       url('/fonts/Meshed Display/MeshedDisplay-Black.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+
+/* Meshed Display Variable */
+@font-face {
+  font-family: 'Meshed Display var';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/Meshed Display/MeshedDisplay.var.ttf') format('truetype');
+}
