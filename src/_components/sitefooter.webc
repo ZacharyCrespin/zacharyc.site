@@ -1,9 +1,32 @@
 <footer class="main-footer">
-  <p>Created By <a href="https://zacharyc.site" target="_blank">Zachary Crespin</a> on <a href="https://github.com/ZacharyCrespin/zacharyc.site" target="_blank">GitHub</a>.</p>
+  <div class="footer-links">
+    <a href="/contact/">Contact</a>
+    <a href="/licenses/">Licenses</a>
+  </div>
+  <p>© Zachary Crespin</p>
 </footer>
 <style>
-  footer.main-footer {
-    margin: 1rem 0;
-    text-align: center;
+  .main-footer {
+    display: grid;
+    grid-template-columns: auto max-content;
+    margin: 1rem var(--gutter);
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+  }
+  .footer-links a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0.5em 1em;
+  }
+  .footer-links a:first-of-type {
+    padding-left: 0
+  }
+  .footer-links a:hover, .footer-links a:focus-visible {
+    text-decoration: underline;
+    text-decoration-thickness: calc(var(--stroke-width) * 2);
+    text-underline-offset: calc(var(--stroke-width) * 2);
   }
 </style>
