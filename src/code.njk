@@ -30,7 +30,7 @@ layout: default
 
 <section class="page-section" aria-label="More Code Projects">
   <h2>More</h2>
-  <div class="cards" data-nosnippet>
+  <div class="cards small" data-nosnippet>
     {%- for project in collections.code | sort('date') | reverse -%}
     <div class="card" aria-label="{{ project.data.title }}">
       <h3>{{ project.data.title }}</h3>

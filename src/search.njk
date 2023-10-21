@@ -33,7 +33,7 @@ layout: default
     height: var(--ts-h4);
   }
 </style>
-<div id="searchResults"></div>
+<div id="searchResults" class="cards"></div>
 <script>
   const searchParams = new URLSearchParams(window.location.search)
   const query = searchParams.get("q")
@@ -53,7 +53,7 @@ layout: default
 
   function generateHTML(page) {
     return `
-      <a class="card full" href="${page.item.url}">
+      <a class="section" href="${page.item.url}">
         <div class="text">
           <h2 class="h3">${page.item.title}</h2>
           <p>${page.item.description}</p>

@@ -171,9 +171,9 @@ button:focus-visible, .button:focus-visible {
 }
 
 hr {
-  box-sizing: content-box;
-  overflow: visible;
-  height: 0;
+  border: none;
+  height: var(--stroke-width);
+  background: linear-gradient(90deg, #0000, #fff, #0000);
   margin: 2rem 0;
 }
 
@@ -327,12 +327,31 @@ pre button svg {
   height: 1.25rem;
 }
 
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.tags .tag {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  margin: 0.5rem 0.25rem;
+  padding: 0.25rem 1rem;
+  border-radius: 100vmax;
+}
+.tags .tag::selection {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
 /* Cards */
-.cards {
+.cards.small {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .cards.wide {
+  display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -359,12 +378,16 @@ a.card:focus-visible .button {
 .cards .card {
   text-align: center;
 }
-.cards .card:not(.full) img {
+.cards .card img {
   width: calc(100% + 1rem);
   margin-top: -0.5rem;
   margin-left: -0.5rem;
   height: auto;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.cards .card .tags {
+  justify-content: center;
 }
 
 .card.video .video-preview {
@@ -381,46 +404,30 @@ a.card:focus-visible .button {
   height: 4rem !important;
 }
 
-/* Full Width Cards */
-.card.full {
+/* Sections */
+.cards section, .cards .section {
+  margin: 2rem 0;
+}
+.cards hr:last-of-type {
+  display: none;
+}
+
+section.split, .section.split {
   display: grid;
   grid-template-columns: max-content auto;
 }
-.card.full img {
-  width: auto;
-  height: auto;
-  max-width: 55vw;
-  max-height: 80vh;
-}
-.card.full .text {
-  margin-left: 1rem;
-  text-align: left;
-}
-.card.full .text .button, .card.full .text button {
-  margin-left: 0;
+
+section.split img, .section.split img {
+  max-width: 65vw;
+  max-height: calc(100vh - 4rem);
 }
 
-/* Tags */
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+section.split .text, .section.split .text {
+  margin-left: 2rem;
 }
-.tags .tag {
-  background-color: var(--color-text);
-  color: var(--color-bg);
-  margin: 0.5rem 0.25rem;
-  padding: 0.25rem 1rem;
-  border-radius: 100vmax;
-}
-.tags .tag::selection {
-  background: var(--color-bg);
-  color: var(--color-text);
-}
-.card.full .tags {
-  justify-content: flex-start;
-}
-.card.full .tag:first-of-type {
+section.split .text .button, section.split .text button,
+.section.split .text .button, .section.split .text button,
+section.split .text .tags .tag:first-of-type, .section.split .text .tags .tag:first-of-type {
   margin-left: 0;
 }
 

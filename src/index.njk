@@ -8,7 +8,7 @@ layout: default
 ---
 <section class="page-section" aria-label="Latest Collections">
   <h2>Latest Collections</h2>
-  <div class="cards" data-nosnippet>
+  <div class="cards small" data-nosnippet>
     {%- for collection in collections.collection | reverse | limit(4) -%}
     <a class="card" href="{{ collection.url }}">
       {% image collection.data.img, collection.data.title + " Collection Image", 300 %}

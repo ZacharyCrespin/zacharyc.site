@@ -5,18 +5,21 @@ id: wallpapers
 layout: default
 trackDownloads: true
 ---
-{% for wallpaper in collections.wallpaper | reverse %}
-<div class="card full" id="{{ wallpaper.data.id }}" aria-label="{{ wallpaper.data.name }}">
-  {% image wallpaper.data.img, wallpaper.data.name + " phone wallpapers", 300, true %}
-  <div class="text">
-    <h2 class="h3">{{ wallpaper.data.name }}</h2>
-    {% if not wallpaper.data.legacy %}<p>{{ wallpaper.data.date | fullString }}</p>{% endif %}
-    <div class="tags">
-      {% for tag in wallpaper.data.tags | filterTags %}
-        <p class="tag">{{ tag }}</p>
-      {% endfor %}
+<div class="cards">
+  {% for wallpaper in collections.wallpaper | reverse %}
+  <div class="section split" id="{{ wallpaper.data.id }}" aria-label="{{ wallpaper.data.name }}">
+    {% image wallpaper.data.img, wallpaper.data.name + " phone wallpapers", 300, true %}
+    <div class="text">
+      <h2 class="h3">{{ wallpaper.data.name }}</h2>
+      {% if not wallpaper.data.legacy %}<p>{{ wallpaper.data.date | fullString }}</p>{% endif %}
+      <div class="tags">
+        {% for tag in wallpaper.data.tags | filterTags %}
+          <p class="tag">{{ tag }}</p>
+        {% endfor %}
+      </div>
+      <a class="button" href="/files/{{- wallpaper.data.id -}}.zip" onclick="trackDownload('/files/{{- wallpaper.data.id -}}.zip')">Download</a>
     </div>
-    <a class="button" href="/files/{{- wallpaper.data.id -}}.zip" onclick="trackDownload('/files/{{- wallpaper.data.id -}}.zip')">Download</a>
   </div>
+  <hr>
+  {% endfor %}
 </div>
-{% endfor %}
