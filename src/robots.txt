@@ -3,3 +3,5 @@ Sitemap: https://zacharyc.site/sitemap.xml
 User-agent: *
 Disallow: /404
 Disallow: /links/
+Disallow: /style-guide/
+Disallow: /contact/thanks/

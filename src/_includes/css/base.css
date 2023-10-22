@@ -219,17 +219,6 @@ details summary:hover {
   cursor: pointer;
 }
 
-fieldset {
-  display: flex;
-  flex-direction: column;
-  border: var(--border);
-  border-radius: var(--border-radius);
-}
-
-fieldset label {
-  margin-inline: 1rem;
-}
-
 input:not([type="radio"], [type="checkbox"], [type="file"]), textarea, select {
   margin: 1rem 0.5rem;
   padding: 0.5rem;
@@ -239,12 +228,21 @@ input:not([type="radio"], [type="checkbox"], [type="file"]), textarea, select {
   color: var(--color-text);
 }
 
-fieldset input:not([type="radio"], [type="checkbox"], [type="file"]), fieldset textarea, fieldset select {
-  margin-top: 0;
+textarea {
+  resize: vertical;
 }
 
-fieldset textarea {
-  resize: vertical;
+form .input {
+  display: flex;
+  flex-direction: column;
+}
+form .input input:not([type="radio"], [type="checkbox"], [type="file"]), form .input textarea, form .input select {
+  margin-top: 0.5rem;
+  margin-left: 0;
+}
+
+form button {
+  margin-inline: auto;
 }
 
 figure img {
