@@ -49,8 +49,8 @@ body {
 
 main {
   margin: 2rem var(--gutter);
-  min-height: calc(100vh - 10rem);
-  min-height: calc(100dvh - 10rem);
+  min-height: calc(100vh - 12rem);
+  min-height: calc(100dvh - 12rem);
 }
 
 article {
@@ -342,6 +342,12 @@ pre button svg {
   background: var(--color-bg);
   color: var(--color-text);
 }
+.tags a.tag {
+  text-decoration: none;
+}
+.tags a.tag:hover {
+  background-color: var(--color-light);
+}
 
 /* Cards */
 .cards.small {
@@ -388,12 +394,12 @@ a.card:focus-visible .button {
   justify-content: center;
 }
 
-.card.video .video-preview {
+.video .video-preview {
   display: inline-block;
   position: relative;
 }
 
-.card.video .play-circle {
+.video .play-circle {
   position: absolute;
   top: 50%;
   left: 50%;
