@@ -454,7 +454,7 @@ section.split .text .tags .tag:first-of-type, .section.split .text .tags .tag:fi
 }
 
 @media screen and (width < 1200px) {
-  .cards {
+  .cards.small {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -466,7 +466,7 @@ section.split .text .tags .tag:first-of-type, .section.split .text .tags .tag:fi
 }
 
 @media screen and (width < 900px) {
-  .cards {
+  .cards.small {
     grid-template-columns: 1fr 1fr;
   }
   .card.full {
@@ -495,24 +495,7 @@ section.split .text .tags .tag:first-of-type, .section.split .text .tags .tag:fi
   .skip-nav {
     display: none;
   }
-  header.main-header {
-    grid-template-columns: 100%;
-    padding: 0;
-  }
-  header.main-header .logo {
-    text-align: center;
-  }
-  header.main-header nav {
-    justify-content: center;
-  }
-  header.main-header nav a {
-    padding: 1em;
-  }
-  h2.section-heading, .h2.section-heading, section h2:first-child, section .h2:first-child {
-    text-align: center;
-    padding-left: 0;
-  }
-  .cards {
+  .cards.small {
     grid-template-columns: 100%;
   }
   .gallery {

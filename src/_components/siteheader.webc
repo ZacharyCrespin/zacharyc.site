@@ -38,4 +38,14 @@
     text-decoration-thickness: calc(var(--stroke-width) * 2);
     text-underline-offset: calc(var(--stroke-width) * 2);
   }
+
+  @media screen and (width < 600px) {
+    .main-header {
+      grid-template-columns: 100%;
+      text-align: center;
+    }
+    .main-header nav {
+      justify-content: center;
+    }
+  }
 </style>
