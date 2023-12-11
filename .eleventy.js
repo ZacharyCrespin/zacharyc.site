@@ -4,6 +4,7 @@ const Image = require("@11ty/eleventy-img");
 const { eleventyImagePlugin } = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
+const downloader = require('11ty-external-file-downloader');
 
 async function imageShortcode(src, alt, sizes, lazyLoad = false) {
   let metadata = await Image("./src/images/" + src, {
@@ -43,6 +44,13 @@ module.exports = function(eleventyConfig) {
 	});
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(filesMinifier);
+
+  eleventyConfig.addPlugin(downloader, {
+    urls: [
+      'https://analytics.zacharyc.site/analytics.js'
+    ],
+    directory: 'public'
+  });
 
   eleventyConfig.addPassthroughCopy('./src/**/*.html');
 

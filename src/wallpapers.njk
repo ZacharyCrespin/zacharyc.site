@@ -3,7 +3,6 @@ title: Wallpapers
 description: Mobile Wallpapers - Free Downloads
 id: wallpapers
 layout: default
-trackDownloads: true
 ---
 <div class="cards">
   {% for wallpaper in collections.wallpaper | reverse %}
@@ -17,7 +16,7 @@ trackDownloads: true
           <p class="tag">{{ tag }}</p>
         {% endfor %}
       </div>
-      <a class="button" href="/files/{{- wallpaper.data.id -}}.zip" onclick="trackDownload('/files/{{- wallpaper.data.id -}}.zip')">Download</a>
+      <a class="button" href="/files/{{- wallpaper.data.id -}}.zip">Download</a>
     </div>
   </div>
   <hr>

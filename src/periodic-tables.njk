@@ -3,7 +3,6 @@ title: Periodic Tables
 description: Free Periodic Tables
 id: periodic-tables
 layout: default
-trackDownloads: true
 ---
 <div class="cards">
   {%- for table in collections.table | reverse -%}
@@ -17,7 +16,7 @@ trackDownloads: true
           <p class="tag">{{ tag }}</p>
         {% endfor %}
       </div>
-      <a class="button" href="/files/{{- table.data.id -}}.zip" onclick="trackDownload('/files/{{- table.data.id -}}.zip')">Download</a>
+      <a class="button" href="/files/{{- table.data.id -}}.zip">Download</a>
     </div>
   </div>
   <hr>
