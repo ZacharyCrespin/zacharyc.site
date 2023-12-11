@@ -252,38 +252,6 @@ figure figcaption {
   text-align: center;
 }
 
-/* Table based on SuperMinimalCSS by Mike Mai */
-/* https://codepen.io/mikemai2awesome/pen/KKvMZVz?editors=1100 */
-table {
-  caption-side: bottom;
-  background-color: var(--color-text);
-  border-spacing: var(--stroke-width);
-  border-radius: var(--border-radius);
-}
-th, td {
-  padding: 0.25em 0.5em;
-  vertical-align: baseline;
-  background-color: var(--color-bg);
-}
-th {
-  text-align: start;
-}
-:where(tr > *:first-child) {
-  white-space: nowrap;
-}
-:where(table > *:first-child tr:first-child > *:first-child, table > caption + * tr:first-child > *:first-child) {
-  border-start-start-radius: var(--border-radius);
-}
-:where(table > *:first-child tr:first-child > *:last-child, table > caption + * tr:first-child > *:last-child) {
-  border-start-end-radius: var(--border-radius);
-}
-:where(table > *:last-child tr:last-child > *:first-child) {
-  border-end-start-radius: var(--border-radius);
-}
-:where(table > *:last-child tr:last-child > *:last-child) {
-  border-end-end-radius: var(--border-radius);
-}
-
 /* Skip Nav Button */
 .skip-nav {
   z-index: 2;

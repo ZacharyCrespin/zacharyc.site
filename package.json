@@ -18,25 +18,24 @@
     "portfolio"
   ],
   "scripts": {
-    "dev": "netlify dev",
     "start": "eleventy --quiet --serve",
-    "start-cms": "npx netlify-cms-proxy-server",
     "build": "eleventy",
+    "dev": "netlify dev",
     "lint": "stylelint src/**/*.css"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-img": "^3.1.1",
+    "@11ty/eleventy-img": "^3.1.8",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
     "11ty-external-file-downloader": "^1.0.3",
-    "stylelint": "^15.10.3",
+    "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-webc": "^0.11.1",
-    "axios": "^1.5.1",
+    "axios": "^1.6.2",
     "fluentui-emoji-js": "^1.1.1",
-    "fuse.js": "^6.6.2"
+    "fuse.js": "^7.0.0"
   }
 }
