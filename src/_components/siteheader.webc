@@ -1,16 +1,36 @@
 <a href="#content" class="button skip-nav">Skip Nav</a>
 <header class="main-header">
   <a href="/" class="header-logo">
-    <eleventy-image src="src/images/home-logo.svg" alt="ZC logo" width="auto"></eleventy-image>
+    <img src="/images/home-logo.svg" alt="ZC logo">
   </a>
-  <nav role="menubar" aria-label="Main Navigation">
+  <nav class="nav-main" role="menubar" aria-label="Main Navigation">
     <a class="nav-link" href="/photography/" role="menuitem">Photography</a>
     <a class="nav-link" href="/film/" role="menuitem">Film</a>
     <a class="nav-link" href="/code/" role="menuitem">Code</a>
-    <!-- <a class="nav-link" href="#" role="menuitem">More</a> -->
+    <a class="nav-link" href="#" onclick="toggleFullMenu()" role="menuitem">More</a>
   </nav>
 </header>
+<div id="sidenav">
+  <div class="sidenavBG" onclick="toggleFullMenu()"></div>
+  <div class="sidenav-links" aria-label="Full Navigation">
+    <div class="sidenav-top">
+      <a href="/search/"><img src="/images/icons/search.svg" alt="Search"></a>
+      <button onclick="toggleFullMenu()"><img src="/images/icons/close.svg" alt="Close"></button>
+    </div>
+    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link" href="/photography/">Photography</a>
+    <a class="nav-link" href="/film/">Film</a>
+    <a class="nav-link" href="/code/">Code</a>
+    <hr>
+    <a class="nav-link" href="/wallpapers/">Wallpapers</a>
+    <a class="nav-link" href="/periodic-tables/">Periodic Tables</a>
+    <a class="nav-link" href="/fluentui-emoji-js/">fluentui-emoji-js</a>
+    <a class="nav-link" href="/contact/">Contact</a>
+  </div>
+</div>
+
 <style>
+  /* Main Header */
   .main-header {
     display: grid;
     grid-template-columns: max-content auto;
@@ -25,7 +45,7 @@
     justify-content: flex-end;
     align-items: center;
   }
-  .main-header .nav-link {
+  .nav-link {
     text-decoration: none;
     margin: 0;
     padding: 0.5em 1em;
@@ -33,7 +53,7 @@
   .main-header .nav-link:last-of-type {
     padding-right: 0
   }
-  .main-header .nav-link:hover, .main-header .nav-link:focus-visible {
+  .nav-link:hover, .nav-link:focus-visible {
     text-decoration: underline;
     text-decoration-thickness: calc(var(--stroke-width) * 2);
     text-underline-offset: calc(var(--stroke-width) * 2);
@@ -48,4 +68,77 @@
       justify-content: center;
     }
   }
+
+  /* Side Nav */
+  #sidenav {
+    width: 100vw;
+    width: 100dvw;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    pointer-events: none;
+  }
+  .sidenav-links {
+    min-width: max-content;
+    background-color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    transform: translateX(100%);
+    pointer-events: all;
+    transition: transform ease .2s, opacity ease .2s;
+  }
+  .sidenav-links hr {
+    margin: 0.5rem 0;
+  }
+  .sidenavBG {
+    width: 100%;
+    background-color: var(--color-bg);
+    opacity: 0;
+    transition: opacity ease .2s;
+  }
+  #sidenav.open .sidenav-links {
+    transform: translateX(0);
+    box-shadow: 0 0 1rem var(--color-dark);
+  }
+  #sidenav.open .sidenavBG {
+    opacity: 0.75;
+    pointer-events: all;
+  }
+
+  .sidenav-top {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .sidenav-top button, .sidenav-top a {
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    border: none;
+  }
+  .sidenav-top button:hover {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+  .sidenav-top img {
+    width: 2.5em;
+    height: 2.5em;
+  }
 </style>
+
+<script>
+  let menuOpen = false
+  function toggleFullMenu() {
+    if (menuOpen) {
+      document.querySelector("#sidenav").classList.remove("open")
+      menuOpen = false
+    } else {
+      document.querySelector("#sidenav").classList.add("open")
+      menuOpen = true
+    }
+  }
+</script>
