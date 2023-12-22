@@ -1,7 +1,7 @@
 <footer class="main-footer">
   <div class="footer-links">
-    <a href="/contact/">Contact</a>
-    <a href="/licenses/">Licenses</a>
+    <a href="https://youtube.com/@ZacharyCrespin"><img src="/images/socials/youtube.svg" alt="YouTube"></a>
+    <a href="https://github.com/ZacharyCrespin"><img src="/images/socials/github.svg" alt="GitHub"></a>
   </div>
   <p>© Zachary Crespin</p>
 </footer>
@@ -20,14 +20,9 @@
   .footer-links a {
     text-decoration: none;
     margin: 0;
-    padding: 0.5em 1em;
+    padding: 0.25em 0.5em;
   }
   .footer-links a:first-of-type {
     padding-left: 0
-  }
-  .footer-links a:hover, .footer-links a:focus-visible {
-    text-decoration: underline;
-    text-decoration-thickness: calc(var(--stroke-width) * 2);
-    text-underline-offset: calc(var(--stroke-width) * 2);
   }
 </style>

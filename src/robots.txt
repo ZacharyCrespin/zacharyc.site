@@ -1,6 +1,9 @@
 Sitemap: https://zacharyc.site/sitemap.xml
 
 User-agent: *
-Disallow: /404
+Disallow: /404/
+Disallow: /quote/
+Disallow: /christmas-countdown/
+Disallow: /style-guide/
 Disallow: /links/
 Disallow: /contact/thanks/
