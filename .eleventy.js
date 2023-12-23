@@ -53,13 +53,14 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy('./src/**/*.html');
+  eleventyConfig.addPassthroughCopy('./src/**/*.css');
+  eleventyConfig.addPassthroughCopy('./src/**/*.js');
 
   eleventyConfig.addPassthroughCopy('./src/admin');
   eleventyConfig.addPassthroughCopy('./src/files');
   eleventyConfig.addPassthroughCopy('./src/fonts');
   eleventyConfig.addPassthroughCopy('./src/images');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
-  eleventyConfig.addPassthroughCopy('./src/analytics.js');
   eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');
   eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
   eleventyConfig.addPassthroughCopy('./src/favicon.ico');

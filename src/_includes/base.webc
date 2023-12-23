@@ -57,7 +57,7 @@
   </head>
   <body>
     <template @html="content" webc:nokeep></template>
-    <script webc:if="highlightCode" src="js/codeCopy.js"></script>
+    <script webc:if="highlightCode" src="/codeCopy.js" webc:keep></script>
     <script @html="getBundle('js')" webc:keep></script>
   </body>
 </html>
