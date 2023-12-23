@@ -7,6 +7,7 @@
 
   /* Typography */
   --font: "Inter", sans-serif;
+  --font-display: "Meshed Display", serif;
   --font-italic: "Georgia", serif;
   --font-code: "Consolas", 'Courier New', monospace;
   --fw-regular: 300;
@@ -34,7 +35,10 @@
 }
 
 @supports (font-variation-settings: normal) {
-  :root { --font: "Inter var", sans-serif; }
+  :root {
+    --font: "Inter var", sans-serif;
+    --font-display: "Meshed Display var", serif;
+  }
 }
 
 body {
@@ -73,6 +77,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .display  {
   margin: 0.25em 0;
 }
 .display {
+  font-family: var(--font-display);
   font-size: var(--ts-display);
   font-weight: var(--fw-bold);
 }

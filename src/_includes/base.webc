@@ -16,7 +16,7 @@
     <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <meta webc:if="shareImage" name="image" :content="'/images/' + shareImage">
-    <meta webc:else name="image" :content="'/images/share/' + id + '.jpg'">
+    <meta webc:if="!shareImage" name="image" :content="'/images/share/' + id + '.jpg'">
     <meta name="color-scheme" content="dark">
     <meta name="author" content="Zachary Crespin">
     <meta name="generator" :content="eleventy.generator">
@@ -40,7 +40,7 @@
     <meta webc:if="description" property="og:description" :content="description">
     <meta webc:else property="og:description" :content="title">
     <meta webc:if="shareImage" property="og:image" :content="'https://zacharyc.site/images/' + shareImage">
-    <meta webc:else property="og:image" :content="'https://zacharyc.site/images/share/' + id  + '.jpg'">
+    <meta webc:if="!shareImage" property="og:image" :content="'https://zacharyc.site/images/share/' + id  + '.jpg'">
     <meta property="og:site_name" content="Zachary Crespin">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
