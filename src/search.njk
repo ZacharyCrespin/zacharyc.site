@@ -3,10 +3,11 @@ title: Search
 id: search
 layout: default
 ---
-<form id="searchForm" class="center">
-  <input type="text" name="q" placeholder="Search...">
+<form id="searchForm" class="center" onsubmit="search(event)">
+  <input id="searchInput" type="text" name="q" placeholder="Search...">
   <button type="submit" aria-label="Search" class="search-icon"><img src="/images/icons/search.svg" alt="Search Icon"></button>
 </form>
+<div id="searchResults" class="cards"></div>
 <style>
   #searchForm {
     display: grid;
@@ -34,22 +35,25 @@ layout: default
     height: var(--ts-h4);
   }
 </style>
-<div id="searchResults" class="cards"></div>
 <script>
-  const searchParams = new URLSearchParams(window.location.search)
-  const query = searchParams.get("q")
-  const searchResults = document.getElementById("searchResults")
-
-  if (query) {
-    document.getElementById("query").value = query;
-    fetch(`/api/search?q=${query}`)
-    .then(res => {
-      return res.json()
-    })
-    .then(res => {
-      result = (res.length > 0) ? res.map(generateHTML).join("") : "<p>No results found</p>"
-      searchResults.innerHTML = result;
-    })
+  const input = document.querySelector("#searchInput")
+  const resultsDiv = document.querySelector("#searchResults")
+  let lastSearch = ""
+  
+  function search(e) {
+    e.preventDefault();
+    const query = input.value
+    if (query != lastSearch) {
+      fetch(`/api/search?q=${query}`)
+      .then(res => {
+        return res.json()
+      })
+      .then(res => {
+        result = (res.length > 0) ? res.map(generateHTML).join("") : "<p>No results found</p>"
+        searchResults.innerHTML = result;
+        lastSearch = query
+      })
+    }
   }
 
   function generateHTML(page) {
@@ -61,6 +65,7 @@ layout: default
           <span class="button">View Page</span>
         </div>
       </a>
+      <hr>
     `;
   }
 </script>
