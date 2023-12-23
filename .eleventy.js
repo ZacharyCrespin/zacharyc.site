@@ -5,6 +5,7 @@ const { eleventyImagePlugin } = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const downloader = require('11ty-external-file-downloader');
+const CleanCSS = require("clean-css");
 
 async function imageShortcode(src, alt, sizes, lazyLoad = false) {
   let metadata = await Image("./src/images/" + src, {
@@ -50,6 +51,10 @@ module.exports = function(eleventyConfig) {
       'https://analytics.zacharyc.site/analytics.js'
     ],
     directory: 'public'
+  });
+
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
   });
 
   eleventyConfig.addPassthroughCopy('./src/**/*.html');

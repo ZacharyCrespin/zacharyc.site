@@ -23,13 +23,9 @@
     <link rel="canonical" :href="'https://zacharyc.site' + page.url">
 
     <!-- CSS -->
-    <link webc:if="!nocss" rel="stylesheet" href="css/inter.css" webc:bucket="site">
-    <link webc:if="!nocss" rel="stylesheet" href="css/meshed-display.css" webc:bucket="site">
-    <link webc:if="!nocss" rel="stylesheet" href="css/base.css" webc:bucket="site">
-    <link webc:if="highlightCode" rel="stylesheet" href="css/prism.css" webc:bucket="site">
+    <link webc:if="!nocss" rel="stylesheet" href="/css/main.css" webc:keep>
+    <link webc:if="highlightCode" rel="stylesheet" href="/css/prism.css" webc:keep>
 
-    <!-- Main Site CSS -->
-    <link rel="stylesheet" :href="getBundleFileUrl('css', 'site')" webc:keep>
     <!-- Page CSS -->
     <style @raw="getBundle('css')" webc:keep></style>
 
@@ -57,7 +53,7 @@
   </head>
   <body>
     <template @html="content" webc:nokeep></template>
-    <script webc:if="highlightCode" src="/codeCopy.js" webc:keep></script>
+    <script webc:if="highlightCode" src="/js/codeCopy.js" webc:keep></script>
     <script @html="getBundle('js')" webc:keep></script>
   </body>
 </html>
