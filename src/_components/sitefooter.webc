@@ -1,12 +1,12 @@
 <footer class="main-footer">
   <div class="footer-links">
-    <a href="https://youtube.com/@ZacharyCrespin" aria-label="YouTube">
+    <a href="https://youtube.com/@ZacharyCrespin" title="YouTube" aria-label="YouTube">
       <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M25 12.5C25 19.4036 19.4036 25 12.5 25C5.59644 25 0 19.4036 0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5ZM17.1327 16.9118H8.30845C7.12774 16.9118 6.17647 15.8676 6.17647 14.5832V10.4168C6.17647 9.12722 7.13252 8.08824 8.30845 8.08824H17.1327C18.3134 8.08824 19.2647 9.13244 19.2647 10.4168V14.5832C19.2695 15.8728 18.3134 16.9118 17.1327 16.9118Z" fill="var(--color-text)"/>
         <path d="M15.0357 12.4347L11.3235 10.2941V14.5754L15.0357 12.4347Z" fill="var(--color-text)"/>
       </svg>
     </a>
-    <a href="https://github.com/ZacharyCrespin" aria-label="GitHub">
+    <a href="https://github.com/ZacharyCrespin" title="GitHub" aria-label="GitHub">
       <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_113_9)">
           <path fill-rule="evenodd" clip-rule="evenodd"

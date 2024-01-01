@@ -35,6 +35,8 @@ collections:
       - {label: "Date", name: "date", widget: "date"}
       - {lapel: "ID", name: id, widget: "string"}
       - {label: "Image", name: "img", widget: "string"}
+      - {label: "Home Featured", name: "homeFeatured", widget: "boolean", required: false}
+      - {label: "Home Featured Order", name: "homeFeaturedOrder", widget: "number", required: false}
   - name: "code" # Used in routes
     label: "Code Project" # Used in the UI
     folder: "src/_content/projects" # The path to the folder where the documents are stored
@@ -50,10 +52,12 @@ collections:
       - {label: "Source URL", name: "source", widget: "string", required: false}
       - {label: "Source Type (`github` or `codepen`)", name: "sourceType", widget: "string", required: false}
       - {label: "Tech", name: "tech", widget: "list", required: false}
-      - {label: "Featured", name: "featured", widget: "boolean", required: false}
-      - {label: "Featured Order", name: "featuredOrder", widget: "number", required: false}
       - {label: "Image", name: "img", widget: "string", required: false}
       - {label: "Date", name: "date", widget: "date"}
+      - {label: "Featured", name: "featured", widget: "boolean", required: false}
+      - {label: "Featured Order", name: "featuredOrder", widget: "number", required: false}
+      - {label: "Home Featured", name: "homeFeatured", widget: "boolean", required: false}
+      - {label: "Home Featured Order", name: "homeFeaturedOrder", widget: "number", required: false}
   - name: "film" # Used in routes
     label: "Film" # Used in the UI
     folder: "src/_content/films" # The path to the folder where the documents are stored
@@ -69,6 +73,10 @@ collections:
       - {label: "Watch Link", name: "watchlink", widget: "string", required: false}
       - {label: "Info Link", name: "infolink", widget: "string", required: false}
       - {label: "Date", name: "date", widget: "date"}
+      - {label: "Featured", name: "featured", widget: "boolean", required: false}
+      - {label: "Featured Order", name: "featuredOrder", widget: "number", required: false}
+      - {label: "Home Featured", name: "homeFeatured", widget: "boolean", required: false}
+      - {label: "Home Featured Order", name: "homeFeaturedOrder", widget: "number", required: false}
   - name: "wallpapers" # Used in routes, e.g., /admin/collections/tables
     label: "Wallpapers" # Used in the UI
     folder: "src/_content/wallpapers" # The path to the folder where the documents are stored

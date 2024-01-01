@@ -7,7 +7,8 @@ tech:
   - Eleventy
   - JavaScript
 featured: true
-featuredOrder: 2
+featuredOrder: 1
+homeFeatured: true
 img: code/bellschedule.png
 date: 2022-07-18T02:10:25Z
 displayTag: Website

@@ -4,15 +4,16 @@ description: Code Projects and Experiments
 id: code
 layout: default
 ---
+<h2>Featured Projects</h2>
 <section class="page-section" aria-label="Featured Code Projects">
-  <h2>Featured</h2>
-  <div class="cards wide" data-nosnippet>
+  <div class="cards" data-nosnippet>
     {%- for project in collections.code | sort('featuredOrder') -%}
       {% if project.data.featured %}
-      <div class="card" aria-label="{{ project.data.title }}">
+      <div class="section split" aria-label="{{ project.data.title }}">
         {% image project.data.img, project.data.title, 600 %}
         <div class="text">
           <h3>{{ project.data.title }}</h3>
+          <p>{{ project.data.date | fullString }}</p>
           <div class="tags" aria-label="Tech Used">
             {%- for tag in project.data.tech -%}
               <p class="tag">{{ tag }}</p>
@@ -23,27 +24,9 @@ layout: default
           {% if project.data.source %}<a class="button" href="{{ project.data.source }}" target="_blank">Source</a>{% endif %}
         </div>
       </div>
+      <hr>
       {% endif %}
     {%- endfor -%}
   </div>
 </section>
-
-<section class="page-section" aria-label="More Code Projects">
-  <h2>More</h2>
-  <div class="cards small" data-nosnippet>
-    {%- for project in collections.code | sort('date') | reverse -%}
-    <div class="card" aria-label="{{ project.data.title }}">
-      <h3>{{ project.data.title }}</h3>
-      <p>{{ project.data.date | fullString }}</p>
-      <div class="tags" aria-label="Tech Used">
-        {%- for tag in project.data.tech -%}
-          <p class="tag">{{ tag }}</p>
-        {%- endfor -%}
-      </div>
-      {% if project.data.extraLink %}<a class="button" href="{{ project.data.extraLink }}">{{ project.data.extraLinkText }}</a>{% endif %}
-      {% if project.data.live %}<a class="button" href="{{ project.data.live }}" target="_blank">Live</a>{% endif %}
-      {% if project.data.source %}<a class="button" href="{{ project.data.source }}" target="_blank">Source</a>{% endif %}
-    </div>
-    {%- endfor -%}
-  </div>
-</section>
+<a class="button center" href="/code/all-projects/">More Projects</a>
