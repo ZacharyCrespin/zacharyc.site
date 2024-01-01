@@ -285,7 +285,7 @@ pre button {
   right: 0.5rem;
   padding: 0.5rem;
   line-height: 1;
-  fill: var(--color-text)
+  fill: var(--color-text);
 }
 pre:hover button {
   opacity: 1;
