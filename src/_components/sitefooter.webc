@@ -41,7 +41,7 @@
     padding: 0.25em 0.5em;
   }
   .footer-links a:first-of-type {
-    padding-left: 0
+    padding-inline-start: 0;
   }
 
   .footer-links a:hover path, .footer-links a:focus-visible path {

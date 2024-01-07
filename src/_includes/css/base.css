@@ -242,8 +242,8 @@ form .input {
   flex-direction: column;
 }
 form .input input:not([type="radio"], [type="checkbox"], [type="file"]), form .input textarea, form .input select {
-  margin-top: 0.5rem;
-  margin-left: 0;
+  margin-block-start: 0.5rem;
+  margin-inline-start: 0;
 }
 
 form button {
@@ -357,8 +357,8 @@ a.card:focus-visible .button {
 }
 .cards .card img {
   width: calc(100% + 1rem);
-  margin-top: -0.5rem;
-  margin-left: -0.5rem;
+  margin-block-start: -0.5rem;
+  margin-inline-start: -0.5rem;
   height: auto;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
@@ -405,7 +405,7 @@ section.split .text, .section.split .text {
 section.split .text .button, section.split .text button,
 .section.split .text .button, .section.split .text button,
 section.split .text .tags .tag:first-of-type, .section.split .text .tags .tag:first-of-type {
-  margin-left: 0;
+  margin-inline-start: 0;
 }
 
 /* Gallery */
@@ -450,14 +450,14 @@ section.split .text .tags .tag:first-of-type, .section.split .text .tags .tag:fi
     max-width: 100%;
   }
   .card.full .text {
-    margin-left: 0;
+    margin-inline-start: 0;
     text-align: center;
   }
   .card.full .text .tags {
     justify-content: center;
   }
   .card.full .text .button, .card.full .text button {
-    margin-left: 0.5rem;
+    margin-inline-start: 0.5rem;
   }
   section.split, .section.split {
     grid-template-columns: 100%;
