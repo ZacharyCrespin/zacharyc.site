@@ -400,7 +400,7 @@ section.split img, .section.split img {
 }
 
 section.split .text, .section.split .text {
-  margin-left: 2rem;
+  margin-inline-start: 2rem;
 }
 section.split .text .button, section.split .text button,
 .section.split .text .button, .section.split .text button,
@@ -458,6 +458,15 @@ section.split .text .tags .tag:first-of-type, .section.split .text .tags .tag:fi
   }
   .card.full .text .button, .card.full .text button {
     margin-left: 0.5rem;
+  }
+  section.split, .section.split {
+    grid-template-columns: 100%;
+  }
+  .section.split .text, section.split .text {
+    margin-inline-start: 0;
+  }
+  section.split img, .section.split img {
+    max-width: 100%;
   }
   .gallery {
     grid-template-columns: 1fr 1fr;
