@@ -115,8 +115,8 @@ module.exports = function(eleventyConfig) {
   // sort list by a frontmatter value
   eleventyConfig.addFilter("sort", function (list, property) {
     return list.sort((a, b) => {
-      const orderA = a.data[property] || 0;
-      const orderB = b.data[property] || 0;
+      const orderA = a.data[property] || 9999;
+      const orderB = b.data[property] || 9999;
       return orderA - orderB;
     });
   });
