@@ -8,7 +8,7 @@ tech:
   - JavaScript
 img: code/emoji.png
 featured: true
-featuredOrder: 0
+featuredOrder: 1
 date: 2023-07-13
 displayTag: NPM Package
 ---

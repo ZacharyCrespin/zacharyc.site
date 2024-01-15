@@ -1,5 +1,6 @@
 {
   "tags": "home-feature",
   "permalink": false,
-  "homeFeatured": true
+  "homeFeatured": true,
+  "homeCustom": true
 }

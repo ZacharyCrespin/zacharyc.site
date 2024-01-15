@@ -5,10 +5,10 @@ sourceType: github
 live: https://fhsbellschedule.netlify.app
 tech:
   - Eleventy
-  - JavaScript
 featured: true
-featuredOrder: 1
+featuredOrder: 2
 homeFeatured: true
+homeFeaturedOrder: 4
 img: code/bellschedule.png
 date: 2022-07-18T02:10:25Z
 displayTag: Website

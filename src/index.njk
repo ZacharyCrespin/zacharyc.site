@@ -1,47 +1,45 @@
 ---
-title: My Work
+title: Featured Work
 seoTitle: Zachary Crespin
 titleOverride: true
 description: Programmer, Filmmaker, Photographer
 id: home
 layout: default
 ---
-<section class="page-section" aria-label="Latest Collections">
-  <h2>Latest Collections</h2>
-  <div class="cards small" data-nosnippet>
-    {%- for collection in collections.collection | reverse | limit(4) -%}
-    <a class="card" href="{{ collection.url }}">
-      {% image collection.data.img, collection.data.title + " Collection Image", 300 %}
-      <h3>{{ collection.data.title }}</h3>
-      <p>{{ collection.data.numberofphotos }} Photos</p>
-      <span class="button">View</span>
-    </a>
-    {%- endfor -%}
-  </div>
-  <a class="button center" href="/photography/collections/">More Collections</a>
-</section>
-
-<section class="page-section" aria-label="Featured Projects">
-  <h2>Featured Projects</h2>
-  <div class="cards wide" data-nosnippet>
-    {%- for project in collections.code | sort('featuredOrder') -%}
-      {% if project.data.featured %}
-      <div class="card" aria-label="{{ project.data.title }}">
-        {% image project.data.img, project.data.title, 600 %}
-        <div class="text">
-          <h3>{{ project.data.title }}</h3>
-          <div class="tags" aria-label="Tech Used">
-            {%- for tag in project.data.tech -%}
-              <p class="tag">{{ tag }}</p>
-            {%- endfor -%}
-          </div>
-          {% if project.data.extraLink %}<a class="button" href="{{ project.data.extraLink }}">{{ project.data.extraLinkText }}</a>{% endif %}
-          {% if project.data.live %}<a class="button" href="{{ project.data.live }}" target="_blank">Live</a>{% endif %}
-          {% if project.data.source %}<a class="button" href="{{ project.data.source }}" target="_blank">Source</a>{% endif %}
+<div class="cards">
+  {% for section in collections.all | reverse | sort('homeFeaturedOrder') %}
+    {% if section.data.homeFeatured %}
+    {% if section.data.homeCustom %}
+    {{ section.content | safe }}<hr>
+    {% else %}
+    <div class="section split" aria-label="{{ section.data.title }}">
+      {% image section.data.img, section.data.title, 600 %}
+      <div class="text">
+        <h3>{{ section.data.title }}</h3>
+        <p>{{ section.data.date | fullString }}</p>
+        <!-- Film -->
+        {% if section.data.description %}
+        <p>{{ section.data.description }}</p>
+        {% if section.data.extDescription %}
+        <p>{{ section.data.extDescription }}</p>
+        {% endif %}
+        {% endif %}
+        <!-- Code -->
+        <div class="tags" aria-label="Tags">
+          <p class="tag">{{ section.data.displayTag }}</p>
+          {%- for tag in section.data.tech -%}<p class="tag">{{ tag }}</p>{%- endfor -%}
         </div>
+        <!-- Code -->
+        {% if section.data.extraLink %}<a class="button" href="{{ section.data.extraLink }}">{{ section.data.extraLinkText }}</a>{% endif %}
+        {% if section.data.live %}<a class="button" href="{{ section.data.live }}" target="_blank">Live</a>{% endif %}
+        {% if section.data.source %}<a class="button" href="{{ section.data.source }}" target="_blank">Source</a>{% endif %}
+        <!-- Film -->
+        {% if section.data.watchlink %}<a href="{{ section.data.watchlink }}" class="button">Watch Now</a>{% endif %}
+        {% if section.data.infolink %}<a href="{{ section.data.infolink }}" class="button">More Info</a>{% endif %}
       </div>
-      {% endif %}
-    {%- endfor -%}
-  </div>
-  <a class="button center" href="/code/">More Projects</a>
-</section>
+    </div>
+    <hr>
+    {% endif %}
+    {% endif %}
+  {% endfor %}
+</div>

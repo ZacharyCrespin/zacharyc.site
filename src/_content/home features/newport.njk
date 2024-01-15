@@ -1,0 +1,20 @@
+---
+homeFeaturedOrder: 5
+---
+<div class="section gallery" aria-label="Newport Beach, Select Photos">
+  {% for photo in collections.photo %}
+    {% if photo.data.id == "newport/1" %}
+    <a class="photo" href="/photography/{{ photo.data.id }}/">
+      {% image photo.data.src, photo.data.alt, 600, true %}
+    </a>
+    {% elseif photo.data.id == "newport/2" %}
+    <a class="photo" href="/photography/{{ photo.data.id }}/">
+      {% image photo.data.src, photo.data.alt, 600, true %}
+    </a>
+    {% elseif photo.data.id == "newport/4" %}
+    <a class="photo" href="/photography/{{ photo.data.id }}/">
+      {% image photo.data.src, photo.data.alt, 600, true %}
+    </a>
+    {% endif %}
+  {% endfor %}
+</div>

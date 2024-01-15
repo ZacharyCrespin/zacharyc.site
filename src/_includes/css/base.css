@@ -396,7 +396,7 @@ section.split, .section.split {
 
 section.split img, .section.split img {
   max-width: 65vw;
-  max-height: calc(100vh - 4rem);
+  max-height: calc(100vh - 10rem);
 }
 
 section.split .text, .section.split .text {

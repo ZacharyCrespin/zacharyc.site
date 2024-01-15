@@ -1,0 +1,14 @@
+---
+homeFeaturedOrder: 3
+---
+<div class="section gallery" aria-label="Hummingbirds, Select Photos">
+  {% for photo in collections.photo %}
+  {% for tag in photo.data.tags %}
+    {% if tag == "hummingbirds" %}
+    <a class="photo" href="/photography/{{ photo.data.id }}/">
+      {% image photo.data.src, photo.data.alt, 600, true %}
+    </a>
+    {% endif %}
+  {% endfor %}
+  {% endfor %}
+</div>
