@@ -85,9 +85,6 @@ h1, .h1 {
   font-size: var(--ts-h1);
   font-weight: var(--fw-bold);
 }
-h1.title {
-  text-align: center;
-}
 h2, .h2 {
   font-size: var(--ts-h2);
   font-weight: var(--fw-semibold);
@@ -175,7 +172,7 @@ button:focus-visible, .button:focus-visible {
   color: var(--color-bg);
 }
 
-hr {
+hr, .line {
   border: none;
   height: var(--stroke-width);
   background: linear-gradient(90deg, #0000, #fff, #0000);
@@ -255,6 +252,19 @@ figure img {
 }
 figure figcaption {
   text-align: center;
+}
+
+.title {
+  width: max-content;
+  margin-inline: auto;
+  margin-bottom: 0.25rem;
+}
+.title h1 {
+  margin-bottom: 0.025em;
+}
+.title .line {
+  width: 100%;
+  margin: 0;
 }
 
 /* Skip Nav Button */

@@ -1,6 +1,5 @@
 ---
 layout: base
-titleOverride: true
 eleventyComputed:
   title: "{{ name }}"
   seoTitle: "{{ name }} — Photography"
