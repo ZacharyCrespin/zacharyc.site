@@ -7,7 +7,7 @@
 
   /* Typography */
   --font: "Inter", sans-serif;
-  --font-display: "Meshed Display", serif;
+  --font-display: "Meshed Display", "Georgia", serif;
   --font-italic: "Georgia", serif;
   --font-code: "Consolas", 'Courier New', monospace;
   --fw-regular: 300;

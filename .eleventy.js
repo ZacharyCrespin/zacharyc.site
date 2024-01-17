@@ -1,7 +1,6 @@
 const pkg = require('./package.json');
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const Image = require("@11ty/eleventy-img");
-const { eleventyImagePlugin } = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const downloader = require('11ty-external-file-downloader');
@@ -25,24 +24,8 @@ async function imageShortcode(src, alt, sizes, lazyLoad = false) {
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginWebc, {
-    components: [
-			"./src/_components/**/*.webc",
-			"npm:@11ty/eleventy-plugin-syntaxhighlight/*.webc",
-			"npm:@11ty/eleventy-img/*.webc",
-		]
+    components: "./src/_components/**/*.webc"
   });
-  eleventyConfig.addPlugin(eleventyImagePlugin, {
-		// Set global default options
-		formats: ["webp", "jpeg", "svg"],
-    widths: [150, 300, 600, "auto"],
-		urlPath: "/images/",
-    outputDir: "public/images/",
-
-		defaultAttributes: {
-			loading: "eager",
-			decoding: "async"
-		}
-	});
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(filesMinifier);
 
@@ -78,18 +61,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias('base', 'base.webc');
   eleventyConfig.addLayoutAlias('default', 'default.webc');
   eleventyConfig.addLayoutAlias('collection', 'collection.njk');
-  eleventyConfig.addLayoutAlias('photo', 'photo.webc');
-
-  eleventyConfig.addWatchTarget("./src/css/");
+  eleventyConfig.addLayoutAlias('photo', 'photo.njk');
 
   // format dates
-  eleventyConfig.addFilter("shortString", (dateObj) => {
-    const year = dateObj.getUTCFullYear();
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const month = months[dateObj.getUTCMonth()];
-    const day = dateObj.getUTCDate();
-    return `${month} ${day}, ${year}`;
-  });
   eleventyConfig.addFilter("fullString", (dateObj) => {
     const year = dateObj.getUTCFullYear();
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
