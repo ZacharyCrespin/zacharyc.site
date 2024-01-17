@@ -409,12 +409,12 @@ section.split img, .section.split img {
   max-height: calc(100vh - 10rem);
 }
 
-section.split .text, .section.split .text {
+section .text, .section .text {
   margin-inline-start: 2rem;
 }
-section.split .text .button, section.split .text button,
-.section.split .text .button, .section.split .text button,
-section.split .text .tags .tag:first-of-type, .section.split .text .tags .tag:first-of-type {
+section .text .button, section .text button,
+.section .text .button, .section .text button,
+section .text .tags .tag:first-of-type, .section .text .tags .tag:first-of-type {
   margin-inline-start: 0;
 }
 
@@ -424,6 +424,9 @@ section.split .text .tags .tag:first-of-type, .section.split .text .tags .tag:fi
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+}
+.gallery.two-wide {
+  grid-template-columns: 1fr 1fr;
 }
 .photo {
   margin: 0.5rem;

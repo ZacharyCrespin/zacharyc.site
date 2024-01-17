@@ -20,11 +20,7 @@ layout: default
         <!-- Film -->
         {% if section.data.description %}
         <p>{{ section.data.description }}</p>
-        {% if section.data.extDescription %}
-        <p>{{ section.data.extDescription }}</p>
         {% endif %}
-        {% endif %}
-        <!-- Code -->
         <div class="tags" aria-label="Tags">
           <p class="tag">{{ section.data.displayTag }}</p>
           {%- for tag in section.data.tech -%}<p class="tag">{{ tag }}</p>{%- endfor -%}
@@ -43,3 +39,10 @@ layout: default
     {% endif %}
   {% endfor %}
 </div>
+
+<style>
+  .section-gallery {
+    display: grid;
+    grid-template-columns: auto max-content;
+  }
+</style>
