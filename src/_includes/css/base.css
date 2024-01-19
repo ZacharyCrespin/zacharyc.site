@@ -15,7 +15,7 @@
   --fw-bold: 900;
 
   /* Text Size */
-  --ts-display: 3.1rem;
+  --ts-display: 3.2rem;
   --ts-h1: 2.8rem;
   --ts-h2: 2.5rem;
   --ts-h3: 2.2rem;
@@ -72,7 +72,7 @@ article {
   outline: var(--border);
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .display  {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   line-height: 1.15;
   margin: 0.25em 0;
 }
@@ -475,11 +475,18 @@ section .text .tags .tag:first-of-type, .section .text .tags .tag:first-of-type 
   section.split, .section.split {
     grid-template-columns: 100%;
   }
-  .section.split .text, section.split .text {
+  .section .text, section .text {
+    text-align: center;
     margin-inline-start: 0;
+  }
+  .section .text .tags, section .text .tags {
+    justify-content: center;
   }
   section.split img, .section.split img {
     max-width: 100%;
+  }
+  .section-gallery, .section.section-gallery, .section-gallery .gallery, .section.section-gallery .gallery {
+    grid-template-columns: 100%;
   }
   .gallery {
     grid-template-columns: 1fr 1fr;
