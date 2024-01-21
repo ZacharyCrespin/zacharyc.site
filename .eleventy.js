@@ -1,9 +1,10 @@
 const pkg = require('./package.json');
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const Image = require("@11ty/eleventy-img");
-const { eleventyImagePlugin } = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
+const downloader = require('11ty-external-file-downloader');
+const CleanCSS = require("clean-css");
 
 async function imageShortcode(src, alt, sizes, lazyLoad = false) {
   let metadata = await Image("./src/images/" + src, {
@@ -23,35 +24,31 @@ async function imageShortcode(src, alt, sizes, lazyLoad = false) {
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginWebc, {
-    components: [
-			"./src/_components/**/*.webc",
-			"npm:@11ty/eleventy-plugin-syntaxhighlight/*.webc",
-			"npm:@11ty/eleventy-img/*.webc",
-		]
+    components: "./src/_components/**/*.webc"
   });
-  eleventyConfig.addPlugin(eleventyImagePlugin, {
-		// Set global default options
-		formats: ["webp", "jpeg", "svg"],
-    widths: [150, 300, 600, "auto"],
-		urlPath: "/images/",
-    outputDir: "public/images/",
-
-		defaultAttributes: {
-			loading: "eager",
-			decoding: "async"
-		}
-	});
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(filesMinifier);
 
+  eleventyConfig.addPlugin(downloader, {
+    urls: [
+      'https://analytics.zacharyc.site/analytics.js'
+    ],
+    directory: 'public'
+  });
+
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
+
   eleventyConfig.addPassthroughCopy('./src/**/*.html');
+  eleventyConfig.addPassthroughCopy('./src/**/*.css');
+  eleventyConfig.addPassthroughCopy('./src/**/*.js');
 
   eleventyConfig.addPassthroughCopy('./src/admin');
   eleventyConfig.addPassthroughCopy('./src/files');
   eleventyConfig.addPassthroughCopy('./src/fonts');
   eleventyConfig.addPassthroughCopy('./src/images');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
-  eleventyConfig.addPassthroughCopy('./src/analytics.js');
   eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');
   eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
   eleventyConfig.addPassthroughCopy('./src/favicon.ico');
@@ -64,18 +61,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias('base', 'base.webc');
   eleventyConfig.addLayoutAlias('default', 'default.webc');
   eleventyConfig.addLayoutAlias('collection', 'collection.njk');
-  eleventyConfig.addLayoutAlias('photo', 'photo.webc');
-
-  eleventyConfig.addWatchTarget("./src/css/");
+  eleventyConfig.addLayoutAlias('photo', 'photo.njk');
 
   // format dates
-  eleventyConfig.addFilter("shortString", (dateObj) => {
-    const year = dateObj.getUTCFullYear();
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const month = months[dateObj.getUTCMonth()];
-    const day = dateObj.getUTCDate();
-    return `${month} ${day}, ${year}`;
-  });
   eleventyConfig.addFilter("fullString", (dateObj) => {
     const year = dateObj.getUTCFullYear();
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -101,8 +89,8 @@ module.exports = function(eleventyConfig) {
   // sort list by a frontmatter value
   eleventyConfig.addFilter("sort", function (list, property) {
     return list.sort((a, b) => {
-      const orderA = a.data[property] || 0;
-      const orderB = b.data[property] || 0;
+      const orderA = parseInt(a.data[property]) || 9999;
+      const orderB = parseInt(b.data[property]) || 9999;
       return orderA - orderB;
     });
   });

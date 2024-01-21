@@ -16,19 +16,16 @@
     <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <meta webc:if="shareImage" name="image" :content="'/images/' + shareImage">
-    <meta webc:else name="image" :content="'/images/share/' + id + '.jpg'">
+    <meta webc:if="!shareImage" name="image" :content="'/images/share/' + id + '.jpg'">
     <meta name="color-scheme" content="dark">
     <meta name="author" content="Zachary Crespin">
     <meta name="generator" :content="eleventy.generator">
     <link rel="canonical" :href="'https://zacharyc.site' + page.url">
 
     <!-- CSS -->
-    <link webc:if="!nocss" rel="stylesheet" href="css/inter.css" webc:bucket="site">
-    <link webc:if="!nocss" rel="stylesheet" href="css/base.css" webc:bucket="site">
-    <link webc:if="highlightCode" rel="stylesheet" href="css/prism.css" webc:bucket="site">
+    <link webc:if="!nocss" rel="stylesheet" href="/css/main.css" webc:keep>
+    <link webc:if="highlightCode" rel="stylesheet" href="/css/prism.css" webc:keep>
 
-    <!-- Main Site CSS -->
-    <link rel="stylesheet" :href="getBundleFileUrl('css', 'site')" webc:keep>
     <!-- Page CSS -->
     <style @raw="getBundle('css')" webc:keep></style>
 
@@ -43,7 +40,7 @@
     <meta webc:if="description" property="og:description" :content="description">
     <meta webc:else property="og:description" :content="title">
     <meta webc:if="shareImage" property="og:image" :content="'https://zacharyc.site/images/' + shareImage">
-    <meta webc:else property="og:image" :content="'https://zacharyc.site/images/share/' + id  + '.jpg'">
+    <meta webc:if="!shareImage" property="og:image" :content="'https://zacharyc.site/images/share/' + id  + '.jpg'">
     <meta property="og:site_name" content="Zachary Crespin">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -51,16 +48,12 @@
     <meta name="twitter:creator" content="@ZacharyCrespin">
 
     <!-- Analytics -->
-    <script webc:keep src="/analytics.js"></script>
-    <script>
-      const analytics = ackeeTracker.create('https://analytics.zacharyc.site').record('133c9354-5976-48e5-803f-809c8aeeda11')
-    </script>
+    <script webc:keep async src="/analytics.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11"></script>
     <template @raw="headCode" webc:nokeep></template>
   </head>
   <body>
     <template @html="content" webc:nokeep></template>
-    <script webc:if="highlightCode" src="js/codeCopy.js"></script>
-    <script webc:if="trackDownloads" src="js/trackDownload.js"></script>
+    <script webc:if="highlightCode" src="/js/codeCopy.js" webc:keep></script>
     <script @html="getBundle('js')" webc:keep></script>
   </body>
 </html>

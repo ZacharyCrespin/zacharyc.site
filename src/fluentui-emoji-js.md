@@ -22,8 +22,8 @@ npm install fluentui-emoji-js
 ```js
 const emoji = require('fluentui-emoji-js')
 
-emoji.fromGlyph('👋','3D').then((emojiFile) => {
-  console.log(emojiFile)
+emoji.fromGlyph('👋','3D').then((emojiImg) => {
+  console.log(emojiImg)
 })
 ```
 
@@ -31,8 +31,8 @@ emoji.fromGlyph('👋','3D').then((emojiFile) => {
 ```js
 import * as emoji from 'fluentui-emoji-js'
 
-const emojiFile = await emoji.fromGlyph('👋','3D')
-console.log(emojiFile)
+const emojiImg = await emoji.fromGlyph('👋','3D')
+console.log(emojiImg)
 ```
 
 #### Displaying the emoji
@@ -43,8 +43,8 @@ Both `fromGlyph(glyph, style)` and `fromCode(code, style)` return the location o
 const emojiImage = document.querySelector('#emojiImage');
 const emoji = '🍕';
 
-emoji.fromGlyph(emoji,'3D').then((emojiFile) => {
-  emojiImage.src = `https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets${emojiFile}`
+emoji.fromGlyph(emoji,'3D').then((emojiImg) => {
+  emojiImage.src = `https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@latest/assets${emojiImg}`
 })
 ```
 

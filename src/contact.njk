@@ -1,0 +1,27 @@
+---
+title: Contact
+id: contact
+layout: default
+---
+<form action="https://formsubmit.co/forms@zacharyc.site" method="POST">
+  <div class="input">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" required>
+  </div>
+  <div class="input">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+  </div>
+  <div class="input">
+    <label for="message">Message</label>
+    <textarea rows="5" name="message" id="message" autocomplete="off" required></textarea>
+  </div>
+  <input type="hidden" name="_next" value="https://zacharyc.site/contact/thanks">
+  <button type="submit">Send</button>
+</form>
+<style>
+  form {
+    max-width: 50ch;
+    margin-inline: auto;
+  }
+</style>

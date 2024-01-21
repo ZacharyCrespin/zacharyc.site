@@ -1,5 +1,6 @@
 {
   "layout": "collection",
   "tags": "collection",
+  "displayTag": "Photo Collection",
   "permalink": "/photography/{{ id }}/index.html"
 }

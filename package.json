@@ -1,7 +1,7 @@
 {
   "name": "zacharyc.site",
   "description": "My Personal Website",
-  "version": "7.18.10",
+  "version": "8.0.0",
   "author": "Zachary Crespin <contact@zacharyc.site> (https://zacharyc.site)",
   "homepage": "https://zacharyc.site",
   "repository": {
@@ -18,25 +18,22 @@
     "portfolio"
   ],
   "scripts": {
-    "dev": "netlify dev",
     "start": "eleventy --quiet --serve",
-    "start-cms": "npx netlify-cms-proxy-server",
     "build": "eleventy",
-    "lint": "stylelint src/**/*.css"
+    "dev": "netlify dev"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-img": "^3.1.1",
+    "@11ty/eleventy-img": "^3.1.8",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
-    "11ty-external-file-downloader": "^1.0.3",
-    "stylelint": "^15.10.3",
-    "stylelint-config-standard": "^34.0.0"
+    "11ty-external-file-downloader": "^1.0.3"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-webc": "^0.11.1",
-    "axios": "^1.5.1",
+    "@11ty/eleventy-plugin-webc": "^0.11.2",
+    "axios": "^1.6.5",
+    "clean-css": "^5.3.3",
     "fluentui-emoji-js": "^1.1.1",
-    "fuse.js": "^6.6.2"
+    "fuse.js": "^7.0.0"
   }
 }

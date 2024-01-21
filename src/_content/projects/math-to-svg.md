@@ -5,7 +5,9 @@ source: https://github.com/ZacharyCrespin/math-to-svg
 sourceType: github
 tech: 
   - Netlify Functions
-  - JavaScript
 img: code/math-to-svg.png
-date: 2023-05-25T07:00:00.000Z
+date: 2023-05-25
+displayTag: Website
+featured: true
+featuredOrder: 3
 ---

@@ -1,0 +1,8 @@
+---
+permalink: css/prism.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+  {% include "css/prism.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

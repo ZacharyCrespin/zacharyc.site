@@ -3,7 +3,10 @@ layout: base
 ---
 <siteheader webc:nokeep></siteheader>
 <main role="main" id="content">
-  <h1 class="title display" @text="title"></h1>
+  <div class="title">
+    <h1 class="display" @text="title"></h1>
+    <div class="line"></div>
+  </div>
   <article webc:if="article" @html="content"></article>
   <template @html="content" webc:else webc:nokeep></template>
 </main>
