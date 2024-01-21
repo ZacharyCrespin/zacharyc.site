@@ -172,6 +172,16 @@ button:focus-visible, .button:focus-visible {
   color: var(--color-bg);
 }
 
+button:disabled, button[disabled], button.disabled, .button.disabled {
+  color: var(--color-light);
+}
+button:disabled:hover, button[disabled]:hover, button.disabled:hover, .button.disabled:hover,
+button:disabled:focus-visible, button[disabled]:focus-visible, button.disabled:focus-visible, .button.disabled:focus-visible {
+  cursor: default;
+  background-color: var(--color-bg);
+  color: var(--color-light);
+}
+
 hr, .line {
   border: none;
   height: var(--stroke-width);
