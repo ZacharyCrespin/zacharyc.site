@@ -2,9 +2,13 @@
 homeFeaturedOrder: 3
 ---
 <div class="section section-gallery" aria-label="Hummingbirds, Select Photos">
-  <div class="gallery two-wide">
+  <div class="gallery">
   {% for photo in collections.photo %}
     {% if photo.data.id == "hummingbirds/1" %}
+    <a class="photo" href="/photography/{{ photo.data.id }}/">
+      {% image photo.data.src, photo.data.alt, 600, true %}
+    </a>
+    {% elseif photo.data.id == "hummingbirds/5" %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
       {% image photo.data.src, photo.data.alt, 600, true %}
     </a>
