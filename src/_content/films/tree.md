@@ -6,6 +6,4 @@ imgalt: A blurd Christmas tree in the baground with the text \"Tree - a Cinemati
 date: 2023-12-22
 watchlink: https://youtu.be/oYH1xbHy8dU
 featured: true
-homeFeatured: true
-homeFeaturedOrder: 1
 ---
