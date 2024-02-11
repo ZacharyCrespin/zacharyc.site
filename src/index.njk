@@ -45,4 +45,9 @@ layout: default
     display: grid;
     grid-template-columns: auto max-content;
   }
+  @media screen and (width < 900px) {
+    .section-gallery, .section.section-gallery, .section-gallery .gallery, .section.section-gallery .gallery {
+      grid-template-columns: 100%;
+    }
+  }
 </style>

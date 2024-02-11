@@ -495,9 +495,6 @@ section .text .tags .tag:first-of-type, .section .text .tags .tag:first-of-type 
   section.split img, .section.split img {
     max-width: 100%;
   }
-  .section-gallery, .section.section-gallery, .section-gallery .gallery, .section.section-gallery .gallery {
-    grid-template-columns: 100%;
-  }
   .gallery {
     grid-template-columns: 1fr 1fr;
   }

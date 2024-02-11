@@ -5,4 +5,7 @@ alt: A hummingbird resting on a feeder
 tags: 
   - hummingbirds
 id: hummingbirds/5
+order: 1
+featured: true
+featuredOrder: 4
 ---

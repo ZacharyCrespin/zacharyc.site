@@ -5,6 +5,7 @@ alt: Hummingbird sitting on a feeder.
 tags: 
   - hummingbirds
 id: hummingbirds/2
+order: 4
 featured: true
-featuredOrder: 3
+featuredOrder: 5
 ---

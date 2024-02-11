@@ -2,7 +2,7 @@
 layout: default
 ---
 <section class="gallery" aria-label="Gallery">
-  {% for photo in collections.photo %}
+  {% for photo in collections.photo | sort("order") %}
   {% for tag in photo.data.tags %}
     {% if tag == id %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">

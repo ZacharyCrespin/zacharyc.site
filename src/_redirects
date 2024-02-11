@@ -5,6 +5,14 @@
 /photos                /photography
 /code/11ty-external-file-downloader    /11ty-external-file-downloader
 /files/wisp.zip        /files/wisps.zip
+/photography/lake-tahoe/1 /photography/lake-tahoe/chipmunk-1
+/photography/lake-tahoe/2 /photography/lake-tahoe/chipmunk-2
+/photography/lake-tahoe/3 /photography/lake-tahoe/chipmunk-3
+/photography/lake-tahoe/4 /photography/lake-tahoe/chipmunk-4
+/photography/lake-tahoe/5 /photography/lake-tahoe/chipmunk-5
+/photography/lake-tahoe/6 /photography/lake-tahoe/chipmunk-6
+/photography/lake-tahoe/7 /photography/lake-tahoe/chipmunk-7
+
 
 # Avoid confusion
 /periodictables        /periodic-tables

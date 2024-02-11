@@ -1,18 +1,14 @@
 ---
-homeFeaturedOrder: 5
+homeFeaturedOrder: 3
 ---
-<div class="section section-gallery" aria-label="Newport Beach, Select Photos">
-  <div class="gallery">
+<div class="section section-gallery" aria-label="Lake Tahoe, Select Photos">
+  <div class="gallery two-wide">
   {% for photo in collections.photo | sort("order") %}
-    {% if photo.data.id == "newport/1" %}
+    {% if photo.data.id == "lake-tahoe/view-1" %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
       {% image photo.data.src, photo.data.alt, 600, true %}
     </a>
-    {% elseif photo.data.id == "newport/2" %}
-    <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt, 600, true %}
-    </a>
-    {% elseif photo.data.id == "newport/4" %}
+    {% elseif photo.data.id == "lake-tahoe/view-2" %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
       {% image photo.data.src, photo.data.alt, 600, true %}
     </a>
@@ -20,10 +16,10 @@ homeFeaturedOrder: 5
   {% endfor %}
   </div>
   <div class="text">
-    <h3>Newport Beach</h3>
+    <h3>Lake Tahoe</h3>
     <div class="tags" aria-label="Tags">
       <p class="tag">Photo Collection</p>
     </div>
-    <a class="button" href="/photography/newport/">View More</a>
+    <a class="button" href="/photography/lake-tahoe/">View More</a>
   </div>
 </div>
