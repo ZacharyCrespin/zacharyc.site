@@ -25,7 +25,7 @@ layout: default
     {%- for photo in collections.photo | sort('featuredOrder') -%}
     {% if photo.data.featured %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt, 600, true %}
+      {% image photo.data.src, photo.data.alt, 300, true %}
     </a>
     {% endif %}
     {%- endfor -%}

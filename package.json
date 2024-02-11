@@ -13,9 +13,9 @@
   },
   "private": true,
   "keywords": [
-    "11ty",
+    "portfolio",
     "photography",
-    "portfolio"
+    "filmmaking"
   ],
   "scripts": {
     "start": "eleventy --quiet --serve",
