@@ -1,11 +1,5 @@
 <footer class="main-footer">
   <div class="footer-links">
-    <a href="https://youtube.com/@ZacharyCrespin" title="YouTube" aria-label="YouTube">
-      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M25 12.5C25 19.4036 19.4036 25 12.5 25C5.59644 25 0 19.4036 0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5ZM17.1327 16.9118H8.30845C7.12774 16.9118 6.17647 15.8676 6.17647 14.5832V10.4168C6.17647 9.12722 7.13252 8.08824 8.30845 8.08824H17.1327C18.3134 8.08824 19.2647 9.13244 19.2647 10.4168V14.5832C19.2695 15.8728 18.3134 16.9118 17.1327 16.9118Z" fill="var(--color-text)"/>
-        <path d="M15.0357 12.4347L11.3235 10.2941V14.5754L15.0357 12.4347Z" fill="var(--color-text)"/>
-      </svg>
-    </a>
     <a href="https://github.com/ZacharyCrespin" title="GitHub" aria-label="GitHub">
       <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_113_9)">
@@ -18,6 +12,11 @@
             <rect width="25" height="25" fill="var(--color-text)" />
           </clipPath>
         </defs>
+      </svg>
+    </a>
+    <a href="https://youtube.com/@ZacharyCrespin" title="YouTube" aria-label="YouTube">
+      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25ZM6.09496 18.809H18.905C20.619 18.809 22.0069 17.3007 22 15.4286V9.38036C22 7.51586 20.619 6 18.905 6H6.09496C4.38788 6 3 7.50828 3 9.38036V15.4286C3 17.2931 4.38094 18.809 6.09496 18.809ZM15.8608 12.3098L10.4719 9.20225V15.4173L15.8608 12.3098Z" fill="white"/>
       </svg>
     </a>
   </div>
