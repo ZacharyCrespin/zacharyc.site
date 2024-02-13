@@ -23,9 +23,7 @@ async function imageShortcode(src, alt, sizes, lazyLoad = false) {
 }
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPlugin(pluginWebc, {
-    components: "./src/_components/**/*.webc"
-  });
+  eleventyConfig.addPlugin(pluginWebc);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(filesMinifier);
 

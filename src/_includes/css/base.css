@@ -296,6 +296,134 @@ figure figcaption {
   margin-block: 2rem;
 }
 
+/* Main Header */
+.main-header {
+  display: grid;
+  grid-template-columns: max-content auto;
+  margin: 1rem var(--gutter);
+  align-items: center;
+}
+.header-logo svg {
+  height: var(--ts-h4);
+  width: 100%;
+}
+.header-logo:hover svg path, .header-logo:focus-visible svg path {
+  fill: var(--color-light);
+}
+.main-header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav-link {
+  text-decoration: none;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+.main-header .nav-link:last-of-type {
+  padding-inline-end: 0;
+}
+.nav-link:hover, .nav-link:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: calc(var(--stroke-width) * 2);
+  text-underline-offset: calc(var(--stroke-width) * 2);
+}
+
+@media screen and (width < 600px) {
+  .main-header {
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+  .main-header nav {
+    justify-content: center;
+  }
+}
+
+/* Side Nav */
+#sidenav {
+  width: 100vw;
+  width: 100dvw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+.sidenav-links {
+  min-width: max-content;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  transform: translateX(100%);
+  pointer-events: all;
+  transition: transform ease .2s, opacity ease .2s;
+}
+.sidenav-links hr {
+  margin: 0.5rem 0;
+}
+.sidenavBG {
+  width: 100%;
+  background-color: var(--color-bg);
+  opacity: 0;
+  transition: opacity ease .2s;
+}
+#sidenav.open .sidenav-links {
+  transform: translateX(0);
+  box-shadow: 0 0 1rem var(--color-dark);
+}
+#sidenav.open .sidenavBG {
+  opacity: 0.75;
+  pointer-events: all;
+}
+
+.sidenav-top {
+  display: flex;
+  justify-content: flex-end;
+}
+.sidenav-top button, .sidenav-top a {
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+  border: none;
+}
+.sidenav-top button:hover {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+.sidenav-top img {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+/* Main Footer */
+.main-footer {
+  display: grid;
+  grid-template-columns: auto max-content;
+  margin: 1rem var(--gutter);
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0.25em 0.5em;
+}
+.footer-links a:first-of-type {
+  padding-inline-start: 0;
+}
+
+.footer-links a:hover path, .footer-links a:focus-visible path {
+  fill: var(--color-light);
+}
+
 /* Copy code button */
 pre button {
   opacity: 0;

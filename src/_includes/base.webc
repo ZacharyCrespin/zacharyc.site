@@ -48,7 +48,7 @@
     <meta name="twitter:creator" content="@ZacharyCrespin">
 
     <!-- Analytics -->
-    <script webc:keep async src="/analytics.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11" data-ackee-opts='{ "detailed": false }'></script>
+    <script webc:keep async src="/analytics.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11" data-ackee-opts='{ "detailed": true }'></script>
     <template @raw="headCode" webc:nokeep></template>
   </head>
   <body>

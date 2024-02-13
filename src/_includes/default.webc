@@ -1,7 +1,51 @@
 ---
 layout: base
 ---
-<siteheader webc:nokeep></siteheader>
+<a href="#content" class="button skip-nav">Skip Nav</a>
+<header class="main-header">
+  <a href="/" class="header-logo" aria-label="ZC Logo">
+    <svg width="726" height="504" viewBox="0 0 726 504" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M212.4 48L30 456V462H345.6V288H339.6C316.8 406.2 255.6 456 189.6 456H148.8L331.2 48V42H43.8V192H49.8C69 95.4 132.6 48 193.8 48H212.4ZM584.222 42C626.222 42 656.822 111 689.222 203.4H695.222V60.6C665.822 44.4 626.822 36 590.822 36C470.222 36 381.422 128.4 381.422 252.6C381.422 376.8 470.222 468 590.822 468C626.822 468 665.822 459.6 695.222 443.4V288H689.222C656.822 393 626.222 462 584.222 462C536.222 462 495.422 372 495.422 252C495.422 132 536.222 42 584.222 42Z" fill="var(--color-text)"/>
+    </svg>      
+  </a>
+  <nav class="nav-main" role="menubar" aria-label="Main Navigation">
+    <a class="nav-link" href="/photography/" role="menuitem">Photography</a>
+    <a class="nav-link" href="/film/" role="menuitem">Film</a>
+    <a class="nav-link" href="/code/" role="menuitem">Code</a>
+    <a class="nav-link" href="#" onclick="toggleFullMenu()" role="menuitem">More</a>
+  </nav>
+</header>
+<div id="sidenav">
+  <div class="sidenavBG" onclick="toggleFullMenu()"></div>
+  <div class="sidenav-links" aria-label="Full Navigation">
+    <div class="sidenav-top">
+      <a href="/search/"><img src="/images/icons/search.svg" alt="Search"></a>
+      <button onclick="toggleFullMenu()"><img src="/images/icons/close.svg" alt="Close"></button>
+    </div>
+    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link" href="/photography/">Photography</a>
+    <a class="nav-link" href="/film/">Film</a>
+    <a class="nav-link" href="/code/">Code</a>
+    <hr>
+    <a class="nav-link" href="/wallpapers/">Wallpapers</a>
+    <a class="nav-link" href="/periodic-tables/">Periodic Tables</a>
+    <a class="nav-link" href="/fluentui-emoji-js/">fluentui-emoji-js</a>
+    <a class="nav-link" href="/contact/">Contact</a>
+  </div>
+</div>
+<script>
+  let menuOpen = false
+  function toggleFullMenu() {
+    if (menuOpen) {
+      document.querySelector("#sidenav").classList.remove("open")
+      menuOpen = false
+    } else {
+      document.querySelector("#sidenav").classList.add("open")
+      menuOpen = true
+    }
+  }
+</script>
+
 <main role="main" id="content">
   <div class="title">
     <h1 class="display" @text="title"></h1>
@@ -10,4 +54,28 @@ layout: base
   <article webc:if="article" @html="content"></article>
   <template @html="content" webc:else webc:nokeep></template>
 </main>
-<sitefooter webc:nokeep></sitefooter>
+
+<footer class="main-footer">
+  <div class="footer-links">
+    <a href="https://github.com/ZacharyCrespin" title="GitHub" aria-label="GitHub">
+      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_113_9)">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M12.5 0C5.59375 0 0 5.73524 0 12.8162C0 18.4873 3.57812 23.2774 8.54688 24.9755C9.17188 25.0877 9.40625 24.7032 9.40625 24.3667C9.40625 24.0624 9.39062 23.0531 9.39062 21.9797C6.25 22.5725 5.4375 21.1947 5.1875 20.4738C5.04688 20.1054 4.4375 18.9679 3.90625 18.6636C3.46875 18.4232 2.84375 17.8305 3.89062 17.8145C4.875 17.7985 5.57812 18.7437 5.8125 19.1281C6.9375 21.0666 8.73438 20.5219 9.45312 20.1855C9.5625 19.3524 9.89062 18.7917 10.25 18.4713C7.46875 18.1509 4.5625 17.0455 4.5625 12.1433C4.5625 10.7496 5.04688 9.59611 5.84375 8.69898C5.71875 8.37857 5.28125 7.06492 5.96875 5.30269C5.96875 5.30269 7.01562 4.96627 9.40625 6.61635C10.4062 6.32799 11.4688 6.1838 12.5313 6.1838C13.5938 6.1838 14.6563 6.32799 15.6563 6.61635C18.0469 4.95025 19.0938 5.30269 19.0938 5.30269C19.7812 7.06492 19.3438 8.37857 19.2188 8.69898C20.0156 9.59611 20.5 10.7335 20.5 12.1433C20.5 17.0615 17.5781 18.1509 14.7969 18.4713C15.25 18.8718 15.6406 19.6408 15.6406 20.8423C15.6406 22.5565 15.625 23.9342 15.625 24.3667C15.625 24.7032 15.8594 25.1037 16.4844 24.9755C18.9659 24.1166 21.1221 22.4815 22.6497 20.3002C24.1773 18.119 24.9993 15.5015 25 12.8162C25 5.73524 19.4062 0 12.5 0Z"
+            fill="var(--color-text)" />
+        </g>
+        <defs>
+          <clipPath id="clip0_113_9">
+            <rect width="25" height="25" fill="var(--color-text)" />
+          </clipPath>
+        </defs>
+      </svg>
+    </a>
+    <a href="https://youtube.com/@ZacharyCrespin" title="YouTube" aria-label="YouTube">
+      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25ZM6.09496 18.809H18.905C20.619 18.809 22.0069 17.3007 22 15.4286V9.38036C22 7.51586 20.619 6 18.905 6H6.09496C4.38788 6 3 7.50828 3 9.38036V15.4286C3 17.2931 4.38094 18.809 6.09496 18.809ZM15.8608 12.3098L10.4719 9.20225V15.4173L15.8608 12.3098Z" fill="white"/>
+      </svg>
+    </a>
+  </div>
+  <p>© Zachary Crespin</p>
+</footer>
