@@ -57,7 +57,7 @@ layout: base
 
 <footer class="main-footer">
   <div class="footer-links">
-    <a href="https://github.com/ZacharyCrespin" title="GitHub" aria-label="GitHub">
+    <a href="https://github.com/ZacharyCrespin" target="_blank" title="GitHub" aria-label="GitHub">
       <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_113_9)">
           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -71,9 +71,9 @@ layout: base
         </defs>
       </svg>
     </a>
-    <a href="https://youtube.com/@ZacharyCrespin" title="YouTube" aria-label="YouTube">
+    <a href="https://www.youtube.com/@ZacharyCrespin" target="_blank" title="YouTube" aria-label="YouTube">
       <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25ZM6.09496 18.809H18.905C20.619 18.809 22.0069 17.3007 22 15.4286V9.38036C22 7.51586 20.619 6 18.905 6H6.09496C4.38788 6 3 7.50828 3 9.38036V15.4286C3 17.2931 4.38094 18.809 6.09496 18.809ZM15.8608 12.3098L10.4719 9.20225V15.4173L15.8608 12.3098Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M25 12.5C25 19.4036 19.4036 25 12.5 25C5.59644 25 0 19.4036 0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5ZM6.76918 18.4607H18.2308C19.7644 18.4607 21.0062 17.1112 21 15.4361V10.0245C21 8.35629 19.7644 7 18.2308 7H6.76918C5.24179 7 4 8.34951 4 10.0245V15.4361C4 17.1044 5.23558 18.4607 6.76918 18.4607ZM15.507 12.6456L10.6854 9.86517V15.426L15.507 12.6456Z" fill="white"/>
       </svg>
     </a>
   </div>

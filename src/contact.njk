@@ -17,11 +17,16 @@ layout: default
     <textarea rows="5" name="message" id="message" autocomplete="off" required></textarea>
   </div>
   <input type="hidden" name="_next" value="https://zacharyc.site/contact/thanks">
-  <button type="submit">Send</button>
+  <div class="formSend">
+    <button type="submit">Send</button>
+  </div>
 </form>
 <style>
   form {
     max-width: 50ch;
     margin-inline: auto;
+  }
+  .formSend {
+    text-align: center;
   }
 </style>

@@ -305,7 +305,7 @@ figure figcaption {
 }
 .header-logo svg {
   height: var(--ts-h4);
-  width: 100%;
+  width: auto;
 }
 .header-logo:hover svg path, .header-logo:focus-visible svg path {
   fill: var(--color-light);
