@@ -103,6 +103,11 @@ eleventyComputed:
       width: 100%;
     }
   }
+  @media screen and (width < 800px) {
+    img {
+      max-width: calc(100vw - 2rem);
+    }
+  }
 </style>
 <script>
   let exifInfoOpen = false

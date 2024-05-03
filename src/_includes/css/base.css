@@ -589,6 +589,9 @@ section .text .tags .tag:first-of-type, .section .text .tags .tag:first-of-type 
 }
 
 @media screen and (width < 900px) {
+  :root {
+    --gutter: 2rem;
+  }
   .cards.small {
     grid-template-columns: 1fr 1fr;
   }
@@ -628,6 +631,9 @@ section .text .tags .tag:first-of-type, .section .text .tags .tag:first-of-type 
 }
 
 @media screen and (width < 600px) {
+  :root {
+    --gutter: 1rem;
+  }
   .skip-nav {
     display: none;
   }
@@ -636,17 +642,5 @@ section .text .tags .tag:first-of-type, .section .text .tags .tag:first-of-type 
   }
   .gallery {
     grid-template-columns: 100%;
-  }
-}
-
-@media screen and (width < 900px) {
-  :root {
-    --gutter: 2rem;
-  }
-}
-
-@media screen and (width < 600px) {
-  :root {
-    --gutter: 1rem;
   }
 }
