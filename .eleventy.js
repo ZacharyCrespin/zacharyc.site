@@ -5,6 +5,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const downloader = require('11ty-external-file-downloader');
 const CleanCSS = require("clean-css");
+const ExifReader = require('exifreader');
 
 async function imageShortcode(src, alt, sizes, lazyLoad = false) {
   let metadata = await Image("./src/images/" + src, {
@@ -92,6 +93,20 @@ module.exports = function(eleventyConfig) {
       return orderA - orderB;
     });
   });
+
+  eleventyConfig.addFilter("loadExif", async function loadExif(src) {
+    let file = "./src/images/" + src;
+    const data = await ExifReader.load(file);
+    const keyValues = {
+      camera: `${data["Make"].description} ${data["Model"].description}`,
+      lens: data["LensModel"] ? data["LensModel"].description :  '',
+      iso: data["ISOSpeedRatings"].description,
+      focalLength: data["FocalLength"].description,
+      aperture: data["FNumber"].description,
+      exposureTime: data["ExposureTime"].description,
+    }
+		return keyValues;
+	});
 
   return {
     dir: {

@@ -8,5 +8,5 @@ id: hummingbirds/1
 date: 2020-11-23T11:57:00-08:00
 order: 2
 featured: true
-featuredOrder: 7
+featuredOrder: 6
 ---

@@ -7,5 +7,5 @@ tags:
 id: hummingbirds/2
 order: 4
 featured: true
-featuredOrder: 5
+featuredOrder: 4
 ---
