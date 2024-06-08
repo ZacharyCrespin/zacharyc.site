@@ -39,6 +39,29 @@ p {
   text-align: right;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+#newQuoteBtn {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  border-radius: 1rem;
+  margin: 0;
+  padding: 0;
+}
+#newQuoteBtn:hover {
+  filter: drop-shadow(0 0 0.5rem var(--color));
+}
+#newQuoteBtn svg {
+  height: 2rem;
+}
+
 @media screen and (width < 900px) {
   h1 {
     font-size: 2.5rem;

@@ -1,4 +1,5 @@
-fetch("/api/quote")
+function getRandomQuote() {
+  fetch("/api/quote")
   .then((response) => response.json())
   .then((data) => {
     document.getElementById("quoteQuote").innerText = `“${data.quote}”`;
@@ -9,3 +10,5 @@ fetch("/api/quote")
       document.title = `“${data.quote}”`;
     }
   });
+}
+getRandomQuote()
