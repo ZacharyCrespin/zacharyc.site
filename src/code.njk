@@ -13,6 +13,9 @@ layout: default
         {% image project.data.img, project.data.title, 600 %}
         <div class="text">
           <h3>{{ project.data.title }}</h3>
+          {% if project.data.description %}
+          <p>{{ project.data.description }}</p>
+          {% endif %}
           <p>{{ project.data.date | fullString }}</p>
           <div class="tags" aria-label="Tech Used">
             {%- for tag in project.data.tech -%}
