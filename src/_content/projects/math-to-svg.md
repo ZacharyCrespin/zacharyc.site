@@ -8,6 +8,5 @@ tech:
 img: code/math-to-svg.png
 date: 2023-05-25
 displayTag: Website
-featured: true
-featuredOrder: 3
+featured: false
 ---

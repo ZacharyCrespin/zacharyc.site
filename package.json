@@ -31,9 +31,9 @@
   },
   "dependencies": {
     "@11ty/eleventy-plugin-webc": "^0.11.2",
-    "axios": "^1.6.8",
+    "axios": "^1.7.4",
     "clean-css": "^5.3.3",
-    "exifreader": "^4.22.0",
+    "exifreader": "^4.23.3",
     "fluentui-emoji-js": "^1.1.1",
     "fuse.js": "^7.0.0"
   }

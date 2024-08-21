@@ -12,7 +12,8 @@
 /photography/lake-tahoe/5 /photography/lake-tahoe/chipmunk-5
 /photography/lake-tahoe/6 /photography/lake-tahoe/chipmunk-6
 /photography/lake-tahoe/7 /photography/lake-tahoe/chipmunk-7
-
+# Used in some old code pens
+/base.css              /css/main.css    200!
 
 # Avoid confusion
 /periodictables        /periodic-tables
