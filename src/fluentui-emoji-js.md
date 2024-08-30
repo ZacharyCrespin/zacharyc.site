@@ -1,7 +1,7 @@
 ---
 title: fluentui-emoji-js
 id: fluentui-emoji-js
-layout: default
+layout: default.webc
 highlightCode: true
 article: true
 shareImage: code/emoji.png

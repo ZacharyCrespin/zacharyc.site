@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: base.webc
 eleventyComputed:
   title: "{{ name }}"
   seoTitle: "{{ name }} — Photography"
@@ -21,18 +21,18 @@ eleventyComputed:
     </script>
 ---
 <main>
-  <button id="close" class="photoBtn" onclick="history.back()" aria-label="Close">
+  <button id="close-btn" class="photoBtn" onclick="history.back()" aria-label="Close">
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M12.5461 37.0538L10.9462 35.4538L22.4001 24L10.9462 12.5461L12.5461 10.9462L24 22.4001L35.4539 10.9462L37.0538 12.5461L25.6 24L37.0538 35.4538L35.4539 37.0538L24 25.5999L12.5461 37.0538Z" fill="white"/>
     </svg>
   </button>
-  <button id="info" class="photoBtn" onclick="toggleExifInfo()" aria-label="Info">
+  <button id="info-btn" class="photoBtn" onclick="toggleInfo()" aria-label="Info">
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M22.9769 33.5H25.2461V22H22.9769V33.5ZM23.9991 18.8C24.383 18.8 24.7061 18.674 24.9682 18.4218C25.2304 18.1696 25.3615 17.8521 25.3615 17.4693C25.3615 17.071 25.2307 16.7393 24.9691 16.4744C24.7075 16.2095 24.3848 16.077 24.0009 16.077C23.6042 16.077 23.2779 16.2095 23.0221 16.4744C22.7664 16.7393 22.6385 17.071 22.6385 17.4693C22.6385 17.8521 22.7693 18.1696 23.0308 18.4218C23.2924 18.674 23.6152 18.8 23.9991 18.8ZM24.0166 43C21.3848 43 18.9199 42.5013 16.6218 41.504C14.3237 40.5066 12.3111 39.1448 10.584 37.4185C8.85691 35.6921 7.49446 33.6791 6.4967 31.3796C5.49893 29.0801 5.00005 26.613 5.00005 23.9784C5.00005 21.3565 5.49871 18.8921 6.49605 16.5852C7.49338 14.2782 8.85521 12.2695 10.5815 10.5591C12.3079 8.84859 14.3209 7.49447 16.6204 6.4967C18.9199 5.49893 21.387 5.00005 24.0216 5.00005C26.6435 5.00005 29.1079 5.49872 31.4148 6.49605C33.7218 7.49338 35.7305 8.84688 37.4409 10.5565C39.1514 12.2662 40.5055 14.2767 41.5033 16.588C42.5011 18.8992 43 21.3644 43 23.9834C43 26.6152 42.5013 29.0801 41.5039 31.3782C40.5066 33.6763 39.1531 35.6858 37.4435 37.4068C35.7338 39.1277 33.7233 40.4902 31.412 41.4941C29.1008 42.498 26.6356 43 24.0166 43ZM24.025 40.7308C28.6647 40.7308 32.609 39.1013 35.8577 35.8423C39.1064 32.5833 40.7307 28.6276 40.7307 23.975C40.7307 19.3353 39.1095 15.391 35.867 12.1423C32.6246 8.8936 28.6689 7.26925 24 7.26925C19.3641 7.26925 15.4167 8.89048 12.1577 12.133C8.89873 15.3754 7.26925 19.3311 7.26925 24C7.26925 28.6359 8.89873 32.5833 12.1577 35.8423C15.4167 39.1013 19.3724 40.7308 24.025 40.7308Z" fill="white"/>
       </svg>
   </button>
   <img src="/images/{{src}}" alt="{{alt}}">
-  <div id="exifInfo">
+  <div id="info">
     {%- set exif = src | loadExif -%}
     <p>{{ exif.camera }}</p>
     {% if exif.lens %}<p>{{ exif.lens }}</p>{% endif %}
@@ -56,7 +56,6 @@ eleventyComputed:
     padding: 2rem;
     column-gap: 2rem;
     box-sizing: border-box;
-    overflow: hidden; /* Prevents content from overflowing */
   }
 
   img {
@@ -65,7 +64,7 @@ eleventyComputed:
     max-height: 100%;
     width: auto;
     height: auto;
-    object-fit: contain; /* Ensures the image scales to fit within the container */
+    object-fit: contain;
   }
 
   .photoBtn {
@@ -80,11 +79,11 @@ eleventyComputed:
     max-width: 2rem;
     max-height: 2rem;
   }
-  #close {
+  #close-btn {
     top: 1rem;
     right: 1rem;
   }
-  #info {
+  #info-btn {
     bottom: 1rem;
     right: 1rem;
   }
@@ -94,10 +93,10 @@ eleventyComputed:
   .photoBtn:hover svg path, .photoBtn:focus-visible svg path {
     fill: var(--color-bg);
   }
-  #exifInfo {
+  #info {
     display: none;
   }
-  #exifInfo.open {
+  #info.open {
     display: inline;
   }
 
@@ -105,20 +104,20 @@ eleventyComputed:
     main {
       flex-direction: column;
     }
-    #exifInfo {
+    #info {
       width: 100%;
     }
   }
 </style>
 <script>
-  let exifInfoOpen = false
-  function toggleExifInfo() {
-    if (exifInfoOpen) {
-      document.querySelector("#exifInfo").classList.remove("open")
-      exifInfoOpen = false
+  let infoOpen = false
+  function toggleInfo() {
+    if (infoOpen) {
+      document.querySelector("#info").classList.remove("open")
+      infoOpen = false
     } else {
-      document.querySelector("#exifInfo").classList.add("open")
-      exifInfoOpen = true
+      document.querySelector("#info").classList.add("open")
+      infoOpen = true
     }
   }
 </script>

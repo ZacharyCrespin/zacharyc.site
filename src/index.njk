@@ -4,7 +4,7 @@ seoTitle: Zachary Crespin
 titleOverride: true
 description: Photographer, Filmmaker, Programmer
 id: home
-layout: default
+layout: default.webc
 ---
 <div class="cards">
   {% for section in collections.all | reverse | sort('homeFeaturedOrder') %}
@@ -13,7 +13,7 @@ layout: default
     {{ section.content | safe }}<hr>
     {% else %}
     <div class="section split" aria-label="{{ section.data.title }}">
-      {% image section.data.img, section.data.title, 600 %}
+      <img src="/images/{{ section.data.img }}" alt="{{ section.data.title }}">
       <div class="text">
         <h2 class="h3">{{ section.data.title }}</h2>
         <p>{{ section.data.date | fullString }}</p>
@@ -30,7 +30,11 @@ layout: default
         {% if section.data.live %}<a class="button" href="{{ section.data.live }}" target="_blank">Live</a>{% endif %}
         {% if section.data.source %}<a class="button" href="{{ section.data.source }}" target="_blank">Source</a>{% endif %}
         <!-- Film -->
-        {% if section.data.watchlink %}<a href="{{ section.data.watchlink }}" class="button">Watch Now</a>{% endif %}
+        {% if section.data.watchlink %}
+          <a href="{{ section.data.watchlink }}" class="button">Watch Now</a>
+        {% else %}
+          <a href="/film/{{section.data.id}}" class="button">Watch Now</a>
+        {% endif %}
         {% if section.data.infolink %}<a href="{{ section.data.infolink }}" class="button">More Info</a>{% endif %}
       </div>
     </div>

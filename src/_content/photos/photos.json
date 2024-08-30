@@ -1,6 +1,6 @@
 {
   "tags": "photo",
   "displayTag": "Photo",
-  "layout": "photo",
+  "layout": "photo.njk",
   "permalink": "/photography/{{ id }}/index.html"
 }

@@ -1,7 +1,7 @@
 ---
 title: 11ty-external-file-downloader
 id: 11ty-external-file-downloader
-layout: default
+layout: default.webc
 highlightCode: true
 article: true
 ---

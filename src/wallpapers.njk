@@ -2,12 +2,12 @@
 title: Wallpapers
 description: Mobile Wallpapers - Free Downloads
 id: wallpapers
-layout: default
+layout: default.webc
 ---
 <div class="cards">
   {% for wallpaper in collections.wallpaper | reverse %}
   <div class="section split" id="{{ wallpaper.data.id }}" aria-label="{{ wallpaper.data.name }}">
-    {% image wallpaper.data.img, wallpaper.data.name + " phone wallpapers", 300, true %}
+    <img src="/images/{{ wallpaper.data.img }}" alt="{{ wallpaper.data.name }} phone wallpapers" loading="lazy">
     <div class="text">
       <h2 class="h3">{{ wallpaper.data.name }}</h2>
       {% if not wallpaper.data.legacy %}<p>{{ wallpaper.data.date | fullString }}</p>{% endif %}

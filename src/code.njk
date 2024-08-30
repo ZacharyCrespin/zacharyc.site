@@ -2,7 +2,7 @@
 title: Code
 description: Code Projects and Experiments
 id: code
-layout: default
+layout: default.webc
 ---
 <h2>Featured Projects</h2>
 <section class="page-section">
@@ -10,7 +10,7 @@ layout: default
     {%- for project in collections.code | sort('featuredOrder') -%}
       {% if project.data.featured %}
       <div class="section split" aria-label="{{ project.data.title }}">
-        {% image project.data.img, project.data.title, 600 %}
+        <img src="/images/{{ project.data.img }}" alt="{{ project.data.title }}">
         <div class="text">
           <h3>{{ project.data.title }}</h3>
           {% if project.data.description %}

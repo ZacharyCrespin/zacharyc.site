@@ -1,0 +1,72 @@
+---
+layout: base.webc
+eleventyComputed:
+  seoTitle: "{{ title }} — Film"
+  shareImage: "/images/film/{{ img }}"
+  permalink: "{% if not watchlink %}/film/{{ id }}/index.html{% endif %}"
+---
+<main>
+  <button id="close-btn" class="photoBtn" onclick="history.back()" aria-label="Close">
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.5461 37.0538L10.9462 35.4538L22.4001 24L10.9462 12.5461L12.5461 10.9462L24 22.4001L35.4539 10.9462L37.0538 12.5461L25.6 24L37.0538 35.4538L35.4539 37.0538L24 25.5999L12.5461 37.0538Z" fill="white"/>
+    </svg>
+  </button>
+  <video controls>
+    <source src="https://videos.zacharyc.site/{{src}}" type="video/mp4"/>
+  </video>
+</main>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    margin: 0;
+    padding: 2rem;
+    column-gap: 2rem;
+    box-sizing: border-box;
+  }
+
+  video {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .photoBtn {
+    margin: 0;
+    padding: 0.25rem;
+    position: fixed;
+    line-height: 1;
+    border: none;
+    z-index: 2;
+  }
+  .photoBtn svg {
+    max-width: 2rem;
+    max-height: 2rem;
+  }
+  #close-btn {
+    top: 1rem;
+    right: 1rem;
+  }
+  .photoBtn svg path {
+    fill: var(--color-text);
+  }
+  .photoBtn:hover svg path, .photoBtn:focus-visible svg path {
+    fill: var(--color-bg);
+  }
+  @media screen and (width < 1500px) {
+    main {
+      flex-direction: column;
+    }
+  }
+</style>

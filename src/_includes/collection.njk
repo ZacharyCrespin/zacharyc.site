@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: default.webc
 ---
 <section class="gallery" aria-label="Gallery">
   {% for photo in collections.photo | sort("order") %}
   {% for tag in photo.data.tags %}
     {% if tag == id %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt, 300, true %}
+      <img src="/images/{{ photo.data.src }}" alt="{{ photo.data.alt }}">
     </a>
     {% endif %}
   {% endfor %}

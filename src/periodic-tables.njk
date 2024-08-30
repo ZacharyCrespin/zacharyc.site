@@ -2,12 +2,12 @@
 title: Periodic Tables
 description: Free Periodic Tables
 id: periodic-tables
-layout: default
+layout: default.webc
 ---
 <div class="cards">
   {%- for table in collections.table | reverse -%}
   <div class="section split" id="{{ table.data.id }}" aria-label="{{ table.data.name }}">
-    {% image table.data.img, table.data.name + " Periodic Table", 600, true %}
+    <img src="/images/{{ table.data.img }}" alt="{{ table.data.name }} Periodic Table" loading="lazy">
     <div class="text">
       <h2 class="h3">{{ table.data.name }}</h2>
       <p>{{ table.data.date | fullString }}</p>

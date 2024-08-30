@@ -2,41 +2,46 @@
 title: Film
 description: Film
 id: film
-layout: default
+layout: default.webc
 ---
-<h2>Fatured Films</h2>
+<h2>Featured Films</h2>
 <div class="cards">
   {% for film in collections.film | reverse %}
     {% if film.data.featured %}
-  <div class="section split" id="{{ film.data.id }}" aria-label="{{ film.data.title }}">
-    {% if film.data.watchlink %}
-      <div class="video">
-        <a href="{{ film.data.watchlink }}" class="video-preview" aria-label="Watch Now">
-          <img src="/images/icons/play_circle.svg" class="play-circle" alt="play icon">
-          {% image film.data.img, film.data.imgalt, 600 %}
-        </a>
+      <div class="section split" id="{{ film.data.id }}" aria-label="{{ film.data.title }}">
+        <div class="video">
+          <a href="{% if film.data.watchlink %}{{ film.data.watchlink }}{% else %}/film/{{film.data.id}}{% endif %}" class="video-preview" aria-label="Watch Now">
+            <img src="/images/icons/play_circle.svg" class="play-circle" alt="play icon">
+            <img src="/images/{{ film.data.img }}" alt="{{ film.data.imgalt }}">
+          </a>
+        </div>
+        <div class="text">
+          <h2 class="h3">{{ film.data.title }}</h2>
+          <p>{{ film.data.date | fullString }}</p>
+          {% if film.data.description %}
+            <p>{{ film.data.description }}</p>
+            {% if film.data.extDescription %}
+              <p>{{ film.data.extDescription }}</p>
+            {% endif %}
+          {% endif %}
+          {% if film.data.role %}
+            <div class="tags" aria-label="Role">
+              {%- for tag in film.data.role -%}
+                <p class="tag">{{ tag }}</p>
+              {%- endfor -%}
+            </div>
+          {% endif %}
+          {% if film.data.watchlink %}
+            <a href="{{ film.data.watchlink }}" class="button">Watch Now</a>
+          {% else %}
+            <a href="/film/{{film.data.id}}" class="button">Watch Now</a>
+          {% endif %}
+          {% if film.data.infolink %}
+            <a href="{{ film.data.infolink }}" class="button">More Info</a>
+          {% endif %}
+        </div>
       </div>
-      {% else %}
-      {% image film.data.img, film.data.imgalt, 600 %}
-      {% endif %}
-      <div class="text">
-        <h2 class="h3">{{ film.data.title }}</h2>
-        <p>{{ film.data.date | fullString }}</p>
-        {% if film.data.description %}
-        <p>{{ film.data.description }}</p>
-        {% if film.data.extDescription %}
-        <p>{{ film.data.extDescription }}</p>
-        {% endif %}
-        {% endif %}
-        {% if film.data.watchlink %}
-        <a href="{{ film.data.watchlink }}" class="button">Watch Now</a>
-        {% endif %}
-        {% if film.data.infolink %}
-        <a href="{{ film.data.infolink }}" class="button">More Info</a>
-        {% endif %}
-      </div>
-    </div>
-    <hr>
+      <hr>
     {% endif %}
   {% endfor %}
 </div>
