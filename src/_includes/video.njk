@@ -2,7 +2,8 @@
 layout: base.webc
 eleventyComputed:
   seoTitle: "{{ title }} — Film"
-  shareImage: "/images/film/{{ img }}"
+  description: "{{ title }}, a film by Zachary Crespin"
+  shareImage: "{{ img }}"
   permalink: "{% if not watchlink %}/film/{{ id }}/index.html{% endif %}"
 ---
 <main>
