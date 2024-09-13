@@ -8,8 +8,7 @@
     <title webc:elseif="seoTitle" @text="seoTitle + ' — Zachary Crespin'"></title>
     <title webc:else @text="title + ' — Zachary Crespin'"></title>
 
-    <meta webc:if="seoDescription" name="description" :content="seoDescription">
-    <meta webc:elseif="description" name="description" :content="description">
+    <meta webc:if="description" name="description" :content="description">
     <meta webc:else name="description" :content="title">
 
     <link rel="icon" href="/favicon.png">

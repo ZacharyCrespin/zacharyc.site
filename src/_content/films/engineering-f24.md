@@ -1,7 +1,6 @@
 ---
 id: engineering-f24
 title: F24 Engineering Highlight
-description: ""
 img: film/engineering-f24.jpg
 imgalt: ""
 src: engineering-f24.mp4

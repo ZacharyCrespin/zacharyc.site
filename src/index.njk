@@ -18,8 +18,8 @@ layout: default.webc
         <h2 class="h3">{{ section.data.title }}</h2>
         <p>{{ section.data.date | fullString }}</p>
         <!-- Film -->
-        {% if section.data.description %}
-        <p>{{ section.data.description }}</p>
+        {% if section.data.details %}
+        <p>{{ section.data.details }}</p>
         {% endif %}
         <div class="tags" aria-label="Tags">
           <p class="tag">{{ section.data.displayTag }}</p>

@@ -538,9 +538,8 @@ section.split, .section.split {
 
 section.split img, .section.split img {
   width: 100%;
-  height: 100%;
+  height: auto;
   max-width: 60vw;
-  max-height: calc(100vh - 10rem);
   border-radius: var(--border-radius);
 }
 
