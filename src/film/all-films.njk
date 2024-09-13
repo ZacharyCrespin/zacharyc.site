@@ -8,7 +8,7 @@ layout: default.webc
   <div class="card video" id="{{ film.data.id }}" aria-label="{{ film.data.title }}">
     <a href="{% if film.data.watchlink %}{{ film.data.watchlink }}{% else %}/film/{{film.data.id}}{% endif %}" class="video-preview" aria-label="Watch Now">
       <img src="/images/icons/play_circle.svg" class="play-circle" alt="play icon">
-      <img src="/images/{{ film.data.img }}" alt="{{ film.data.imgalt }}">
+      {% image film.data.img, film.data.imgalt %}
     </a>
     <div class="text">
       <h2 class="h3">{{ film.data.title }}</h2>

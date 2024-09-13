@@ -5,6 +5,7 @@ const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const downloader = require('11ty-external-file-downloader');
 const CleanCSS = require("clean-css");
 const ExifReader = require('exifreader');
+const Image = require("@11ty/eleventy-img");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginWebc);
@@ -21,6 +22,23 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
+
+  eleventyConfig.addShortcode("image", async function (src, alt, loading = "eager") {
+		let metadata = await Image(`src/images/${src}`, {
+      widths: [400, 800, 1600, "auto"],
+      formats: ["avif", "webp", "svg", "jpeg"],
+      urlPath: "/images",
+      outputDir: "public/images",
+		});
+
+		let imageAttributes = {
+			alt,
+      sizes: "100vh",
+			loading,
+      decoding: "async",
+		};
+		return Image.generateHTML(metadata, imageAttributes);
+	});
 
   eleventyConfig.addPassthroughCopy('./src/**/*.html');
   eleventyConfig.addPassthroughCopy('./src/**/*.css');

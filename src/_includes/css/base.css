@@ -291,6 +291,7 @@ figure figcaption {
 }
 
 /* Main Header */
+/* TODO: don't tab through menu when hidden */
 .main-header {
   display: grid;
   grid-template-columns: max-content auto;

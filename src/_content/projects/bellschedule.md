@@ -7,7 +7,7 @@ live: https://fhsbellschedule.netlify.app
 tech:
   - Eleventy
 featured: true
-featuredOrder: 3
+featuredOrder: 2
 homeFeatured: false
 img: code/bellschedule.png
 date: 2022-07-18T02:10:25Z

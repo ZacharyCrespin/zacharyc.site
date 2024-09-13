@@ -4,3 +4,5 @@ public
 src/videos
 .netlify
 **/*.DS_Store
+/.unlighthouse
+/.cache
