@@ -10,7 +10,7 @@ layout: default.webc
     {%- for project in collections.code | sort('featuredOrder') -%}
       {% if project.data.featured %}
       <div class="section split" aria-label="{{ project.data.title }}">
-        {% image project.data.img, project.data.title, "large", "60vw" %}
+        {% image project.data.img, project.data.title, "large", "(max-width: 900px) 100vw, 60vw" %}
         <div class="text">
           <h3>{{ project.data.title }}</h3>
           {% if project.data.description %}

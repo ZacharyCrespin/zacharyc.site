@@ -6,15 +6,15 @@ homeFeaturedOrder: 1
   {% for photo in collections.photo | sort("order") %}
     {% if photo.data.id == "hummingbirds/5" %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt, "medium", "30vw" %}
+      {% image photo.data.src, photo.data.alt, "medium", "(max-width: 900px) 100vw, 30vw" %}
     </a>
     {% elseif photo.data.id == "hummingbirds/2" %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt, "medium", "30vw" %}
+      {% image photo.data.src, photo.data.alt, "medium", "(max-width: 900px) 100vw, 30vw" %}
     </a>
     {% elseif photo.data.id == "hummingbirds/1" %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt, "medium", "30vw" %}
+      {% image photo.data.src, photo.data.alt, "medium", "(max-width: 900px) 100vw, 30vw" %}
     </a>
     {% endif %}
   {% endfor %}

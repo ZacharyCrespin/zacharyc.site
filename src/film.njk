@@ -12,7 +12,7 @@ layout: default.webc
         <div class="video">
           <a href="{% if film.data.watchlink %}{{ film.data.watchlink }}{% else %}/film/{{film.data.id}}{% endif %}" class="video-preview" aria-label="Watch Now">
             <img src="/images/icons/play_circle.svg" class="play-circle" alt="play icon">
-            {% image film.data.img, film.data.imgalt, "large", "60vw" %}
+            {% image film.data.img, film.data.imgalt, "large", "(max-width: 900px) 100vw, 60vw" %}
           </a>
         </div>
         <div class="text">

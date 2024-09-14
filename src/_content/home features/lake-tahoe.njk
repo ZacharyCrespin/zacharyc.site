@@ -6,11 +6,11 @@ homeFeaturedOrder: 3
   {% for photo in collections.photo | sort("order") %}
     {% if photo.data.id == "lake-tahoe/view-1" %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt, "medium", "50vw" %}
+      {% image photo.data.src, photo.data.alt, "medium", "(max-width: 900px) 100vw, 30vw" %}
     </a>
     {% elseif photo.data.id == "lake-tahoe/view-2" %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt, "medium", "50vw" %}
+      {% image photo.data.src, photo.data.alt, "medium", "(max-width: 900px) 100vw, 30vw" %}
     </a>
     {% endif %}
   {% endfor %}
