@@ -23,9 +23,17 @@ module.exports = function(eleventyConfig) {
     return new CleanCSS({}).minify(code).styles;
   });
 
-  eleventyConfig.addShortcode("image", async function (src, alt, loading = "eager") {
+  // Image Optimization
+
+  // Large - [200, 400, 800, 1200, "auto"]
+  // For now medium uses large resolutions
+  // Small - [150, 300, 600, 800, "auto"]
+  // TODO: Collection banners are too small
+  eleventyConfig.addShortcode("image", async function (src, alt, widths, sizes = "100vh", loading = "eager") {
+    widths = (widths == "small" ? [150, 300, 600, 800, "auto"] : [200, 400, 800, 1200, "auto"])
+
 		let metadata = await Image(`src/images/${src}`, {
-      widths: [400, 800, 1600, "auto"],
+      widths,
       formats: ["avif", "webp", "svg", "jpeg"],
       urlPath: "/images",
       outputDir: "public/images",
@@ -33,16 +41,12 @@ module.exports = function(eleventyConfig) {
 
 		let imageAttributes = {
 			alt,
-      sizes: "100vh",
+      sizes,
 			loading,
       decoding: "async",
 		};
 		return Image.generateHTML(metadata, imageAttributes);
 	});
-
-  eleventyConfig.addPassthroughCopy('./src/**/*.html');
-  eleventyConfig.addPassthroughCopy('./src/**/*.css');
-  eleventyConfig.addPassthroughCopy('./src/**/*.js');
 
   eleventyConfig.addPassthroughCopy('./src/admin');
   eleventyConfig.addPassthroughCopy('./src/files');
@@ -53,6 +57,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
   eleventyConfig.addPassthroughCopy('./src/favicon.ico');
   eleventyConfig.addPassthroughCopy('./src/favicon.png');
+  eleventyConfig.addPassthroughCopy('./src/quote/script.js');
+  eleventyConfig.addPassthroughCopy('./src/quote/style.css');
   eleventyConfig.addPassthroughCopy('./src/quotes.json');
   eleventyConfig.addPassthroughCopy('./src/robots.txt');
   eleventyConfig.addPassthroughCopy('./src/sites.json');

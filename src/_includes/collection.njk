@@ -6,7 +6,7 @@ layout: default.webc
   {% for tag in photo.data.tags %}
     {% if tag == id %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt %}
+      {% image photo.data.src, photo.data.alt, "medium", "33vw" %}
     </a>
     {% endif %}
   {% endfor %}

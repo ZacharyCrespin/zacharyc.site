@@ -6,15 +6,15 @@ homeFeaturedOrder: 5
   {% for photo in collections.photo | sort("order") %}
     {% if photo.data.id == "newport/1" %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt %}
+      {% image photo.data.src, photo.data.alt, "medium", "30vw" %}
     </a>
     {% elseif photo.data.id == "newport/2" %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt %}
+      {% image photo.data.src, photo.data.alt, "medium", "30vw" %}
     </a>
     {% elseif photo.data.id == "newport/4" %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt %}
+      {% image photo.data.src, photo.data.alt, "medium", "30vw" %}
     </a>
     {% endif %}
   {% endfor %}

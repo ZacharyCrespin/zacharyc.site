@@ -9,7 +9,7 @@ layout: default.webc
   <div class="cards small" data-nosnippet>
     {%- for collection in collections.collection | reverse | limit(4) -%}
     <a class="card" href="{{ collection.url }}" aria-label="{{ collection.data.title }}">
-      {% image collection.data.img, collection.data.title + " Collection Image" %}
+      {% image collection.data.img, collection.data.title + " Collection Image", "small", "24vw" %}
       <h3>{{ collection.data.title }}</h3>
       <p>{{ collection.data.numberofphotos }} Photos</p>
       <span class="button">View</span>
@@ -25,7 +25,7 @@ layout: default.webc
     {%- for photo in collections.photo | sort('featuredOrder') -%}
     {% if photo.data.featured %}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt %}
+      {% image photo.data.src, photo.data.alt, "medium", "33vw" %}
     </a>
     {% endif %}
     {%- endfor -%}
