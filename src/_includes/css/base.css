@@ -9,19 +9,19 @@
   --font: "Inter", sans-serif;
   --font-display: "Meshed Display", "Georgia", serif;
   --font-italic: "Georgia", serif;
-  --font-code: "Consolas", 'Courier New', monospace;
+  --font-code: Menlo, Monaco, 'Courier New', monospace;
   --fw-regular: 300;
   --fw-semibold: 600;
   --fw-bold: 900;
 
   /* Text Size */
-  --ts-display: 3.2rem;
-  --ts-h1: 2.8rem;
-  --ts-h2: 2.5rem;
-  --ts-h3: 2.2rem;
-  --ts-h4: 1.9rem;
-  --ts-h5: 1.6rem;
-  --ts-h6: 1.3rem;
+  --ts-display: 2.5rem;
+  --ts-h1: 2.2rem;
+  --ts-h2: 2rem;
+  --ts-h3: 1.8rem;
+  --ts-h4: 1.6rem;
+  --ts-h5: 1.4rem;
+  --ts-h6: 1.2rem;
   --ts-body: 1rem;
 
   /* More */
@@ -77,6 +77,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: 0.25em 0;
 }
 .display {
+  font-family: var(--font-display);
   font-size: var(--ts-display);
   font-weight: var(--fw-bold);
 }
@@ -250,11 +251,9 @@ form button {
   margin-inline: auto;
 }
 
-figure img {
+figure img, img.figure {
+  border: var(--border);
   border-radius: var(--border-radius);
-}
-figure figcaption {
-  text-align: center;
 }
 
 .title {
@@ -291,7 +290,6 @@ figure figcaption {
 }
 
 /* Main Header */
-/* TODO: don't tab through menu when hidden */
 .main-header {
   display: grid;
   grid-template-columns: max-content auto;
@@ -347,6 +345,7 @@ figure figcaption {
   display: flex;
   justify-content: flex-end;
   pointer-events: none;
+  visibility: hidden;
 }
 .sidenav-links {
   min-width: max-content;
@@ -366,6 +365,9 @@ figure figcaption {
   background-color: var(--color-bg);
   opacity: 0;
   transition: opacity ease .2s;
+}
+#sidenav.open {
+  visibility: visible;
 }
 #sidenav.open .sidenav-links {
   transform: translateX(0);

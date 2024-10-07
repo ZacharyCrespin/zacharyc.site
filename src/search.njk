@@ -3,7 +3,7 @@ title: Search
 id: search
 layout: default.webc
 ---
-<form id="searchForm" class="center" onsubmit="search(event)">
+<form id="searchForm" class="center" onsubmit="userInput(event)">
   <input id="searchInput" type="text" name="q" placeholder="Search...">
   <button type="submit" aria-label="Search" class="search-icon"><img src="/images/icons/search.svg" alt="Search Icon"></button>
 </form>
@@ -42,12 +42,28 @@ layout: default.webc
 <script>
   const input = document.querySelector("#searchInput")
   const resultsDiv = document.querySelector("#searchResults")
+  let urlParams = new URLSearchParams(window.location.search);
   let lastSearch = ""
+
+  if (urlParams.has('q') || urlParams.has('query')) {
+    if (urlParams.has('q')) {
+      search(urlParams.get('q'))
+    } else {
+      search(urlParams.get('query'))
+    }
+  }
   
-  function search(e) {
+  function userInput(e) {
     e.preventDefault();
-    const query = input.value
+    const q = input.value;
+    urlParams.set("q", q);
+    history.replaceState(null, null, "?"+urlParams.toString());
+    search(q);
+  }
+
+  function search(query) {
     if (query != lastSearch) {
+      input.value = query
       fetch(`/api/search?q=${query}`)
       .then(res => {
         return res.json()

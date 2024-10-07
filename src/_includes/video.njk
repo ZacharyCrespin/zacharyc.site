@@ -5,6 +5,8 @@ eleventyComputed:
   description: "{{ title }}, a film by Zachary Crespin"
   shareImage: "{{ img }}"
   permalink: "{% if not watchlink %}/film/{{ id }}/index.html{% endif %}"
+  headCode: |
+    <meta name="robots" content="noindex">
 ---
 <main>
   <button id="close-btn" class="photoBtn" onclick="history.back()" aria-label="Close">

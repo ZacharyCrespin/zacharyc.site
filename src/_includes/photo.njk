@@ -6,19 +6,7 @@ eleventyComputed:
   description: "{{ name }}, a photo by Zachary Crespin"
   shareImage: "{{ src }}"
   headCode: |
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org/",
-        "@type": "ImageObject",
-        "contentUrl": "https://zacharyc.site/images/{{ src }}",
-        "creator": {
-          "@type": "Person",
-          "name": "Zachary Crespin"
-        },
-        "creditText": "Zachary Crespin",
-        "copyrightNotice": "Zachary Crespin"
-      }
-    </script>
+    <meta name="robots" content="noindex">
 ---
 <main>
   <button id="close-btn" class="photoBtn" onclick="history.back()" aria-label="Close">
@@ -111,6 +99,15 @@ eleventyComputed:
   }
 </style>
 <script>
+  const closeBtn = document.getElementById("close-btn");
+
+  const referrer = document.referrer;
+  const currentDomain = window.location.hostname;
+  
+  if (!referrer || !referrer.includes(currentDomain)) {
+    closeBtn.style.display = "none";
+  }
+
   let infoOpen = false
   function toggleInfo() {
     if (infoOpen) {
