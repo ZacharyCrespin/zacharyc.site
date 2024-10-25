@@ -29,8 +29,8 @@ module.exports = function(eleventyConfig) {
   // For now medium uses large resolutions
   // Small - [300, 600, 800, "auto"]
   // TODO: Collection banners are too small
-  eleventyConfig.addShortcode("image", async function (src, alt, widths, sizes = "100vh", loading = "eager") {
-    widths = (widths == "small" ? [300, 600, 800, "auto"] : [400, 800, 1200, "auto"])
+  eleventyConfig.addShortcode("image", async function (src, alt, widths, sizes = "100vw", loading = "eager") {
+    widths = (widths == "small" ? [300, 600, 800, 1200] : [400, 800, 1200, "auto"])
 
 		let metadata = await Image(`src/images/${src}`, {
       widths,
