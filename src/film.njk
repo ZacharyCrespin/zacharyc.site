@@ -4,6 +4,7 @@ description: Film
 id: film
 layout: default.webc
 ---
+<!-- TODO: Fix CLS issues -->
 <h2>Featured Films</h2>
 <div class="cards">
   {% for film in collections.film | reverse %}
@@ -42,5 +43,3 @@ layout: default.webc
     {% endif %}
   {% endfor %}
 </div>
-<p class="button disabled center">More Films <span class="light">(Coming Soon)</span></p>
-<!-- <a class="button center" href="/film/all-films/">More Films</a> -->

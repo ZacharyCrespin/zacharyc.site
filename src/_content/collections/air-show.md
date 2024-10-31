@@ -1,7 +1,7 @@
 ---
-title: Air Show
-seoTitle: Air Show — Photography
-description: Air Show Photo Collection
+title: Pacific Air Show
+seoTitle: Pacific Air Show — Photography
+description: Pacific Air Show Photo Collection
 numberofphotos: 12
 date: 2021-10-02
 id: air-show
