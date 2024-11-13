@@ -511,20 +511,6 @@ a.card:focus-visible .button {
   justify-content: center;
 }
 
-.video .video-preview {
-  display: inline-block;
-  position: relative;
-}
-
-.video .play-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 4rem !important;
-  height: 4rem !important;
-}
-
 /* Sections */
 .cards section, .cards .section {
   margin: 2rem 0;

@@ -4,14 +4,13 @@ description: Film
 id: film
 layout: default.webc
 ---
-<!-- TODO: Fix CLS issues -->
 <h2>Featured Films</h2>
 <div class="cards">
   {% for film in collections.film | reverse %}
     {% if film.data.featured %}
       <div class="section split" id="{{ film.data.id }}" aria-label="{{ film.data.title }}">
         <div class="video">
-          <a href="{% if film.data.watchlink %}{{ film.data.watchlink }}{% else %}/film/{{film.data.id}}{% endif %}" class="video-preview" aria-label="Watch Now">
+          <a href="{% if film.data.watchlink %}{{ film.data.watchlink }}{% else %}/film/{{film.data.id}}/{% endif %}" class="video-preview" aria-label="Watch Now">
             <img src="/images/icons/play_circle.svg" class="play-circle" alt="play icon">
             {% image film.data.img, film.data.imgalt, "large", "(max-width: 900px) 100vw, 60vw" %}
           </a>
@@ -43,3 +42,19 @@ layout: default.webc
     {% endif %}
   {% endfor %}
 </div>
+
+<style>
+  .video .video-preview {
+    display: inline-block;
+    position: relative;
+  }
+
+  .video .play-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+</style>

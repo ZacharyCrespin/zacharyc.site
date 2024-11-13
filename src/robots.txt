@@ -6,3 +6,6 @@ Disallow: /quote/
 Disallow: /style-guide/
 Disallow: /links/
 Disallow: /contact/thanks/
+Disallow: /images/photography/
+Disallow: /videos/
+Disallow: /files/

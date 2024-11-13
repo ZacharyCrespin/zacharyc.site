@@ -10,7 +10,7 @@ shareImage: code/emoji.png
 
 <a href="https://www.npmjs.com/package/fluentui-emoji-js" target="_blank">NPM</a> | 
 <a href="https://github.com/ZacharyCrespin/fluentui-emoji-js" target="_blank">Github</a> | 
-<a href="https://zacharyc.site/fluentui-emoji-js/demo" target="_blank">Live Demo</a>
+<a href="https://zacharyc.site/fluentui-emoji-js/demo/" target="_blank">Live Demo</a>
 
 ### Install
 ```bash
