@@ -597,17 +597,17 @@ section .text .tags .tag:first-of-type, .section .text .tags .tag:first-of-type 
   .card.full .text .button, .card.full .text button {
     margin-inline-start: 0.5rem;
   }
-  section.split, .section.split {
+  section.split:not(.nonresponsive), .section.split:not(.nonresponsive) {
     grid-template-columns: 100%;
   }
-  .section .text, section .text {
+  .section:not(.nonresponsive) .text, section:not(.nonresponsive) .text {
     text-align: center;
     margin-inline-start: 0;
   }
-  .section .text .tags, section .text .tags {
+  .section:not(.nonresponsive) .text .tags, section:not(.nonresponsive) .text .tags {
     justify-content: center;
   }
-  section.split img, .section.split img {
+  section.split:not(.nonresponsive) img, .section.split:not(.nonresponsive) img {
     max-width: 100%;
   }
   .gallery {

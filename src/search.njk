@@ -38,6 +38,15 @@ layout: default.webc
   a.section {
     text-decoration: none;
   }
+
+  .section.split img {
+    max-width: 25vw;
+
+  }
+  .search-img {
+    border: var(--border);
+    border-radius: var(--radius);
+  }
 </style>
 <script>
   const input = document.querySelector("#searchInput")
@@ -77,8 +86,17 @@ layout: default.webc
   }
 
   function generateHTML(page) {
+    // Use shareImage instead of screenshot if specified
+    let imgCode = ''
+    if (page.item.img) {
+      imgCode = `<img src="${page.item.img}" alt="${page.item.title}" class="search-img">`
+    } else {
+      imgCode = `<img src="https://v1.screenshot.11ty.dev/${encodeURIComponent(page.item.url)}/opengraph/" alt="${page.item.title}" class="search-img">`
+    }
+
     return `
-      <a class="section" href="${page.item.url}">
+      <a class="section split nonresponsive" href="${page.item.url}">
+        ${imgCode}
         <div class="text">
           <h2 class="h3">${page.item.title}</h2>
           <p>${page.item.description}</p>

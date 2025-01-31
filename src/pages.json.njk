@@ -9,7 +9,9 @@ eleventyExcludeFromCollections: true
     "url": "https://zacharyc.site{{ page.url }}",
     "title": "{{ page.data.title }}",
     "description": "{{ page.data.description }}",
-    "tags": "{{ page.data.tags | filterTags }}"
+    "tags": "{{ page.data.tags | filterTags }}"{%- if page.data.shareImage -%},
+    "img": "https://zacharyc.site/images/{{ page.data.shareImage }}"
+    {%- endif -%}
   },
   {%- endif -%}
   {%- endfor -%}
@@ -18,7 +20,8 @@ eleventyExcludeFromCollections: true
     "url": "https://zacharyc.site/periodic-tables/#{{ table.data.id }}",
     "title": "{{ table.data.name }}",
     "description": "{{ table.data.name }} Periodic Table",
-    "tags": "{{ table.data.tags | filterTags }}"
+    "tags": "{{ table.data.tags | filterTags }}",
+    "img": "https://zacharyc.site/images/{{ table.data.img }}"
   },
   {%- endfor -%}
   {%- for wallpaper in collections.wallpaper -%}
@@ -26,7 +29,8 @@ eleventyExcludeFromCollections: true
     "url": "https://zacharyc.site/wallpapers/#{{ wallpaper.data.id }}",
     "title": "{{ wallpaper.data.name }}",
     "description": "{{ wallpaper.data.name }} Wallpapers",
-    "tags": "{{ wallpaper.data.tags | filterTags }}"
+    "tags": "{{ wallpaper.data.tags | filterTags }}",
+    "img": "https://zacharyc.site/images/share/wallpapers.jpg"
   },
   {%- endfor -%}
   {

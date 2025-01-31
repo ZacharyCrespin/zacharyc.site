@@ -8,5 +8,4 @@ date: 2023-12-18
 role:
   - Cinematographer
   - Editor
-featured: true
 ---
