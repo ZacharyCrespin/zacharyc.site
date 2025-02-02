@@ -11,15 +11,7 @@
     <meta webc:if="description" name="description" :content="description">
     <meta webc:else name="description" :content="title">
 
-    <link rel="icon" href="/favicon.png">
-    <link rel="icon" href="/favicon-light.png" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <meta webc:if="shareImage" name="image" :content="'/images/' + shareImage">
-    <meta webc:if="!shareImage" name="image" :content="'/images/share/' + id + '.jpg'">
     <meta name="color-scheme" content="dark">
-    <meta name="author" content="Zachary Crespin">
-    <meta name="generator" :content="eleventy.generator">
     <link rel="canonical" :href="'https://zacharyc.site' + page.url">
 
     <!-- CSS -->
@@ -28,6 +20,17 @@
 
     <!-- Page CSS -->
     <style @raw="getBundle('css')" webc:keep></style>
+
+    <!-- Preload -->
+    <link rel="preload" href="/fonts/Meshed Display/MeshedDisplay.var.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/Inter/Inter.var.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon-light.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <meta webc:if="shareImage" name="image" :content="'/images/' + shareImage">
+    <meta webc:if="!shareImage" name="image" :content="'/images/share/' + id + '.jpg'">
 
     <!-- Open Graph -->
     <meta property="og:url" :content="'https://zacharyc.site' + page.url">
@@ -47,13 +50,17 @@
     <meta name="twitter:site" content="@ZacharyCrespin">
     <meta name="twitter:creator" content="@ZacharyCrespin">
 
-    <!-- Analytics -->
-    <script webc:keep async src="/analytics.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11" data-ackee-opts='{ "detailed": true }'></script>
+    <meta name="author" content="Zachary Crespin">
+    <meta name="generator" :content="eleventy.generator">
+
     <template @raw="headCode" webc:nokeep></template>
   </head>
   <body>
     <template @html="content" webc:nokeep></template>
     <script webc:if="highlightCode" src="/js/codeCopy.js"></script>
     <script @html="getBundle('js')" webc:keep></script>
+
+    <!-- Analytics -->
+    <script webc:keep async src="/analytics.js" data-ackee-server="https://analytics.zacharyc.site" data-ackee-domain-id="133c9354-5976-48e5-803f-809c8aeeda11" data-ackee-opts='{ "detailed": true }'></script>
   </body>
 </html>

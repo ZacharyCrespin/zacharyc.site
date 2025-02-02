@@ -19,8 +19,8 @@ layout: base.webc
   <div class="sidenavBG" onclick="toggleFullMenu()"></div>
   <div class="sidenav-links" aria-label="Full Navigation">
     <div class="sidenav-top">
-      <a href="/search/"><img src="/images/icons/search.svg" alt="Search"></a>
-      <button onclick="toggleFullMenu()"><img src="/images/icons/close.svg" alt="Close"></button>
+      <a href="/search/"><img src="/images/icons/search.svg" alt="Search" loading="lazy"></a>
+      <button onclick="toggleFullMenu()"><img src="/images/icons/close.svg" alt="Close" loading="lazy"></button>
     </div>
     <a class="nav-link" href="/">Home</a>
     <a class="nav-link" href="/photography/">Photography</a>

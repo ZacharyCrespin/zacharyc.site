@@ -4,10 +4,15 @@ eleventyComputed:
   seoTitle: "{{ title }} — Film"
   description: "{{ title }}, a film by Zachary Crespin"
   shareImage: "{{ img }}"
-  permalink: "{% if not watchlink %}/film/{{ id }}/index.html{% endif %}"
+  permalink: "/film/{{ id }}/index.html"
   headCode: |
     <meta name="robots" content="noindex">
 ---
+{% if watchlink %}
+<script>
+  window.location.href = "{{ watchlink | safe }}";
+</script>
+{% endif %}
 <main>
   <button id="close-btn" class="photoBtn" onclick="history.back()" aria-label="Close">
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">

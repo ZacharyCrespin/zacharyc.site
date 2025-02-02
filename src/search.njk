@@ -91,7 +91,7 @@ layout: default.webc
     if (page.item.img) {
       imgCode = `<img src="${page.item.img}" alt="${page.item.title}" class="search-img">`
     } else {
-      imgCode = `<img src="https://v1.screenshot.11ty.dev/${encodeURIComponent(page.item.url)}/opengraph/" alt="${page.item.title}" class="search-img">`
+      imgCode = `<img src="https://v1.screenshot.11ty.dev/${encodeURIComponent(page.item.url)}/opengraph/" width="1200" height="630" alt="${page.item.title}" class="search-img">`
     }
 
     return `
