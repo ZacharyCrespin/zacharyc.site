@@ -9,12 +9,7 @@ layout: default.webc
   {% for film in collections.film | reverse %}
     {% if film.data.featured %}
       <div class="section split" id="{{ film.data.id }}" aria-label="{{ film.data.title }}">
-        <div class="video">
-          <a href="{% if film.data.watchlink %}{{ film.data.watchlink }}{% else %}/film/{{film.data.id}}/{% endif %}" class="video-preview" aria-label="Watch Now">
-            <img src="/images/icons/play_circle.svg" class="play-circle" alt="play icon">
-            {% image film.data.img, film.data.imgalt, "large", "(max-width: 900px) 100vw, 60vw" %}
-          </a>
-        </div>
+        {% image film.data.img, film.data.imgalt, "large", "(max-width: 900px) 100vw, 60vw" %}
         <div class="text">
           <h2 class="h3">{{ film.data.title }}</h2>
           <p>{{ film.data.date | fullString }}</p>
@@ -30,7 +25,7 @@ layout: default.webc
           {% endif %}
           {% if film.data.watchlink %}
             <a href="{{ film.data.watchlink }}" class="button">Watch Now</a>
-          {% else %}
+          {% elif film.data.watch %}
             <a href="/film/{{film.data.id}}" class="button">Watch Now</a>
           {% endif %}
           {% if film.data.infolink %}
@@ -42,19 +37,3 @@ layout: default.webc
     {% endif %}
   {% endfor %}
 </div>
-
-<style>
-  .video .video-preview {
-    display: inline-block;
-    position: relative;
-  }
-
-  .video .play-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 4rem !important;
-    height: 4rem !important;
-  }
-</style>
