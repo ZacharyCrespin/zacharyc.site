@@ -26,6 +26,7 @@ layout: base.webc
     <a class="nav-link" href="/photography/">Photography</a>
     <a class="nav-link" href="/film/">Film</a>
     <a class="nav-link" href="/code/">Code</a>
+    <a class="nav-link" href="/3d/">3D Models</a>
     <a class="nav-link" href="/contact/">Contact</a>
   </div>
 </div>

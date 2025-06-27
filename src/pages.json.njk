@@ -33,6 +33,15 @@ eleventyExcludeFromCollections: true
     "img": "https://zacharyc.site/images/share/wallpapers.jpg"
   },
   {%- endfor -%}
+    {%- for design in collections.3d -%}
+  {
+    "url": "https://zacharyc.site/3d/#{{ design.data.id }}",
+    "title": "{{ design.data.title }}",
+    "description": "{{ design.data.description }}",
+    "tags": "{{ design.data.tags | filterTags }}",
+    "img": "https://zacharyc.site/images/{{design.data.imgs[0]}}"
+  },
+  {%- endfor -%}
   {
     "url": "https://fhsbellschedule.netlify.app/",
     "title": "Today — FHS Bell Schedule",

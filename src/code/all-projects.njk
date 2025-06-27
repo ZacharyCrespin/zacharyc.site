@@ -3,7 +3,7 @@ title: All Projects
 id: all-projects
 layout: default.webc
 ---
-<div class="cards small" data-nosnippet>
+<div class="cards small">
   {%- for project in collections.code | sort('date') | reverse -%}
   <div class="card" aria-label="{{ project.data.title }}">
     <h2 class="h3">{{ project.data.title }}</h2>

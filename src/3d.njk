@@ -1,0 +1,32 @@
+---
+title: 3D Models
+description: 3D Printing Models
+id: 3d
+layout: default.webc
+---
+<h2>Latest Designs</h2>
+<div class="cards">
+  {%- for design in collections.3d | reverse  | sort('featuredOrder') -%}
+    <div class="section {% if design.data.multiImage %}section-gallery{% else %}split{% endif %}" id="{{ design.data.id }}" aria-label="{{ design.data.title }}">
+        {% if design.data.multiImage %}
+        <div class="gallery {% if design.data.multiImage == 2 %}two-wide{% endif %}">
+          {% for photo in design.data.imgs | limit(design.data.multiImage) %}
+          <div class="photo">
+              {% image photo, "", "medium", "(max-width: 900px) 100vw, 30vw" %}
+          </div>
+          {% endfor %}
+        </div>
+        {% else %}
+        {% image design.data.imgs[0], design.data.title, "large", "(max-width: 900px) 100vw, 60vw" %}
+        {% endif %}
+      <div class="text">
+        <h3>{{ design.data.title }}</h3>
+        <p>{{ design.data.description }}</p>
+        <p>{{ design.data.date | fullString }}</p>
+        {% if design.data.modelLink %}<a class="button" href="{{ design.data.modelLink }}">Get 3D Model</a>{% endif %}
+        {% if design.data.downloadLink %}<a class="button" href="{{ design.data.downloadLink }}" target="_blank">Download 3D Model</a>{% endif %}
+      </div>
+    </div>
+    <hr>
+  {%- endfor -%}
+</div>
