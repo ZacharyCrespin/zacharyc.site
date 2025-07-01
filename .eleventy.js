@@ -25,7 +25,7 @@ module.exports = function(eleventyConfig) {
 
   // Image Optimization
   eleventyConfig.addShortcode("image", async function (src, alt, widths, sizes = "100vw", loading = "eager", photography = false) {
-    widths = (widths == "small" ? [400, 600, 800] : [800, 1200, (photography ? ["1600"] : [])]);
+    widths = (widths == "small" ? [400, 600, 800] : [800, 1200, ...(photography ? [1600] : [])]);
 
 		let metadata = await Image(`src/images/${src}`, {
       widths,
@@ -48,6 +48,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/fonts');
   eleventyConfig.addPassthroughCopy('./src/images/icons');
   eleventyConfig.addPassthroughCopy('./src/images/share');
+  eleventyConfig.addPassthroughCopy('./src/images/film');
+  eleventyConfig.addPassthroughCopy('./src/images/photography');
   eleventyConfig.addPassthroughCopy('./src/images/**.*');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
   eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');
