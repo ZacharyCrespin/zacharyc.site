@@ -12,7 +12,7 @@ layout: default.webc
         <div class="gallery {% if design.data.multiImage == 2 %}two-wide{% endif %}">
           {% for photo in design.data.imgs | limit(design.data.multiImage) %}
           <div class="photo">
-              {% image photo, "", "medium", "(max-width: 900px) 100vw, 30vw" %}
+              {% image photo, "", "small", "(max-width: 900px) 100vw, 30vw" %}
           </div>
           {% endfor %}
         </div>

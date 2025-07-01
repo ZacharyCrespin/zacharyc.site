@@ -24,13 +24,8 @@ module.exports = function(eleventyConfig) {
   });
 
   // Image Optimization
-
-  // Large - [400, 800, 1200, "auto"]
-  // For now medium uses large resolutions
-  // Small - [300, 600, 800, "auto"]
-  // TODO: Collection banners are too small
-  eleventyConfig.addShortcode("image", async function (src, alt, widths, sizes = "100vw", loading = "eager") {
-    widths = (widths == "small" ? [300, 600, 800, 1200] : [400, 800, 1200, "auto"])
+  eleventyConfig.addShortcode("image", async function (src, alt, widths, sizes = "100vw", loading = "eager", photography = false) {
+    widths = (widths == "small" ? [400, 600, 800] : [800, 1200, (photography ? ["1600"] : [])]);
 
 		let metadata = await Image(`src/images/${src}`, {
       widths,
@@ -51,7 +46,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/admin');
   eleventyConfig.addPassthroughCopy('./src/files');
   eleventyConfig.addPassthroughCopy('./src/fonts');
-  eleventyConfig.addPassthroughCopy('./src/images');
+  eleventyConfig.addPassthroughCopy('./src/images/icons');
+  eleventyConfig.addPassthroughCopy('./src/images/share');
+  eleventyConfig.addPassthroughCopy('./src/images/**.*');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
   eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');
   eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
