@@ -5,5 +5,5 @@ alt: A bright yellow buoy in the center, surrounded by still waters
 tags: 
   - lake-tahoe
 id: lake-tahoe/buoy
-order: 7
+order: 17
 ---

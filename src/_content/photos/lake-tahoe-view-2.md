@@ -5,7 +5,7 @@ alt: A wide view of the landscape surrounding Emerald Bay, Lake Tahoe
 tags: 
   - lake-tahoe
 id: lake-tahoe/view-2
-order: 2
+order: 12
 featured: true
-featuredOrder: 2
+featuredOrder: 3
 ---

@@ -49,7 +49,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/images/icons');
   eleventyConfig.addPassthroughCopy('./src/images/share');
   eleventyConfig.addPassthroughCopy('./src/images/film');
-  eleventyConfig.addPassthroughCopy('./src/images/photography');
+  eleventyConfig.addPassthroughCopy('./src/images/photography'); // TODO: Remove and use optimized images for share cards
   eleventyConfig.addPassthroughCopy('./src/images/**.*');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
   eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');

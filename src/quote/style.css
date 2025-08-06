@@ -39,6 +39,10 @@ p {
   text-align: right;
 }
 
+button {
+  color: var(--color)
+}
+
 button:hover {
   cursor: pointer;
 }
