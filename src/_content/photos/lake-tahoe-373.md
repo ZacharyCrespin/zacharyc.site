@@ -6,4 +6,5 @@ tags:
   - lake-tahoe
 id: lake-tahoe/373
 order: 1
+homeFeaturedOrder: 1
 ---

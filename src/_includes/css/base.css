@@ -546,7 +546,7 @@ section .text .tags .tag:first-of-type, .section .text .tags .tag:first-of-type 
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
+  align-items: start;
 }
 .gallery.two-wide {
   grid-template-columns: 1fr 1fr;

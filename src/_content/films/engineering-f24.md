@@ -7,4 +7,6 @@ src: engineering-f24.mp4
 date: 2024-05-09
 featured: true
 watch: true
+homeFeatured: true
+homeFeaturedOrder: 3
 ---

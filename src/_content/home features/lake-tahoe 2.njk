@@ -1,0 +1,29 @@
+---
+homeFeaturedOrder: 1
+---
+<div class="section section-gallery" aria-label="Lake Tahoe, Select Photos">
+  <div class="gallery">
+  {% for photo in collections.photo | sort("homeFeaturedOrder") %}
+    {% if photo.data.id == "lake-tahoe/373" %}
+    <a class="photo" href="/photography/{{ photo.data.id }}/">
+      {% image photo.data.src, photo.data.alt, "small", "(max-width: 900px) 100vw, 30vw" %}
+    </a>
+    {% elseif photo.data.id == "lake-tahoe/123" %}
+    <a class="photo" href="/photography/{{ photo.data.id }}/">
+      {% image photo.data.src, photo.data.alt, "small", "(max-width: 900px) 100vw, 30vw" %}
+    </a>
+    {% elseif photo.data.id == "lake-tahoe/393" %}
+    <a class="photo" href="/photography/{{ photo.data.id }}/">
+      {% image photo.data.src, photo.data.alt, "small", "(max-width: 900px) 100vw, 30vw" %}
+    </a>
+    {% endif %}
+  {% endfor %}
+  </div>
+  <div class="text">
+    <h2 class="h3">Lake Tahoe</h2>
+    <div class="tags" aria-label="Tags">
+      <p class="tag">Photo Collection</p>
+    </div>
+    <a class="button" href="/photography/lake-tahoe/">View More</a>
+  </div>
+</div>
