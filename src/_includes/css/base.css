@@ -176,6 +176,23 @@ button:disabled:focus-visible, button[disabled]:focus-visible, button.disabled:f
   color: var(--color-light);
 }
 
+.iconBtn {
+  margin: 0;
+  padding: 0.25rem;
+  line-height: 1;
+  border: none;
+}
+.iconBtn svg {
+  max-width: 1rem;
+  max-height: 1rem;
+}
+.iconBtn svg path {
+  fill: var(--color-text);
+}
+.iconBtn:hover svg path, .iconBtn:focus-visible svg path {
+  fill: var(--color-bg);
+}
+
 hr, .line {
   border: none;
   height: var(--stroke-width);
@@ -524,7 +541,7 @@ section.split, .section.split {
   grid-template-columns: max-content auto;
 }
 
-section.split img, .section.split img {
+section.split picture img, .section.split picture img {
   width: 100%;
   max-width: 60vw;
   height: auto;

@@ -9,7 +9,34 @@ layout: default.webc
   {% for film in collections.film | reverse %}
     {% if film.data.featured %}
       <div class="section split" id="{{ film.data.id }}" aria-label="{{ film.data.title }}">
-        {% image film.data.img, film.data.imgalt, "large", "(max-width: 900px) 100vw, 60vw" %}
+        {% if film.data.slider %}
+          <div class="slider" aria-label="image slider" data-slider-id="{{ film.data.id }}">
+            <div class="slider-images">
+              {% for img in film.data.imgs %}
+                <div class="slide{% if loop.first %} active{% endif %}">
+                {% image img, film.data.imgalts[loop.index0], "large", "(max-width: 900px) 100vw, 60vw" %}
+                </div>
+              {% endfor %}
+            </div>
+            <div class="slider-control">
+              <button class="iconBtn prev" aria-label="Previous slide">
+                <svg width="20" height="37" viewBox="0 0 20 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.18056 18.5L19.246 3.43455C19.6434 3.03712 19.837 2.56405 19.8268 2.01535C19.8165 1.46662 19.6126 0.993552 19.2152 0.596152C18.8178 0.198718 18.3447 0 17.796 0C17.2473 0 16.7742 0.198718 16.3768 0.596152L1.06526 15.9385C0.703728 16.3 0.43578 16.7051 0.261414 17.1538C0.08708 17.6025 -8.58307e-05 18.0513 -8.58307e-05 18.5C-8.58307e-05 18.9487 0.08708 19.3974 0.261414 19.8461C0.43578 20.2948 0.703728 20.6999 1.06526 21.0615L16.4076 36.4038C16.805 36.8012 17.2729 36.9948 17.8114 36.9846C18.3498 36.9743 18.8178 36.7704 19.2152 36.373C19.6126 35.9756 19.8114 35.5025 19.8114 34.9538C19.8114 34.4051 19.6126 33.932 19.2152 33.5346L4.18056 18.5Z" fill="white"/>
+                </svg>
+              </button>
+              {% for img in film.data.imgs | reverse %}
+                <input type="radio" name="slider-{{ film.data.id }}" {% if loop.first %}checked{% endif %} data-index="{{ loop.index0 }}" aria-hidden>
+              {% endfor %}
+              <button class="iconBtn next" aria-label="Next slide">
+                <svg width="20" height="37" viewBox="0 0 20 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.6466 18.5L0.581185 3.43455C0.183752 3.03712 -0.00984801 2.56405 0.000385319 2.01535C0.010652 1.46662 0.214501 0.993552 0.611935 0.596152C1.00937 0.198718 1.48243 0 2.03113 0C2.57983 0 3.0529 0.198718 3.45034 0.596152L18.7619 15.9385C19.1234 16.3 19.3914 16.7051 19.5657 17.1538C19.7401 17.6025 19.8272 18.0513 19.8272 18.5C19.8272 18.9487 19.7401 19.3974 19.5657 19.8461C19.3914 20.2948 19.1234 20.6999 18.7619 21.0615L3.41958 36.4038C3.02215 36.8012 2.5542 36.9948 2.01573 36.9846C1.4773 36.9743 1.00937 36.7704 0.611935 36.373C0.214501 35.9756 0.0157845 35.5025 0.0157845 34.9538C0.0157845 34.4051 0.214501 33.932 0.611935 33.5346L15.6466 18.5Z" fill="white"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        {% else %}
+          {% image film.data.img, film.data.imgalt, "large", "(max-width: 900px) 100vw, 60vw" %}
+        {% endif %}
         <div class="text">
           <h2 class="h3">{{ film.data.title }}</h2>
           <p>{{ film.data.date | fullString }}</p>
@@ -37,3 +64,80 @@ layout: default.webc
     {% endif %}
   {% endfor %}
 </div>
+<style>
+  .slider {
+    position: relative;
+    display: inline-block;
+  }
+  .slider .slide picture {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 600ms ease;
+  }
+  .slider .slide.active picture {
+    opacity: 1;
+    position: relative;
+  }
+  .slider img {
+    display: block;
+    width: auto;
+    max-width: none;
+  }
+  .slider .slider-control {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+  }
+  .slider .slider-control button {
+    z-index: 10;
+    padding-inline: 0.5rem;
+  }
+  .slider .slider-control input {
+    z-index: 10;
+    margin: 0;
+    margin-inline: 0.25rem;
+  }
+</style>
+<script>
+  document.querySelectorAll(".slider").forEach(slider => {
+    const slides = slider.querySelectorAll(".slide");
+    const radios = slider.querySelectorAll('input[type="radio"]');
+    const prev = slider.querySelector(".prev");
+    const next = slider.querySelector(".next");
+
+    let current = 0;
+
+    function show(index) {
+      slides[current].classList.remove("active");
+      radios[current].checked = false;
+
+      current = index;
+
+      slides[current].classList.add("active");
+      radios[current].checked = true;
+    }
+
+    radios.forEach((radio, i) => {
+      radio.addEventListener("change", () => {
+        show(i)
+      });
+    });
+
+    if (prev) {
+      prev.addEventListener("click", () => {
+        show((current - 1 + slides.length) % slides.length);
+      });
+    }
+
+    if (next) {
+      next.addEventListener("click", () => {
+        show((current + 1) % slides.length);
+      });
+    }
+
+    setInterval(() => {
+      show((current + 1) % slides.length);
+    }, 5500);
+  });
+</script>
