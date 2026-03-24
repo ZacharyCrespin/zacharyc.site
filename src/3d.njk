@@ -24,7 +24,7 @@ layout: default.webc
         <h3>{{ design.data.title }}</h3>
         <p>{{ design.data.description }}</p>
         <p>{{ design.data.date | fullString }}</p>
-        {% if design.data.modelLink %}<a class="button" href="{{ design.data.modelLink }}">Get 3D Model</a>{% endif %}
+        {% if design.data.modelLink %}<a class="button" href="{{ design.data.modelLink }}" target="_blank">Get 3D Model</a>{% endif %}
         {% if design.data.downloadLink %}<a class="button" href="{{ design.data.downloadLink }}" target="_blank">Download 3D Model</a>{% endif %}
       </div>
     </div>

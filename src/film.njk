@@ -10,7 +10,7 @@ layout: default.webc
     {% if film.data.featured %}
       <div class="section split" id="{{ film.data.id }}" aria-label="{{ film.data.title }}">
         {% if film.data.slider %}
-          <div class="slider" aria-label="image slider" data-slider-id="{{ film.data.id }}">
+          <div class="slider" aria-label="Image slider" data-slider-id="{{ film.data.id }}">
             <div class="slider-images">
               {% for img in film.data.imgs %}
                 <div class="slide{% if loop.first %} active{% endif %}">
@@ -25,7 +25,7 @@ layout: default.webc
                 </svg>
               </button>
               {% for img in film.data.imgs | reverse %}
-                <input type="radio" name="slider-{{ film.data.id }}" {% if loop.first %}checked{% endif %} data-index="{{ loop.index0 }}" aria-hidden>
+                <input type="radio" class="radio" name="slider-{{ film.data.id }}" {% if loop.first %}checked{% endif %} data-index="{{ loop.index0 }}" aria-label="Change to image {{ loop.index }}">
               {% endfor %}
               <button class="iconBtn next" aria-label="Next slide">
                 <svg width="20" height="37" viewBox="0 0 20 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +73,7 @@ layout: default.webc
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: opacity 600ms ease;
+    transition: opacity 600ms ease; /* Doesn't work in Safari?? */
   }
   .slider .slide.active picture {
     opacity: 1;
@@ -97,6 +97,22 @@ layout: default.webc
     z-index: 10;
     margin: 0;
     margin-inline: 0.25rem;
+  }
+
+  input.radio {
+    appearance: none;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-text);
+    position: relative;
+    top: 0.375rem;
+  }
+  input.radio:checked {
+    background-color: var(--color-text);
+  }
+  input.radio:hover {
+    background-color: var(--color-text);
   }
 </style>
 <script>
@@ -136,8 +152,8 @@ layout: default.webc
       });
     }
 
-    setInterval(() => {
-      show((current + 1) % slides.length);
-    }, 5500);
+    // setInterval(() => {
+    //   show((current + 1) % slides.length);
+    // }, 4500);
   });
 </script>

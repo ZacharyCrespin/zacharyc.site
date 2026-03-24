@@ -7,6 +7,4 @@ imgalt: Zachary is in a podcast room with equipment visible in the background. T
 date: 2023-03-06
 watchlink: https://youtu.be/DnIjLDGCDhg
 featured: true
-homeFeatured: true
-homeFeaturedOrder: 5
 ---
