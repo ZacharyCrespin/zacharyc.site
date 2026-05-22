@@ -7,4 +7,5 @@ imgs: [3d/foam-stand/Web Cover.jpg, 3d/foam-stand/P1280281.jpg]
 alts: []
 multiImage: 2
 date: 2025-06-26
+order: 2
 ---

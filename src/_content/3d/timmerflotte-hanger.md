@@ -6,4 +6,5 @@ description: Command strip compatible hanger for IKEA TIMMERFLOTTE temperature &
 imgs: [3d/timmerflotte-hanger/P1310672.jpg]
 alts: []
 date: 2026-02-26
+order: 9
 ---

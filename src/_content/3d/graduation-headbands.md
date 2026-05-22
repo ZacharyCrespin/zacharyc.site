@@ -6,4 +6,5 @@ description: Class of 2026 Graduation Headbands
 imgs: [3d/graduation-headbands/P1310712.jpg]
 alts: []
 date: 2025-05-21
+order: 3
 ---

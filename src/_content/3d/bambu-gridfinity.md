@@ -7,4 +7,5 @@ imgs: [3d/bambu-gridfinity/Web Cover.jpg, 3d/bambu-gridfinity/P1240556.jpg, 3d/b
 alts: []
 multiImage: 3
 date: 2025-01-16
+order: 5
 ---
