@@ -5,7 +5,6 @@ id: 3d
 layout: default.webc
 ---
 <p class="center">You can also find my designs on <a href="https://makerworld.com/en/@ZacharyC" target="_blank">Maker World</a></p>
-<h2>Latest Designs</h2>
 <div class="cards">
   {%- for design in collections.3d | reverse  | sort('order') -%}
     <div class="section {% if design.data.multiImage %}section-gallery{% else %}split{% endif %}" id="{{ design.data.id }}" aria-label="{{ design.data.title }}">
