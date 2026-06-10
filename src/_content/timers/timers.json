@@ -1,0 +1,6 @@
+{
+  "tags": "timer",
+  "displayTag": "Timer",
+  "layout": "timer.njk",
+  "permalink": "/timers/{{ id }}/index.html"
+}

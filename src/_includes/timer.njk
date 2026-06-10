@@ -1,0 +1,22 @@
+---
+layout: default.webc
+eleventyComputed:
+  title: "{{ name }}"
+  seoTitle: "{{ name }} — Timers"
+  shareImage: "{{ img }}"
+---
+<main>
+  <div class="section split" id="{{ id }}" aria-label="{{ name }}">
+    {% image img, imgAlt, "large", "(max-width: 900px) 100vw, 60vw", "lazy" %}
+    <div class="text">
+      <h2 class="h3">{{ name }} Timer Package</h2>
+      <div class="tags">
+        {% for tag in tags | filterTags %}
+          <p class="tag">{{ tag }}</p>
+        {% endfor %}
+      </div>
+      <p>{{ description }}</p>
+      <a class="button" href="{{ link }}">{{ linkText}}</a>
+    </div>
+  </div>
+</main>

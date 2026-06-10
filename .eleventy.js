@@ -71,7 +71,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("version", () => pkg.version);
 
   // filter out tags used for collections
-  const collectionTags = ["film", "photo", "collection", "code", "table", "wallpaper"];
+  const collectionTags = ["film", "photo", "collection", "code", "table", "wallpaper", "timer"];
 	eleventyConfig.addFilter("filterTags", function filterTags(tags) {
 		return (tags || []).filter(tag => collectionTags.indexOf(tag) === -1);
 	});

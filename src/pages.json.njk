@@ -30,7 +30,7 @@ eleventyExcludeFromCollections: true
     "title": "{{ wallpaper.data.name }}",
     "description": "{{ wallpaper.data.name }} Wallpapers",
     "tags": "{{ wallpaper.data.tags | filterTags }}",
-    "img": "https://zacharyc.site/images/share/wallpapers.jpg"
+    "img": "https://zacharyc.site/images/{{ wallpaper.data.img }}"
   },
   {%- endfor -%}
   {%- for design in collections.3d -%}
