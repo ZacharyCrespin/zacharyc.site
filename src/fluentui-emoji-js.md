@@ -1,6 +1,7 @@
 ---
 title: fluentui-emoji-js
 id: fluentui-emoji-js
+description: JS library for matching microsoft fluent emojis to emoji characters or unicode
 layout: default.webc
 highlightCode: true
 article: true

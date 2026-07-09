@@ -1,6 +1,7 @@
 ---
 id: engineering-f24
 title: F24 Engineering Highlight
+description: Foothill F24 Engineering Highlight Video
 slider: true
 img: film/f24.jpg
 imgalt: "A small group of students looking down at a laptop."

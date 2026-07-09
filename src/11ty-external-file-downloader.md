@@ -1,6 +1,7 @@
 ---
 title: 11ty-external-file-downloader
 id: 11ty-external-file-downloader
+description: JS package to download files locally on Eleventy build
 layout: default.webc
 highlightCode: true
 article: true
