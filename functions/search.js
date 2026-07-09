@@ -1,18 +1,7 @@
-const axios = require('axios');
 const Fuse = require('fuse.js');
 
-async function getPages() {
-  try {
-    const response = await axios.get("https://zacharyc.site/pages.json");
-    return response.data;
-  } catch (error) {
-    console.log(error);
-    return error.message;
-  }
-}
-
 async function search(query) {
-  const pages = await getPages();
+  const pages = require("../public/pages.json");
   const fuse = new Fuse(pages, {
     keys: [
       {

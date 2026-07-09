@@ -1,5 +1,9 @@
 ---
 layout: default.webc
+eleventyComputed:
+  seoTitle: "{{ name }} — Photography"
+  description: "{{ name }} Photography by Zachary Crespin"
+  shareImage: "{{ img }}"
 ---
 <section class="gallery" aria-label="Gallery">
   {% for photo in collections.photo | sort("order") %}

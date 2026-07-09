@@ -46,7 +46,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/admin');
   eleventyConfig.addPassthroughCopy('./src/files');
   eleventyConfig.addPassthroughCopy('./src/fonts');
-  eleventyConfig.addPassthroughCopy('./src/images'); // TODO: Remove and use optimized images for share cards
+  eleventyConfig.addPassthroughCopy('./src/images/icons');
+  eleventyConfig.addPassthroughCopy('./src/images/static');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
   eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');
   eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
@@ -64,7 +65,7 @@ module.exports = function(eleventyConfig) {
     return `${month} ${day}, ${year}`;
   });
 
-  // limit number of idems in a collection
+  // limit number of items in a collection
   eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
 
   // version
@@ -85,9 +86,9 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  // Load Exif data for display on photo pages
   eleventyConfig.addFilter("loadExif", async function loadExif(src) {
-    let file = "./src/images/" + src;
-    const data = await ExifReader.load(file);
+    const data = await ExifReader.load(`./src/images/${src}`);
     const keyValues = {
       camera: `${data["Make"].description} ${data["Model"].description}`,
       lens: data["LensModel"] ? data["LensModel"].description :  '',
@@ -97,6 +98,22 @@ module.exports = function(eleventyConfig) {
       exposureTime: data["ExposureTime"].description,
     }
 		return keyValues;
+	});
+
+  // 11ty Image for share images
+  eleventyConfig.addFilter("shareImageFilter", async function (src, pageid, alt ='') {
+		let metadata = await Image(`src/images/${src}`, {
+      widths: [1200],
+      formats: ["jpg"],
+      urlPath: "http://localhost:8080/images/",
+      outputDir: "public/images",
+    });
+		let imageAttributes = {
+			alt,
+		};
+
+    const imageObject = (Image.generateObject(metadata, imageAttributes))
+		return imageObject.img.src;
 	});
 
   return {

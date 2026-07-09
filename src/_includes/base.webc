@@ -15,7 +15,7 @@
     <link rel="canonical" :href="'https://zacharyc.site' + page.url">
 
     <!-- CSS -->
-    <link webc:if="!nocss" rel="stylesheet" href="/css/main.css" webc:keep>
+    <link rel="stylesheet" href="/css/main.css" webc:keep>
     <link webc:if="highlightCode" rel="stylesheet" href="/css/prism.css" webc:keep>
 
     <!-- Page CSS -->
@@ -28,9 +28,8 @@
     <link rel="icon" href="/favicon.png">
     <link rel="icon" href="/favicon-light.png" media="(prefers-color-scheme: light)">
     <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <meta webc:if="shareImage" name="image" :content="'/images/' + shareImage">
-    <meta webc:if="!shareImage" name="image" :content="'/images/share/' + id + '.jpg'">
+    <link rel="apple-touch-icon" href="/images/static/apple-touch-icon.png">
+    <meta name="image" :content="shareImageFilter(shareImage ? shareImage : ('share/' + id + '.jpg'), id, title)">
 
     <!-- Open Graph -->
     <meta property="og:url" :content="'https://zacharyc.site' + page.url">
@@ -42,12 +41,10 @@
     <meta webc:else property="og:title" :content="title + ' — Zachary Crespin'">
     <meta webc:if="description" property="og:description" :content="description">
     <meta webc:else property="og:description" :content="title">
-    <meta webc:if="shareImage" property="og:image" :content="'https://zacharyc.site/images/' + shareImage">
-    <meta webc:if="!shareImage" property="og:image" :content="'https://zacharyc.site/images/share/' + id  + '.jpg'">
+    <meta property="og:image" :content="shareImageFilter(shareImage ? shareImage : ('share/' + id + '.jpg'), id, title)">
     <meta property="og:site_name" content="Zachary Crespin">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ZacharyCrespin">
     <meta name="twitter:creator" content="@ZacharyCrespin">
 
     <meta name="author" content="Zachary Crespin">
