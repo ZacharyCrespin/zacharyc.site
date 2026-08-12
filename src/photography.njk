@@ -4,7 +4,7 @@ description: Photography
 id: photography
 layout: default.webc
 ---
-<section class="page-section" aria-label="Featured Collections">
+<section class="page-section">
   <h2>Featured Collections</h2>
   <div class="cards small">
     {%- for collection in collections.collection | sort('featuredOrder') -%}
@@ -21,15 +21,14 @@ layout: default.webc
   <a class="button center" href="/photography/collections/">More Collections</a>
 </section>
 
-<section class="page-section" aria-label="Featured Photos">
+<section class="page-section">
   <h2>Featured Photos</h2>
-  <div class="gallery" aria-label="Gallery">
-    {%- for photo in collections.photo | sort('featuredOrder') -%}
-    {% if photo.data.featured %}
+  <div class="gallery">
+    {%- for photo in collections.featuredPhoto | sort('featuredOrder') -%}
     <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt, "small", "(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" %}
+      {% set loadingStrategy = "lazy" if loop.index0 > 5 else "eager" %}
+      {% image photo.data.src, photo.data.alt, "small", "(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw", loadingStrategy %}
     </a>
-    {% endif %}
     {%- endfor -%}
   </div>
 </section>

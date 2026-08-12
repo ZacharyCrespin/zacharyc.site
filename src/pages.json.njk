@@ -9,8 +9,9 @@ eleventyExcludeFromCollections: true
     "url": "https://zacharyc.site{{ page.url }}",
     "title": "{{ page.data.title }}",
     "description": "{{ page.data.description }}",
-    "tags": "{{ page.data.tags | filterTags }}"{%- if page.data.shareImage -%},
-    "img": "https://zacharyc.site/images/{{ page.data.shareImage }}"
+    "tags": "{{ page.data.tags | filterTags }}",
+    {%- if page.data.shareImage -%}"img": "{{ page.data.shareImage | shareImageFilter }}"
+    {%- else -%}"img": "{{ ('share/' + page.data.id + '.jpg') | shareImageFilter }}"
     {%- endif -%}
   },
   {%- endif -%}
@@ -21,7 +22,7 @@ eleventyExcludeFromCollections: true
     "title": "{{ table.data.name }}",
     "description": "{{ table.data.name }} Periodic Table",
     "tags": "{{ table.data.tags | filterTags }}",
-    "img": "https://zacharyc.site/images/{{ table.data.img }}"
+    "img": "{{ table.data.img | shareImageFilter }}"
   },
   {%- endfor -%}
   {%- for wallpaper in collections.wallpaper -%}
@@ -30,7 +31,7 @@ eleventyExcludeFromCollections: true
     "title": "{{ wallpaper.data.name }}",
     "description": "{{ wallpaper.data.name }} Wallpapers",
     "tags": "{{ wallpaper.data.tags | filterTags }}",
-    "img": "https://zacharyc.site/images/{{ wallpaper.data.img }}"
+    "img": "{{ wallpaper.data.img | shareImageFilter }}"
   },
   {%- endfor -%}
   {%- for design in collections.3d -%}
@@ -39,7 +40,7 @@ eleventyExcludeFromCollections: true
     "title": "{{ design.data.title }}",
     "description": "{{ design.data.description }}",
     "tags": "{{ design.data.tags | filterTags }}",
-    "img": "https://zacharyc.site/images/{{design.data.imgs[0]}}"
+    "img": "{{ design.data.imgs[0] | shareImageFilter }}"
   },
   {%- endfor -%}
   {

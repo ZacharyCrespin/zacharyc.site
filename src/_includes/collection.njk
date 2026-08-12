@@ -1,18 +1,15 @@
 ---
 layout: default.webc
 eleventyComputed:
-  seoTitle: "{{ name }} — Photography"
-  description: "{{ name }} Photography by Zachary Crespin"
+  seoTitle: "{{ title }} — Photography"
+  description: "{{ title }} Photography by Zachary Crespin"
   shareImage: "{{ img }}"
 ---
 <section class="gallery" aria-label="Gallery">
-  {% for photo in collections.photo | sort("order") %}
-  {% for tag in photo.data.tags %}
-    {% if tag == id %}
-    <a class="photo" href="/photography/{{ photo.data.id }}/">
-      {% image photo.data.src, photo.data.alt, "small", "(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" %}
+  {% for photo in collections[id] | sort("order") %}
+    <a class="photo" href="/photography/{{ photo.data.id }}/?gallery={{ id }}">
+      {% set loadingStrategy = "lazy" if loop.index0 > 5 else "eager" %}
+      {% image photo.data.src, photo.data.alt, "small", "(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw", loadingStrategy %}
     </a>
-    {% endif %}
-  {% endfor %}
   {% endfor %}
 </section>

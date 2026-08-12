@@ -26,6 +26,14 @@ layout: default.webc
     max-width: 50ch;
     margin-inline: auto;
   }
+  form .input {
+    display: flex;
+    flex-direction: column;
+  }
+  form .input input:not([type="radio"], [type="checkbox"], [type="file"]), form .input textarea, form .input select {
+    margin-block-start: 0.5rem;
+    margin-inline-start: 0;
+  }
   .formSend {
     text-align: center;
   }

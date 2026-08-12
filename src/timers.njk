@@ -6,8 +6,9 @@ layout: default.webc
 ---
 <div class="cards">
   {%- for timer in collections.timer | reverse -%}
+  {% set loadingStrategy = "lazy" if loop.index0 > 2 else "eager" %}
   <div class="section split" id="{{ timer.data.id }}" aria-label="{{ timer.data.name }}">
-    {% image timer.data.img, timer.data.imgAlt, "large", "(max-width: 900px) 100vw, 60vw", "lazy" %}
+    {% image timer.data.img, timer.data.imgAlt, "large", "(max-width: 900px) 100vw, 60vw", loadingStrategy %}
     <div class="text">
       <h2 class="h3">{{ timer.data.name }}</h2>
       <div class="tags">

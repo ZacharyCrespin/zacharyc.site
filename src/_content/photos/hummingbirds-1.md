@@ -4,9 +4,9 @@ src: photography/hummingbirds/1.jpg
 alt: Hummingbird sitting on a branch.
 tags: 
   - hummingbirds
+  - featuredPhoto
 id: hummingbirds/1
 date: 2020-11-23T11:57:00-08:00
 order: 2
-featured: true
 featuredOrder: 6
 ---

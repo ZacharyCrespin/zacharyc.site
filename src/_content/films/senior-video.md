@@ -11,6 +11,6 @@ role:
   - Lead Editor
   - Section Director, Academics
 watchlink: https://youtu.be/h5bBckWe0Pk
-featured: true
+tags: featuredFilm
 featuredOrder: 1
 ---

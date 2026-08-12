@@ -22,14 +22,14 @@
     <style @raw="getBundle('css')" webc:keep></style>
 
     <!-- Preload -->
-    <link rel="preload" href="/fonts/Meshed Display/MeshedDisplay.var.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/fonts/Meshed Display/MeshedDisplay-Black.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/Inter/Inter.var.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="icon" href="/favicon.png">
     <link rel="icon" href="/favicon-light.png" media="(prefers-color-scheme: light)">
     <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" href="/images/static/apple-touch-icon.png">
-    <meta name="image" :content="shareImageFilter(shareImage ? shareImage : ('share/' + id + '.jpg'), id, title)">
+    <meta name="image" :content="shareImageFilter(shareImage ? shareImage : ('share/' + id + '.jpg'))">
 
     <!-- Open Graph -->
     <meta property="og:url" :content="'https://zacharyc.site' + page.url">
@@ -41,7 +41,7 @@
     <meta webc:else property="og:title" :content="title + ' — Zachary Crespin'">
     <meta webc:if="description" property="og:description" :content="description">
     <meta webc:else property="og:description" :content="title">
-    <meta property="og:image" :content="shareImageFilter(shareImage ? shareImage : ('share/' + id + '.jpg'), id, title)">
+    <meta property="og:image" :content="shareImageFilter(shareImage ? shareImage : ('share/' + id + '.jpg'))">
     <meta property="og:site_name" content="Zachary Crespin">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">

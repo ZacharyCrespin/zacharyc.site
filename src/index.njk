@@ -21,7 +21,7 @@ layout: default.webc
         {% if section.data.details %}
         <p>{{ section.data.details }}</p>
         {% endif %}
-        <div class="tags" aria-label="Tags">
+        <div class="tags">
           <p class="tag">{{ section.data.displayTag }}</p>
           {%- for tag in section.data.tech -%}<p class="tag">{{ tag }}</p>{%- endfor -%}
         </div>

@@ -1,13 +1,12 @@
 ---
 title: fluentui-emoji-js
-extraLink: /fluentui-emoji-js/
-extraLinkText: Docs
+docs: /fluentui-emoji-js/
 source: https://github.com/ZacharyCrespin/fluentui-emoji-js
 sourceType: github
 tech:
   - JavaScript
 img: code/emoji.png
-featured: true
+tags: featuredCode
 featuredOrder: 1
 date: 2023-07-13
 displayTag: NPM Package

@@ -9,7 +9,8 @@ blocks.forEach((block) => {
     let button = document.createElement('button');
 
     button.innerHTML = copyButtonLabel;
-    button.ariaLabel = 'Copy Code';
+    button.className = 'icon-btn';
+    button.title = 'Copy Code';
     block.appendChild(button);
 
     button.addEventListener('click', async () => {

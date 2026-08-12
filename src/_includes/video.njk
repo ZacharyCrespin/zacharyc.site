@@ -12,22 +12,23 @@ eleventyComputed:
 <script>
   window.location.href = "{{ watchlink | safe }}";
 </script>
+<main>
+  <div class="center">
+    <p>If redirect failed <a href="{{ watchlink | safe }}">click here to watch</a>.</p>
+  </div>
+</main>
 {% else %}
 <main>
-  <button id="close-btn" class="iconBtn" onclick="history.back()" aria-label="Close">
+  <button id="close-btn" class="icon-btn" onclick="history.back()" title="Close">
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M12.5461 37.0538L10.9462 35.4538L22.4001 24L10.9462 12.5461L12.5461 10.9462L24 22.4001L35.4539 10.9462L37.0538 12.5461L25.6 24L37.0538 35.4538L35.4539 37.0538L24 25.5999L12.5461 37.0538Z" fill="white"/>
     </svg>
   </button>
-  <video controls>
-    <source src="https://videos.zacharyc.site/{{src}}" type="video/mp4"/>
+  <video controls controlslist="nodownload noplaybackrate">
+    <source src="/videos/{{src}}" type="video/mp4"/>
   </video>
 </main>
 <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
   main {
     display: flex;
     justify-content: center;
@@ -50,11 +51,11 @@ eleventyComputed:
     object-fit: contain;
   }
 
-  .iconBtn {
+  .icon-btn {
     position: fixed;
     z-index: 2;
   }
-  .iconBtn svg {
+  .icon-btn svg {
     max-width: 2rem;
     max-height: 2rem;
   }

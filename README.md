@@ -3,4 +3,4 @@
 # Hi, I’m Zachary Crespin
 ## [Photographer](https://zacharyc.site/photography/), [Filmmaker](https://zacharyc.site/film/), [Programmer](https://zacharyc.site/code/)
 
-Cheak out my website: [zacharyc.site](https://zacharyc.site/)
+Check out my website: [zacharyc.site](https://zacharyc.site/)

@@ -1,17 +1,32 @@
-const pkg = require('./package.json');
-const pluginWebc = require("@11ty/eleventy-plugin-webc");
+const Image = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const filesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const downloader = require('11ty-external-file-downloader');
 const CleanCSS = require("clean-css");
 const ExifReader = require('exifreader');
-const Image = require("@11ty/eleventy-img");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginWebc);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(filesMinifier);
 
+  // Pass through static files
+  eleventyConfig.addPassthroughCopy('./src/admin');
+  eleventyConfig.addPassthroughCopy('./src/files');
+  eleventyConfig.addPassthroughCopy('./src/fonts');
+  eleventyConfig.addPassthroughCopy('./src/images/icons');
+  eleventyConfig.addPassthroughCopy('./src/images/static');
+  eleventyConfig.addPassthroughCopy('./src/videos');
+  eleventyConfig.addPassthroughCopy('./src/_redirects');
+  eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');
+  eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
+  eleventyConfig.addPassthroughCopy('./src/favicon.ico');
+  eleventyConfig.addPassthroughCopy('./src/favicon.png');
+  eleventyConfig.addPassthroughCopy('./src/robots.txt');
+  eleventyConfig.addPassthroughCopy('./src/sites.json');
+
+  // Download analytics.js to public folder 
   eleventyConfig.addPlugin(downloader, {
     urls: [
       'https://analytics.zacharyc.site/analytics.js'
@@ -19,11 +34,7 @@ module.exports = function(eleventyConfig) {
     directory: 'public'
   });
 
-  eleventyConfig.addFilter("cssmin", function(code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
-
-  // Image Optimization
+  // 11ty Image Optimization
   eleventyConfig.addShortcode("image", async function (src, alt, widths, sizes = "100vw", loading = "eager", photography = false) {
     widths = (widths == "small" ? [400, 600, 800] : [800, 1200, ...(photography ? [1600] : [])]);
 
@@ -43,20 +54,25 @@ module.exports = function(eleventyConfig) {
 		return Image.generateHTML(metadata, imageAttributes);
 	});
 
-  eleventyConfig.addPassthroughCopy('./src/admin');
-  eleventyConfig.addPassthroughCopy('./src/files');
-  eleventyConfig.addPassthroughCopy('./src/fonts');
-  eleventyConfig.addPassthroughCopy('./src/images/icons');
-  eleventyConfig.addPassthroughCopy('./src/images/static');
-  eleventyConfig.addPassthroughCopy('./src/_redirects');
-  eleventyConfig.addPassthroughCopy('./src/favicon-dark.png');
-  eleventyConfig.addPassthroughCopy('./src/favicon-light.png');
-  eleventyConfig.addPassthroughCopy('./src/favicon.ico');
-  eleventyConfig.addPassthroughCopy('./src/favicon.png');
-  eleventyConfig.addPassthroughCopy('./src/robots.txt');
-  eleventyConfig.addPassthroughCopy('./src/sites.json');
+  // 11ty Image for share images
+  eleventyConfig.addFilter("shareImageFilter", async function (src) {
+    const alt = ''
+		let metadata = await Image(`src/images/${src}`, {
+      widths: [1200],
+      formats: ["jpg"],
+      urlPath: "https://zacharyc.site/images/",
+      outputDir: "public/images",
+    });
+		let imageAttributes = {
+			alt
+		};
 
-  // format dates
+    // Export url
+    const imageObject = (Image.generateObject(metadata, imageAttributes))
+		return imageObject.img.src;
+	});
+
+  // Format dates
   eleventyConfig.addFilter("fullString", (dateObj) => {
     const year = dateObj.getUTCFullYear();
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -65,19 +81,7 @@ module.exports = function(eleventyConfig) {
     return `${month} ${day}, ${year}`;
   });
 
-  // limit number of items in a collection
-  eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
-
-  // version
-  eleventyConfig.addShortcode("version", () => pkg.version);
-
-  // filter out tags used for collections
-  const collectionTags = ["film", "photo", "collection", "code", "table", "wallpaper", "timer"];
-	eleventyConfig.addFilter("filterTags", function filterTags(tags) {
-		return (tags || []).filter(tag => collectionTags.indexOf(tag) === -1);
-	});
-
-  // sort list by a frontmatter value
+  // Sort list by frontmatter value
   eleventyConfig.addFilter("sort", function (list, property) {
     return list.sort((a, b) => {
       const orderA = parseInt(a.data[property]) || 9999;
@@ -86,8 +90,22 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  // Filter out tags used for collections
+  const collectionTags = ["film", "featuredFilm", "photo", "featuredPhoto", "collection", "code", "featuredCode", "table", "wallpaper", "timer"];
+	eleventyConfig.addFilter("filterTags", function filterTags(tags) {
+		return (tags || []).filter(tag => collectionTags.indexOf(tag) === -1);
+	});
+
+  // Limit number of items in a collection
+  eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
+
+  // CSS minify filter
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
+
   // Load Exif data for display on photo pages
-  eleventyConfig.addFilter("loadExif", async function loadExif(src) {
+  eleventyConfig.addFilter("getExif", async function getExif(src) {
     const data = await ExifReader.load(`./src/images/${src}`);
     const keyValues = {
       camera: `${data["Make"].description} ${data["Model"].description}`,
@@ -100,22 +118,7 @@ module.exports = function(eleventyConfig) {
 		return keyValues;
 	});
 
-  // 11ty Image for share images
-  eleventyConfig.addFilter("shareImageFilter", async function (src, pageid, alt ='') {
-		let metadata = await Image(`src/images/${src}`, {
-      widths: [1200],
-      formats: ["jpg"],
-      urlPath: "http://localhost:8080/images/",
-      outputDir: "public/images",
-    });
-		let imageAttributes = {
-			alt,
-		};
-
-    const imageObject = (Image.generateObject(metadata, imageAttributes))
-		return imageObject.img.src;
-	});
-
+  // Set input and output directories
   return {
     dir: {
       input: "src",

@@ -5,19 +5,18 @@ description: All Coding Projects and Experiments
 layout: default.webc
 ---
 <div class="cards small">
-  <!-- TODO: sort() only works with numbers -->
-  {%- for project in collections.code | sort('date') | reverse -%} 
-  <div class="card" aria-label="{{ project.data.title }}">
+  {%- for project in collections.code | reverse  -%} 
+  <div class="card">
     <h2 class="h3">{{ project.data.title }}</h2>
     <p>{{ project.data.date | fullString }}</p>
-    <div class="tags" aria-label="Tech Used">
+    <div class="tags">
       {%- for tag in project.data.tech -%}
         <p class="tag">{{ tag }}</p>
       {%- endfor -%}
     </div>
-    {% if project.data.extraLink %}<a class="button" href="{{ project.data.extraLink }}">{{ project.data.extraLinkText }}</a>{% endif %}
-    {% if project.data.live %}<a class="button" href="{{ project.data.live }}" target="_blank">Live</a>{% endif %}
-    {% if project.data.source %}<a class="button" href="{{ project.data.source }}" target="_blank">Source</a>{% endif %}
+    {% if project.data.docs %}<a class="button" href="{{ project.data.docs }}" title="{{ project.data.title }} Documentation">Docs</a>{% endif %}
+    {% if project.data.live %}<a class="button" href="{{ project.data.live }}" target="_blank" title="Visit live site">Live</a>{% endif %}
+    {% if project.data.source %}<a class="button" href="{{ project.data.source }}" target="_blank" title="{{ project.data.title }} Source Code">Source</a>{% endif %}
   </div>
   {%- endfor -%}
 </div>

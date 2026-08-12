@@ -4,7 +4,7 @@ title: Shotgun/Boom Microphone Case
 modelLink: https://links.zacharyc.site/MicCase
 description: Protective case or Shotgun/Boom microphones.
 imgs: [3d/mic-case/App Cover.jpg, 3d/mic-case/P1260397.jpg, 3d/mic-case/P1260388.jpg]
-alts: []
+alts: ["A shotgun microphone stands vertically infront of a dark textured backdrop with two sections of a plastic holding case one each side, both sides are black and one has a red ring on top.", "A two-part shotgun microphone case lying on a dark backdrop showing a tapered hole on one side to secure the base of the mic."]
 multiImage: 2
 date: 2025-03-29
 order: 6
