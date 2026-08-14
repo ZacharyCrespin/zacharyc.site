@@ -588,6 +588,9 @@ pre button.icon-btn svg {
   .cards.wide {
     grid-template-columns: 100%;
   }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (width < 900px) {
@@ -627,9 +630,6 @@ pre button.icon-btn svg {
   section.split:not(.nonresponsive) img, .section.split:not(.nonresponsive) img {
     max-width: 100%;
     max-height: 100vh;
-  }
-  .gallery {
-    grid-template-columns: 1fr 1fr;
   }
 }
 

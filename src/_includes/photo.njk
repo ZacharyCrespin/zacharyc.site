@@ -25,19 +25,21 @@ eleventyComputed:
     </svg>
   </button>
 
-  <a href="#" id="prev-btn" style="display: none;" title="Previous">
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M23.9999 22.4L35.4537 10.9462L37.0537 12.5461L25.5998 24L37.0537 35.4538L35.4537 37.0538L23.9999 25.5999L22.3999 24L23.9999 22.4Z" fill="white"/>
-    </svg>
-  </a>
+  <div id="main-image">
+    <a href="#" id="prev-btn" style="display: none;" title="Previous">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23.9999 22.4L35.4537 10.9462L37.0537 12.5461L25.5998 24L37.0537 35.4538L35.4537 37.0538L23.9999 25.5999L22.3999 24L23.9999 22.4Z" fill="white"/>
+      </svg>
+    </a>
 
-  {% image src, alt, "large", "100vw", "eager", true %}
+    {% image src, alt, "large", "100vw", "eager", true %}
 
-  <a href="#" id="next-btn" style="display: none;" title="Next">
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12.5462 37.0538L10.9463 35.4538L22.4001 24L10.9463 12.5461L12.5462 10.9462L24.0001 22.4L25.6 24L24.0001 25.5999L12.5462 37.0538Z" fill="white"/>
-    </svg>
-  </a>
+    <a href="#" id="next-btn" style="display: none;" title="Next">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.5462 37.0538L10.9463 35.4538L22.4001 24L10.9463 12.5461L12.5462 10.9462L24.0001 22.4L25.6 24L24.0001 25.5999L12.5462 37.0538Z" fill="white"/>
+      </svg>
+    </a>
+  </div>
 
   <div id="info">
     {%- set exif = src | getExif -%}
@@ -48,47 +50,39 @@ eleventyComputed:
 </main>
 
 <style>
-  html, body {
-    height: 100%;
-  }
   main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
     height: 100dvh;
     margin: 0;
-    padding: 2rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     column-gap: 1rem;
     box-sizing: border-box;
+    --img-max: calc(100vw - 10rem);
   }
 
-  picture {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+  #main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    column-gap: 1rem;
   }
 
   img {
     display: block;
-    width: auto;
+    width: 100%;
     height: auto;
-    max-width: calc(100vw - 4rem);
     max-height: calc(100vh - 4rem);
-    max-height: calc(100dvh - 4rem);
-    object-fit: contain;
+    max-width: var(--img-max);
   }
 
-  .icon-btn {
+  #close-btn, #close-link, #info-btn {
     position: fixed;
     z-index: 2;
-  }
-  .icon-btn svg {
-    max-width: 2rem;
-    max-height: 2rem;
   }
   #close-btn, #close-link {
     top: 1rem;
@@ -100,12 +94,13 @@ eleventyComputed:
   }
   #info {
     display: none;
+    max-width: var(--img-max);
   }
   #info.open {
     display: inline;
   }
 
-  @media screen and (width < 1500px) {
+  @media screen and (width < 1000px) {
     main {
       flex-direction: column;
     }
